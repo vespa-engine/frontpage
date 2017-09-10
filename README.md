@@ -1,2 +1,2 @@
-# vespa-frontpage
-Generated with Jekyll
+# frontpage
+The Vespa.ai front page
