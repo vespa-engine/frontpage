@@ -1,0 +1,17 @@
+title: Vespa. Big data. Real time.
+description: > # this means to ignore newlines until "baseurl:"
+  Your big data processing and serving system - deep learning, 
+  search applications, ad selection system, personalized 
+  recommendation systems, and more...
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://vespa.ai" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  vespa-engine
+
+# Build settings
+markdown: kramdown
+theme: agency-jekyll-theme
+plugins:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
