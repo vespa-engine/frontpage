@@ -1,3 +1,133 @@
+# Agency theme overrides
+h2 .section-heading,
+h2 .section-subheading,
+h3 .section-heading,
+h3 .section-subheading {
+    text-transform: none;
+    font-family: {{ site.data.template.font.secondary }};
+    color: #3F9DD8;
+}
+
+.bg-light-blue {
+    background-image: linear-gradient(-1deg, rgba(63,157,216,0.08) 0%, rgba(163, 195, 215, 0.08) 97%);
+}
+
+nav .navbar-default {
+    background-color: #3F9DD8;
+}
+
+nav .navbar-default .navbar-brand {
+    background: transparent url({{ site.baseurl }}/img/Vespa-V2.png) no-repeat;
+    background-size: contain;
+    direction: ltr;
+    text-indent: -9000px;
+    height: 40px;
+    width: 194px;
+    display: inline-block;
+    font-family: {{ site.data.template.font.primary }};
+    font-weight: bold;
+    color: #{{ site.data.template.color.primary }};
+    margin-top: 12px;
+    margin-left: 10px;
+}
+
+nav .navbar-default .nav li a {
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    text-transform: none;
+    font-family: {{ site.data.template.font.primary }};
+}
+
+nav .navbar-default.navbar-shrink {
+    background-color: #3F9DD8;
+}
+
+header {
+    background-image: linear-gradient(0deg, #98C1DB 7%, #3F9DD8 100%);
+}
+
+header .intro {
+    max-width: 350px;
+}
+
+header .intro-logo {
+    max-width: 120px;
+    padding-bottom: 30px;
+}
+
+header .intro-button {
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+}
+
+header .intro-long {
+    line-height: 27px;
+    font-size: 16px;
+    padding-bottom: 60px;
+}
+
+header .intro .intro-lead-in {
+    font-style: normal;
+}
+
+header .intro .intro-heading {
+    font-style: normal;
+}
+
+header .intro-button {
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+}
+
+header .intro .btn-xl {
+    background: #FFFFFF;
+    border: 1px solid #3F9DD8;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #3F9DD8;
+    font-weight: normal;
+    text-transform: none;
+    font-family: {{ site.data.template.font.primary }};
+}
+
+@media(min-width: 768px) {
+    header .intro {
+        padding-top: 200px;
+        max-width: 620px;
+    }
+
+    header .intro-logo {
+        max-width: 238px;
+        padding-bottom: 70px;
+    }
+
+    header .intro .intro-lead-in {
+        font-size: 50px;
+        font-style: normal;
+        line-height: 50px;
+    }
+
+    header .intro .intro-heading {
+        margin-bottom: 25px;
+        font-size: 90px;
+        font-weight: 600;
+    }
+}
+
+section {
+    padding: 50px 0;
+}
+
+section h3.section-subheading {
+    margin-bottom: 50px;
+    font-weight: normal;
+}
+
+@media(min-width: 768px) {
+    section {
+        padding: 50px 0;
+    }
+}
+
 footer .row {
     font-size: 12px;
     text-align: left;
@@ -24,6 +154,70 @@ footer .credits {
     font-size: 25px;
 }
 
-.feature-icon {
-    fill: #3F9DD8;
+#features .feature-text {
+    font-family: {{ site.data.template.font.primary }};
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+#features .feature-title {
+    font-weight: bold;
+}
+
+#features .feature-icon {
+    height: 130px;
+    position: relative;
+}
+
+#features .feature-icon img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);    
+}
+
+#features .feature-row {
+    padding-bottom: 30px;
+}
+
+#features .features-button {
+    text-align: center;
+    padding-top: 20px;
+}
+
+#features .features-button a {
+    background: #FFFFFF;
+    border: 1px solid #3C99EF;
+    border-radius: 2px;
+    color: #3C99EF;
+}
+
+#featurematrix .table {
+    font-weight: normal;
+    line-height: 57px;
+    font-family: {{ site.data.template.font.secondary }};
+
+}
+
+#featurematrix .table th {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgba(48, 48, 48, 0.5);
+}
+
+#featurematrix .table tbody tr {
+    border-top: 1px solid #D8D8D8;
+}
+
+footer {
+    font-size: 14px;
+    color: #FFFFFF !important;
+}
+
+footer quicklinks {
+    font-size: 14px;
+    color: #FFFFFF !important !important !important !important;    
 }
