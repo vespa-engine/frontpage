@@ -12,11 +12,13 @@ h3 .section-subheading {
     background-image: linear-gradient(-1deg, rgba(63,157,216,0.08) 0%, rgba(163, 195, 215, 0.08) 97%);
 }
 
-nav .navbar-default {
+.navbar-default {
     background-color: #3F9DD8;
+    padding: 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-nav .navbar-default .navbar-brand {
+.navbar-default .navbar-brand {
     background: transparent url({{ site.baseurl }}/img/Vespa-V2.png) no-repeat;
     background-size: contain;
     direction: ltr;
@@ -31,7 +33,7 @@ nav .navbar-default .navbar-brand {
     margin-left: 10px;
 }
 
-nav .navbar-default .nav li a {
+.navbar-default .nav li a {
     font-weight: bold;
     letter-spacing: 1px;
     color: #FFFFFF;
@@ -39,7 +41,7 @@ nav .navbar-default .nav li a {
     font-family: {{ site.data.template.font.primary }};
 }
 
-nav .navbar-default.navbar-shrink {
+.navbar-default.navbar-shrink {
     background-color: #3F9DD8;
 }
 
@@ -49,6 +51,8 @@ header {
 
 header .intro {
     max-width: 350px;
+    padding-top: 100px;
+    padding-bottom: 50px;
 }
 
 header .intro-logo {
@@ -92,6 +96,7 @@ header .intro .btn-xl {
 @media(min-width: 768px) {
     header .intro {
         padding-top: 200px;
+        padding-bottom: 200px;
         max-width: 620px;
     }
 
