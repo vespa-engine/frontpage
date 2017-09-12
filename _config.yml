@@ -9,7 +9,6 @@ github_username:  vespa-engine
 
 # Build settings
 markdown: kramdown
-theme: agency-jekyll-theme
 plugins:
   - jekyll-feed
 exclude:

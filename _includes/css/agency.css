@@ -25,7 +25,6 @@ p {
 
 p.large {
     font-size: 16px;
-    text-align: center;
 }
 
 a,
@@ -53,16 +52,17 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: {{ site.data.template.font.secondary }};
-    color: #3F9DD8;
+    text-transform: uppercase;
+    font-family: {{ site.data.template.font.primary }};
+    font-weight: 700;
 }
 
 .img-centered {
     margin: 0 auto;
 }
 
-.bg-light-blue {
-	background-image: linear-gradient(-1deg, rgba(63,157,216,0.08) 0%, rgba(163, 195, 215, 0.08) 97%);
+.bg-light-gray {
+    background-color: #f7f7f7;
 }
 
 .bg-darkest-gray {
@@ -73,7 +73,7 @@ h6 {
     border-color: #{{ site.data.template.color.primary }};
     text-transform: uppercase;
     font-family: {{ site.data.template.font.primary }};
-    font-weight: 600;
+    font-weight: 700;
     color: #fff;
     background-color: #{{ site.data.template.color.primary }};
 }
@@ -122,9 +122,10 @@ fieldset[disabled] .btn-primary.active {
     padding: 20px 40px;
     border-color: #{{ site.data.template.color.primary }};
     border-radius: 3px;
+    text-transform: uppercase;
     font-family: {{ site.data.template.font.primary }};
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
     color: #fff;
     background-color: #{{ site.data.template.color.primary }};
 }
@@ -171,22 +172,12 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default {
     border-color: transparent;
-    background-color: #3F9DD8;
+    background-color: #222;
 }
 
 .navbar-default .navbar-brand {
-    background: transparent url({{ site.baseurl }}/img/Vespa-V2.png) no-repeat;
-    background-size: contain;
-    direction: ltr;
-    text-indent: -9000px;
-    height: 40px;
-    width: 194px;
-    display: inline-block;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: bold;
+    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
     color: #{{ site.data.template.color.primary }};
-    margin-top: 12px;
-    margin-left: 10px;
 }
 
 .navbar-default .navbar-brand:hover,
@@ -215,10 +206,14 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .nav li a {
+    text-transform: uppercase;
     font-family: {{ site.data.template.font.primary }};
-    font-weight: bold;
+    font-weight: 400;
     letter-spacing: 1px;
     color: #fff;
+    -webkit-transition: all ease .35s;
+    -moz-transition: all ease .35s;
+    transition: all ease .35s;
 }
 
 .navbar-default .nav li a:hover,
@@ -262,7 +257,7 @@ fieldset[disabled] .btn-xl.active {
 
     .navbar-default.navbar-shrink {
         padding: 10px 0;
-	    background-color: #3F9DD8;
+        background-color: #222;
     }
 
     .navbar-default.navbar-shrink .navbar-brand {
@@ -274,7 +269,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: linear-gradient(0deg, #98C1DB 7%, #3F9DD8 100%);
+    background-image: url('{{ site.baseurl }}/img/header-bg.jpg');
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -283,85 +278,54 @@ header {
     -o-background-size: cover;
 }
 
-
-header .intro {
+header .intro-text {
     padding-top: 100px;
     padding-bottom: 50px;
-    max-width: 350px;
 }
 
-header .intro-logo {
-	max-width: 120px;
-	padding-bottom: 30px;
-}
-
-header .intro-button {
-	box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
-}
-
-header .intro-text {
-	line-height: 27px;
-	font-size: 16px;
-	padding-bottom: 60px;
-}
-
-header .intro .intro-lead-in {
+header .intro-text .intro-lead-in {
     margin-bottom: 25px;
     font-family: {{ site.data.template.font.secondary }};
     font-size: 22px;
-    font-style: normal;
+    font-style: italic;
     line-height: 22px;
 }
 
-header .intro .intro-heading {
+header .intro-text .intro-heading {
     margin-bottom: 25px;
+    text-transform: uppercase;
     font-family: {{ site.data.template.font.primary }};
     font-size: 50px;
-    font-style: normal;
+    font-weight: 700;
     line-height: 50px;
 }
 
-header .intro .btn-xl {
-	background: #FFFFFF;
-	border: 1px solid #3F9DD8;
-	border-radius: 2px;
-	font-family: HelveticaNeue;
-	font-size: 20px;
-	color: #3F9DD8;
-	font-weight: normal;
-}
-
 @media(min-width:768px) {
-    header .intro {
-        padding-top: 200px;
+    header .intro-text {
+        padding-top: 300px;
         padding-bottom: 200px;
-        max-width: 620px;
     }
 
-	header .intro-logo {
-		max-width: 238px;
-		padding-bottom: 70px;
-	}
-
-    header .intro .intro-lead-in {
+    header .intro-text .intro-lead-in {
         margin-bottom: 25px;
         font-family: {{ site.data.template.font.secondary }};
-        font-size: 50px;
-        font-style: normal;
-        line-height: 50px;
+        font-size: 40px;
+        font-style: italic;
+        line-height: 40px;
     }
 
-    header .intro .intro-heading {
-        margin-bottom: 25px;
+    header .intro-text .intro-heading {
+        margin-bottom: 50px;
+        text-transform: uppercase;
         font-family: {{ site.data.template.font.primary }};
-        font-size: 90px;
-        font-weight: 600;
+        font-size: 75px;
+        font-weight: 700;
         line-height: 75px;
     }
 }
 
 section {
-    padding: 50px 0;
+    padding: 100px 0;
 }
 
 section h2.section-heading {
@@ -371,21 +335,23 @@ section h2.section-heading {
 }
 
 section h3.section-subheading {
-    margin-bottom: 50px;
+    margin-bottom: 75px;
+    text-transform: none;
     font-family: {{ site.data.template.font.secondary }};
     font-size: 16px;
     font-style: italic;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 @media(min-width:768px) {
     section {
-        padding: 50px 0;
+        padding: 150px 0;
     }
 }
 
 .service-heading {
     margin: 15px 0;
+    text-transform: none;
 }
 
 #portfolio .portfolio-item {
@@ -688,6 +654,71 @@ section h3.section-subheading {
 
 aside.clients img {
     margin: 50px auto;
+}
+
+section#contact {
+    background-color: #222;
+    background-image: url('{{ site.baseurl }}/img/map-image.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+section#contact .section-heading {
+    color: #fff;
+}
+
+section#contact .form-group {
+    margin-bottom: 25px;
+}
+
+section#contact .form-group input,
+section#contact .form-group textarea {
+    padding: 20px;
+}
+
+section#contact .form-group input.form-control {
+    height: auto;
+}
+
+section#contact .form-group textarea.form-control {
+    height: 236px;
+}
+
+section#contact .form-control:focus {
+    border-color: #{{ site.data.template.color.primary }};
+    box-shadow: none;
+}
+
+section#contact::-webkit-input-placeholder {
+    text-transform: uppercase;
+    font-family: {{ site.data.template.font.primary }};
+    font-weight: 700;
+    color: #bbb;
+}
+
+section#contact:-moz-placeholder {
+    text-transform: uppercase;
+    font-family: {{ site.data.template.font.primary }};
+    font-weight: 700;
+    color: #bbb;
+}
+
+section#contact::-moz-placeholder {
+    text-transform: uppercase;
+    font-family: {{ site.data.template.font.primary }};
+    font-weight: 700;
+    color: #bbb;
+}
+
+section#contact:-ms-input-placeholder {
+    text-transform: uppercase;
+    font-family: {{ site.data.template.font.primary }};
+    font-weight: 700;
+    color: #bbb;
+}
+
+section#contact .text-danger {
+    color: #e74c3c;
 }
 
 footer {

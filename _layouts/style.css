@@ -1,4 +1,2 @@
 {% include css/vespa.css %}
-{% include css/bootstrap.min.css %}
-{% include css/agency.css %}
 {{ content }}
