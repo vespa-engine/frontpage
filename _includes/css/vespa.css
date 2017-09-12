@@ -1,15 +1,32 @@
-# Agency theme overrides
-h2 .section-heading,
-h2 .section-subheading,
-h3 .section-heading,
-h3 .section-subheading {
-    text-transform: none;
-    font-family: {{ site.data.template.font.secondary }};
-    color: #3F9DD8;
-}
-
 .bg-light-blue {
     background-image: linear-gradient(-1deg, rgba(63,157,216,0.08) 0%, rgba(163, 195, 215, 0.08) 97%);
+}
+
+section h2.section-heading,
+section h2.section-subheading,
+section h3.section-heading,
+section h3.section-subheading {
+    text-transform: none;
+    font-family: {{ site.data.template.font.secondary }};
+    font-weight: normal;
+    font-style: normal;
+}
+
+section h2.section-heading,
+section h3.section-heading {
+    font-size: 50px;
+    color: #3F9DD8;
+    margin-bottom: 5px;
+}
+
+section h2.section-subheading,
+section h3.section-subheading {
+    line-height: 26px;
+    margin-top: 0;
+}
+
+.text-muted {
+    color: #303030;
 }
 
 .navbar-default {
@@ -35,18 +52,20 @@ h3 .section-subheading {
 
 .navbar-default .nav li a {
     font-weight: bold;
+    font-size: 16px;
     letter-spacing: 1px;
     color: #FFFFFF;
     text-transform: none;
     font-family: {{ site.data.template.font.primary }};
 }
 
-.navbar-default.navbar-shrink {
-    background-color: #3F9DD8;
+.navbar-toggle {
+    margin-right: 45px;
 }
 
 header {
     background-image: linear-gradient(0deg, #98C1DB 7%, #3F9DD8 100%);
+    min-height: 100vh;
 }
 
 header .intro {
@@ -62,6 +81,8 @@ header .intro-logo {
 
 header .intro-button {
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 header .intro-long {
@@ -72,6 +93,10 @@ header .intro-long {
 
 header .intro .intro-lead-in {
     font-style: normal;
+    font-size: 22px;
+    line-height: 50px;
+    margin-bottom: 25px;
+    font-family: {{ site.data.template.font.secondary }};
 }
 
 header .intro .intro-heading {
@@ -169,6 +194,7 @@ footer .credits {
 
 #features .feature-title {
     font-weight: bold;
+    padding-bottom: 10px;
 }
 
 #features .feature-icon {
@@ -197,6 +223,8 @@ footer .credits {
     border: 1px solid #3C99EF;
     border-radius: 2px;
     color: #3C99EF;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 #featurematrix .table {
@@ -219,10 +247,59 @@ footer .credits {
 
 footer {
     font-size: 14px;
-    color: #FFFFFF !important;
+    color: #FFFFFF;
+    background-color: #3F9DD8;
+    line-height: 22px;
+    letter-spacing: 0;
 }
+
+footer .footer-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
 
 footer quicklinks {
     font-size: 14px;
-    color: #FFFFFF !important !important !important !important;    
+    color: #FFFFFF;
+}
+
+
+footer ul.quicklinks {
+    margin: 0;
+    padding: 0;
+}
+
+footer .footer-title {
+    color: #FFC43C;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+footer ul.quicklinks a {
+    color: #FFFFFF;
+}
+
+footer .quicklink-section {
+    padding: 0;
+    min-width: 120px;
+}
+
+footer .credits {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: normal;
+    text-align: right;
+    padding: 0;
+    font-family: {{ site.data.template.font.secondary }};
+}
+
+footer .credits a {
+    color: #FFFFFF;
+}
+
+footer .copyright {
+    color: #FFC43C;
 }
