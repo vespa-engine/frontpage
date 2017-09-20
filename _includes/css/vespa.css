@@ -136,6 +136,11 @@ header .intro .btn-xl {
         line-height: 50px;
     }
 
+    header .intro .intro-long {
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
     header .intro .intro-heading {
         margin-bottom: 25px;
         font-size: 90px;
