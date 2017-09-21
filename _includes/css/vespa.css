@@ -35,28 +35,39 @@ section h3.section-subheading {
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
+
+.navbar-default .navbar-header {
+    margin-left: 13px;
+}
+
 .navbar-default .navbar-brand {
     background: transparent url({{ site.baseurl }}/img/Vespa-V2.png) no-repeat;
     background-size: contain;
     direction: ltr;
     text-indent: -9000px;
-    height: 40px;
-    width: 194px;
+    height: 28px;
+    width: 100px;
     display: inline-block;
     font-family: {{ site.data.template.font.primary }};
     font-weight: bold;
     color: #{{ site.data.template.color.primary }};
-    margin-top: 12px;
+    margin-top: 16px;
     margin-left: 10px;
 }
 
 .navbar-default .nav li a {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 1px;
     color: #FFFFFF;
     text-transform: none;
     font-family: {{ site.data.template.font.primary }};
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover {
+    color: #FFC43C;
 }
 
 .navbar-toggle {
@@ -131,7 +142,7 @@ header .intro .btn-xl {
     }
 
     header .intro .intro-lead-in {
-        font-size: 50px;
+        font-size: 51px;
         font-style: normal;
         line-height: 50px;
     }
@@ -190,9 +201,9 @@ footer .credits {
 }
 
 #features .feature-text {
+    color: #303030;
     font-family: {{ site.data.template.font.primary }};
     font-size: 16px;
-    line-height: 18px;
     text-align: center;
     padding-bottom: 5px;
 }
@@ -211,7 +222,20 @@ footer .credits {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);    
+    transform: translate(-50%, -50%);  
+    height: 80px;     
+}
+
+#features .link {
+    min-height: 235px;
+}
+
+#features .link a {
+    text-decoration: none;
+}
+
+#features .link:hover {
+    background: #E1F3FD;
 }
 
 #features .feature-row {
