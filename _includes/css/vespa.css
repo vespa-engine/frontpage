@@ -145,6 +145,7 @@ header .intro-down-arrow {
 
 @media (min-height: 1150px) {
     header .intro-down-arrow {
+        # Hard code top: 1150 (height of top section) - 20 (bottom) - 36 (image height) = 1094        
         top: 1094px;
     }
 }
