@@ -74,6 +74,15 @@ section h3.section-subheading {
     margin-right: 45px;
 }
 
+/* Trick to prevent anchored links to hide heading behind navbar */
+section[id]:before {
+    display: block;
+    content: " ";
+    margin-top: -80px;
+    height: 100px;
+    visibility: hidden;
+}
+
 header {
     background-image: linear-gradient(0deg, #98C1DB 7%, #3F9DD8 100%);
     min-height: 1150px;
@@ -145,7 +154,7 @@ header .intro-down-arrow {
 
 @media (min-height: 1150px) {
     header .intro-down-arrow {
-        # Hard code top: 1150 (height of top section) - 20 (bottom) - 36 (image height) = 1094        
+        /* Hard code top: 1150 (height of top section) - 20 (bottom) - 36 (image height) = 1094 */
         top: 1094px;
     }
 }
