@@ -351,6 +351,7 @@ footer ul.quicklinks a {
 
 footer .quicklink-section {
     padding: 0;
+    min-width: 120px;
 }
 
 footer .credits {
