@@ -345,20 +345,18 @@ footer .footer-title {
 }
 
 footer ul.quicklinks a {
+    font-size: 14px;
     color: #FFFFFF;
 }
 
 footer .quicklink-section {
     padding: 0;
-    min-width: 120px;
 }
 
 footer .credits {
     font-size: 12px;
-    line-height: 14px;
     font-weight: normal;
     text-align: right;
-    padding: 0;
     font-family: {{ site.data.template.font.secondary }};
 }
 
@@ -366,6 +364,6 @@ footer .credits a {
     color: #FFFFFF;
 }
 
-footer .copyright {
+footer .credits span {
     color: #FFC43C;
 }
