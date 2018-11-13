@@ -17,3 +17,8 @@ In order to add a (temporary) announcement banner on top of the page, add the fo
 
 The end result will look like this:
 ![Announcement screenshot](_announcement_sample.png)
+
+## Notes
+```bundle exec jekyll serve``` to serve on http://localhost:4000/
+
+Update Gemfile and/or run ```bundle update github-pages``` (example) to update dependencies 
