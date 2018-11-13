@@ -324,6 +324,10 @@ footer .credits {
     border-top: 1px solid #D8D8D8;
 }
 
+#meetups a {
+    color: #FFFFFF;
+}
+
 footer {
     font-size: 14px;
     color: #FFFFFF;
