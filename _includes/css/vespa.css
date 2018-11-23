@@ -38,9 +38,24 @@ section h3.section-subheading {
      width: 100%;
 }
 
-#banner a {
+#banner, #mc_embed_signup a {
     color: #FFFFFF;
     text-decoration: underline;
+}
+
+#mc_embed_signup h2 {
+    text-align: center;
+    text-transform: none;
+    font-weight: normal !important;
+}
+
+#mc_embed_signup button, input, optgroup, select, textarea {
+    color: #000000;
+}
+
+.mc_fieldset input[type="checkbox"] {
+    position: relative !important;
+    margin-left: 0 !important;
 }
 
 .navbar-default {
