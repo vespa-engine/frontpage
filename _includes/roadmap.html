@@ -1,0 +1,86 @@
+
+
+<style>
+div.row {padding-bottom: 10px;}
+</style>
+
+<section id="roadmap" class="bg-light-blue">
+  <div class="intro container">
+    <div class="col-lg-12 text-center">
+      <div class="h1">Roadmap</div>
+    </div>
+    <div class="row">
+      <div class="h2 col-lg-12 text-left">2019 Q2</div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <strong>Faster rank function without term position</strong></br>
+        Using term position information normally improves relevance.
+        Not all applications need this / requires higher query throughput
+      </div>
+    </div><div class="row">
+      <div class="col-lg-12 text-left">
+        <strong>Export metrics to monitoring system</strong></br>
+        Vespa processes on nodes expose a JSON metrics interface.
+        These metrics can be scraped and integrated with monitoring systems.
+        With the new metrics proxy, all metrics on a node are aggregated in one interface,
+        and renamed as needed for easier integration
+      </div>
+    </div><div class="row">
+      <div class="col-lg-12 text-left">
+        <strong>Multiphased grouping execution in backend</strong></br>
+        Currently Vespa executes the full grouping in the content node in a single phase
+        if that is necessary.
+        This is necessary if at any level there is ordering on something else than rank.
+        In the case of multiple levels with different ordering, this is not optimal.
+        Instead do multi pass in the content node
+      </div>
+    </div><div class="row">
+      <div class="col-lg-12 text-left">
+        <strong>System Test framework</strong></br>
+        Enable external contributors to validate code at system level
+      </div>
+    </div><div class="row">
+      <div class="col-lg-12 text-left">
+        <strong>TLS on internal protocols</strong></br>
+        All intra-process communication is secured using TLS
+      </div>
+    </div><div class="row">
+      <div class="col-lg-12 text-left">
+        <strong>Support continuously or periodically trained machine learned models in ranking</strong></br>
+        Enables pulling models (TensorFlow/ONNX/XGBoost) from external storage
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="h2 col-lg-12 text-left">2019 Q1</div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <strong>Release Vespa 7</strong></br>
+        First major version bump of Vespa in >2 years that allows us to break backwards compatibility.
+        Necessary to clean up deprecated APIs/code, migrate to Java 11
+        and prepare for the new, faster Java release cycle.
+        This modernizes code and improves security for Vespa applications.
+        <a href="https://docs.vespa.ai/documentation/vespa7-release-notes.html">Release notes</a>
+      </div>
+    </div><div class="row">
+      <div class="col-lg-12 text-left">
+        <strong>Vespa advanced ranking models: Partial update of document tensor cells</strong></br>
+        Support online and reinforcement learning in models with large parameter spaces,
+        and continuous updates of individual signals stored in tensors.
+        <a href="https://docs.vespa.ai/documentation/reference/document-json-format.html#tensor-modify">
+        API documentation</a>
+      </div>
+    </div><div class="row">
+      <div class="col-lg-12 text-left">
+        <strong>Boolean document field type</strong></br>
+        Support modelling data more precisely to save memory and memory bandwidth.
+        Read more on
+        <a href="https://docs.vespa.ai/documentation/performance/feature-tuning.html#boolean-numeric-text-attribute">
+        selecting field type</a>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
