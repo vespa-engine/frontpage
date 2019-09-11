@@ -1,5 +1,5 @@
 ---
 # Intentionally empty - edit the theme's home layout instead
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: meet-vespa-team
+layout: documentation/automatic-deployments
 ---
