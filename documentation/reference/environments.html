@@ -1,0 +1,52 @@
+---
+# Copyright 2018 Yahoo Inc. Licensed under the terms of the Apache 2.0 license. See LICENSE in the project root.
+title: Environments
+---
+
+<table class="table">
+  <tr><th style="width:100px">Name</th><th>Description</th><th>Expiry</th><th>Cluster sizes</th></tr>
+  <tr>
+    <td id="prod"><code>prod</code></td>
+    <td>Hosts all production deployments.</td>
+    <td>No expiry</td>
+    <td><code>max(2, spec)</code></td>
+  </tr>
+  <tr>
+    <td id="test"><code>test</code></td>
+    <td>Used for <a href="../automated-deployments.html#system-test">automated system tests</a>.</td>
+    <td>2 hours</td>
+    <td><code>1</code></td>
+  </tr>
+  <tr>
+    <td id="staging"><code>staging</code></td>
+    <td>Used for <a href="../automated-deployments.html#staging-test">automated staging tests</a>.</td>
+    <td>6 hours</td>
+    <td><code>min(max(2, 0.1 * spec), spec)</code></td>
+  </tr>
+  <tr>
+    <td id="dev"><code>dev</code></td>
+    <td>Used for development testing.</td>
+    <td>14 days</td>
+    <td><code>1</code></td>
+  </tr>
+  <tr>
+    <td id="perf"><code>perf</code></td>
+    <td>Used for performance testing.</td>
+    <td>7 days</td>
+    <td><code>min(3, spec)</code></td>
+  </tr>
+</table>
+
+
+<h3>Production</h3>
+
+<p>Deployments in <code>prod</code> must have at least one more node than required to handle peak load.
+A cluster is a <em>container</em> or <em>content</em> cluster,
+and a regular application has a container <em>and</em> a content cluster.
+A minimal, typical <code>prod</code> deployment therefore has 4 nodes.</p>
+
+<h3>Other environments</h3>
+
+<p>To keep the specified cluster sizes, for very particular testing, outside <code>prod</code>, specify
+<a href="services-hosted.html#environment-and-region-variants">environment and region variants</a>.
+Example: <pre>&lt;nodes deploy:environment="perf" count="5"/&gt;</pre>
