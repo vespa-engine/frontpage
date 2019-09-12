@@ -1,0 +1,315 @@
+---
+title: deployment.xml
+---
+
+<p>
+<code>deployment.xml</code> resides at the root of the
+<a href="https://docs.vespa.ai/documentation/cloudconfig/application-packages.html">application package</a>
+and defines which environments and regions the application
+is deployed to during
+  <a href="../automated-deployments.html">automated application deployment.</a></p>
+
+<p>Deployment progresses through the <code>test</code> and <code>staging</code>
+environments to the <code>prod</code> environments listed in deployment.xml.
+Test steps are added if production deployments are set up, even if not explicitly listed.
+<code>deployment.xml</code> is not used for <code>dev</code> and <code>perf</code> environments,
+as these are deployed manually.
+</p>
+
+<p>An example deployment.xml:
+<pre>
+&lt;deployment version="1.0"&gt;
+  &lt;notifications&gt;
+    &lt;email address="user@domain.com" when="failing" /&gt;
+    &lt;email role="author" /&gt;
+  &lt;/notifications&gt;
+  &lt;block-change revision="false" days="mon,wed-fri" hours="16-23" time-zone="UTC"/&gt;
+  &lt;prod&gt;
+    &lt;region active="true"&gt;us-east-3&lt;/region&gt;
+    ...
+    &lt;delay hours="3" minutes="7" seconds="13"/&gt;
+    &lt;parallel&gt;
+      &lt;region active="true"&gt;us-west-1&lt;/region&gt;
+      ...
+    &lt;/parallel&gt;
+  &lt;/prod&gt;
+  &lt;endpoints&gt;
+    &lt;endpoint container-id="my-global-query-endpoint"&gt;
+      &lt;region&gt;us-east-3&lt;/region&gt;
+      ...
+    &lt;/endpoint&gt;
+  &lt;/endpoints&gt;
+&lt;/deployment&gt;
+</pre>
+</p>
+
+
+<h2 id="deployment">deployment</h2>
+<p>
+The root element. Attributes:
+<table class="table">
+  <tr>
+    <th style="width:150px">Name</th>
+    <th>Values</th>
+    <th>Mandatory</th>
+  </tr>
+
+  <tr>
+    <td>version</td>
+    <td>1.0</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>major-version</td>
+    <td>The major version number this application is valid for.
+    Do not specify except to work around problems with a new major version.</td>
+    <td>No</td>
+  </tr>
+</table>
+</p>
+
+
+<h2 id="notifications">notifications</h2>
+<p>
+In <code>&lt;deployment&gt;</code>. If present, allows notifications for failing jobs.
+A default setting for when to send notifications can be specified here; otherwise, the
+default is to send only for failing jobs which are deploying a new commit. 
+
+<table class="table">
+  <tr><th style="width:150px">Name</th><th>Values</th><th>Mandatory</th></tr>
+  <tr>
+    <td>when
+      <td>Set to <code>failing</code> to default to sending notifications whenever a job fails.
+    <td>No: Default is <code>failing-commit</code>
+  </tr>
+</table>
+</p>
+
+
+<h2 id="email">email</h2>
+<p>
+In <code>&lt;notifications&gt;</code>. Causes an email to be sent for failing jobs,
+as specified under <a href="#notifications">notifications</a>. 
+Email can be sent to static email addresses, or to certain roles which are evaluated when an email is to be sent. 
+Each <code>&lt;email&gt;</code> element must specify <em>either</em>
+<code>address="..."</code> <em>or</em> <code>role="..."</code>,
+and <em>may</em> override the conditions for when to be notififed. 
+
+<table class="table">
+  <tr><th style="width:150px">Name</th><th>Values</th><th>Mandatory</th></tr>
+  <tr>
+    <td>address
+    <td>An email address to notify of failing jobs.
+    <td>Somewhat: Must be present if <code>role</code> is not.
+  </tr>
+  <tr>
+    <td>role
+    <td>The only supported value is <code>author</code>, which evaluates to the author of the git commit being deployed. 
+    <td>Somewhat: Must be present if <code>address</code> is not.
+  </tr>
+  <tr>
+    <td>when
+    <td>Overrides the default conditions for sending notifications, for this email recipient.
+      Use <code>failing</code> for any failing job, or <code>failing-commit</code> for jobs failing on new commits only.
+    <td>No: Default value is inherited from the parent <a href="#notifications">notifications</a>.
+  </tr>
+</table>
+This example configures notifications to be sent for all failing jobs by default, to "user@domain.com",
+and to the git commit author only on failing commits:
+<pre>
+&lt;notifications when="failing"&gt;
+  &lt;email address="user@domain.com" /&gt;
+  &lt;email role="author" when="failing-commit" /&gt;
+&lt;/notifications&gt;
+</pre>
+</p>
+
+
+
+<h2 id="block-change">block-change</h2>
+<p>Blocks changes from being deployed to production in the matching time interval.
+Changes are nevertheless tested while blocked.
+This tag must be placed after any <code>&lt;test&gt;</code> and <code>&lt;staging&gt;</code> tags,
+and before <code>&lt;prod&gt;</code>.
+By default, both application revision changes and Vespa platform changes (upgrades)
+are blocked. It is possible to block just one kind of change using the "revision"
+"version" boolean attributes.
+</p>
+
+<table class="table">
+  <tr><th style="width:150px">Name</th><th>Values</th><th>Mandatory</th></tr>
+  <tr>
+    <td>revision
+    <td>Set to <code>false</code> to allow application revision changes during the block period set by this.
+    <td>No: Default is <code>true</code>
+  </tr>
+  <tr>
+    <td>version
+    <td>Set to <code>false</code> to allow Vespa version changes during the block period set by this.
+    <td>No: Default is <code>true</code>
+  </tr>
+  <tr>
+    <td>days
+    <td>A spec of the days this block if effective - a comma-separated list of single days or day intervals
+        where the start and end day are separated by a dash and are inclusive. Each day is identified by its english
+        name or three-letter abbreviation.
+    <td>Yes.
+  </tr>
+  <tr>
+    <td>hours
+    <td>A spec of the hours this block if effective - a comma-separated list of single hours or hour intervals
+        where the start and end hour are separated by a dash and are inclusive. Each hour is identified by a number
+        from 0 to 23.
+    <td>Yes.
+  </tr>
+  <tr>
+    <td>time-zone
+    <td>The name of the time zone used to interpret the hours attribute.
+        Time zones are full names or short forms, when the latter is unambiguous.
+        See
+        <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZoneId.html#of-java.lang.String-">ZoneId.of</a>
+        for the full spec of acceptable values.
+    <td>No: Default is UTC.
+  </tr>
+</table>
+
+<p>The below example blocks all changes on weekends, and blocks revisions outside working hours, in the PT time zone:</p>
+<p>
+<pre>
+&lt;block-change days="sat-sun" hours="0-23" time-zone="America/Los_Angeles"/&gt;
+&lt;block-change revision="false" days="mon-fri,sat,sun" hours="0-8,16-23" time-zone="America/Los_Angeles"/&gt;
+</pre>
+</p>
+
+
+<h2 id="test">test</h2>
+<p>
+In <code>&lt;deployment&gt;</code>.
+If present, the application is deployed to the <a href="environments.html#test"><code>test</code></a> environment, and system tested there, even if there are no staging or prod zones.
+</p>
+
+
+
+<h2 id="staging">staging</h2>
+<p>
+In <code>&lt;deployment&gt;</code>.
+If present, the application is deployed to the <code>test</code> and <a href="environments.html#staging"><code>staging</code></a> environments, and tested there, even if there are no prod zones.
+</p>
+
+
+
+<h2 id="prod">prod</h2>
+
+<p>
+In <code>&lt;deployment&gt;</code>.
+If present, the application is deployed to the production regions listed inside this element,
+after deployments and tests in the <code>test</code> and <code>staging</code> environments. Attributes:
+</p>
+
+
+
+<h2 id="region">region</h2>
+<p>
+In <code>&lt;prod&gt;</code>.
+The application is deployed to the production region with id contained in this element. Attributes:
+<table class="table">
+  <tr><th style="width:150px">Name</th><th>Values</th><th>Mandatory</th></tr>
+  <tr>
+    <td>active</td>
+    <td>Whether this region should receive traffic from the global endpoint of this application.
+      This is useful when adding a new region to an application which is not ready to receive traffic yet.</td>
+    <td>Yes</td>
+  </tr>
+</table>
+To remove a deployment from a region, remove the region from the <code>&lt;prod&gt;</code> element, and
+add a <em>deployment-removal</em>
+<a href="http://docs.vespa.ai/documentation/reference/validation-overrides.html">
+validation override</a>. Example:
+<pre>
+&lt;validation-overrides&gt;
+  &lt;allow until="2019-11-23"&gt;deployment-removal&lt;/allow&gt;
+&lt;/validation-overrides&gt;
+</pre>
+</p>
+
+
+
+<h2 id="delay">delay</h2>
+<p>
+In <code>&lt;prod&gt;</code>.
+Introduces a delay between two deployments.
+This may be useful to allow some grace time to discover errors before deploying a change in additional zones.
+The maximum total delay is 24 hours.
+The delay can be specified as any combination of hour, minute and seconds attributes.
+</p>
+
+
+
+<h2 id="parallel">parallel</h2>
+<p>
+In <code>&lt;prod&gt;</code>.
+Deploys to a list of regions in parallel. Multiple <code>&lt;parallel&gt;</code> elements
+are permitted. The following example will deploy
+to <code>us-west-1</code> first, then to <code>us-east-3</code> and <code>us-central-1</code>
+simultaneously, and, finally to <code>eu-west-1</code>, once both parallel deployments
+have completed:
+</p>
+<p>
+<pre>
+&lt;region active="true"&gt;us-west-1&lt;/region&gt;
+&lt;parallel&gt;
+  &lt;region active="true"&gt;us-east-3&lt;/region&gt;
+  &lt;region active="true"&gt;us-central-1&lt;/region&gt;
+&lt;/parallel&gt;
+&lt;region active="true"&gt;eu-west-1&lt;/region&gt;
+</pre>
+</p>
+
+
+
+<h2 id="endpoints">endpoints</h2>
+<p>
+In <code>&lt;deployment&gt;</code>.  Contains one or more <a href="#endpoint"><code>&lt;endpoint&gt;</code></a> elements
+that specify global endpoints that should be created for the application.
+</p>
+
+<h2 id="endpoint">endpoint</h2>
+<p>
+Specifies a global endpoint for this application. Each endpoint will point to
+the regions that are declared in the endpoint. If no regions are specified, the
+endpoint defaults to the regions declared in the
+<code>&lt;prod&gt;</code> element. The following example creates a default
+endpoint to all regions, and a <em>us</em> endpoint pointing only to US regions.
+</p>
+<p>
+<pre>
+&lt;endpoints&gt;
+  &lt;endpoint container-id="my-global-query-endpoint"/&gt;
+  &lt;endpoint id="us" container-id="my-global-query-endpoint"&gt;
+    &lt;region&gt;us-east-3&lt;/region&gt;
+    &lt;region&gt;us-west-1&lt;/region&gt;
+  &lt;/endpoint&gt;
+&lt;/endpoints&gt;
+</pre>
+</p>
+
+<table class="table">
+  <tr><th style="width:150px">Name</th><th>Values</th><th>Mandatory</th></tr>
+  <tr>
+    <td>id</td>
+    <td>
+      The identifier for the endpoint.  This will be part of the endpoint name that is generated.
+      If not specified, the endpoint will be the default global endpoint for the application.
+    </td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>container-id</td>
+    <td>
+      The id of the <a href="https://docs.vespa.ai/documentation/reference/services-container.html">container cluster</a>
+      to which requests to the global endpoint is forwarded.
+    </td>
+    <td>Yes</td>
+  </tr>
+</table>
+</p>
