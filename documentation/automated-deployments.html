@@ -5,9 +5,11 @@ title: Automated Deployments
 <p>This document explains the process - and safety mechanisms - which allows application changes and Vespa platform
 releases to be continuously deployed to production.</p>
 
+<h2 id="continous-deployment-on-vespa">Continous deployment on Vespa</h2>
+
 <p>
 Each application package build which is submitted to hosted Vespa constitutes an application change which
-must be tested and, if found healthy, <a href="reference/deployment.html">deployed</a>.
+must be tested and, if found healthy, deployed.
 Similarly, each change to the Vespa platform, by the Vespa team, must be tested and deployed for all the hosted applications.
 Hosted Vespa automates all these tests and deployments, with features including:
 <ul>
@@ -22,6 +24,47 @@ With <em>Continuous Integration (CI)</em> <!-- link to something later -->
 that builds and submits changes to the application as they are committed, hosted Vespa thus provides
 full-fledged Continuous Deployment (CD) of all its applications, both for application developers, and for the Vespa team.
 </p>
+
+<h2 id="setting-up-deployment-to-production">Setting up deployment to production</h2>
+
+<p>Follow these steps to set up deployment to production of your application.</p>
+
+<h3 id="create-deployment-xml">1. Create deployment.xml</h3>
+
+<p>Create a <a href="reference/deployment.html">deployment.xml</a> file alongside services.xml to configure where
+and when you want to deploy.</p>
+
+<h3 id="create-system-and-staging-tests">2. Create system and staging tests</h3>
+
+<p>Create at least one <a href="#system-tests">system</a>, and one <a href="#staging-tests">staging</a> test
+if your application don't have any. You can use the ones in
+<a href="https://github.com/vespa-engine/sample-apps/tree/master/basic-search-hosted">basic-search-hosted</a>
+as a starting point. As you add more functionality in your application you should add more tests.</p>
+
+<h3 id="set-up-a-deployment-job">3. Set up a deployment job</h3>
+
+<p>In your preferred continuous build tool, set up a job which builds your Vespa application and ships it to the
+Vespa cloud. Typically you'll want to trigger this job by a merge to the main branch in the source control system
+where you store the Vespa application repository.</p>
+
+<p>The job should execute the following:</p>
+
+<pre>
+mvn clean vespa:compileVersion
+mvn -P fat-test-application \
+  package vespa:submit \
+  -Dvespaversion="$(cat target/vespa.compile.version)"  \
+  -Drepository=$(git config --get remote.origin.url) \
+  -Dbranch=$(git rev-parse --abbrev-ref HEAD) \
+  -Dcommit=$(git rev-parse HEAD) \
+  -DauthorEmail=$(git log -1 --format=%aE)
+</pre>
+
+<p>If you need a Docker image in which to run this you can use <code>vespaengine/vespa-pipeline</code>.</p>
+
+<p>Once this is set up you can make any change to your application in production simply by checking in
+the change to your application source repository. The rest of this document will explain how deployments are
+orchestrated and cover some common topics around continuous deployment in stateful systems.</p>
 
 
 <h2 id="deployment-orchestration">Deployment orchestration</h2>
