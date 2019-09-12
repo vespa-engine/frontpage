@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+{% include documentation-header.html %}
+</head>
+
+<body id="page-top" class="index">
+
+<!-- Fixed navbar -->
+{% include nav.html %}
+
+<section>
+
+<div class="row">
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+<h1>{{ page.title | escape }}</h1>
+
+{{ content }}
+
+</div>
+</div>
+
+</section>
+
+{% include footer.html %}
+{% include js.html %}
+</body>
+</html>
