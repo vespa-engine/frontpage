@@ -25,23 +25,22 @@ as these are deployed manually.
   &lt;/notifications&gt;
   &lt;block-change revision="false" days="mon,wed-fri" hours="16-23" time-zone="UTC"/&gt;
   &lt;prod&gt;
-    &lt;region active="true"&gt;us-east-3&lt;/region&gt;
+    &lt;region active="true"&gt;us-east-1c&lt;/region&gt;
     ...
     &lt;delay hours="3" minutes="7" seconds="13"/&gt;
     &lt;parallel&gt;
-      &lt;region active="true"&gt;us-west-1&lt;/region&gt;
+      &lt;region active="true"&gt;us-west-1c&lt;/region&gt;
       ...
     &lt;/parallel&gt;
   &lt;/prod&gt;
   &lt;endpoints&gt;
     &lt;endpoint container-id="my-global-query-endpoint"&gt;
-      &lt;region&gt;us-east-3&lt;/region&gt;
+      &lt;region&gt;us-east-1c&lt;/region&gt;
       ...
     &lt;/endpoint&gt;
   &lt;/endpoints&gt;
 &lt;/deployment&gt;
 </pre>
-</p>
 
 
 <h2 id="deployment">deployment</h2>
@@ -185,7 +184,8 @@ are blocked. It is possible to block just one kind of change using the "revision
 <h2 id="test">test</h2>
 <p>
 In <code>&lt;deployment&gt;</code>.
-If present, the application is deployed to the <a href="environments.html#test"><code>test</code></a> environment, and system tested there, even if there are no staging or prod zones.
+If present, the application is deployed to the <a href="environments.html#test"><code>test</code></a> environment,
+and system tested there, even if there are no staging or prod zones.
 </p>
 
 
@@ -193,7 +193,8 @@ If present, the application is deployed to the <a href="environments.html#test">
 <h2 id="staging">staging</h2>
 <p>
 In <code>&lt;deployment&gt;</code>.
-If present, the application is deployed to the <code>test</code> and <a href="environments.html#staging"><code>staging</code></a> environments, and tested there, even if there are no prod zones.
+If present, the application is deployed to the <code>test</code> and
+<a href="environments.html#staging"><code>staging</code></a> environments, and tested there, even if there are no prod zones.
 </p>
 
 
@@ -211,7 +212,8 @@ after deployments and tests in the <code>test</code> and <code>staging</code> en
 <h2 id="region">region</h2>
 <p>
 In <code>&lt;prod&gt;</code>.
-The application is deployed to the production region with id contained in this element. Attributes:
+The application is deployed to the production <a href="zones.html">region</a> with id contained in this element.
+Attributes:
 <table class="table">
   <tr><th style="width:150px">Name</th><th>Values</th><th>Mandatory</th></tr>
   <tr>
