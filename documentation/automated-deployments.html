@@ -60,7 +60,8 @@ mvn -P fat-test-application \
   -DauthorEmail=$(git log -1 --format=%aE)
 </pre>
 
-<p>If you need a Docker image in which to run this you can use <code>vespaengine/vespa-pipeline</code>.</p>
+<p>The deployment job must have access to the private key of your application which is pointed to from the pom.xml.
+If you need a Docker image in which to run this you can use <code>vespaengine/vespa-pipeline</code>.</p>
 
 <p>Once this is set up you can make any change to your application in production simply by checking in
 the change to your application source repository. The rest of this document will explain how deployments are
