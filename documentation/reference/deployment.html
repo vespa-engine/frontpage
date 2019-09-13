@@ -25,17 +25,17 @@ as these are deployed manually.
   &lt;/notifications&gt;
   &lt;block-change revision="false" days="mon,wed-fri" hours="16-23" time-zone="UTC"/&gt;
   &lt;prod&gt;
-    &lt;region active="true"&gt;us-east-1c&lt;/region&gt;
+    &lt;region active="true"&gt;aws-us-east-1c&lt;/region&gt;
     ...
     &lt;delay hours="3" minutes="7" seconds="13"/&gt;
     &lt;parallel&gt;
-      &lt;region active="true"&gt;us-west-1c&lt;/region&gt;
+      &lt;region active="true"&gt;aws-us-west-1c&lt;/region&gt;
       ...
     &lt;/parallel&gt;
   &lt;/prod&gt;
   &lt;endpoints&gt;
     &lt;endpoint container-id="my-global-query-endpoint"&gt;
-      &lt;region&gt;us-east-1c&lt;/region&gt;
+      &lt;region&gt;aws-us-east-1c&lt;/region&gt;
       ...
     &lt;/endpoint&gt;
   &lt;/endpoints&gt;
