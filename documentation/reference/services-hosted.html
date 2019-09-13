@@ -16,7 +16,7 @@ In a standalone deployment, nodes for a cluster are specified by listing each no
 <p><strong>Subelements:</strong> <a href="#node-resources">resources</a> (&lt;node&gt; is not allowed).</p>
 <strong>Attributes:</strong>
 <ul>
-  <li><strong>count</strong>: Non-negative integer. The number of nodes of the cluster.
+  <li><strong>count</strong>: Positive integer. The number of nodes of the cluster.
 </ul>
 <p>
 In addition there are some attributes for specific cluster types, listed below.
@@ -118,7 +118,7 @@ In most cases, there is no need to specify this explicitly.
 
 
 
-<h2 id="environment-and-region-variants">Environment and region variants</h2>
+<h2 id="instance-environment-and-region-variants">Instance, environment and region variants</h2>
 
 <p>Application packages support defining different configuration settings
 for different <em>instances</em>, <em>environments</em> and <em>regions</em>.
@@ -203,6 +203,7 @@ and in region <em>us-east-3</em>, the config is different.
 
 
 <h2 id="controllers">controllers</h2>
+
 <p>Under <code>content</code> provides control over the nodes used as cluster controllers in this cluster on hosted Vespa.
 If this element is not specified, 3 nodes from the content cluster are assigned as cluster controllers
 (from different groups if applicable). If this is specified, there is one mandatory sub-element,
