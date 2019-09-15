@@ -12,6 +12,12 @@ defaults:
     values:
       layout: "documentation"
       index: true
+  -
+    scope:
+      path: "/pages/*"
+    values:
+      layout: "page"
+      index: true
 
 # Build settings
 markdown: kramdown
