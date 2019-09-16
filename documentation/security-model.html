@@ -2,25 +2,20 @@
 title: "Security model"
 ---
 
-<p>This document explains the security model of the Vespa cloud.</p>
+<p>This document details the security model of the Vespa cloud.</p>
+
 
 <h2 id="control-plane">Control plane</h2>
 
-<p>The following explains how access to management features are limited.</p>
+<p>The following explains how access to management features in Vespa is controlled.</p>
 
-<h3 id="access-to-the-vespa-console">Access to the Vespa console</h3>
+<p><b>Access to the Vespa console</b></p>
 
 <p>Console access is available to authenticated users only.
-Access is granted based on role membership as defined in <a href="#roles">roles</a>.</p>
+This is bootstrapped by creating a <i>tenant</i> with an <i>owner</i>.
+From this, additional users, as well as <i>applications</i> can be created under the tenant.
+Access is granted based membership in the following roles:
 
-<h3 id="application-deployment">Application deployment</h3>
-
-<p>Deploying applications can be done by any user member of a role with deploy privileges (see <a href="#roles">roles</a>).
-Additionally every application can have deploy keys which can be used by the maven deploy plugin or command line tool.</p>
-
-<h3 id="roles">Roles</h3>
-
-<p>
 <table class="table">
     <tr><td>tenant owner</td><td>Inherits tenant admin, and can additionally delete tenant</td></tr>
     <tr><td>tenant admin</td><td>Inherits tenant operator and application admin. Can also manage tenant metadata and delete applications</td></tr>
@@ -30,46 +25,55 @@ Additionally every application can have deploy keys which can be used by the mav
     <tr><td>application developer</td><td>Inherits application reader. Can also deploy applications to development zones.</td></tr>
     <tr><td>application reader</td><td>Can see information about an application.</td></tr>
 </table>
-</p>
 
-<h2 id="application-access-control">Application access control</h2>
+<p><b>Application deployment</b></p>
+
+<p>Running applications are changed through <i>application deployment</i>. Deployments are autorized by possessing
+a <b>private key</b> which is referenced from pom.xml or the command line. A key pair is generated for an application
+in the console, and the private key file is referenced by the property <code>privateKeyFile</code>.</p>
+
+<p>This is used both in
+<a href="reference/zones.html">manual deployments</a> to the dev/perf zones and by the deployment job in
+<a href="automated-deployments.html">automated deployments</a> to production.
+Manual deployments can also be done in the console by a
+user having the requisite user role.</p>
+
+
+<h2 id="data-plane">Data plane</h2>
 
 <p>All application endpoints are secured with mutual TLS.</p>
 
-<h3 id="server-certificate">Server certificate</h3>
+<p><b>Server certificate</b></p>
 
 <p>On first time deployment a server certificate identifying the application will be provisioned.
 This certificate will be automatically set up on all application endpoints.
 The certificate is signed by DigiCert or Globalsign.</p>
 
-<h3 id="client-certificate">Client certificate</h3>
+<p><b>Client certificate</b></p>
 
 <p>To enable TLS client side authentication:</p>
 
 <ol>
-    <li>Add trusted certificates (or issuer certificates) to the file <em>[application-package]/security/clients.pem</em>.
-    <li>Add a tag to the container element(s) in services.xml: <pre>&lt;client-authorize/&gt;</pre>.
+    <li>Add trusted certificates (or issuer certificates) to the file <code>[application-package]/security/clients.pem</code>.
+    <li>Add a tag to the container element(s) in services.xml: <code>&lt;client-authorize/&gt;</code>.
 </ol>
 
-<p>With this, only clients presenting a valid certificate will be able to access the application endpoints.</p>
-
-<p class="alert-warning">
-Note: in order to test application deployments, another trusted client certificate is added by hosted Vespa test/staging zones.
+<p>With this, only clients presenting a valid certificate will be able to access the application endpoints.
+In order to test application deployments, another trusted client certificate is added by hosted Vespa test/staging zones.
 This will not affect production deployments.
 </p>
 
-<h3 id="internal-node-to-node-communication">Internal node to node communication</h3>
+<h2 id="application-isolation">Application isolation</h2>
 
-<p>All internal communication between nodes in an application is secured with several layers:</p>
+<p>All application nodes run as separate isolated Docker containers.</p>
+
+<p>All internal communication between nodes in an application is secured in two layers:</p>
 
 <ul>
     <li>Network ACLs (iptables) allowing only local communication within the application.</li>
-    <li>Mutual TLS with authorization only allowing nodes from the same application.</li>    
+    <li>Mutual TLS with authorization only allowing nodes from the same application.</li>
 </ul>
 
-<h2 id="container-isolation">Cnotainer isolation</h2>
-
-<p>All application nodes run as separate isolated Docker containers.</p>
 
 <h2 id="data-at-rest">Data at rest</h2>
 
