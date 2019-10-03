@@ -6,7 +6,6 @@ title: Automated Deployments
 releases to be continuously deployed to production.</p>
 
 <h2 id="continous-deployment-on-vespa">Continous deployment on Vespa</h2>
-
 <p>
 Each application package build which is submitted to hosted Vespa constitutes an application change which
 must be tested and, if found healthy, deployed.
@@ -25,24 +24,33 @@ that builds and submits changes to the application as they are committed, hosted
 full-fledged Continuous Deployment (CD) of all its applications, both for application developers, and for the Vespa team.
 </p>
 
-<h2 id="setting-up-deployment-to-production">Setting up deployment to production</h2>
 
-<p>Follow these steps to set up deployment to production of your application.</p>
+
+<h2 id="setting-up-deployment-to-production">Setting up deployment to production</h2>
+<p>Follow these steps to set up deployment to production of an application.</p>
+
 
 <h3 id="create-deployment-xml">1. Create deployment.xml</h3>
+<p>Create a <a href="reference/deployment.html">deployment.xml</a> file alongside services.xml
+to configure where and when to deploy - supported zones:
+<table class="table">
+<tr>
+  <th>Zone</th><th>Description</th>
+</tr><tr>
+  <td>prod.aws-us-east-1c</td><td>US East coast production zone. Status: being set up</td>
+</tr>
+</table>
+</p>
 
-<p>Create a <a href="reference/deployment.html">deployment.xml</a> file alongside services.xml to configure where
-and when you want to deploy.</p>
 
 <h3 id="create-system-and-staging-tests">2. Create system and staging tests</h3>
-
-<p>Create at least one <a href="#system-tests">system</a>, and one <a href="#staging-tests">staging</a> test
-if your application doesn't have any. You can use the ones in
-<a href="https://github.com/vespa-engine/sample-apps/tree/master/basic-search-hosted">basic-search-hosted</a>
+<p>Create at least one <a href="#system-tests">system</a>, and one <a href="#staging-tests">staging</a> test.
+Use the ones in
+<a href="https://github.com/vespa-cloud/sample-apps/tree/master/basic-search-java">basic-search-java</a>
 as a starting point. As you add more functionality in your application you should add more tests.</p>
 
-<h3 id="set-up-a-deployment-job">3. Set up a deployment job</h3>
 
+<h3 id="set-up-a-deployment-job">3. Set up a deployment job</h3>
 <p>In your preferred continuous build tool, set up a job which builds your Vespa application and ships it to the
 Vespa cloud. Typically you'll want to trigger this job by a merge to the main branch in the source control system
 where you store the Vespa application repository.</p>
@@ -68,8 +76,8 @@ the change to your application source repository. The rest of this document will
 orchestrated and cover some common topics around continuous deployment in stateful systems.</p>
 
 
-<h2 id="deployment-orchestration">Deployment orchestration</h2>
 
+<h2 id="deployment-orchestration">Deployment orchestration</h2>
 <p>
 Vespa applications are <em>compiled</em> against one version of the Vespa Java artifacts, 
 and then deployed to nodes in the cloud where the <em>runtime</em> Vespa version is controlled by the system. 
@@ -100,6 +108,7 @@ Examples of advanced deployment configuration which can be set in
   <li>Grace periods between deployments</li>
 </ul>
 </p>
+
 
 
 <h2 id="system-tests">System tests</h2>
@@ -141,6 +150,7 @@ like:
 </p>
 
 
+
 <h2 id="staging-tests">Staging tests</h2>
 <p>
 Just like tests with the <code>@SystemTest</code> annotation, tests with the <code>@StagingTest</code> and
@@ -174,6 +184,7 @@ To deploy to a certain platform version, use, e.g., <code>mvn vespa:deploy -Dves
 <p>The sizes of clusters in staging are by default reduced to 10% of the size specified in services.xml, or at least 2 nodes.</p>
 
 
+
 <h2 id="production-tests">Production tests</h2>
 <p>
 Finally, tests may also be annotated with the <code>@ProductionTest</code> annotation. These are run against production after deployment,
@@ -190,6 +201,7 @@ or as a VM argument in your IDE. <strong>Be careful not to run system or staging
 </p>
 
 
+
 <h2 id="deleting-an-application">Deleting an application</h2>
 <p>
 <ol>
@@ -198,6 +210,7 @@ or as a VM argument in your IDE. <strong>Be careful not to run system or staging
   <li>Delete the CI job that builds and pushes new artifacts.</li>
 </ol>
 </p>
+
 
 
 <h2 id="feature_switches_and_bucket_tests">Feature switches and bucket tests</h2>
@@ -252,7 +265,6 @@ separate instance.
 
 
 <h2 id="change-field-type">Change field type</h2>
-
 <p>Changing a field's type is a breaking change and not allowed. The CD way of changing field type is
   to do such changes in multiple steps: Add a new field with the new desired type, populate the new field,
 change all operations to use the new field, then remove the old field.
