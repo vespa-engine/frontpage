@@ -23,16 +23,29 @@ Access is granted based membership in the following roles:
 
 <p><b>Application deployment</b></p>
 
-<p>Running applications are changed through <i>application deployment</i>. Deployments are autorized by possessing
-a <b>private key</b> which is referenced from pom.xml or the command line. A key pair is generated for an application
-in the console, and the private key file is referenced by the property <code>privateKeyFile</code>.</p>
-
-<p>This is used both in
-<a href="reference/zones.html">manual deployments</a> to the dev/perf zones and by the deployment job in
-<a href="automated-deployments.html">automated deployments</a> to production.
-Manual deployments can also be done in the console by a
-user having the requisite user role.</p>
-
+There are two kinds of application deployments: 
+<ul>
+    <li><a href="reference/zones.html">manual deployments</a> to dev/perf zones, for application development testing, and</li>
+    <li><a href="automated-deployments.html">automated deployments</a> to production zones.</li>
+</ul>
+<p>
+Likewise, there are two kinds of keys that can be used for API authentication:
+<ul>
+    <li>developer keys, which identify a member of the _developer_ role, and allows, e.g., manual deployments and system tests, and</li>
+    <li>headless keys, which identify a build service which submits application packages for automated deployment.</li>
+</ul>
+<p>
+Developer keys are personal, and are managed on the tenant level, in the Vespa cloud console. Each developer may have a single
+key at any time, and both administrators and developers may revoke the key of another developer, if it has been compromised. 
+</p>
+<p>
+Headless keys are managed on the application level, in the Vespa cloud console. Each application may have several headless keys.
+</p>
+For both kinds of key, the public key is uploaded through the console. The private key is kept secret, but must be made available to
+the Maven Vespa plugin which deploys applications, and to test code for system tests against dev/perf deployments. In both cases,
+this is done by setting the <code>privateKeyFile</code> property in <code>pom.xml</code> of the application, or by specifying
+this system property on the command line (<code>-DprivateKeyFile=/path/to/key</code>).
+<p>
 
 <h2 id="data-plane">Data plane</h2>
 
@@ -54,9 +67,11 @@ The certificate is signed by DigiCert or Globalsign.</p>
 </ol>
 
 <p>With this, only clients presenting a valid certificate will be able to access the application endpoints.
-In order to test application deployments, another trusted client certificate is added by hosted Vespa test/staging zones.
-This will not affect production deployments.
+In order to test application deployments, another trusted client certificate is added by hosted Vespa for deploymenst to the
+test and staging zones _only_. This does not affect production deployments.
 </p>
+To run system tests against a development endpoint, specify the <code>dataPlaneCertificateFile</code> and
+<code>dataPlanePrivateKeyFile</code> properties, in the same manner as the <code>privateKeyFile</code> used for API access.
 
 <h2 id="application-isolation">Application isolation</h2>
 
