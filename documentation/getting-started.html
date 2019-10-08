@@ -1,0 +1,136 @@
+---
+title: "Getting Started"
+---
+
+<p>
+Hosted Vespa is at the moment <a href="mailto:info@vespa.ai">invite only</a>.
+</p>
+
+
+
+<p>
+To get started, create an application in the <a href="https://console.vespa-external.aws.oath.cloud">console</a>.
+This requires a Google or GitHub account.
+Click "Create application" and enter application name.
+</p><p>
+Prerequisites for the sample apps are git and a X.509 certificate.
+To create a self-signed certificate
+(more details in <a href="security-model.html#data-plane">Data Plane</a>,
+see <em>Client certificate</em>), do:
+<pre>
+$ openssl req -x509 -nodes -days 14 -newkey ec:&lt;(openssl ecparam -name prime256v1) \
+  -keyout $HOME/key.pem -out $HOME/clients.pem
+</pre>
+</p>
+
+
+<ol>
+    <li>
+        <p>
+        <strong>Download the
+            <a href="https://github.com/vespa-cloud/sample-apps/tree/master/album-recommendation">album-recommendation</a>
+            sample app</strong>
+<pre>
+$ git clone git@github.com:vespa-cloud/sample-apps.git &amp;&amp; cd sample-apps/album-recommendation
+</pre>
+        </p>
+    </li>
+    <li>
+        <p>
+        <strong>Create the application package</strong>
+<pre>
+$ mkdir -p src/main/application/security &amp;&amp; cp $HOME/clients.pem src/main/application/security/clients.pem
+$ cd src/main/application &amp;&amp; zip -r ../../../application.zip . &amp;&amp; cd ../../..
+</pre>
+        </p>
+    </li>
+    <li>
+        <p>
+        <strong>Click Deploy. In the "Deploy to dev" console section, upload <em>application.zip</em> - click Deploy</strong>
+        </p>
+    </li>
+    <li>
+        <p>
+        <strong>Click <em>deployment log</em> to track the deployment</strong>
+        </p><p>
+        "Installation succeeded!" in the bottom pane indicates success
+        </p>
+    </li>
+    <li>
+        <p>
+        <strong>Click <em>Instances</em> at the top, then <em>endpoints</em></strong>
+        </p><p>
+        Try the endpoint to validate it is up:
+<pre>
+$ export ENDPOINT=https://end.point.name
+$ curl --cert src/main/application/security/clients.pem --key $HOME/key.pem $ENDPOINT
+</pre>
+        </p>
+    </li>
+    <li>
+        <p>
+        <strong>Feed documents</strong>
+<pre>
+$ curl --cert $HOME/clients.pem --key $HOME/key.pem \
+  -H "Content-Type:application/json" --data-binary @src/test/resources/A-Head-Full-of-Dreams.json \
+  $ENDPOINT/document/v1/mynamespace/music/docid/1
+$ curl --cert $HOME/clients.pem --key $HOME/key.pem \
+  -H "Content-Type:application/json" --data-binary @src/test/resources/Love-Is-Here-To-Stay.json \
+  $ENDPOINT/document/v1/mynamespace/music/docid/2
+$ curl --cert $HOME/clients.pem --key $HOME/key.pem \
+  -H "Content-Type:application/json" --data-binary @src/test/resources/Hardwired...To-Self-Destruct.json \
+  $ENDPOINT/document/v1/mynamespace/music/docid/3
+</pre>
+        </p>
+    </li>
+    <li>
+        <p>
+        <strong>Recommend albums</strong>
+        </p><p>
+        Send user profile in query, find recommended albums in the result set:
+<pre>
+$ curl --cert $HOME/clients.pem --key $HOME/key.pem \
+'$ENDPOINT/search/?ranking=rank_albums&amp;yql=select%20%2A%20from%20sources%20%2A%20where%20sddocname%20contains%20%22music%22%3B&amp;ranking.features.query(user_profile)=%7B%7Bcat%3Apop%7D%3A0.8%2C%7Bcat%3Arock%7D%3A0.2%2C%7Bcat%3Ajazz%7D%3A0.1%7D'
+</pre>
+        </p>
+    </li>
+    <li>
+        <p>
+        <strong>Explore the <em>album recommendations</em> sample app</strong>
+        </p><p>
+        Find details on how the simple recommendation engine was made in the
+        <a href="https://github.com/vespa-cloud/sample-apps/blob/master/album-recommendation/README.md">README</a>.
+        </p>
+    </li>
+</ol>
+
+<hr />
+
+<p>
+Next steps:
+<ol>
+  <li>
+      <p>
+      <strong>Explore a sample app with custom java code</strong>
+      </p><p>
+      Try <a href="https://github.com/vespa-cloud/sample-apps/tree/master/basic-search-java">basic-search-java</a>.
+      <!-- ToDo: grow the recommendation app into a java app and replace -->
+      </p>
+  </li>
+  <li>
+      <p>
+      <strong>Implement a system and staging test</strong>
+      </p><p>
+      Hosted Vespa has a secure, feature-rich, continuous deployment pipeline - read more in
+      <a href="automated-deployments.html">automated deployments</a>.
+      </p>
+  </li>
+  <li>
+      <p>
+      <strong>Deploy to a production zone</strong>
+      </p><p>
+      Deploy a <a href="security-model.html">secure</a> production application.
+      </p>
+  </li>
+</ol>
+</p>
