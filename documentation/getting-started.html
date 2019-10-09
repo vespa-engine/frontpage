@@ -63,7 +63,7 @@ $ cd src/main/application &amp;&amp; zip -r ../../../application.zip . &amp;&amp
         Try the endpoint to validate it is up:
 <pre>
 $ export ENDPOINT=https://end.point.name
-$ curl --cert src/main/application/security/clients.pem --key $HOME/key.pem $ENDPOINT
+$ curl --cert $HOME/clients.pem --key $HOME/key.pem $ENDPOINT
 </pre>
         </p>
     </li>
@@ -90,13 +90,13 @@ $ curl --cert $HOME/clients.pem --key $HOME/key.pem \
         Send user profile in query, find recommended albums in the result set:
 <pre>
 $ curl --cert $HOME/clients.pem --key $HOME/key.pem \
-'$ENDPOINT/search/?ranking=rank_albums&amp;yql=select%20%2A%20from%20sources%20%2A%20where%20sddocname%20contains%20%22music%22%3B&amp;ranking.features.query(user_profile)=%7B%7Bcat%3Apop%7D%3A0.8%2C%7Bcat%3Arock%7D%3A0.2%2C%7Bcat%3Ajazz%7D%3A0.1%7D'
+"$ENDPOINT/search/?ranking=rank_albums&amp;yql=select%20%2A%20from%20sources%20%2A%20where%20sddocname%20contains%20%22music%22%3B&amp;ranking.features.query(user_profile)=%7B%7Bcat%3Apop%7D%3A0.8%2C%7Bcat%3Arock%7D%3A0.2%2C%7Bcat%3Ajazz%7D%3A0.1%7D"
 </pre>
         </p>
     </li>
     <li>
         <p>
-        <strong>Explore the <em>album recommendations</em> sample app</strong>
+        <strong>Explore the <em>album-recommendation</em> sample app</strong>
         </p><p>
         Find details on how the simple recommendation engine was made in the
         <a href="https://github.com/vespa-cloud/sample-apps/blob/master/album-recommendation/README.md">README</a>.
@@ -113,8 +113,7 @@ Next steps:
       <p>
       <strong>Explore a sample app with custom java code</strong>
       </p><p>
-      Try <a href="https://github.com/vespa-cloud/sample-apps/tree/master/basic-search-java">basic-search-java</a>.
-      <!-- ToDo: grow the recommendation app into a java app and replace -->
+      Try <a href="https://github.com/vespa-cloud/sample-apps/tree/master/album-recommendation-java">album-recommendation-java</a>.
       </p>
   </li>
   <li>
