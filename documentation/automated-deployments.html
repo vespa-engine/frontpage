@@ -46,7 +46,7 @@ to configure where and when to deploy - supported zones:
 <h3 id="create-system-and-staging-tests">2. Create system and staging tests</h3>
 <p>Create at least one <a href="#system-tests">system</a>, and one <a href="#staging-tests">staging</a> test.
 Use the ones in
-<a href="https://github.com/vespa-cloud/sample-apps/tree/master/basic-search-java">basic-search-java</a>
+<a href="https://github.com/vespa-cloud/sample-apps/tree/master/album-recommendation-java">album-recommendation-java</a>
 as a starting point. As you add more functionality in your application you should add more tests.</p>
 
 
@@ -125,7 +125,7 @@ against the Vespa deployment to test, and for endpoint discovery. The default be
 and the default behavior of <code>mvn test -Dtest.categories=system</code> is to run system tests against this dev deployment.
 The <em>tenant</em>, <em>application</em> and <em>instance</em> (or <code>"default"</code>) properties from the <em>pom.xml</em>
 are used for this. Tests can also be run from an IDE without additional setup. 
-See <a href="https://github.com/vespa-engine/sample-apps/tree/master/basic-search-hosted">this application</a> for sample system tests.
+See <a href="https://github.com/vespa-cloud/sample-apps/tree/master/album-recommendation-java">this application</a> for sample system tests.
 </p><p>
 During automated tests, the deployment is instead done to the
 <a href="reference/environments.html#test">test environment</a>, with the same application package and Vespa runtime
