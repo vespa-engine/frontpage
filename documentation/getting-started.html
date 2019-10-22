@@ -14,13 +14,7 @@ This requires a Google or GitHub account.
 Click "Create application" and enter application name.
 </p><p>
 Prerequisites for the sample apps are git and a X.509 certificate.
-To create a self-signed certificate
-(more details in <a href="security-model.html#data-plane">Data Plane</a>,
-see <em>Client certificate</em>), do:
-<pre>
-$ openssl req -x509 -nodes -days 14 -newkey ec:&lt;(openssl ecparam -name prime256v1) \
-  -keyout $HOME/key.pem -out $HOME/clients.pem
-</pre>
+A certificate is also generated below.
 </p>
 
 
@@ -37,9 +31,21 @@ $ git clone git@github.com:vespa-cloud/sample-apps.git &amp;&amp; cd sample-apps
     </li>
     <li>
         <p>
+        <strong>Create a self-signed certificate</strong>
+<pre>
+$ openssl req -x509 -nodes -days 14 -newkey ec:&lt;(openssl ecparam -name prime256v1) \
+  -keyout data-plane-private-key.pem -out data-plane-public-cert.pem
+</pre>
+        Alternatively, copy existing keys to current work dir.
+        More details in <a href="security-model.html#data-plane">Data Plane</a>,
+        see <em>Client certificate</em>.
+        </p>
+    </li>
+    <li>
+        <p>
         <strong>Create the application package</strong>
 <pre>
-$ mkdir -p src/main/application/security &amp;&amp; cp $HOME/clients.pem src/main/application/security/clients.pem
+$ mkdir -p src/main/application/security &amp;&amp; cp data-plane-public-cert.pem src/main/application/security/data-plane-public-cert.pem
 $ cd src/main/application &amp;&amp; zip -r ../../../application.zip . &amp;&amp; cd ../../..
 </pre>
         </p>
@@ -66,7 +72,7 @@ $ cd src/main/application &amp;&amp; zip -r ../../../application.zip . &amp;&amp
         Try the endpoint to validate it is up:
 <pre>
 $ export ENDPOINT=https://end.point.name
-$ curl --cert $HOME/clients.pem --key $HOME/key.pem $ENDPOINT
+$ curl --cert data-plane-public-cert.pem --key data-plane-private-key.pem $ENDPOINT
 </pre>
         </p>
     </li>
@@ -74,13 +80,13 @@ $ curl --cert $HOME/clients.pem --key $HOME/key.pem $ENDPOINT
         <p>
         <strong>Feed documents</strong>
 <pre>
-$ curl --cert $HOME/clients.pem --key $HOME/key.pem \
+$ curl --cert data-plane-public-cert.pem --key data-plane-private-key.pem \
   -H "Content-Type:application/json" --data-binary @src/test/resources/A-Head-Full-of-Dreams.json \
   $ENDPOINT/document/v1/mynamespace/music/docid/1
-$ curl --cert $HOME/clients.pem --key $HOME/key.pem \
+$ curl --cert data-plane-public-cert.pem --key data-plane-private-key.pem \
   -H "Content-Type:application/json" --data-binary @src/test/resources/Love-Is-Here-To-Stay.json \
   $ENDPOINT/document/v1/mynamespace/music/docid/2
-$ curl --cert $HOME/clients.pem --key $HOME/key.pem \
+$ curl --cert data-plane-public-cert.pem --key data-plane-private-key.pem \
   -H "Content-Type:application/json" --data-binary @src/test/resources/Hardwired...To-Self-Destruct.json \
   $ENDPOINT/document/v1/mynamespace/music/docid/3
 </pre>
@@ -92,7 +98,7 @@ $ curl --cert $HOME/clients.pem --key $HOME/key.pem \
         </p><p>
         Send user profile in query, find recommended albums in the result set:
 <pre>
-$ curl --cert $HOME/clients.pem --key $HOME/key.pem \
+$ curl --cert data-plane-public-cert.pem --key data-plane-private-key.pem \
 "$ENDPOINT/search/?ranking=rank_albums&amp;yql=select%20%2A%20from%20sources%20%2A%20where%20sddocname%20contains%20%22music%22%3B&amp;ranking.features.query(user_profile)=%7B%7Bcat%3Apop%7D%3A0.8%2C%7Bcat%3Arock%7D%3A0.2%2C%7Bcat%3Ajazz%7D%3A0.1%7D"
 </pre>
         </p>
