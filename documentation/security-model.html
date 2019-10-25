@@ -43,8 +43,8 @@ Headless keys are managed on the application level, in the Vespa cloud console. 
 </p>
 For both kinds of key, the public key is uploaded through the console. The private key is kept secret, but must be made available to
 the Maven Vespa plugin which deploys applications, and to test code for system tests against dev/perf deployments. In both cases,
-this is done by setting the <code>privateKeyFile</code> property in <code>pom.xml</code> of the application, or by specifying
-this system property on the command line (<code>-DprivateKeyFile=/path/to/key</code>).
+this is done by setting the <code>apiKeyFile</code> property in <code>pom.xml</code> of the application, or by specifying
+this system property on the command line (<code>-DapiKeyFile=/path/to/key</code>).
 <p>
 
 <h2 id="data-plane">Data plane</h2>
@@ -71,7 +71,7 @@ In order to test application deployments, another trusted client certificate is 
 test and staging zones _only_. This does not affect production deployments.
 </p>
 To run system tests against a development endpoint, specify the <code>dataPlaneCertificateFile</code> and
-<code>dataPlanePrivateKeyFile</code> properties, in the same manner as the <code>privateKeyFile</code> used for API access.
+<code>dataPlaneKeyFile</code> properties, in the same manner as the <code>apiKeyFile</code> used for API access.
 
 <h2 id="application-isolation">Application isolation</h2>
 
