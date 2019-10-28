@@ -1,5 +1,90 @@
 ---
-# Intentionally empty - edit the theme's home layout instead
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: cloud-index
+title: The Vespa Cloud
 ---
+
+<style>
+table.price {
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+
+table.price td {
+    padding: 6px;
+}
+
+ul.offer li {
+    padding: 6px;
+}
+</style>
+
+<section id="roadmap" class="bg-light-blue">
+
+<div class="intro container">
+
+<div class="row">
+
+<div class="col-lg-12 text-left">
+<div class="h1">The Vespa Cloud</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-lg-12 text-left">
+
+<p>Running big data applications is hard: It combines high availability, consistent low latency and distributed
+state and computation. Outsource it to a team that has as their sole priority to do it well, and which have been
+at it for many years. It is as easy as deploying your application on the Vespa cloud service available in
+<a href="https://vespa.ai/documentation/reference/zones">AWS regions around the world</a>.</p>
+
+<p><b>What you get:</b></p>
+
+<ul class="offer">
+
+<li>Your Vespa applications are managed by the world’s most experienced big data serving operations team.</li>
+
+<li>Application changes are
+<a href="https://vespa.ai/documentation/automated-deployments">continuously, quickly and safely deployed to production</a>.</li>
+
+<li>You are automatically and safely kept on the latest production proven version of Vespa and OS -
+ensuring security, and availability of the latest Vespa features with no effort required on your part. A new release
+of Vespa is usually installed four times a week.</li>
+
+<li><a href="https://vespa.ai/documentation/security-model">Strong security by default</a>:
+All external and internal communications is secured with mutual TLS with
+application-specific certificates. All applications run on in dedicated and network isolated containers.</li>
+
+<li><b>Proactive operations</b> - Vespa operations will monitor and analyze the systems running your applications 
+in production 24/7 and react to potential problems.</li>
+
+<li><b>Application support</b> with response by the next business day by the team that develops Vespa.</li>
+
+<li>Convenient and fast application development by deploying any number of development copies of your
+applications with seconds turnaround time to our development environment.</li>
+
+<li>All the <a href="https://docs.vespa.ai/documentation/features.html">features of Vespa</a> are available just as
+they would be in a self-hosted application, just without the effort of operating and securing it.</li>
+
+</ul>
+
+<p><a href="mailto:support@vespa.ai" class="btn btn-xl intro-button">Sign Up</a></p>
+
+<h3>Pricing</h3>
+
+<p>Vespa charges by the machine resources allocated to your applications in three dimensions:</p>
+
+<table class="price">
+<tr><td><b>Per vcpu hour:</b></td>      <td>$0.12</td></tr>
+<tr><td><b>Per memory Gb hour:</b></td> <td>$0.012</td></tr>
+<tr><td><b>Per disk Gb hour:</b></td>   <td>$0.0004</td></tr>
+</table>
+
+<p>In production zones, the resources you allocate are precisely what you specify in services.xml for the duration
+the application is deployed.</p>
+
+<p>In dev, and test zones, applications will by default be
+<a href="https://vespa.ai/documentation/reference/environments">downscaled</a> and you will be charged for
+the capacity actually used. In test zones, applications will only allocate resources while tests are running.</p>
+
+<p>In addition to machine resource costs, network costs incurred by your application are passed on to you at
+<a href="https://aws.amazon.com/ec2/pricing/on-demand/#Data_Transfer">standard AWS prices</a>.
+These depends only on how you use your applications.</p>
