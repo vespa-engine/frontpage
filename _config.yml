@@ -14,7 +14,7 @@ defaults:
       index: true
   -
     scope:
-      path: "/pages/*"
+      path: "/cloud/*"
     values:
       layout: "page"
       index: true
