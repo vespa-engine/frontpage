@@ -181,6 +181,16 @@ header .intro-down-arrow {
     transform: translateX(-50%);
 }
 
+header .intro-featured-articles {
+    padding-top: 100px;
+    padding-bottom: 5px;
+}
+
+header .featuredlogo {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 @media (min-height: 1150px) {
     header .intro-down-arrow {
         /* Hard code top: 1150 (height of top section) - 20 (bottom) - 36 (image height) = 1094 */
