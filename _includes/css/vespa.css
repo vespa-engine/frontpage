@@ -70,18 +70,11 @@ section h3.section-subheading {
 }
 
 .navbar-default .navbar-brand {
-    background: transparent url({{ site.baseurl }}/img/Vespa-V2.png) no-repeat;
-    background-size: contain;
-    direction: ltr;
-    text-indent: -9000px;
-    height: 28px;
-    width: 100px;
-    display: inline-block;
-    font-family: {{ site.data.template.font.primary }};
-    font-weight: bold;
-    color: #{{ site.data.template.color.primary }};
-    margin-top: 16px;
-    margin-left: 10px;
+    float: left;
+    height: 60px;
+    padding: 16px 25px;
+    font-size: 18px;
+    line-height: 20px;
 }
 
 .navbar-default .nav li a {
