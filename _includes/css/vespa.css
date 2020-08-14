@@ -2,6 +2,22 @@
     background-image: linear-gradient(-1deg, rgba(63,157,216,0.08) 0%, rgba(163, 195, 215, 0.08) 97%);
 }
 
+.bg-light-gray {
+    background-color: #f7f7f7;
+}
+
+.bg-darkest-gray {
+    background-color: #222;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.denali-icon-color {
+    color: #3F9DD8;
+}
+
 section h2.section-heading,
 section h2.section-subheading,
 section h3.section-heading,
