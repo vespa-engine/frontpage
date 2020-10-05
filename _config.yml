@@ -12,12 +12,6 @@ defaults:
     values:
       layout: "documentation"
       index: true
-  -
-    scope:
-      path: "/cloud/*"
-    values:
-      layout: "page"
-      index: true
 
 # Build settings
 markdown: kramdown
