@@ -1,0 +1,23 @@
+- title: Structured, text &amp; vector search
+  description: >
+    Combine search in structured data, text and vectors in one query to achieve functionality and performance
+    which is simply impossible with other technologies.
+  link: features#query-capabilities
+
+- title: Machine learning support
+  description: >
+    Vespa is engineered around scalable and efficient support for machine-learned model inference, and supports
+    a most machine-learned models from most tools.
+  link: features#computation-engine
+
+- title: Elastic data management
+  description: >
+    Vespa will automatically keep data distributed over nodes, and redistribute in the background on changes.
+    No need to worry about how data is divided and distributed.
+  link: features#operability-and-data-management
+
+- title: Unbeatable performance
+  description: >
+    Vespa scales to any amount of data and traffic, and is built on a C++ core providing hardware-near optimizations
+    and efficient utilization of any amount of memory and cores.
+  link: features#performance-and-scalability

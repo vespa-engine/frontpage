@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+{% include htmlhead.html %}
+
+<body class="denali-theme-vespa">
+
+{% include navbar.html logo="vespa-logo.png" %}
+{% include cover.html %}
+{% include usecases.html usecases=site.data.usecases %}
+{% include features.html features=site.data.features %}
+{% include users.html users=site.data.users %}
+{% include blogposts.html blogposts=site.data.blogposts %}
+{% include gettingstarted.html %}
+
+{% include footer.html footerlinks=site.data.footerlinks %}
+{% include js.html %}
+
+</body>
+</html>

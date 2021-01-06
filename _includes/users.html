@@ -1,0 +1,21 @@
+<div class="container-full is-marginless has-bg-grey-300">
+    <div class="container p-y-15">
+        <div class="row">
+            <div class="col">
+                <h1 class="is-brand-500 m-t-20">How other companies use Vespa to build their business</h1>
+            </div>
+        </div>
+        <div class="row">
+            {% for user in include.users %}
+            <div class="xs-col-1-1 sm-col-1-1 md-col-1-2 lg-col-1-2 xl-col-1-2">
+                <div class="flex flex-column">
+                    <div class="flex section-users--user-column">
+                        <img class="p-t-30" width="100" src="{{ site.baseurl }}/{{user.logo}}" alt="">
+                        <p class="p-30">{{user.text}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

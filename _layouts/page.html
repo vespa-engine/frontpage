@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 
-{% include htmlhead.html %}
+{% include htmlhead.html theme="light" %}
 
-<body id="page-top" class="index">
+<body class="denali-theme-vespa-light subpage">
 
-{% include nav.html %}
+{% include navbar.html logo="vespa-logo-color.png" class="vespa-light" %}
 
 {{ content }}
 
-{% include footer.html %}
+{% include footer.html footerlinks=site.data.footerlinks %}
 {% include js.html %}
 
 </body>
