@@ -1,0 +1,297 @@
+---
+# Copyright Verizon Media. Licensed under the terms of the Apache 2.0 license. See LICENSE in the project root.
+title: "Vespa Use Cases"
+layout: page
+---
+
+<!-- ToDo: move to common stylesheet once final -->
+<style>
+  li {
+      list-style-position: outside;
+  }
+</style>
+
+
+<div class="container-full">
+  <div class="m-t-20 row">
+  <div class="xs-col-1-1 sm-col-1-1 md-col-1-1 lg-col-8-12 lg-col-off-2-12 xl-col-8-12 xl-col-off-2-12">
+
+    <h1 id="vespa-use-cases">Vespa use cases</h1>
+
+    <div>
+      <div class="flex-column">
+        <p>
+          When you can to compute over large data sets online, a new world of possibilities for new applications
+          and features opens up. This page describes some of the most well known problems people use Vespa to solve.
+        </p>
+      </div>
+    </div>
+
+
+    <div>
+      <div class="flex-column">
+        <h2 id="text-search">Text search</h2>
+        <p>
+          Vespa is a full-featured text search engine with full support for traditional information retrieval
+          as well as modern embedding based techniques. Moreover, since these approaches can be combined efficiently
+          in the same query and ranking model, it's easy to use elements of both in the same application,
+          something no other technologies can do currently but which is usually necessary to get good results in
+          real applications. Search applications usually make use of these features of Vespa:
+        </p>
+        <ul class="list p-l-30 p-b-10">
+          <li><a href="https://docs.vespa.ai/documentation/text-matching-ranking.html">Full text search</a>
+            with support for word position based <a href="https://docs.vespa.ai/documentation/reference/query-language-reference.html#near">matching</a>
+            and <a href="https://docs.vespa.ai/documentation/ranking.html">relevance</a>,
+            and advanced operators like <a href="https://docs.vespa.ai/documentation/using-wand-with-vespa.html">WAND</a>
+            over text terms.</li>
+          <li>Fast <a href="https://docs.vespa.ai/documentation/approximate-nn-hnsw.html">approximate nearest neighbour search (ANN)</a>
+            in vector spaces, based on the HNSW algorithm.</li>
+          <li><a href="https://docs.vespa.ai/documentation/reference/query-language-reference.html#where">Matching</a>
+            by <a href="https://docs.vespa.ai/documentation/attributes.html">structured metadata</a>.</li>
+          <li>Combining multiple of the above matching operators freely in the same query by
+            <a href="https://docs.vespa.ai/documentation/reference/query-language-reference.html#and">AND</a> and
+            <a href="https://docs.vespa.ai/documentation/reference/query-language-reference.html#or">OR</a>.</li>
+          <li>A large set of
+            <a href="https://docs.vespa.ai/documentation/reference/rank-features.html">relevance features</a>
+            including <a href="https://docs.vespa.ai/documentation/reference/bm25.html">bm25</a>
+            and
+            <a href="https://docs.vespa.ai/documentation/reference/string-segment-match.html">more advanced text features using positional information</a>,
+            <a href="https://docs.vespa.ai/documentation/geo-search.html#rank">geo features</a>,
+            time and so on.</li>
+          <li>Ranking by arbitrary
+            <a href="https://docs.vespa.ai/documentation/reference/ranking-expressions.html">mathematical expressions</a>
+            over scalar and <a href="https://docs.vespa.ai/documentation/tensor-user-guide.html">tensor</a> features,
+            as well as by models created in
+            <a href="https://docs.vespa.ai/documentation/lightgbm.html">LightGbm</a>,
+            <a href="https://docs.vespa.ai/documentation/xgboost.html">XGBoost</a>,
+            <a href="https://docs.vespa.ai/documentation/tensorflow.html">TensorFlow</a>
+            or any tool supporting
+            <a href="https://docs.vespa.ai/documentation/onnx.html">ONNX</a>. This includes support for modern
+            transformer based language models, which are evaluated on the content nodes like other ranking
+            expressions for scalability.</li>
+          <li>Support for <a href="https://docs.vespa.ai/documentation/ranking.html#performance">2-phase ranking</a>.</li>
+          <li>Surfacing <a href="https://docs.vespa.ai/documentation/document-summaries.html">any document data</a>
+            in results, with optional support for
+            <a href="https://docs.vespa.ai/documentation/reference/schema-reference.html#summary">static or dynamic snippeting</a>
+            with highlighting.</li>
+          <li>Deploy application specific <a href="https://docs.vespa.ai/documentation/searcher-development.html">query, result</a>
+            and <a href="https://docs.vespa.ai/documentation/document-processing.html">document processors</a> in Java deployed
+            as part of the application.</li>
+          <li><a href="https://docs.vespa.ai/documentation/grouping.html">Grouping, deduplication and aggregation</a>
+            over all matches.</li>
+        </ul>
+
+        <p>
+          No matter which features you combine, you'll benefit from Vespa's
+          <a href="https://docs.vespa.ai/documentation/performance/sizing-search.html">linear scalability</a>,
+          <a href="https://docs.vespa.ai/documentation/content/idealstate.html">automatic data management</a> and
+          <a href="https://docs.vespa.ai/documentation/elastic-vespa.html">online elasticity</a>,
+          and support for
+          <a href="https://docs.vespa.ai/documentation/performance/sizing-feeding.html">sustained high volume</a>
+          and <a href="https://docs.vespa.ai/documentation/writing-to-vespa.html">fully realtime writes</a>
+          which allows you to both add new documents, and cheaply update fields of existing documents while serving.
+        </p>
+        <h3>Text search sample applications</h3>
+        <p>
+          These example open source Vespa text search applications can be used as a starting point:
+        </p>
+        <ul class="list p-l-30 p-b-10">
+          <li>
+            <a href="https://docs.vespa.ai/documentation/tutorials/text-search.html">Text search tutorial</a>
+            with <a href="https://github.com/vespa-engine/sample-apps/tree/master/text-search">complete application source</a>.
+          </li>
+          <li>
+            Vespa documentation search: A simple text search application providing the search on this site.
+            <a href="https://github.com/vespa-engine/sample-apps/tree/master/vespa-cloud/vespa-documentation-search">Complete application source</a>.
+          </li>
+          <li>
+            cord19.vespa.ai: Hybrid text and semantic search, document similarity search and attribute filtering.
+            <a href="https://github.com/vespa-engine/sample-apps/tree/master/vespa-cloud/cord-19-search">Complete application source</a>.
+            <a href="https://cord19.vespa.ai/">Try it out</a>.
+          </li>
+          <li>
+            MS Marco competition entry using bm25, GBDT and docTTTTQuery to achieve the best ranked entry using traditional
+            retrieval techniques, with 20 ms response time.
+            <a href="https://github.com/vespa-engine/sample-apps/tree/master/msmarco-ranking">Complete application source</a>.
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+
+    <div>
+      <div class="flex-column">
+        <h2 id="recommendation-and-personalization">Recommendation and personalization</h2>
+        <p>
+          Recommendation, content personalization and ad targeting is all the same thing when it comes to
+          implementation: For a given user or context, evaluate machine-learned content recommender models
+          to find the best items and show them to the user. Usually it is also necessary to filter out
+          unwanted items based on metadata, such as e.g language used, or remaining ad budget.
+          In addition it is often necessary to group the recommended items to make browsing easier or
+          filter out those that are too similar.
+        </p>
+        <p>
+          Vespa makes it possible to do the whole process online, at the moment
+          when the recommendation is needed, which ensures recommendations are up to date and makes it affordable
+          to make them specifically for each user or situation. These features of Vespa are usually leveraged:
+        </p>
+        <ul class="list p-l-30 p-b-10">
+          <li><a href="https://docs.vespa.ai/documentation/nearest-neighbor-search.html">Search in vector spaces</a>
+            (<a href="https://docs.vespa.ai/documentation/approximate-nn-hnsw.html">approximate (ANN)</a> or exact)
+            in combination with filters.</li>
+          <li>Evaluation of complex
+            <a href="https://docs.vespa.ai/documentation/ranking.html#machine-learned-model-inference">machine-learned models</a>
+            in parallel on the content nodes to scale to any amount of content.</li>
+          <li>Surfacing <a href="https://docs.vespa.ai/documentation/document-summaries.html">any document data</a> in
+            results.</li>
+          <li>Deploy application specific <a href="https://docs.vespa.ai/documentation/searcher-development.html">query, result</a>
+            and <a href="https://docs.vespa.ai/documentation/document-processing.html">document processors</a> in Java deployed
+            as part of the application.</li>
+          <li><a href="https://docs.vespa.ai/documentation/grouping.html">Grouping and deduplication</a>
+            of the recommended items.</li>
+          <li><a href="https://docs.vespa.ai/documentation/writing-to-vespa.html">Fast realtime updates</a>
+            of metadata to produce high quality interaction signals for the recommender.</li>
+        </ul>
+
+        <h3>Recommendation sample applications</h3>
+        <p>
+          These example open source Vespa recommendation applications can be used as a starting point:
+        </p>
+        <ul class="list p-l-30 p-b-10">
+          <li>
+            A <a href="https://docs.vespa.ai/documentation/tutorials/blog-recommendation.html">Recommendation tutorial</a>
+            with <a href="https://github.com/vespa-engine/sample-apps/tree/master/blog-recommendation">complete application source</a>.
+          </li>
+          <li>
+            Album recommendation: A minimal, recommendation application.
+            Complete application source,
+            <a href="https://github.com/vespa-engine/sample-apps/tree/master/vespa-cloud/album-recommendation">Vespa cloud version</a>,
+            <a href="https://github.com/vespa-engine/sample-apps/tree/master/album-recommendation-selfhosted">self-hosted version</a>.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div>
+      <div class="flex-column">
+        <h2 id="question-answering">Question answering</h2>
+        <p>
+          Question answering provides direct answers to user's question. This is needed in chat bots,
+          virtual assistants and similar, and is also becoming an expected feature of high-end search solutions, where
+          a direct answer is provided on queries that seem to be questions.
+        </p>
+        <p>
+          A high quality question answerer works as follows: Text snippets are represented by vector embeddings
+          which are indexed for fast matching with
+          <a href="https://docs.vespa.ai/documentation/approximate-nn-hnsw.html">ANN</a>.
+          The best candidates found by ANN matching are evaluated in a
+          transformer based language model which outputs the score of the snippet as well as the beginning and
+          end of the text answer.
+        </p>
+        <p>
+          By using Vespa, the entire process can be implemented as an application on a
+          single platform, and made to execute with a latency of a few tens of milliseconds while scaling to any
+          volume, while delivering quality on par with the research state of the art.
+        </p>
+        <p>
+          See our
+          <a href="https://blog.vespa.ai/efficient-open-domain-question-answering-on-vespa/">blog post</a>
+          showing how to replicate the best question answering performance from the research community
+          as a production ready Vespa application, and
+          <a href="https://blog.vespa.ai/from-research-to-production-scaling-a-state-of-the-art-machine-learning-system/">the followup post</a>
+          how we brought down the response time to tens of milliseconds.
+          The <a href="https://github.com/vespa-engine/sample-apps/tree/master/dense-passage-retrieval-with-ann">complete source</a>
+          for this application is also available.
+        </p>
+
+      </div>
+    </div>
+
+
+    <div>
+      <div class="flex-column">
+        <h2 id="semi-structured-navigation">Semi-structured navigation</h2>
+        <p>
+          Applications that use semi-structured data - that is a combination of data-base like data and plain text -
+          usually benefit from allowing users to navigate in the data using both structured navigation and
+          <a href="https://docs.vespa.ai/documentation/text-matching-ranking.html">text search</a>.
+          The most common example of this is e-commerce, or shopping sites.
+        </p>
+        <p>
+          This makes use of traditional text search in conjunction with
+          <a href="https://docs.vespa.ai/documentation/reference/sorting.html">sorting</a>,
+          <a href="https://docs.vespa.ai/documentation/grouping.html">grouping</a> and
+          <a href="https://docs.vespa.ai/documentation/reference/query-language-reference.html#where">"filtering by metadata</a>.
+          As any query can be grouped and filtered, this allows users to switch between drilling down by metadata
+          and searching by text seamlessly without losing context. Commonly some of the metadata is supplied by
+          <a href="https://docs.vespa.ai/documentation/parent-child.html">parent documents</a>
+          (such as the merchant of a product). Some e-commerce applications also make use
+          of embeddings to provide search, navigation or recommendation in an embedding space.
+        </p>
+        <p>
+          For more details, see the
+          <a href="https://docs.vespa.ai/documentation/use-case-shopping.html">shopping use case</a>
+          in the Vespa documentation and the accompanying
+          <a href="https://github.com/vespa-engine/sample-apps/tree/master/use-case-shopping">application source</a>
+          with frontend.
+        </p>
+      </div>
+    </div>
+
+
+    <div>
+      <div class="flex-column">
+        <h2 id="personal-search">Personal search</h2>
+        <p>
+          <i>Personal search</i> (not to be confused with <a href="#recommendation-and-personalization">personalization</a>)
+          is to provide search in personal collections of data where there is never a need to search across many
+          collections in a single query. In such applications it is not cost effective to do the work to maintain global
+          reverse indexes and the best solution is to
+          <a href="https://docs.vespa.ai/documentation/streaming-search.html">search by streaming</a>
+          trough the raw data at query time.
+          Latency can still be bounded for arbitrary sized collections as each is distributed over a number of nodes
+          to bound the size of a given user's collection on a given node.
+        </p>
+        <p>
+          Vespa provides a <i>streaming</i> mode where the usual functionality of the engine is backed by searching
+          streaming through the raw data stored in Vespa, no indexes necessary.
+          This allows powerful personal search applications to be implemented easily and cheaply at any scale.
+          Read more in our
+          <a href="https://blog.vespa.ai/efficient-personal-search-at-large-scale/">blog post on personal search</a>.
+        </p>
+      </div>
+    </div>
+
+
+    <div>
+      <div class="flex-column">
+        <h2 id="typeahead-suggestions">Typeahead suggestions</h2>
+        <p>
+          Many applications which make use of textual input make use of typeahead suggestions,
+          where a number of suggested completions are presented while the user is typing.
+          This usually involves searching and ranking matching candidate completions with really low latency -
+          a suitable job for Vespa. Vespa features usually involved in this are:
+        </p>
+        <ul class="list p-l-30 p-b-10">
+          <li>Text search with
+            <a href="https://docs.vespa.ai/documentation/text-matching-ranking.html#prefix-search">prefix match</a>,
+            or <a href="https://docs.vespa.ai/documentation/reference/schema-reference.html#gram">gram matching</a>, or</li>
+          <li>prefix, substring or
+            <a href="https://docs.vespa.ai/documentation/reference/query-language-reference.html#matches">regexp</a>
+            search in a (structured) attribute containing an array of strings.</li>
+          <li><a href="https://docs.vespa.ai/documentation/writing-to-vespa.html">Realtime updates</a>
+            of features signalling how often a suggestion is selected.</li>
+          <li>A <a href="https://docs.vespa.ai/documentation/reference/ranking-expressions.html">ranking expression</a>
+            to rank the candidate completions using match and metadata features.</li>
+          <li>A <a href="#personal-search">personal search</a> cluster if some suggestions depend on personal data,
+            and if so federated with a cluster of shared suggestions.</li>
+        </ul>
+        <p class="m-b-50"></p>
+      </div>
+    </div>
+
+  </div>
+  </div>
+</div>

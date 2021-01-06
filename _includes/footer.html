@@ -1,0 +1,20 @@
+<!-- Footer -->
+<div class="container-full is-marginless has-bg-grey-200">
+    <div class="container">
+        <div class="row p-t-30">
+            <div class="xs-col-1-1 sm-col-1-1 md-col-1-2 lg-col-1-2 xl-col-1-2 flex flex-row space-between m-b-20">
+                {% for column in include.footerlinks %}
+                    <div class="flex-column">
+                        <h4 class="upper">{{column.header}}</h4>
+                        {% for link in column.links %}
+                            <a href="{{link.link}}">{{link.title}}</a><br>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="col m-b-20 section-footer--copyright">
+                <h6>Copyright Verizon Media</h6>
+            </div>
+        </div>
+    </div>
+</div>

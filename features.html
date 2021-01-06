@@ -1,0 +1,301 @@
+---
+# Copyright Verizon Media. Licensed under the terms of the Apache 2.0 license. See LICENSE in the project root.
+title: "Vespa Features"
+layout: page
+---
+
+<!-- ToDo: move to common stylesheet once final -->
+<style>
+  li {
+      list-style-position: outside;
+  }
+</style>
+
+
+<div class="container-full">
+  <div class="m-t-20 row">
+    <div class="xs-col-1-1 sm-col-1-1 md-col-1-1 lg-col-8-12 lg-col-off-2-12 xl-col-8-12 xl-col-off-2-12">
+
+    <h1 id="feature-overview">Feature overview</h1>
+
+    <div>
+      <div class="flex-column">
+        <p>
+          Vespa is a complete platform for big data serving, with the goal to make it easy
+          to create modern applications which computes over large data sets online,
+          and affordable to run them at any scale.
+          To deliver that, Vespa provides
+          an <a href="#query-capabilities">uniquely broad range of query capabilities</a>,
+          a <a href="#computation-engine">powerful computation engine</a> with great support for modern machine-learned models,
+          <a href="operability">hands-off operability, data management and application development support</a>, and
+          <a href="#performance-and-scalability">unbeatable performance and scalability</a>.
+        </p>
+      </div>
+    </div>
+
+
+    <div>
+      <div class="flex-column">
+        <h2 id="query-capabilities">Query capabilities in Vespa</h2>
+
+        <p>Vespa supports querying by:
+        </p>
+          <ul class="list p-l-30 p-b-10">
+            <li><b><a href="https://docs.vespa.ai/documentation/reference/query-language-reference.html">Structured data</a></b>:
+              Exact, substring and regexp, numerical ranges, geo-distance, predicates.</li>
+            <li><b><a href="https://docs.vespa.ai/documentation/text-matching-ranking">Text</a></b>:
+              Full text with tokenization and stemming, as well as positional information.</li>
+            <li><b><a href="https://docs.vespa.ai/documentation/nearest-neighbor-search.html">Vectors</a></b>:
+              Nearest neighbour, approximate (ANN) or exact, with a variety of distance metrics.</li>
+          </ul>
+        <p>
+          Operators querying fields in these ways can be
+          <a href="https://docs.vespa.ai/documentation/reference/query-language-reference.html">combined freely</a>
+          by AND and OR in queries
+          while still executing efficiently. This makes it possible to express a wide range
+          of behavior, such as retrieving in vector spaces with filters or performing hybrid
+          text and semantic retrieval. Vespa is the only engine able to do this:
+        </p>
+        <div style="text-align: center" class="p-20">
+          <img width="400" style="text-align: center" src="assets/query-tree.svg" alt=""/>
+        </div>
+        <p>
+          In addition, Vespa provides a <a href="https://docs.vespa.ai/documentation/grouping">grouping language</a>
+          which lets queries specify how matches should be grouped and aggregated.
+          This makes it possible to group matches by unique field values or buckets, and aggregate, count or compute
+          values over the groups. Groupings can be arbitrarily deep and multiple groupings can be made in the same query.
+          Even though grouping applies to all matches across all nodes, it executes efficiently as a distributed
+          computation.
+        </p>
+      </div>
+    </div>
+
+
+    <div>
+      <div class="flex-column">
+        <h2 id="computation-engine">Vespa's computation engine</h2>
+
+        <p>
+          Once data is selected by a query most applications need to
+          <a href="https://docs.vespa.ai/documentation/ranking">compute over each data element</a>.
+          In a search application this can be a relevance model deciding which of all the matches
+          should eventually be surfaced, in a recommendation system it's a recommender deciding which
+          candidate items to recommend. More generally, it can be any set of numerical computations
+          using a matched document item and query as input. The result of such computations can be used
+          to prioritize which items to return (ranking), or just be returned with the matches.
+        </p>
+
+        <h3>Computation as mathematical expressions</h3>
+        <p>
+          Computation in Vespa is specified as
+          <a href="https://docs.vespa.ai/documentation/reference/ranking-expressions.html">mathematical expressions</a>
+          over scalars and tensors.
+          These expressions may be written by hand or imported into Vespa from a machine learner
+          (<a href="https://docs.vespa.ai/documentation/tensorflow">TensorFlow</a>,
+          <a href="https://docs.vespa.ai/documentation/lightgbm">LightGBM</a>,
+          <a href="https://docs.vespa.ai/documentation/xgboost">XGBoost</a>,
+          or <a href="https://docs.vespa.ai/documentation/onnx">ONNX</a>-compatible tool).
+          Computations over data happens locally on the nodes storing the data, which is important because it
+          allows as much parallel computation as there are data nodes and avoids sending the data over the network
+          for computation, something which can not scale.
+        </p>
+        <div style="text-align: center" class="p-20">
+          <img width="500" src="assets/ML-models.svg" alt=""/>
+        </div>
+        <p>
+          The features these expressions compute over are either fields of the documents, values passed with the
+          query, data from the application package, or a selection from the wide range of
+          <a href="https://docs.vespa.ai/documentation/reference/rank-features.html">built-in features</a>
+          in Vespa combining data from both queries and documents, such as e.g text match features.
+        </p>
+
+        <h3>Sparse and dense tensors</h3>
+
+        <p>
+          <a href="https://docs.vespa.ai/documentation/tensor-user-guide.html">Tensors</a>
+          are generalizations of vectors (1-d) and matrixes (2-d) to any number of dimensions.
+          Since features in Vespa can be tensors, and the expression language provides operators for
+          <a href="https://docs.vespa.ai/documentation/reference/ranking-expressions.html#tensor-functions">computing over tensors</a>,
+          it is possible to express a wide range of computation over collections of numbers
+          to for example perform inference in modern transformer based language deep learning models.
+        </p>
+
+        <p>
+          Tensor dimensions in Vespa can - uniquely - be either <i>sparse</i> or <i>dense</i>, and tensor computations
+          work the same with both kinds. Sparse dimensions can accept any string as keys.
+          This makes it possible to represent both array-like and map-like data as tensors
+          - for example a map of vectors - and still compute efficiently, which greatly increases the range
+          of computation that can be done with tensors in Vespa compared to most other tools supporting tensors.
+        </p>
+
+        <h3>Multi-phase inference</h3>
+        <p>
+          Multi-phase inference can be used to invest more computational power in the best candidate items
+          by doing an initial selection using a simpler model,
+          <a href="https://docs.vespa.ai/documentation/reference/schema-reference.html#secondphase-rank">followed by</a>
+          computing a more expensive model for the best candidates.
+        </p>
+      </div>
+    </div>
+
+
+    <div>
+      <div class="flex-column">
+        <h2 id="operability-and-data-management">Operability and data management in Vespa</h2>
+
+        <p>
+          Vespa is engineered to be safe and easy to operate at scale. While operating distributed stateful
+          systems to deliver consistent low latency and high availability in all scenarios is never easy and
+          you should consider using the <a href="https://cloud.vespa.ai/">Vespa Cloud</a> to provide that for you,
+          Vespa automates all routine tasks such that they can be  performed safely in production with no service
+          disruption and little human involvement. This includes tasks involved in
+          <a href="#data-management">data</a> and <a href="#node-management">node</a> management,
+          <a href="#system-configuration">system configuration</a> and
+          <a href="#application-development">application development</a>.
+        </p>
+
+        <h3 id="data-management">Data management</h3>
+
+        <p>
+          Data in Vespa is <a href="https://docs.vespa.ai/documentation/elastic-vespa.html">automatically distributed</a>
+          over available nodes in the cluster,
+          in the configured
+          <a href="https://docs.vespa.ai/documentation/reference/services-content.html#redundancy">redundancy</a>
+          factor, with no manual decision making needed. Nodes can be added to
+          (or removed from) clusters at any time: Vespa will redistribute
+          content in the background without impacting query or write traffic.
+        </p>
+
+        <div style="text-align: center" class="p-20">
+          <img width="300" src="assets/elastic-grow.svg" alt=""/>
+        </div>
+
+        <p>
+          This functionality is
+          <a href="https://docs.vespa.ai/documentation/content/idealstate.html">based on the CRUSH algorithm</a>
+          and ensures that content will be near uniformly distributed over nodes while also
+          ensuring minimal data redistribution when there are changes to the set of cluster nodes.
+        </p>
+
+        <h3 id="node-management">Node management</h3>
+
+        <p>
+          Nodes in Vespa are automatically monitored and routed around should they fail.
+          In stateful clusters this includes redistributing data in the background to rebuild the configured
+          redundancy level when a node fails.
+        </p>
+
+        <div style="text-align: center" class="p-20">
+          <img width="300" style="text-align: center"  src="assets/elastic-fail.svg" alt=""/>
+        </div>
+
+        <p>
+          The upshot is that Vespa keeps working when nodes fail, with no
+          need for manual operations, except to occasionally add capacity replacing the failed nodes.
+        </p>
+
+        <h3 id="system-configuration">System configuration</h3>
+
+        <p>
+          A Vespa system instance is a collection of clusters which realizes the
+          functionality of an application. Vespa instances are always completely configured by a high level
+          specification of the system - the
+          <a href="https://docs.vespa.ai/documentation/cloudconfig/application-packages">application package</a> -
+          while the detailed configuration of the
+          nodes and processes involved are done automatically by Vespa itself. This makes it easy to create
+          Vespa systems of any size and hard to create an incorrect configuration.
+        </p>
+
+        <h3 id="application-development">Application development</h3>
+
+        <p>
+          Any change to a Vespa system is made simply by changing the application package and 
+          <a href="https://docs.vespa.ai/documentation/reference/vespa-cmdline-tools.html#vespa-deploy">deploying</a> 
+          it to Vespa:
+        </p>
+        <div style="text-align: center" class="p-20">
+          <img width="400" style="text-align: center"  src="assets/deploy-flow.svg" alt=""/>
+        </div>
+        <p>
+          Vespa will apply most changes immediately without impacting
+          queries or write traffic. If a change is potentially dangerous, or requires further actions such
+          as restarting nodes, Vespa will specify this such that the operator can decide what to do and
+          carry out those actions. On the <a href="https://cloud.vespa.ai/">Vespa cloud</a> these operations are
+          also <a href="https://cloud.vespa.ai/automated-deployments.html">automated</a>,
+          providing full, safe continuous deployment for all changes.
+        </p>
+
+      </div>
+    </div>
+
+
+    <div>
+      <div class="flex-column">
+        <h2 id="performance-and-scalability">Performance and scalability</h2>
+
+        <p>
+          Vespa is engineered to perform computations over data in less than hundred milliseconds
+          and scale to any data size and query load. Due to the very large scale of some of the systems
+          Vespa is running, it has been cost effective to invest a large number of man-years into optimizing
+          Vespa at all levels from fundamental architectural choices to ensure parallelization to low-level
+          optimization of core algorithms and data structures to execute without cache misses.
+        </p>
+
+        <h3>Distributed and scalable computation</h3>
+
+        <p>
+          Most computation happens on the nodes storing the content.
+          This ensures that the amount of computation that can be done in fixed time
+          scales with the number of content nodes, and that network bandwidth never becomes a bottleneck.
+        </p>
+        <div style="text-align: center" class="p-20">
+          <img width="300" src="assets/query-fanout.svg" alt=""/>
+        </div>
+        <p>
+          If you can express a computation in Vespa you, can be sure that you can scale it nearly indefinitely
+          to higher data volumes, lower latency, and higher query load by adding more nodes.
+        </p>
+
+        <h3>Efficient query execution</h3>
+
+        <p>
+          Vespa uses a variety of index structures to be able to find the data specified by a query quickly:
+          Dictionaries and posting lists for text, B-trees for structured data, and
+          <a href="https://arxiv.org/abs/1603.09320">HNSW</a> indexes for vectors. The HNSW algorithm in Vespa
+          <a href="https://blog.vespa.ai/approximate-nearest-neighbor-search-in-vespa-part-1/">has been modified</a>
+          to support true realtime updates and support for efficient searching with query filters.
+        </p>
+        <p>
+          While the stateless <a href="https://docs.vespa.ai/documentation/jdisc/">container</a>
+          nodes in Vespa are written in Java, the
+          <a href="https://docs.vespa.ai/documentation/proton.html">content</a>
+          nodes that store and compute over data are implemented in C++ to be able to efficiently
+          manage any amount of memory and make use of hardware specific optimizations.
+          Queries are executed in parallel over content nodes, but parallelization does not stop there.
+          Vespa will also parallelize a query over a
+          <a href="https://docs.vespa.ai/documentation/reference/schema-reference.html#num-threads-per-search">configurable number</a>
+          of cores on each node to bring down latency further.
+        </p>
+
+        <h3>Real-time and high throughput writes</h3>
+
+        <p class="m-b-50">
+          In addition to queries, <a href="https://docs.vespa.ai/documentation/writing-to-vespa.html">write</a>
+          <a href="https://docs.vespa.ai/documentation/performance/sizing-feeding.html">performance</a>
+          is also very important in most applications.
+          Vespa can deliver a write throughput of a few tens of thousands of operations per second per content
+          node in most cases, and this write load can be sustained indefinitely, and does not impact query
+          execution, apart from spending a fixed fraction of the nodes resources. All writes are applied in real time.
+          Vespa achieves this by distributing writes to nodes using a distributed, async messagebus, and applying them
+          using lock-free in-memory data structures only, in addition to a persisted transaction log for replay.
+          Disk structures are maintained in background with the goal of spreading the load of maintenance
+          evenly over time to maintain stable resource usage.
+          In addition to adding, changing and removing entire documents, Vespa supports updating just selected fields,
+          which can be extremely cheap when these fields hold structured values.
+        </p>
+      </div>
+    </div>
+
+  </div>
+  </div>
+</div>

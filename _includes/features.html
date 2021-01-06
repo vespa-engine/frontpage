@@ -1,0 +1,18 @@
+<!-- Features -->
+<div class="container">
+    <div class="row p-y-60">
+        {% for feature in include.features %}
+            <div class="xs-col-10-12 xs-col-off-1-12 sm-col-6-12 md-col-1-2 lg-col-1-4 xl-col-1-4">
+                <a href="{{feature.link}}" class="section-guide--item br-4 m-y-10 flex flex-column space-between overflow-hidden">
+                    <div class="p-t-30 p-b-10 p-x-40">
+                        <h2>{{feature.title}}</h2>
+                        <p class="m-t-20">{{feature.description}}</p>
+                    </div>
+                    <div class="section-guide--item--button p-x-40 p-y-18">
+                        <p class="is-bold">Learn More</p>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>

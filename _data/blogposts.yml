@@ -1,0 +1,33 @@
+- title: "Using approximate nearest neighbor search in real world applications"
+  excerpt: "From text search and recommendation to ads and online dating, ANN search rarely works in isolation."
+  link: https://blog.vespa.ai/using-approximate-nearest-neighbor-search-in-real-world-applications/
+  image: https://blog.vespa.ai/assets/2020-12-18-using-approximate-nearest-neighbor-search-in-real-world-applications/nn.png
+  author: Lester Solbakken
+  author-avatar: https://blog.vespa.ai/assets/avatars/lesters.jpg
+  date: 2020-12-18
+
+- title: "Vespa Product Updates, December 2020"
+  excerpt: >
+    Advances in Vespa features and performance include improved tensor ranking performance, Apache ZooKeeper
+    integration, Vespa Python API for researchers and ONNX integration.
+  link: https://blog.vespa.ai/vespa-product-updates-december-2020/
+  image: https://blog.vespa.ai/assets/images/donald-giannatti-Wj1D-qiOseE-unsplash.jpg
+  author: Kristian Aune
+  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
+  date: 2020-12-17
+
+- title: "Stateful model serving: how we accelerate inference using ONNX Runtime"
+  excerpt: "There's a difference between stateless and stateful model serving."
+  link: https://blog.vespa.ai/stateful-model-serving-how-we-accelerate-inference-using-onnx-runtime/
+  image: https://blog.vespa.ai/assets/2020-12-14-stateful-model-serving-how-we-accelerate-inference-using-onnx-runtime/vespa_ort_logos_vert.png
+  author: Lester Solbakken
+  author-avatar: https://blog.vespa.ai/assets/avatars/lesters.jpg
+  date: 2020-12-14
+
+- title: "Fine-tuning a BERT model for search applications"
+  excerpt: "How to ensure training and serving encoding compatibility."
+  link: https://blog.vespa.ai/fine-tune-bert-basic-transformers-trainer-search-applications/
+  image: https://blog.vespa.ai/assets/2020-11-25-fine-tune-bert-basic-transformers-trainer-search-applications/figure_1.jpg
+  author: Thiago Martins
+  author-avatar: https://blog.vespa.ai/assets/avatars/thigm85.jpg
+  date: 2020-11-25

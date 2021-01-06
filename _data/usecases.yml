@@ -1,0 +1,43 @@
+- title: "Text search"
+  icon: d-time-stopwatch
+  image: "assets/filter-illustration.png"
+  imagewidth: 218
+  link: "usecases#text-search"
+  description: Vespa is a full-featured text search engine and supports both regular text search
+    and fast approximate vector search (ANN). This makes it easy to create high-performing search
+    applications at any scale, whether you want to use traditional techniques, or a modern vector based
+    approach. You can even combine both approaches efficiently in the same query, something no other engine
+    can do.
+
+- title: "Recommendation and personalization"
+  icon: d-certificate-ribbon
+  image: "assets/performance-illustration.png"
+  imagewidth: 305
+  link: "usecases#recommendation-and-personalization"
+  description: Recommendation, personalization and targeting involves evaluating recommender
+    models over content items to select the best ones. Vespa lets you build applications which does this online,
+    typically combining fast vector search and filtering with evaluation of machine-learned models
+    over the items. This makes it possible to make recommendations  specifically for each user or situation, using
+    completely up to date information.
+
+- title: "Question answering"
+  icon: d-comment-help
+  image: "assets/qa-illustration.png"
+  imagewidth: 268
+  link: "usecases#question-answering"
+  description: Providing direct answers to questions is useful when creating chatbots,
+    virtual assistants, and to answer some search queries. Modern question answerers
+    combine evaluation of transformer based language models with efficient retrieval of candidate text
+    snippets. Vespa makes it possible to build question answering systems combining the quality of the research
+    state of the art with production-ready performance.
+
+- title: "Semi-structured navigation"
+  icon: d-cart-shopping
+  image: "assets/e-commerce-illustration.png"
+  imagewidth: 266
+  link: "usecases#semi-structured-navigation"
+  description: Applications such as e-commerce use a combination of
+    structured data and text and need to provide structured navigation - grouping data dynamically
+    for navigation and filtering - in combination with search and recommendation.
+    Vespa provides all the features required for this with great performance, which makes it possible to
+    realize functionally complete applications leveraging structured data on a unified architecture.
