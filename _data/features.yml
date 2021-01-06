@@ -7,7 +7,7 @@
 - title: Machine learning support
   description: >
     Vespa is engineered around scalable and efficient support for machine-learned model inference, and supports
-    a most machine-learned models from most tools.
+    most machine-learned models from most tools.
   link: features#computation-engine
 
 - title: Elastic data management
