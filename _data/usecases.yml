@@ -17,7 +17,7 @@
   description: Recommendation, personalization and targeting involves evaluating recommender
     models over content items to select the best ones. Vespa lets you build applications which does this online,
     typically combining fast vector search and filtering with evaluation of machine-learned models
-    over the items. This makes it possible to make recommendations  specifically for each user or situation, using
+    over the items. This makes it possible to make recommendations specifically for each user or situation, using
     completely up to date information.
 
 - title: "Question answering"
@@ -28,8 +28,8 @@
   description: Providing direct answers to questions is useful when creating chatbots,
     virtual assistants, and to answer some search queries. Modern question answerers
     combine evaluation of transformer based language models with efficient retrieval of candidate text
-    snippets. Vespa makes it easy to build question answering systems combining the research
-    state of the art with production-ready performance.
+    snippets. Vespa makes it easy to build question answering systems combining
+    the state of the art in research with performance suitable for production.
 
 - title: "Semi-structured navigation"
   icon: d-cart-shopping
