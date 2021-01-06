@@ -28,7 +28,7 @@
   description: Providing direct answers to questions is useful when creating chatbots,
     virtual assistants, and to answer some search queries. Modern question answerers
     combine evaluation of transformer based language models with efficient retrieval of candidate text
-    snippets. Vespa makes it possible to build question answering systems combining the quality of the research
+    snippets. Vespa makes it easy to build question answering systems combining the research
     state of the art with production-ready performance.
 
 - title: "Semi-structured navigation"
