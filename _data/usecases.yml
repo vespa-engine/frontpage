@@ -1,7 +1,7 @@
 - title: "Text search"
   icon: d-time-stopwatch
-  image: "assets/filter-illustration.png"
-  imagewidth: 218
+  image: "assets/text-search-illustration.png"
+  imagewidth: 266
   link: "usecases#text-search"
   description: Vespa is a full-featured text search engine and supports both regular text search
     and fast approximate vector search (ANN). This makes it easy to create high-performing search
