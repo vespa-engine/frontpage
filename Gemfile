@@ -36,3 +36,5 @@ gem "wdm", "~> 0.1.0", :install_if => Gem.win_platform?
 # kramdown v1, comment out this line.
 gem "kramdown-parser-gfm"
 
+# Work-around for webrick no longer included in Ruby 3.0 (https://github.com/jekyll/jekyll/issues/8523)
+gem "webrick"
