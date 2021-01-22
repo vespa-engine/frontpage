@@ -1,3 +1,4 @@
+<!-- Copyright Verizon Media. All rights reserved. -->
 # Vespa front-page
 The Vespa.ai front page
 
