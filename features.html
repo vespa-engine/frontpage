@@ -41,16 +41,16 @@ layout: page
         <p>Vespa supports querying by:
         </p>
           <ul class="list p-l-30 p-b-10">
-            <li><b><a href="https://docs.vespa.ai/documentation/reference/query-language-reference.html">Structured data</a></b>:
+            <li><b><a href="https://docs.vespa.ai/en/reference/query-language-reference.html">Structured data</a></b>:
               Exact, substring and regexp, numerical ranges, geo-distance, predicates.</li>
-            <li><b><a href="https://docs.vespa.ai/documentation/text-matching-ranking">Text</a></b>:
+            <li><b><a href="https://docs.vespa.ai/en/text-matching-ranking">Text</a></b>:
               Full text with tokenization and stemming, as well as positional information.</li>
-            <li><b><a href="https://docs.vespa.ai/documentation/nearest-neighbor-search.html">Vectors</a></b>:
+            <li><b><a href="https://docs.vespa.ai/en/nearest-neighbor-search.html">Vectors</a></b>:
               Nearest neighbour, approximate (ANN) or exact, with a variety of distance metrics.</li>
           </ul>
         <p>
           Operators querying fields in these ways can be
-          <a href="https://docs.vespa.ai/documentation/reference/query-language-reference.html">combined freely</a>
+          <a href="https://docs.vespa.ai/en/reference/query-language-reference.html">combined freely</a>
           by AND and OR in queries
           while still executing efficiently. This makes it possible to express a wide range
           of behavior, such as retrieving in vector spaces with filters or performing hybrid
@@ -60,7 +60,7 @@ layout: page
           <img width="400" style="text-align: center" src="assets/query-tree.svg" alt=""/>
         </div>
         <p>
-          In addition, Vespa provides a <a href="https://docs.vespa.ai/documentation/grouping">grouping language</a>
+          In addition, Vespa provides a <a href="https://docs.vespa.ai/en/grouping">grouping language</a>
           which lets queries specify how matches should be grouped and aggregated.
           This makes it possible to group matches by unique field values or buckets, and aggregate, count or compute
           values over the groups. Groupings can be arbitrarily deep and multiple groupings can be made in the same query.
@@ -77,7 +77,7 @@ layout: page
 
         <p>
           Once data is selected by a query most applications need to
-          <a href="https://docs.vespa.ai/documentation/ranking">compute over each data element</a>.
+          <a href="https://docs.vespa.ai/en/ranking">compute over each data element</a>.
           In a search application this can be a relevance model deciding which of all the matches
           should eventually be surfaced, in a recommendation system it's a recommender deciding which
           candidate items to recommend. More generally, it can be any set of numerical computations
@@ -88,13 +88,13 @@ layout: page
         <h3>Computation as mathematical expressions</h3>
         <p>
           Computation in Vespa is specified as
-          <a href="https://docs.vespa.ai/documentation/reference/ranking-expressions.html">mathematical expressions</a>
+          <a href="https://docs.vespa.ai/en/reference/ranking-expressions.html">mathematical expressions</a>
           over scalars and tensors.
           These expressions may be written by hand or imported into Vespa from a machine learner
-          (<a href="https://docs.vespa.ai/documentation/tensorflow">TensorFlow</a>,
-          <a href="https://docs.vespa.ai/documentation/lightgbm">LightGBM</a>,
-          <a href="https://docs.vespa.ai/documentation/xgboost">XGBoost</a>,
-          or <a href="https://docs.vespa.ai/documentation/onnx">ONNX</a>-compatible tool).
+          (<a href="https://docs.vespa.ai/en/tensorflow">TensorFlow</a>,
+          <a href="https://docs.vespa.ai/en/lightgbm">LightGBM</a>,
+          <a href="https://docs.vespa.ai/en/xgboost">XGBoost</a>,
+          or <a href="https://docs.vespa.ai/en/onnx">ONNX</a>-compatible tool).
           Computations over data happens locally on the nodes storing the data, which is important because it
           allows as much parallel computation as there are data nodes and avoids sending the data over the network
           for computation, something which can not scale.
@@ -105,17 +105,17 @@ layout: page
         <p>
           The features these expressions compute over are either fields of the documents, values passed with the
           query, data from the application package, or a selection from the wide range of
-          <a href="https://docs.vespa.ai/documentation/reference/rank-features.html">built-in features</a>
+          <a href="https://docs.vespa.ai/en/reference/rank-features.html">built-in features</a>
           in Vespa combining data from both queries and documents, such as e.g text match features.
         </p>
 
         <h3>Sparse and dense tensors</h3>
 
         <p>
-          <a href="https://docs.vespa.ai/documentation/tensor-user-guide.html">Tensors</a>
+          <a href="https://docs.vespa.ai/en/tensor-user-guide.html">Tensors</a>
           are generalizations of vectors (1-d) and matrixes (2-d) to any number of dimensions.
           Since features in Vespa can be tensors, and the expression language provides operators for
-          <a href="https://docs.vespa.ai/documentation/reference/ranking-expressions.html#tensor-functions">computing over tensors</a>,
+          <a href="https://docs.vespa.ai/en/reference/ranking-expressions.html#tensor-functions">computing over tensors</a>,
           it is possible to express a wide range of computation over collections of numbers
           to for example perform inference in modern transformer based language deep learning models.
         </p>
@@ -132,7 +132,7 @@ layout: page
         <p>
           Multi-phase inference can be used to invest more computational power in the best candidate items
           by doing an initial selection using a simpler model,
-          <a href="https://docs.vespa.ai/documentation/reference/schema-reference.html#secondphase-rank">followed by</a>
+          <a href="https://docs.vespa.ai/en/reference/schema-reference.html#secondphase-rank">followed by</a>
           computing a more expensive model for the best candidates.
         </p>
       </div>
@@ -157,10 +157,10 @@ layout: page
         <h3 id="data-management">Data management</h3>
 
         <p>
-          Data in Vespa is <a href="https://docs.vespa.ai/documentation/elastic-vespa.html">automatically distributed</a>
+          Data in Vespa is <a href="https://docs.vespa.ai/en/elastic-vespa.html">automatically distributed</a>
           over available nodes in the cluster,
           in the configured
-          <a href="https://docs.vespa.ai/documentation/reference/services-content.html#redundancy">redundancy</a>
+          <a href="https://docs.vespa.ai/en/reference/services-content.html#redundancy">redundancy</a>
           factor, with no manual decision making needed. Nodes can be added to
           (or removed from) clusters at any time: Vespa will redistribute
           content in the background without impacting query or write traffic.
@@ -172,7 +172,7 @@ layout: page
 
         <p>
           This functionality is
-          <a href="https://docs.vespa.ai/documentation/content/idealstate.html">based on the CRUSH algorithm</a>
+          <a href="https://docs.vespa.ai/en/content/idealstate.html">based on the CRUSH algorithm</a>
           and ensures that content will be near uniformly distributed over nodes while also
           ensuring minimal data redistribution when there are changes to the set of cluster nodes.
         </p>
@@ -200,7 +200,7 @@ layout: page
           A Vespa system instance is a collection of clusters which realizes the
           functionality of an application. Vespa instances are always completely configured by a high level
           specification of the system - the
-          <a href="https://docs.vespa.ai/documentation/cloudconfig/application-packages">application package</a> -
+          <a href="https://docs.vespa.ai/en/cloudconfig/application-packages">application package</a> -
           while the detailed configuration of the
           nodes and processes involved are done automatically by Vespa itself. This makes it easy to create
           Vespa systems of any size and hard to create an incorrect configuration.
@@ -210,7 +210,7 @@ layout: page
 
         <p>
           Any change to a Vespa system is made simply by changing the application package and 
-          <a href="https://docs.vespa.ai/documentation/reference/vespa-cmdline-tools.html#vespa-deploy">deploying</a> 
+          <a href="https://docs.vespa.ai/en/reference/vespa-cmdline-tools.html#vespa-deploy">deploying</a>
           it to Vespa:
         </p>
         <div style="text-align: center" class="p-20">
@@ -266,22 +266,22 @@ layout: page
           to support true realtime updates and support for efficient searching with query filters.
         </p>
         <p>
-          While the stateless <a href="https://docs.vespa.ai/documentation/jdisc/">container</a>
+          While the stateless <a href="https://docs.vespa.ai/en/jdisc/">container</a>
           nodes in Vespa are written in Java, the
-          <a href="https://docs.vespa.ai/documentation/proton.html">content</a>
+          <a href="https://docs.vespa.ai/en/proton.html">content</a>
           nodes that store and compute over data are implemented in C++ to be able to efficiently
           manage any amount of memory and make use of hardware specific optimizations.
           Queries are executed in parallel over content nodes, but parallelization does not stop there.
           Vespa will also parallelize a query over a
-          <a href="https://docs.vespa.ai/documentation/reference/schema-reference.html#num-threads-per-search">configurable number</a>
+          <a href="https://docs.vespa.ai/en/reference/schema-reference.html#num-threads-per-search">configurable number</a>
           of cores on each node to bring down latency further.
         </p>
 
         <h3>Real-time and high throughput writes</h3>
 
         <p class="m-b-50">
-          In addition to queries, <a href="https://docs.vespa.ai/documentation/writing-to-vespa.html">write</a>
-          <a href="https://docs.vespa.ai/documentation/performance/sizing-feeding.html">performance</a>
+          In addition to queries, <a href="https://docs.vespa.ai/en/writing-to-vespa.html">write</a>
+          <a href="https://docs.vespa.ai/en/performance/sizing-feeding.html">performance</a>
           is also very important in most applications.
           Vespa can deliver a write throughput of a few tens of thousands of operations per second per content
           node in most cases, and this write load can be sustained indefinitely, and does not impact query

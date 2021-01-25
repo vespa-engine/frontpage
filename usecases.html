@@ -39,56 +39,56 @@ layout: page
           real applications. Search applications usually make use of these features of Vespa:
         </p>
         <ul class="list p-l-30 p-b-10">
-          <li><a href="https://docs.vespa.ai/documentation/text-matching-ranking.html">Full text search</a>
-            with support for word position based <a href="https://docs.vespa.ai/documentation/reference/query-language-reference.html#near">matching</a>
-            and <a href="https://docs.vespa.ai/documentation/ranking.html">relevance</a>,
-            and advanced operators like <a href="https://docs.vespa.ai/documentation/using-wand-with-vespa.html">WAND</a>
+          <li><a href="https://docs.vespa.ai/en/text-matching-ranking.html">Full text search</a>
+            with support for word position based <a href="https://docs.vespa.ai/en/reference/query-language-reference.html#near">matching</a>
+            and <a href="https://docs.vespa.ai/en/ranking.html">relevance</a>,
+            and advanced operators like <a href="https://docs.vespa.ai/en/using-wand-with-vespa.html">WAND</a>
             over text terms.</li>
-          <li>Fast <a href="https://docs.vespa.ai/documentation/approximate-nn-hnsw.html">approximate nearest neighbour search (ANN)</a>
+          <li>Fast <a href="https://docs.vespa.ai/en/approximate-nn-hnsw.html">approximate nearest neighbour search (ANN)</a>
             in vector spaces, based on the HNSW algorithm.</li>
-          <li><a href="https://docs.vespa.ai/documentation/reference/query-language-reference.html#where">Matching</a>
-            by <a href="https://docs.vespa.ai/documentation/attributes.html">structured metadata</a>.</li>
+          <li><a href="https://docs.vespa.ai/en/reference/query-language-reference.html#where">Matching</a>
+            by <a href="https://docs.vespa.ai/en/attributes.html">structured metadata</a>.</li>
           <li>Combining multiple of the above matching operators freely in the same query by
-            <a href="https://docs.vespa.ai/documentation/reference/query-language-reference.html#and">AND</a> and
-            <a href="https://docs.vespa.ai/documentation/reference/query-language-reference.html#or">OR</a>.</li>
+            <a href="https://docs.vespa.ai/en/reference/query-language-reference.html#and">AND</a> and
+            <a href="https://docs.vespa.ai/en/reference/query-language-reference.html#or">OR</a>.</li>
           <li>A large set of
-            <a href="https://docs.vespa.ai/documentation/reference/rank-features.html">relevance features</a>
-            including <a href="https://docs.vespa.ai/documentation/reference/bm25.html">bm25</a>
+            <a href="https://docs.vespa.ai/en/reference/rank-features.html">relevance features</a>
+            including <a href="https://docs.vespa.ai/en/reference/bm25.html">bm25</a>
             and
-            <a href="https://docs.vespa.ai/documentation/reference/string-segment-match.html">more advanced text features using positional information</a>,
-            <a href="https://docs.vespa.ai/documentation/geo-search.html#rank">geo features</a>,
+            <a href="https://docs.vespa.ai/en/reference/string-segment-match.html">more advanced text features using positional information</a>,
+            <a href="https://docs.vespa.ai/en/geo-search.html#rank">geo features</a>,
             time and so on.</li>
           <li>Ranking by arbitrary
-            <a href="https://docs.vespa.ai/documentation/reference/ranking-expressions.html">mathematical expressions</a>
-            over scalar and <a href="https://docs.vespa.ai/documentation/tensor-user-guide.html">tensor</a> features,
+            <a href="https://docs.vespa.ai/en/reference/ranking-expressions.html">mathematical expressions</a>
+            over scalar and <a href="https://docs.vespa.ai/en/tensor-user-guide.html">tensor</a> features,
             as well as by models created in
-            <a href="https://docs.vespa.ai/documentation/lightgbm.html">LightGbm</a>,
-            <a href="https://docs.vespa.ai/documentation/xgboost.html">XGBoost</a>,
-            <a href="https://docs.vespa.ai/documentation/tensorflow.html">TensorFlow</a>
+            <a href="https://docs.vespa.ai/en/lightgbm.html">LightGbm</a>,
+            <a href="https://docs.vespa.ai/en/xgboost.html">XGBoost</a>,
+            <a href="https://docs.vespa.ai/en/tensorflow.html">TensorFlow</a>
             or any tool supporting
-            <a href="https://docs.vespa.ai/documentation/onnx.html">ONNX</a>. This includes support for modern
+            <a href="https://docs.vespa.ai/en/onnx.html">ONNX</a>. This includes support for modern
             transformer based language models, which are evaluated on the content nodes like other ranking
             expressions for scalability.</li>
-          <li>Support for <a href="https://docs.vespa.ai/documentation/ranking.html#performance">2-phase ranking</a>.</li>
-          <li>Surfacing <a href="https://docs.vespa.ai/documentation/document-summaries.html">any document data</a>
+          <li>Support for <a href="https://docs.vespa.ai/en/ranking.html#performance">2-phase ranking</a>.</li>
+          <li>Surfacing <a href="https://docs.vespa.ai/en/document-summaries.html">any document data</a>
             in results, with optional support for
-            <a href="https://docs.vespa.ai/documentation/reference/schema-reference.html#summary">static or dynamic snippeting</a>
+            <a href="https://docs.vespa.ai/en/reference/schema-reference.html#summary">static or dynamic snippeting</a>
             with highlighting.</li>
-          <li>Deploy application specific <a href="https://docs.vespa.ai/documentation/searcher-development.html">query, result</a>
-            and <a href="https://docs.vespa.ai/documentation/document-processing.html">document processors</a> in Java deployed
+          <li>Deploy application specific <a href="https://docs.vespa.ai/en/searcher-development.html">query, result</a>
+            and <a href="https://docs.vespa.ai/en/document-processing.html">document processors</a> in Java deployed
             as part of the application.</li>
-          <li><a href="https://docs.vespa.ai/documentation/grouping.html">Grouping, deduplication and aggregation</a>
+          <li><a href="https://docs.vespa.ai/en/grouping.html">Grouping, deduplication and aggregation</a>
             over all matches.</li>
         </ul>
 
         <p>
           No matter which features you combine, you'll benefit from Vespa's
-          <a href="https://docs.vespa.ai/documentation/performance/sizing-search.html">linear scalability</a>,
-          <a href="https://docs.vespa.ai/documentation/content/idealstate.html">automatic data management</a> and
-          <a href="https://docs.vespa.ai/documentation/elastic-vespa.html">online elasticity</a>,
+          <a href="https://docs.vespa.ai/en/performance/sizing-search.html">linear scalability</a>,
+          <a href="https://docs.vespa.ai/en/content/idealstate.html">automatic data management</a> and
+          <a href="https://docs.vespa.ai/en/elastic-vespa.html">online elasticity</a>,
           and support for
-          <a href="https://docs.vespa.ai/documentation/performance/sizing-feeding.html">sustained high volume</a>
-          and <a href="https://docs.vespa.ai/documentation/writing-to-vespa.html">fully realtime writes</a>
+          <a href="https://docs.vespa.ai/en/performance/sizing-feeding.html">sustained high volume</a>
+          and <a href="https://docs.vespa.ai/en/writing-to-vespa.html">fully realtime writes</a>
           which allows you to both add new documents, and cheaply update fields of existing documents while serving.
         </p>
         <h3>Text search sample applications</h3>
@@ -97,7 +97,7 @@ layout: page
         </p>
         <ul class="list p-l-30 p-b-10">
           <li>
-            <a href="https://docs.vespa.ai/documentation/tutorials/text-search.html">Text search tutorial</a>
+            <a href="https://docs.vespa.ai/en/tutorials/text-search.html">Text search tutorial</a>
             with <a href="https://github.com/vespa-engine/sample-apps/tree/master/text-search">complete application source</a>.
           </li>
           <li>
@@ -137,20 +137,20 @@ layout: page
           to make them specifically for each user or situation. These features of Vespa are usually leveraged:
         </p>
         <ul class="list p-l-30 p-b-10">
-          <li><a href="https://docs.vespa.ai/documentation/nearest-neighbor-search.html">Search in vector spaces</a>
-            (<a href="https://docs.vespa.ai/documentation/approximate-nn-hnsw.html">approximate (ANN)</a> or exact)
+          <li><a href="https://docs.vespa.ai/en/nearest-neighbor-search.html">Search in vector spaces</a>
+            (<a href="https://docs.vespa.ai/en/approximate-nn-hnsw.html">approximate (ANN)</a> or exact)
             in combination with filters.</li>
           <li>Evaluation of complex
-            <a href="https://docs.vespa.ai/documentation/ranking.html#machine-learned-model-inference">machine-learned models</a>
+            <a href="https://docs.vespa.ai/en/ranking.html#machine-learned-model-inference">machine-learned models</a>
             in parallel on the content nodes to scale to any amount of content.</li>
-          <li>Surfacing <a href="https://docs.vespa.ai/documentation/document-summaries.html">any document data</a> in
+          <li>Surfacing <a href="https://docs.vespa.ai/en/document-summaries.html">any document data</a> in
             results.</li>
-          <li>Deploy application specific <a href="https://docs.vespa.ai/documentation/searcher-development.html">query, result</a>
-            and <a href="https://docs.vespa.ai/documentation/document-processing.html">document processors</a> in Java deployed
+          <li>Deploy application specific <a href="https://docs.vespa.ai/en/searcher-development.html">query, result</a>
+            and <a href="https://docs.vespa.ai/en/document-processing.html">document processors</a> in Java deployed
             as part of the application.</li>
-          <li><a href="https://docs.vespa.ai/documentation/grouping.html">Grouping and deduplication</a>
+          <li><a href="https://docs.vespa.ai/en/grouping.html">Grouping and deduplication</a>
             of the recommended items.</li>
-          <li><a href="https://docs.vespa.ai/documentation/writing-to-vespa.html">Fast realtime updates</a>
+          <li><a href="https://docs.vespa.ai/en/writing-to-vespa.html">Fast realtime updates</a>
             of metadata to produce high quality interaction signals for the recommender.</li>
         </ul>
 
@@ -160,7 +160,7 @@ layout: page
         </p>
         <ul class="list p-l-30 p-b-10">
           <li>
-            A <a href="https://docs.vespa.ai/documentation/tutorials/blog-recommendation.html">Recommendation tutorial</a>
+            A <a href="https://docs.vespa.ai/en/tutorials/blog-recommendation.html">Recommendation tutorial</a>
             with <a href="https://github.com/vespa-engine/sample-apps/tree/master/blog-recommendation">complete application source</a>.
           </li>
           <li>
@@ -185,7 +185,7 @@ layout: page
         <p>
           A high quality question answerer works as follows: Text snippets are represented by vector embeddings
           which are indexed for fast matching with
-          <a href="https://docs.vespa.ai/documentation/approximate-nn-hnsw.html">ANN</a>.
+          <a href="https://docs.vespa.ai/en/approximate-nn-hnsw.html">ANN</a>.
           The best candidates found by ANN matching are evaluated in a
           transformer based language model which outputs the score of the snippet as well as the beginning and
           end of the text answer.
@@ -216,23 +216,23 @@ layout: page
         <p>
           Applications that use semi-structured data - that is a combination of data-base like data and plain text -
           usually benefit from allowing users to navigate in the data using both structured navigation and
-          <a href="https://docs.vespa.ai/documentation/text-matching-ranking.html">text search</a>.
+          <a href="https://docs.vespa.ai/en/text-matching-ranking.html">text search</a>.
           The most common example of this is e-commerce, or shopping sites.
         </p>
         <p>
           This makes use of traditional text search in conjunction with
-          <a href="https://docs.vespa.ai/documentation/reference/sorting.html">sorting</a>,
-          <a href="https://docs.vespa.ai/documentation/grouping.html">grouping</a> and
-          <a href="https://docs.vespa.ai/documentation/reference/query-language-reference.html#where">"filtering by metadata</a>.
+          <a href="https://docs.vespa.ai/en/reference/sorting.html">sorting</a>,
+          <a href="https://docs.vespa.ai/en/grouping.html">grouping</a> and
+          <a href="https://docs.vespa.ai/en/reference/query-language-reference.html#where">"filtering by metadata</a>.
           As any query can be grouped and filtered, this allows users to switch between drilling down by metadata
           and searching by text seamlessly without losing context. Commonly some of the metadata is supplied by
-          <a href="https://docs.vespa.ai/documentation/parent-child.html">parent documents</a>
+          <a href="https://docs.vespa.ai/en/parent-child.html">parent documents</a>
           (such as the merchant of a product). Some e-commerce applications also make use
           of embeddings to provide search, navigation or recommendation in an embedding space.
         </p>
         <p>
           For more details, see the
-          <a href="https://docs.vespa.ai/documentation/use-case-shopping.html">shopping use case</a>
+          <a href="https://docs.vespa.ai/en/use-case-shopping.html">shopping use case</a>
           in the Vespa documentation and the accompanying
           <a href="https://github.com/vespa-engine/sample-apps/tree/master/use-case-shopping">application source</a>
           with frontend.
@@ -249,7 +249,7 @@ layout: page
           is to provide search in personal collections of data where there is never a need to search across many
           collections in a single query. In such applications it is not cost effective to do the work to maintain global
           reverse indexes and the best solution is to
-          <a href="https://docs.vespa.ai/documentation/streaming-search.html">search by streaming</a>
+          <a href="https://docs.vespa.ai/en/streaming-search.html">search by streaming</a>
           trough the raw data at query time.
           Latency can still be bounded for arbitrary sized collections as each is distributed over a number of nodes
           to bound the size of a given user's collection on a given node.
@@ -276,14 +276,14 @@ layout: page
         </p>
         <ul class="list p-l-30 p-b-10">
           <li>Text search with
-            <a href="https://docs.vespa.ai/documentation/text-matching-ranking.html#prefix-search">prefix match</a>,
-            or <a href="https://docs.vespa.ai/documentation/reference/schema-reference.html#gram">gram matching</a>, or</li>
+            <a href="https://docs.vespa.ai/en/text-matching-ranking.html#prefix-search">prefix match</a>,
+            or <a href="https://docs.vespa.ai/en/reference/schema-reference.html#gram">gram matching</a>, or</li>
           <li>prefix, substring or
-            <a href="https://docs.vespa.ai/documentation/reference/query-language-reference.html#matches">regexp</a>
+            <a href="https://docs.vespa.ai/en/reference/query-language-reference.html#matches">regexp</a>
             search in a (structured) attribute containing an array of strings.</li>
-          <li><a href="https://docs.vespa.ai/documentation/writing-to-vespa.html">Realtime updates</a>
+          <li><a href="https://docs.vespa.ai/en/writing-to-vespa.html">Realtime updates</a>
             of features signalling how often a suggestion is selected.</li>
-          <li>A <a href="https://docs.vespa.ai/documentation/reference/ranking-expressions.html">ranking expression</a>
+          <li>A <a href="https://docs.vespa.ai/en/reference/ranking-expressions.html">ranking expression</a>
             to rank the candidate completions using match and metadata features.</li>
           <li>A <a href="#personal-search">personal search</a> cluster if some suggestions depend on personal data,
             and if so federated with a cluster of shared suggestions.</li>
