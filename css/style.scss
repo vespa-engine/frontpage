@@ -232,7 +232,7 @@ button.section-searchbar {
 }
 
 /* Fix anchored links being hidden under navbar */
-*[id]:before {
+h1[id]::before, h2[id]::before, h3[id]::before, h4[id]::before {
     display: block;
     content: " ";
     margin-top: -75px;
