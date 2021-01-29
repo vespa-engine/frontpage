@@ -1,0 +1,167 @@
+---
+# Copyright Verizon Media. All rights reserved.
+title: Migrating from Elasticsearch
+layout: page
+---
+
+<div class="container-full">
+  <div class="m-t-20 row">
+    <div class="xs-col-1-1 sm-col-1-1 md-col-1-1 lg-col-8-12 lg-col-off-2-12 xl-col-8-12 xl-col-off-2-12">
+      <div class="flex-column">
+        <div class="flex-column">
+          <h1 id="migrating-from-elasticsearch">Migrating from Elasticsearch</h1>
+          <p>
+            This is a guide for how to move data from Elasticsearch (ES) to Vespa.
+            By the end of this guide you will have generated a deployable Vespa application package.
+            To consider whether Vespa is a better choice for your use case,
+            take a look at the <a href="vespa-elastic-solr">comparison</a>.
+          </p>
+          <p>
+            Vespa provides a helper conversion script for basic conversion of ES data and mappings
+            to Vespa data and configuration.
+            <!-- ToDo: more details on what is in an app package and a link ...  -->
+          </p>
+
+          <h2 id="feed-a-sample-es-index">Feed a sample ES index</h2>
+          <p>
+            Set up an index with 1,000 sample documents using
+            <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.9/getting-started-index.html">
+              getting-started-index</a> or skip this part if you have an index:
+          </p>
+<pre>
+$ docker network create --driver bridge esnet
+
+$ docker run --rm --name esnode --network esnet -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" \
+  docker.elastic.co/elasticsearch/elasticsearch:7.10.2
+
+$ curl 'https://raw.githubusercontent.com/elastic/elasticsearch/master/docs/src/test/resources/accounts.json' \
+  &gt; accounts.json
+
+$ curl -H "Content-Type:application/json" --data-binary @accounts.json 'localhost:9200/bank/_bulk?pretty&refresh'
+
+$ curl 'localhost:9200/_cat/indices?v'
+</pre>
+          <p>
+            The last command should indicate 1,000 documents in the index.
+          </p>
+
+
+          <h2 id="dump-documents-from-es">Dump documents from ES</h2>
+          <p>
+            Refer to <a href="https://github.com/elasticsearch-dump/elasticsearch-dump">ElasticDump</a> for details.
+          </p>
+<pre>
+$ cat &gt; dumpit.sh &lt;&lt; EOF
+npm install elasticdump
+/dump/node_modules/.bin/elasticdump --input=http://esnode:9200/bank --output=bank_data.json    --type=data
+/dump/node_modules/.bin/elasticdump --input=http://esnode:9200/bank --output=bank_mapping.json --type=mapping
+EOF
+
+$ docker run --rm --name esdump --network esnet -v "$PWD":/dump -w /dump node:alpine sh dumpit.sh
+
+$ docker network remove esnet
+</pre>
+
+
+          <h2 id="generate-vespa-documents-and-application-package">Generate Vespa documents and Application Package</h2>
+          <p>
+            Use <a href="https://github.com/vespa-engine/vespa/tree/master/config-model/src/main/python">
+            ES_Vespa_parser.py</a> to generate documents and configuration:
+          </p>
+<pre>
+$ curl 'https://raw.githubusercontent.com/vespa-engine/vespa/master/config-model/src/main/python/ES_Vespa_parser.py' \
+  &gt; ES_Vespa_parser.py
+
+$ python3 ./ES_Vespa_parser.py --application_name application bank_data.json bank_mapping.json
+</pre>
+          <p>
+            This will generate documents in a <code>documents.json</code> file
+            where each document has IDs like this <code>id:application:_doc::1</code>.
+            It also generated an <code>application</code> folder that contains the Vespa application configuration.
+          </p>
+<pre>
+/application
+      │     
+      ├── documents.json
+      ├── hosts.xml
+      ├── services.xml
+      └── /schemas
+            ├── _doc.sd
+            └── ... 
+</pre>
+
+
+          <h2 id="deploy-to-vespa">Deploy to Vespa</h2>
+          <p>
+            This tutorial have been tested with a Docker container with 6GB RAM.
+            <code>application</code> is mapped to /app in the Docker container.
+            Start the Vespa container:
+          </p>
+<pre>
+$ docker run -m 6G --detach --name vespa --hostname vespa-es-tutorial \
+  --privileged --volume `pwd`:/app \
+  --publish 8080:8080 --publish 19112:19112 vespaengine/vespa
+</pre>
+          <p>
+            Wait for the configuration server to start - wait for a 200 OK response:
+          </p>
+<pre>
+$ docker exec vespa bash -c 'curl -s --head http://localhost:19071/ApplicationStatus'
+</pre>
+          <p>
+            <a href="https://docs.vespa.ai/en/cloudconfig/application-packages.html#deploy">Deploy</a>
+            the <code>application</code> package:
+          </p>
+<pre>
+$ docker exec vespa bash -c '/opt/vespa/bin/vespa-deploy prepare /app/application && \
+  /opt/vespa/bin/vespa-deploy activate'
+</pre>
+          <p>
+            Ensure the application is active - wait for a 200 OK response:
+          </p>
+<pre>
+$ curl -s --head http://localhost:8080/ApplicationStatus
+</pre>
+          <p>
+            The Vespa node is now configured and ready for use.
+          </p>
+
+
+          <h2 id="feed-documents">Feed documents</h2>
+          <p>
+            Use the <a href="https://docs.vespa.ai/en/vespa-http-client.html">vespa-http-client</a>:
+          </p>
+<pre>
+$ docker exec vespa bash -c 'java -jar /opt/vespa/lib/jars/vespa-http-client-jar-with-dependencies.jar \
+    --verbose --file /app/application/documents.json --host localhost --port 8080'
+</pre>
+
+
+          <h2 id="get-a-document">Get a document</h2>
+          <p>
+            Get documents using the <a href="https://docs.vespa.ai/en/document-v1-api-guide.html">Document API</a>:
+          </p>
+<pre>
+$ curl -s http://localhost:8080/document/v1/application/_doc/docid/1
+</pre>
+
+
+          <h2 id="query-documents">Query documents</h2>
+          <p>
+            Use the <a href="https://docs.vespa.ai/en/query-api.html">Query API</a> to count documents,
+            find <code>"totalCount": 1000</code> in the output, and run a text query:
+          </p>
+<pre>
+$ curl -H "Content-Type: application/json" \
+  --data '{"yql" : "select * from sources * where sddocname contains \"_doc\";"}' \
+  http://localhost:8080/search/
+
+$ curl -H "Content-Type: application/json" \
+  --data '{"yql" : "select * from sources * where firstname contains \"amber\";"}' \
+  http://localhost:8080/search/
+</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
