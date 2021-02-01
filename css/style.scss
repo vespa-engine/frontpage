@@ -257,6 +257,11 @@ h1[id]::before, h2[id]::before, h3[id]::before, h4[id]::before {
     }
 }
 
+/* Want to hide tables under navbar as well */
+table {
+    position: static !important;
+}
+
 pre {
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
     font-size: 1.3rem !important;
