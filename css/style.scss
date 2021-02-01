@@ -256,3 +256,22 @@ h1[id]::before, h2[id]::before, h3[id]::before, h4[id]::before {
         margin-bottom: 10px;
     }
 }
+
+pre {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size: 1.3rem !important;
+    -webkit-font-smoothing: auto;
+    overflow: auto;
+    page-break-inside: avoid;
+    display: block;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    border: 1px solid #ccc;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border-radius: 0;
+    padding: 14px !important;
+    margin-bottom: 10px;
+}
