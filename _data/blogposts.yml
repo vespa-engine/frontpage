@@ -1,3 +1,11 @@
+- title: "Q&A from "The Great Search Engine Debate - Elasticsearch, Solr or Vespa?" Meetup"
+  excerpt: "This blog post addresses the Vespa-related questions, with quicklinks into the recording for easy access. We have also responded to the unanswered questions from the chat log."
+  link: https://blog.vespa.ai/the-great-search-engine-debate-elasticsearch-solr-or-vespa/
+  image: https://blog.vespa.ai/assets/2021-02-08-the-great-search-engine-debate-elasticsearch-solr-or-vespa/cover.png
+  author: Kristian Aune
+  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
+  date: 2021-02-08
+
 - title: "Vespa Product Updates, January 2021"
   excerpt: "Advances in Vespa features and performance last month include Automatic Reindexing, Tensor Optimizations and Explainlevel Query Parameter for easier query blueprint tracing."
   link: https://blog.vespa.ai/vespa-product-updates-january-2021/
@@ -21,12 +29,4 @@
   author: Kristian Aune
   author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
   date: 2020-12-17
-
-- title: "Stateful model serving: how we accelerate inference using ONNX Runtime"
-  excerpt: "There's a difference between stateless and stateful model serving."
-  link: https://blog.vespa.ai/stateful-model-serving-how-we-accelerate-inference-using-onnx-runtime/
-  image: https://blog.vespa.ai/assets/2020-12-14-stateful-model-serving-how-we-accelerate-inference-using-onnx-runtime/vespa_ort_logos_vert.png
-  author: Lester Solbakken
-  author-avatar: https://blog.vespa.ai/assets/avatars/lesters.jpg
-  date: 2020-12-14
 
