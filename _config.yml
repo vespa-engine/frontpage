@@ -54,7 +54,7 @@ search:
   feed_endpoints:
     - url: https://vespacloud-docsearch.vespa-team.aws-us-east-1c.public.vespa.oath.cloud/
       indexes:
-        - cloud_index.json
+        - vespa.ai_index.json
     - url: https://vespacloud-docsearch.vespa-team.aws-ap-northeast-1a.public.vespa.oath.cloud/
       indexes:
-        - frontpage_index.json
+        - vespa.ai_index.json
