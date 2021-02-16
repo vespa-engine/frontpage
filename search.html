@@ -78,14 +78,16 @@ layout: page
 
                 var ul = $("<ul>").appendTo("#result");
                 var base_url = {
-                    "open" : "https://docs.vespa.ai",
-                    "cloud": "https://cloud.vespa.ai",
-                    "blog" : "https://blog.vespa.ai"
+                    "open"    : "https://docs.vespa.ai",
+                    "cloud"   : "https://cloud.vespa.ai",
+                    "blog"    : "https://blog.vespa.ai",
+                    "vespaai" : "https://vespa.ai"
                 }
                 var source_name = {
-                    "open" : "Documentation",
-                    "cloud": "Cloud",
-                    "blog" : "Blog"
+                    "open"    : "Documentation",
+                    "cloud"   : "Cloud",
+                    "blog"    : "Blog",
+                    "vespaai" : "Vespa.ai"
                 }
 
                 $.each( data.root.children, function( i, item ) {
