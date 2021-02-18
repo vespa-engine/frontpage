@@ -1,3 +1,11 @@
+- title: "Build a basic text search application from python with Vespa"
+  excerpt: "Introducing pyvespa simplified API. Build Vespa application from python with few lines of code."
+  link: https://blog.vespa.ai/build-basic-text-search-app-from-python-with-vespa/
+  image: https://blog.vespa.ai/assets/2021-02-18-build-basic-text-search-app-from-python-with-vespa/figure_1.jpg
+  author: Thiago Martins
+  author-avatar: https://blog.vespa.ai/assets/avatars/thigm85.jpg
+  date: 2021-02-18
+
 - title: 'Q&A from "The Great Search Engine Debate - Elasticsearch, Solr or Vespa?" Meetup'
   excerpt: "This blog post addresses the Vespa-related questions, with quicklinks into the recording for easy access. We have also responded to the unanswered questions from the chat log."
   link: https://blog.vespa.ai/the-great-search-engine-debate-elasticsearch-solr-or-vespa/
@@ -21,12 +29,3 @@
   author: Lester Solbakken
   author-avatar: https://blog.vespa.ai/assets/avatars/lesters.jpg
   date: 2020-12-18
-
-- title: "Vespa Product Updates, December 2020"
-  excerpt: "Advances in Vespa features and performance include improved tensor ranking performance, Apache ZooKeeper integration, Vespa Python API for researchers and ONNX integration."
-  link: https://blog.vespa.ai/vespa-product-updates-december-2020/
-  image: https://blog.vespa.ai/assets/images/donald-giannatti-Wj1D-qiOseE-unsplash.jpg
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2020-12-17
-
