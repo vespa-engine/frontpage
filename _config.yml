@@ -43,6 +43,7 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - .idea
+  - vespaai_index.json
 
 search:
   namespace: "vespaai"
