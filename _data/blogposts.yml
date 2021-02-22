@@ -1,3 +1,11 @@
+- title: "How Using Screwdriver for CI/CD Reduced Vespa’s Time Spent on Builds and Pull Requests by 75%"
+  excerpt: "Introducing Screwdriver for Vespa's CI/CD needs."
+  link: https://blog.vespa.ai/how-using-screwdriver-for-cicd-reduced-vespas-time-spent-on-builds-and-pull-requests-by-75-percent/
+  image: https://blog.vespa.ai/assets/2021-02-19-how-using-screwdriver-for-cicd-reduced-vespas-time-spent-on-builds-and-pull-requests-by-75-percent/cover.jpg
+  author: Arnstein Ressem
+  author-avatar: https://blog.vespa.ai/assets/avatars/aressem.png
+  date: 2021-02-22
+
 - title: "Build a basic text search application from python with Vespa"
   excerpt: "Introducing pyvespa simplified API. Build Vespa application from python with few lines of code."
   link: https://blog.vespa.ai/build-basic-text-search-app-from-python-with-vespa/
@@ -6,7 +14,15 @@
   author-avatar: https://blog.vespa.ai/assets/avatars/thigm85.jpg
   date: 2021-02-18
 
-- title: 'Q&A from "The Great Search Engine Debate - Elasticsearch, Solr or Vespa?" Meetup'
+- title: "Using approximate nearest neighbor search to find similar products"
+  excerpt: "Approximate nearest neighbor search demonstration using Amazon Product dataset"
+  link: https://blog.vespa.ai/image-similarity-search/
+  image: https://blog.vespa.ai/assets/2020-12-18-using-approximate-nearest-neighbor-search-in-real-world-applications/nn.png
+  author: Jo Kristian Bergum
+  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
+  date: 2021-02-16
+
+- title: "Q&A from \"The Great Search Engine Debate - Elasticsearch, Solr or Vespa?\" Meetup"
   excerpt: "This blog post addresses the Vespa-related questions, with quicklinks into the recording for easy access. We have also responded to the unanswered questions from the chat log."
   link: https://blog.vespa.ai/the-great-search-engine-debate-elasticsearch-solr-or-vespa/
   image: https://blog.vespa.ai/assets/2021-02-08-the-great-search-engine-debate-elasticsearch-solr-or-vespa/cover.png
@@ -14,18 +30,3 @@
   author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
   date: 2021-02-08
 
-- title: "Vespa Product Updates, January 2021"
-  excerpt: "Advances in Vespa features and performance last month include Automatic Reindexing, Tensor Optimizations and Explainlevel Query Parameter for easier query blueprint tracing."
-  link: https://blog.vespa.ai/vespa-product-updates-january-2021/
-  image: https://blog.vespa.ai/assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2021-02-02
-
-- title: "Using approximate nearest neighbor search in real world applications"
-  excerpt: "From text search and recommendation to ads and online dating, ANN search rarely works in isolation."
-  link: https://blog.vespa.ai/using-approximate-nearest-neighbor-search-in-real-world-applications/
-  image: https://blog.vespa.ai/assets/2020-12-18-using-approximate-nearest-neighbor-search-in-real-world-applications/nn.png
-  author: Lester Solbakken
-  author-avatar: https://blog.vespa.ai/assets/avatars/lesters.jpg
-  date: 2020-12-18
