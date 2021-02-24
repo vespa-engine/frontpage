@@ -1,3 +1,19 @@
+- title: "How I learned Vespa by thinking in Solr"
+  excerpt: "Learning Vespa in terms of Solr analogies can help flatten the learning curve."
+  link: https://blog.vespa.ai/how-i-learned-vespa-by-thinking-in-solr/
+  image: https://blog.vespa.ai/assets/2021-02-19-how-i-learned-vespa-by-thinking-in-solr/albert-WswqR4xIuH8-unsplash.jpg
+  author: Sujit Pal
+  author-avatar: https://blog.vespa.ai/assets/avatars/sujitpal.png
+  date: 2021-02-24
+
+- title: "Parent-child joins and tensors for content recommendation"
+  excerpt: "A real-world application of parent-child joins and tensor functions to model topic popularity for content recommendation."
+  link: https://blog.vespa.ai/parent-child-joins-tensors-content-recommendation/
+  image: https://blog.vespa.ai/assets/2021-02-22-parent-child-joins-tensors-content-recommendation/header-image.jpg
+  author: Aaron Nagao
+  author-avatar: https://blog.vespa.ai/assets/avatars/aaronnagao.jpg
+  date: 2021-02-22
+
 - title: "How Using Screwdriver for CI/CD Reduced Vespa’s Time Spent on Builds and Pull Requests by 75%"
   excerpt: "Introducing Screwdriver for Vespa's CI/CD needs."
   link: https://blog.vespa.ai/how-using-screwdriver-for-cicd-reduced-vespas-time-spent-on-builds-and-pull-requests-by-75-percent/
@@ -13,20 +29,4 @@
   author: Thiago Martins
   author-avatar: https://blog.vespa.ai/assets/avatars/thigm85.jpg
   date: 2021-02-18
-
-- title: "Using approximate nearest neighbor search to find similar products"
-  excerpt: "Approximate nearest neighbor search demonstration using Amazon Product dataset"
-  link: https://blog.vespa.ai/image-similarity-search/
-  image: https://blog.vespa.ai/assets/2020-12-18-using-approximate-nearest-neighbor-search-in-real-world-applications/nn.png
-  author: Jo Kristian Bergum
-  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2021-02-16
-
-- title: "Q&A from \"The Great Search Engine Debate - Elasticsearch, Solr or Vespa?\" Meetup"
-  excerpt: "This blog post addresses the Vespa-related questions, with quicklinks into the recording for easy access. We have also responded to the unanswered questions from the chat log."
-  link: https://blog.vespa.ai/the-great-search-engine-debate-elasticsearch-solr-or-vespa/
-  image: https://blog.vespa.ai/assets/2021-02-08-the-great-search-engine-debate-elasticsearch-solr-or-vespa/cover.png
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2021-02-08
 
