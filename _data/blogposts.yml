@@ -1,32 +1,32 @@
-- title: "How I learned Vespa by thinking in Solr"
-  excerpt: "Learning Vespa in terms of Solr analogies can help flatten the learning curve."
-  link: https://blog.vespa.ai/how-i-learned-vespa-by-thinking-in-solr/
-  image: https://blog.vespa.ai/assets/2021-02-19-how-i-learned-vespa-by-thinking-in-solr/albert-WswqR4xIuH8-unsplash.jpg
-  author: Sujit Pal
-  author-avatar: https://blog.vespa.ai/assets/avatars/sujitpal.png
-  date: 2021-02-24
+- title: "Vespa Product Updates, March 2021"
+  excerpt: "Advances in Vespa features and performance last month include mass update/delete in /document/v1/, improved memory usage, OR-to-WeakAnd and better full node protection."
+  link: https://blog.vespa.ai/vespa-product-updates-march-2021/
+  image: https://blog.vespa.ai/assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg
+  author: Kristian Aune
+  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
+  date: 2021-03-30
 
-- title: "Parent-child joins and tensors for content recommendation"
-  excerpt: "A real-world application of parent-child joins and tensor functions to model topic popularity for content recommendation."
-  link: https://blog.vespa.ai/parent-child-joins-tensors-content-recommendation/
-  image: https://blog.vespa.ai/assets/2021-02-22-parent-child-joins-tensors-content-recommendation/header-image.jpg
-  author: Aaron Nagao
-  author-avatar: https://blog.vespa.ai/assets/avatars/aaronnagao.jpg
-  date: 2021-02-22
-
-- title: "How Using Screwdriver for CI/CD Reduced Vespa’s Time Spent on Builds and Pull Requests by 75%"
-  excerpt: "Introducing Screwdriver for Vespa's CI/CD needs."
-  link: https://blog.vespa.ai/how-using-screwdriver-for-cicd-reduced-vespas-time-spent-on-builds-and-pull-requests-by-75-percent/
-  image: https://blog.vespa.ai/assets/2021-02-19-how-using-screwdriver-for-cicd-reduced-vespas-time-spent-on-builds-and-pull-requests-by-75-percent/cover.jpg
-  author: Arnstein Ressem
-  author-avatar: https://blog.vespa.ai/assets/avatars/aressem.png
-  date: 2021-02-22
-
-- title: "Build a basic text search application from python with Vespa"
-  excerpt: "Introducing pyvespa simplified API. Build Vespa application from python with few lines of code."
-  link: https://blog.vespa.ai/build-basic-text-search-app-from-python-with-vespa/
-  image: https://blog.vespa.ai/assets/2021-02-18-build-basic-text-search-app-from-python-with-vespa/figure_1.jpg
+- title: "Build a News recommendation app from python with Vespa: Part 2"
+  excerpt: "Part 2 - From news search to news recommendation with embeddings."
+  link: https://blog.vespa.ai/build-news-recommendation-app-from-python-with-vespa/
+  image: https://blog.vespa.ai/assets/2021-03-29-build-news-recommendation-app-from-python-with-vespa/figure_1.jpg
   author: Thiago Martins
   author-avatar: https://blog.vespa.ai/assets/avatars/thigm85.jpg
-  date: 2021-02-18
+  date: 2021-03-29
+
+- title: "Build a News recommendation app from python with Vespa: Part 1"
+  excerpt: "Part 1 - News search functionality."
+  link: https://blog.vespa.ai/build-news-search-app-from-python-with-vespa/
+  image: https://blog.vespa.ai/assets/2021-03-22-build-news-search-app-from-python-with-vespa/figure_1.jpg
+  author: Thiago Martins
+  author-avatar: https://blog.vespa.ai/assets/avatars/thigm85.jpg
+  date: 2021-03-22
+
+- title: "How to use Postman with Vespa APIs"
+  excerpt: "Interfacing with secure Vespa APIs is easy with Postman. Use Postman collections to template read and write operations to Vespa."
+  link: https://blog.vespa.ai/interface-with-vespa-apis-using-postman/
+  image: https://blog.vespa.ai/assets/2021-03-16-interface-with-vespa-apis-using-postman/json.png
+  author: Kristian Aune
+  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
+  date: 2021-03-16
 
