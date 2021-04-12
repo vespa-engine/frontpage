@@ -16,7 +16,7 @@
                 document.getElementById('modal-video-frame').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
             }
         </script>
-        <a href="#close" class="close" onclick="pauseVideo();"><i class="d-icon d-close"></i></a>
+        <a href="#close" class="close" onclick="pauseVideo();" data-proofer-ignore><i class="d-icon d-close"></i></a>
         <div class="modal-content">
             <iframe id="modal-video-frame" src="https://www.youtube.com/embed/{{include.videoId}}?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
