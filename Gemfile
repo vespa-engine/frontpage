@@ -33,3 +33,7 @@ gem "kramdown-parser-gfm"
 
 # Work-around for webrick no longer included in Ruby 3.0 (https://github.com/jekyll/jekyll/issues/8523)
 gem "webrick"
+
+# Get the html-proofer to work
+gem 'rake'
+gem 'html-proofer'
