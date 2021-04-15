@@ -22,11 +22,11 @@
 
 - header: Community
   links:
-    - title: Contributing
-      link: https://github.com/vespa-engine/vespa/blob/master/CONTRIBUTING.md
+    - title: Slack
+      link: http://slack.vespa.ai
     - title: Stack Overflow
       link: https://stackoverflow.com/questions/tagged/vespa
-    - title: Gitter
-      link: https://gitter.im/vespa-engine/Lobby
+    - title: Contributing
+      link: https://github.com/vespa-engine/vespa/blob/master/CONTRIBUTING.md
     - title: Meetups / Conferences
       link: support#meetups
