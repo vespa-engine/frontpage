@@ -1,3 +1,11 @@
+- title: "Build sentence/paragraph level QA application from python with Vespa"
+  excerpt: "Retrieve paragraph and sentence level information with sparse and dense ranking features."
+  link: https://blog.vespa.ai/build-qa-app-from-python-with-vespa/
+  image: https://blog.vespa.ai/assets/2021-04-19-build-qa-app-from-python-with-vespa/figure_1.jpg
+  author: Thiago Martins
+  author-avatar: https://blog.vespa.ai/assets/avatars/thigm85.jpg
+  date: 2021-04-19
+
 - title: "Vespa Product Updates, March 2021"
   excerpt: "Advances in Vespa features and performance last month include mass update/delete in /document/v1/, improved memory usage, OR-to-WeakAnd and better full node protection."
   link: https://blog.vespa.ai/vespa-product-updates-march-2021/
@@ -21,12 +29,4 @@
   author: Thiago Martins
   author-avatar: https://blog.vespa.ai/assets/avatars/thigm85.jpg
   date: 2021-03-22
-
-- title: "How to use Postman with Vespa APIs"
-  excerpt: "Interfacing with secure Vespa APIs is easy with Postman. Use Postman collections to template read and write operations to Vespa."
-  link: https://blog.vespa.ai/interface-with-vespa-apis-using-postman/
-  image: https://blog.vespa.ai/assets/2021-03-16-interface-with-vespa-apis-using-postman/json.png
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2021-03-16
 
