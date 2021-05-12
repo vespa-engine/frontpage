@@ -8,5 +8,5 @@
   text: OkCupid chose Vespa over Elasticsearch as the basis of their solution to find
     matches for users in real time, due to Vespa's automatic data management, flexible ranking,
     and support for adding new fields for filtering and sorting quickly without
-    refeeding all data. <a href="https://tech.okcupid.com/vespa-vs-elasticsearch/" target="_new">Read more</a>.
+    refeeding all data. <a href="https://medium.com/okcupid-tech-blog/vespa-vs-elasticsearch-for-matching-millions-of-people-6e3af18eb4dc" target="_new">Read more</a>.
 
