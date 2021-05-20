@@ -1,3 +1,19 @@
+- title: "Vespa Product Updates, May 2021"
+  excerpt: "Advances in features and performance include new int8 and bfloat16 tensor cell types, compact tensor feed format, Approximate Nearest Neighbor using Hamming distance, hash-based attribute dictionaries and case-sensitive attribute search"
+  link: https://blog.vespa.ai/vespa-product-updates-may-2021/
+  image: https://blog.vespa.ai/assets/images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg
+  author: Kristian Aune
+  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
+  date: 2021-05-20
+
+- title: "Pretrained Transformer Language Models for Search - part 1"
+  excerpt: "This is the first blog post in a series of posts where we introduce using pretrained Transformer models for search and document ranking with Vespa.ai."
+  link: https://blog.vespa.ai/pretrained-transformer-language-models-for-search-part-1/
+  image: https://blog.vespa.ai/assets/2021-05-19-pretrained-transformer-language-models-for-search-part-1/jamie-street-uNNCs5kL70Q.jpg
+  author: Jo Kristian Bergum
+  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
+  date: 2021-05-19
+
 - title: "Build sentence/paragraph level QA application from python with Vespa"
   excerpt: "Retrieve paragraph and sentence level information with sparse and dense ranking features."
   link: https://blog.vespa.ai/build-qa-app-from-python-with-vespa/
@@ -13,20 +29,4 @@
   author: Kristian Aune
   author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
   date: 2021-03-30
-
-- title: "Build a News recommendation app from python with Vespa: Part 2"
-  excerpt: "Part 2 - From news search to news recommendation with embeddings."
-  link: https://blog.vespa.ai/build-news-recommendation-app-from-python-with-vespa/
-  image: https://blog.vespa.ai/assets/2021-03-29-build-news-recommendation-app-from-python-with-vespa/figure_1.jpg
-  author: Thiago Martins
-  author-avatar: https://blog.vespa.ai/assets/avatars/thigm85.jpg
-  date: 2021-03-29
-
-- title: "Build a News recommendation app from python with Vespa: Part 1"
-  excerpt: "Part 1 - News search functionality."
-  link: https://blog.vespa.ai/build-news-search-app-from-python-with-vespa/
-  image: https://blog.vespa.ai/assets/2021-03-22-build-news-search-app-from-python-with-vespa/figure_1.jpg
-  author: Thiago Martins
-  author-avatar: https://blog.vespa.ai/assets/avatars/thigm85.jpg
-  date: 2021-03-22
 
