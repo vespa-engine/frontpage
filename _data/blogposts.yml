@@ -1,9 +1,25 @@
+- title: "Pretrained Transformer Language Models for Search - part 2"
+  excerpt: "This is the second blog post in a series of posts where we introduce using pretrained Transformer models for search and document ranking with Vespa.ai."
+  link: https://blog.vespa.ai/pretrained-transformer-language-models-for-search-part-2/
+  image: https://blog.vespa.ai/assets/2021-05-25-pretrained-transformer-language-models-for-search-part-2/rob-fuller-u9GEK0AuOU8-unsplash.jpg
+  author: Jo Kristian Bergum
+  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
+  date: 2021-05-28
+
 - title: "Vespa Product Updates, May 2021"
   excerpt: "Advances in features and performance include new int8 and bfloat16 tensor cell types, compact tensor feed format, Approximate Nearest Neighbor using Hamming distance, hash-based attribute dictionaries and case-sensitive attribute search"
   link: https://blog.vespa.ai/vespa-product-updates-may-2021/
   image: https://blog.vespa.ai/assets/images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg
   author: Kristian Aune
   author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
+  date: 2021-05-20
+
+- title: "Build a News recommendation app from python with Vespa: Part 3"
+  excerpt: "Part 3 - Efficient use of click-through rate via parent-child relationship."
+  link: https://blog.vespa.ai/news-recommendation-with-parent-child-relationship/
+  image: https://blog.vespa.ai/assets/2021-05-20-news-recommendation-with-parent-child-relationship/figure_1.jpg
+  author: Thiago Martins
+  author-avatar: https://blog.vespa.ai/assets/avatars/thigm85.jpg
   date: 2021-05-20
 
 - title: "Pretrained Transformer Language Models for Search - part 1"
@@ -13,20 +29,4 @@
   author: Jo Kristian Bergum
   author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
   date: 2021-05-19
-
-- title: "Build sentence/paragraph level QA application from python with Vespa"
-  excerpt: "Retrieve paragraph and sentence level information with sparse and dense ranking features."
-  link: https://blog.vespa.ai/build-qa-app-from-python-with-vespa/
-  image: https://blog.vespa.ai/assets/2021-04-19-build-qa-app-from-python-with-vespa/figure_1.jpg
-  author: Thiago Martins
-  author-avatar: https://blog.vespa.ai/assets/avatars/thigm85.jpg
-  date: 2021-04-19
-
-- title: "Vespa Product Updates, March 2021"
-  excerpt: "Advances in Vespa features and performance last month include mass update/delete in /document/v1/, improved memory usage, OR-to-WeakAnd and better full node protection."
-  link: https://blog.vespa.ai/vespa-product-updates-march-2021/
-  image: https://blog.vespa.ai/assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2021-03-30
 
