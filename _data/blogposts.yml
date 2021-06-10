@@ -1,3 +1,11 @@
+- title: "Build a basic text search application from python with Vespa: Part 2"
+  excerpt: "Evaluate search engine experiments from python."
+  link: https://blog.vespa.ai/build-basic-text-search-app-from-python-with-vespa-part-2/
+  image: https://blog.vespa.ai/assets/2021-06-05-build-basic-text-search-app-from-python-with-vespa-part-2/figure_1.jpg
+  author: Thiago Martins
+  author-avatar: https://blog.vespa.ai/assets/avatars/thigm85.jpg
+  date: 2021-06-05
+
 - title: "Pretrained Transformer Language Models for Search - part 3"
   excerpt: "This is the third blog post in a series of posts where we introduce using pretrained Transformer models for search and document ranking with Vespa.ai."
   link: https://blog.vespa.ai/pretrained-transformer-language-models-for-search-part-3/
@@ -20,13 +28,5 @@
   image: https://blog.vespa.ai/assets/images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg
   author: Kristian Aune
   author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2021-05-20
-
-- title: "Build a News recommendation app from python with Vespa: Part 3"
-  excerpt: "Part 3 - Efficient use of click-through rate via parent-child relationship."
-  link: https://blog.vespa.ai/news-recommendation-with-parent-child-relationship/
-  image: https://blog.vespa.ai/assets/2021-05-20-news-recommendation-with-parent-child-relationship/figure_1.jpg
-  author: Thiago Martins
-  author-avatar: https://blog.vespa.ai/assets/avatars/thigm85.jpg
   date: 2021-05-20
 
