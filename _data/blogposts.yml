@@ -1,3 +1,11 @@
+- title: "Pretrained Transformer Language Models for Search - part 4"
+  excerpt: "This is the fourth blog post in a series of posts where we introduce using pretrained Transformer models for search and document ranking with Vespa.ai."
+  link: https://blog.vespa.ai/pretrained-transformer-language-models-for-search-part-4/
+  image: https://blog.vespa.ai/assets/2021-06-18-pretrained-transformer-language-models-for-search-part-4/patrick-hendry-m3TjnLvnGyQ-unsplash.jpg
+  author: Jo Kristian Bergum
+  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
+  date: 2021-06-22
+
 - title: "Build a basic text search application from python with Vespa: Part 2"
   excerpt: "Evaluate search engine experiments from python."
   link: https://blog.vespa.ai/build-basic-text-search-app-from-python-with-vespa-part-2/
@@ -21,12 +29,4 @@
   author: Jo Kristian Bergum
   author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
   date: 2021-05-28
-
-- title: "Vespa Product Updates, May 2021"
-  excerpt: "Advances in features and performance include new int8 and bfloat16 tensor cell types, compact tensor feed format, Approximate Nearest Neighbor using Hamming distance, hash-based attribute dictionaries and case-sensitive attribute search"
-  link: https://blog.vespa.ai/vespa-product-updates-may-2021/
-  image: https://blog.vespa.ai/assets/images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2021-05-20
 
