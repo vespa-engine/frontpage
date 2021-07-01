@@ -1,3 +1,11 @@
+- title: "Improve throughput and concurrency with HTTP/2"
+  excerpt: "The Vespa HTTP container now accepts HTTP/2 with TLS enabled. Learn how this improves HTTP throughput and efficiency, and how to get started using HTTP/2."
+  link: https://blog.vespa.ai/http2/
+  image: https://blog.vespa.ai/assets/2021-07-01-http2/simon-connellan-MYSJJWwryPk-unsplash.jpg
+  author: Bjørn C Seime and Jon M Venstad
+  author-avatar: https://blog.vespa.ai/assets/avatars/bjorncs.jpg
+  date: 2021-07-01
+
 - title: "Pretrained Transformer Language Models for Search - part 4"
   excerpt: "This is the fourth blog post in a series of posts where we introduce using pretrained Transformer models for search and document ranking with Vespa.ai."
   link: https://blog.vespa.ai/pretrained-transformer-language-models-for-search-part-4/
@@ -21,12 +29,4 @@
   author: Jo Kristian Bergum
   author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
   date: 2021-05-31
-
-- title: "Pretrained Transformer Language Models for Search - part 2"
-  excerpt: "This is the second blog post in a series of posts where we introduce using pretrained Transformer models for search and document ranking with Vespa.ai."
-  link: https://blog.vespa.ai/pretrained-transformer-language-models-for-search-part-2/
-  image: https://blog.vespa.ai/assets/2021-05-25-pretrained-transformer-language-models-for-search-part-2/rob-fuller-u9GEK0AuOU8-unsplash.jpg
-  author: Jo Kristian Bergum
-  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2021-05-28
 
