@@ -3,7 +3,7 @@
   link: https://blog.vespa.ai/http2/
   image: https://blog.vespa.ai/assets/2021-07-01-http2/simon-connellan-MYSJJWwryPk-unsplash.jpg
   author: Bjørn C Seime and Jon M Venstad
-  author-avatar: https://blog.vespa.ai/assets/avatars/bjorncs.jpg
+  author-avatar: https://blog.vespa.ai/assets/avatars/bjorncs.jpg https://blog.vespa.ai/assets/avatars/jvenstad.jpg
   date: 2021-07-01
 
 - title: "Pretrained Transformer Language Models for Search - part 4"

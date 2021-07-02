@@ -10,9 +10,12 @@
                         <div class="flex flex-column">
                             <h2 class="p-t-20 p-x-20">{{blogpost.title}}</h2>
                             <div class="flex p-20 align-items-center">
+                                {% assign avatars = blogpost.author-avatar | split: " " %}
+                                {% for avatar in avatars %}
                                 <div class="h-15 w-15 br-circle overflow-hidden m-r-20">
-                                    <img src="{{blogpost.author-avatar}}" alt="">
+                                    <img src="{{avatar}}" alt="">
                                 </div>
+                                {% endfor %}
                                 <div>
                                     <h4>{{blogpost.author}}</h4>
                                     <p class="line-height-compact">{{ blogpost.date | date_to_string }}</p>
