@@ -1,3 +1,11 @@
+- title: "Accelerating stateless model evaluation on Vespa"
+  excerpt: "It has become increasingly important to efficiently evaluate machine-learned models in the stateless container cluster. We have recently added accelerated model evaluation here, which opens up new usage areas."
+  link: https://blog.vespa.ai/stateless-model-evaluation/
+  image: https://blog.vespa.ai/assets/2021-07-05-stateless-model-evaluation/vespa.png
+  author: Lester Solbakken
+  author-avatar: https://blog.vespa.ai/assets/avatars/lesters.jpg
+  date: 2021-07-05
+
 - title: "Improve throughput and concurrency with HTTP/2"
   excerpt: "The Vespa HTTP container now accepts HTTP/2 with TLS enabled. Learn how this improves HTTP throughput and efficiency, and how to get started using HTTP/2."
   link: https://blog.vespa.ai/http2/
@@ -21,12 +29,4 @@
   author: Thiago Martins
   author-avatar: https://blog.vespa.ai/assets/avatars/thigm85.jpg
   date: 2021-06-05
-
-- title: "Pretrained Transformer Language Models for Search - part 3"
-  excerpt: "This is the third blog post in a series of posts where we introduce using pretrained Transformer models for search and document ranking with Vespa.ai."
-  link: https://blog.vespa.ai/pretrained-transformer-language-models-for-search-part-3/
-  image: https://blog.vespa.ai/assets/2021-06-02-pretrained-transformer-language-models-for-search-part-3/frank-busch-Oxe3bgeweUI-unsplash.jpg
-  author: Jo Kristian Bergum
-  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2021-05-31
 
