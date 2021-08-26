@@ -1,3 +1,19 @@
+- title: "Securing Vespa with mutually authenticated TLS (mTLS)"
+  excerpt: "Learn how to secure both the application container and the Vespa internal communication of your Vespa application."
+  link: https://blog.vespa.ai/securing-vespa-with-mutually-authenticated-tls/
+  image: https://blog.vespa.ai/assets/2021-08-23-securing-vespa-with-mutually-authenticated-tls/jason-dent-3wPJxh-piRw-unsplash.jpg
+  author: Bjørn C Seime, Morten Tokle, and Tor Brede Vekterli
+  author-avatar: https://blog.vespa.ai/assets/avatars/bjorncs.jpg https://blog.vespa.ai/assets/avatars/mortent.png https://blog.vespa.ai/assets/avatars/vekterli.jpg
+  date: 2021-08-23
+
+- title: "Internship at Vespa"
+  excerpt: "After the summer internship of 2021 the interns have summarised what they have done and their experience at Vespa"
+  link: https://blog.vespa.ai/summer-interns/
+  image: https://blog.vespa.ai/assets/2021-08-20-summer-interns/interns.jpg
+  author: Mathias Chunnoo and Ole-Magnus Vian Norum
+  author-avatar: https://blog.vespa.ai/assets/avatars/chunnoo.jpg https://blog.vespa.ai/assets/avatars/onorum.jpg
+  date: 2021-08-20
+
 - title: "Vespa Product Updates, July 2021"
   excerpt: "Advances in Vespa features and performance include HTTP/2 feed and query endpoints, ONNX Runtime integration for stateless model inference, and the new open Vespa Factory build and test system."
   link: https://blog.vespa.ai/vespa-product-updates-july-2021/
@@ -13,20 +29,4 @@
   author: Lester Solbakken
   author-avatar: https://blog.vespa.ai/assets/avatars/lesters.jpg
   date: 2021-07-05
-
-- title: "Improve throughput and concurrency with HTTP/2"
-  excerpt: "The Vespa HTTP container now accepts HTTP/2 with TLS enabled. Learn how this improves HTTP throughput and efficiency, and how to get started using HTTP/2."
-  link: https://blog.vespa.ai/http2/
-  image: https://blog.vespa.ai/assets/2021-07-01-http2/simon-connellan-MYSJJWwryPk-unsplash.jpg
-  author: Bjørn C Seime and Jon M Venstad
-  author-avatar: https://blog.vespa.ai/assets/avatars/bjorncs.jpg https://blog.vespa.ai/assets/avatars/jvenstad.jpg
-  date: 2021-07-01
-
-- title: "Pretrained Transformer Language Models for Search - part 4"
-  excerpt: "This is the fourth blog post in a series of posts where we introduce using pretrained Transformer models for search and document ranking with Vespa.ai."
-  link: https://blog.vespa.ai/pretrained-transformer-language-models-for-search-part-4/
-  image: https://blog.vespa.ai/assets/2021-06-18-pretrained-transformer-language-models-for-search-part-4/patrick-hendry-m3TjnLvnGyQ-unsplash.jpg
-  author: Jo Kristian Bergum
-  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2021-06-22
 
