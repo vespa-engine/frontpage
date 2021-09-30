@@ -1,3 +1,19 @@
+- title: "Vespa Product Updates, September 2021"
+  excerpt: "Advances in Vespa features and performance include Vespa CLI, nearest neighbor performance improvements, mTLS security, improved write throughput and Sentencepiece Encoder."
+  link: https://blog.vespa.ai/vespa-product-updates-september-2021/
+  image: https://blog.vespa.ai/assets/images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg
+  author: Kristian Aune
+  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
+  date: 2021-09-30
+
+- title: "Computing with tensors in Vespa"
+  excerpt: "In this blog post, we'll explore some of the unique properties of tensors in Vespa."
+  link: https://blog.vespa.ai/computing-with-tensors/
+  image: https://blog.vespa.ai/assets/2021-09-30-computing-with-tensors/pietro-jeng-n6B49lTx7NM-unsplash.jpg
+  author: Lester Solbakken
+  author-avatar: https://blog.vespa.ai/assets/avatars/lesters.jpg
+  date: 2021-09-30
+
 - title: "Introducing Vespa CLI"
   excerpt: "The official command-line tool for Vespa is now available."
   link: https://blog.vespa.ai/introducing-vespa-cli/
@@ -13,20 +29,4 @@
   author: Bjørn C Seime, Morten Tokle, and Tor Brede Vekterli
   author-avatar: https://blog.vespa.ai/assets/avatars/bjorncs.jpg https://blog.vespa.ai/assets/avatars/mortent.png https://blog.vespa.ai/assets/avatars/vekterli.jpg
   date: 2021-08-23
-
-- title: "Internship at Vespa"
-  excerpt: "After the summer internship of 2021 the interns have summarised what they have done and their experience at Vespa"
-  link: https://blog.vespa.ai/summer-interns/
-  image: https://blog.vespa.ai/assets/2021-08-20-summer-interns/interns.jpg
-  author: Mathias Chunnoo and Ole-Magnus Vian Norum
-  author-avatar: https://blog.vespa.ai/assets/avatars/chunnoo.jpg https://blog.vespa.ai/assets/avatars/onorum.jpg
-  date: 2021-08-20
-
-- title: "Vespa Product Updates, July 2021"
-  excerpt: "Advances in Vespa features and performance include HTTP/2 feed and query endpoints, ONNX Runtime integration for stateless model inference, and the new open Vespa Factory build and test system."
-  link: https://blog.vespa.ai/vespa-product-updates-july-2021/
-  image: https://blog.vespa.ai/assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2021-07-06
 
