@@ -9,14 +9,11 @@ layout: page
         <div class="xs-col-1-1 sm-col-1-1 md-col-1-1 lg-col-8-12 lg-col-off-2-12 xl-col-8-12 xl-col-off-2-12">
             <div class="flex-column">
                 <h1 id="releases">Releases</h1>
-                <p>
-                    Vespa is released daily Mon-Thu, with some restrictions:
+
+                <p>Vespa is released every Monday through Thursday. Each public release has passed all our
+                    functional and performance tests, and is already running the applications on our
+                    public cloud service.
                 </p>
-                <ul class="list">
-                    <li>The release must pass all tests and run without regressions
-                        for select production applications</li>
-                    <li>The release is not manually blocked / holiday block window</li>
-                </ul>
                 <br/>
                 <p>
                     For each release of Vespa we provide the following artifacts:
@@ -28,11 +25,11 @@ layout: page
                 </ul>
                 <br/>
                 <p>
-                    Vespa only releases from the current major version with minor version increments.
-                </p>
-                <p>
                     Vespa uses <a href="https://docs.vespa.ai/en/vespa-versions.html">semantic versioning</a>.
-                    It is normal to find "holes" in the version sequence, as releases are skipped.
+                    Each release is backwards compatible and supports live migration on running systems.
+                    It is therefore a minor version number change. All new features are released on such minor versions.
+                    Every second year or so we make a major version change which removes previously deprecated
+                    functionality.
                 </p>
             </div>
         </div>
