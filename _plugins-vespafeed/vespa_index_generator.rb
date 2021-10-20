@@ -1,4 +1,4 @@
-# Copyright Verizon Media. All rights reserved
+# Copyright Yahoo. All rights reserved
 
 require 'json'
 require 'nokogiri'

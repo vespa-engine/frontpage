@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright Verizon Media. All rights reserved
+# Copyright Yahoo. All rights reserved
 
 import json
 import os
