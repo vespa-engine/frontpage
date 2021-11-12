@@ -236,7 +236,7 @@ index: true
 
         <p>
           Vespa is engineered to perform computations over data in less than hundred milliseconds
-          and scale to any data size and query load. Due to the very large scale of some of the systems
+          and scale to any data size and query load. Due to the large scale of some of the systems
           Vespa is running, it has been cost effective to invest a large number of man-years into optimizing
           Vespa at all levels from fundamental architectural choices to ensure parallelization to low-level
           optimization of core algorithms and data structures to execute without cache misses.
@@ -283,8 +283,8 @@ index: true
         <p class="m-b-50">
           In addition to queries, <a href="https://docs.vespa.ai/en/reads-and-writes.html">write</a>
           <a href="https://docs.vespa.ai/en/performance/sizing-feeding.html">performance</a>
-          is also very important in most applications.
-          Vespa can deliver a write throughput of a few tens of thousands of operations per second per content
+          is also important in most applications.
+          Vespa can deliver a write throughput of tens of thousands of operations per second per content
           node in most cases, and this write load can be sustained indefinitely, and does not impact query
           execution, apart from spending a fixed fraction of the nodes resources. All writes are applied in real time.
           Vespa achieves this by distributing writes to nodes using a distributed, async messagebus, and applying them
