@@ -1,3 +1,27 @@
+- title: "Vespa Newsletter, November 2021"
+  excerpt: "Advances in Vespa features and performance include improved schema inheritance, Intellij plugin for schemas, Hamming distance in ranking, and performance gains in data dump, application deployment and node recovery."
+  link: https://blog.vespa.ai/vespa-newsletter-november-2021/
+  image: https://blog.vespa.ai/assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg
+  author: Kristian Aune
+  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
+  date: 2021-11-23
+
+- title: "Vespa increases HTTP visiting throughput ten-fold or more"
+  excerpt: "The new slicing feature in /document/v1 splits visiting across independent HTTP requests, letting throughput scale with the number of container nodes or clients."
+  link: https://blog.vespa.ai/sliced-visiting/
+  image: https://blog.vespa.ai/assets/2021-11-13-sliced-visiting/annie-spratt-gSQbip5HHuc-unsplash.jpg
+  author: Jon M Venstad
+  author-avatar: https://blog.vespa.ai/assets/avatars/jvenstad.jpg
+  date: 2021-11-13
+
+- title: "Result diversification using Vespa result grouping"
+  excerpt: "This blog post dives into how to achieve result diversification using Vespa's grouping framework."
+  link: https://blog.vespa.ai/result-diversification-with-vespa/
+  image: https://blog.vespa.ai/assets/2021-11-11-result-diversification-with-vespa/robert-lukeman-_RBcxo9AU-U-unsplash.jpg
+  author: Jo Kristian Bergum
+  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
+  date: 2021-11-11
+
 - title: "Vespa Product Updates, September 2021"
   excerpt: "Advances in Vespa features and performance include Vespa CLI, nearest neighbor performance improvements, mTLS security, improved write throughput and Sentencepiece Encoder."
   link: https://blog.vespa.ai/vespa-product-updates-september-2021/
@@ -5,28 +29,4 @@
   author: Kristian Aune
   author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
   date: 2021-09-30
-
-- title: "Computing with tensors in Vespa"
-  excerpt: "In this blog post, we'll explore some of the unique properties of tensors in Vespa."
-  link: https://blog.vespa.ai/computing-with-tensors/
-  image: https://blog.vespa.ai/assets/2021-09-30-computing-with-tensors/pietro-jeng-n6B49lTx7NM-unsplash.jpg
-  author: Lester Solbakken
-  author-avatar: https://blog.vespa.ai/assets/avatars/lesters.jpg
-  date: 2021-09-30
-
-- title: "Introducing Vespa CLI"
-  excerpt: "The official command-line tool for Vespa is now available."
-  link: https://blog.vespa.ai/introducing-vespa-cli/
-  image: https://blog.vespa.ai/assets/2021-09-23-introducing-vespa-cli/screenshot.png
-  author: Martin Polden
-  author-avatar: https://blog.vespa.ai/assets/avatars/mpolden.jpg
-  date: 2021-09-23
-
-- title: "Securing Vespa with mutually authenticated TLS (mTLS)"
-  excerpt: "Learn how to secure both the application container and the Vespa internal communication of your Vespa application."
-  link: https://blog.vespa.ai/securing-vespa-with-mutually-authenticated-tls/
-  image: https://blog.vespa.ai/assets/2021-08-23-securing-vespa-with-mutually-authenticated-tls/jason-dent-3wPJxh-piRw-unsplash.jpg
-  author: Bjørn C Seime, Morten Tokle, and Tor Brede Vekterli
-  author-avatar: https://blog.vespa.ai/assets/avatars/bjorncs.jpg https://blog.vespa.ai/assets/avatars/mortent.png https://blog.vespa.ai/assets/avatars/vekterli.jpg
-  date: 2021-08-23
 
