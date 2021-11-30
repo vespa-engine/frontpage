@@ -1,5 +1,13 @@
+- title: "Text-to-image search with Vespa"
+  excerpt: "In this post we explore a text-to-image search application on Vespa using approximate nearest neighbor search on vector representations of text and images."
+  link: https://blog.vespa.ai/text-image-search/
+  image: https://blog.vespa.ai/assets/2021-11-28-text-image-search/streamlit_example.png
+  author: Lester Solbakken
+  author-avatar: https://blog.vespa.ai/assets/avatars/lesters.jpg
+  date: 2021-11-28
+
 - title: "Vespa Newsletter, November 2021"
-  excerpt: "Advances in Vespa features and performance include improved schema inheritance, Intellij plugin for schemas, Hamming distance in ranking, and performance gains in data dump, application deployment and node recovery."
+  excerpt: "Advances in Vespa features and performance include improved schema inheritance, Intellij plugin for schemas, Hamming distance in ranking, and performance gains in data dump and application deployment."
   link: https://blog.vespa.ai/vespa-newsletter-november-2021/
   image: https://blog.vespa.ai/assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg
   author: Kristian Aune
@@ -21,12 +29,4 @@
   author: Jo Kristian Bergum
   author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
   date: 2021-11-11
-
-- title: "Vespa Product Updates, September 2021"
-  excerpt: "Advances in Vespa features and performance include Vespa CLI, nearest neighbor performance improvements, mTLS security, improved write throughput and Sentencepiece Encoder."
-  link: https://blog.vespa.ai/vespa-product-updates-september-2021/
-  image: https://blog.vespa.ai/assets/images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2021-09-30
 
