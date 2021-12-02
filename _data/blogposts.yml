@@ -1,3 +1,11 @@
+- title: "Billion-scale vector search with Vespa - part one"
+  excerpt: "Part one in a blog post series on billion-scale vector search. This post covers using nearest neighbor search with compact binary representations and bitwise hamming distance."
+  link: https://blog.vespa.ai/billion-scale-knn/
+  image: https://blog.vespa.ai/assets/2021-12-03-binary-codes/federico-beccari-L8126OwlroY-unsplash.jpg
+  author: Jo Kristian Bergum
+  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
+  date: 2021-12-01
+
 - title: "Text-to-image search with Vespa"
   excerpt: "In this post we explore a text-to-image search application on Vespa using approximate nearest neighbor search on vector representations of text and images."
   link: https://blog.vespa.ai/text-image-search/
@@ -21,12 +29,4 @@
   author: Jon M Venstad
   author-avatar: https://blog.vespa.ai/assets/avatars/jvenstad.jpg
   date: 2021-11-13
-
-- title: "Result diversification using Vespa result grouping"
-  excerpt: "This blog post dives into how to achieve result diversification using Vespa's grouping framework."
-  link: https://blog.vespa.ai/result-diversification-with-vespa/
-  image: https://blog.vespa.ai/assets/2021-11-11-result-diversification-with-vespa/robert-lukeman-_RBcxo9AU-U-unsplash.jpg
-  author: Jo Kristian Bergum
-  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2021-11-11
 
