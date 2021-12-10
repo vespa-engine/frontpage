@@ -1,3 +1,11 @@
+- title: "Log4j vulnerability update (CVE-2021-44228)"
+  excerpt: "Brief update on our current knowledge about the Log4j vulnerability (CVE-2021-44228) and Vespa."
+  link: https://blog.vespa.ai/log4j-vulnerability/
+  image: https://blog.vespa.ai/assets/2021-12-10-log4j-vulnerability/github-pr.png
+  author: Andreas Eriksen
+  author-avatar: https://blog.vespa.ai/assets/avatars/andreer.jpg
+  date: 2021-12-10
+
 - title: "Basic HTTP testing of Vespa applications"
   excerpt: "Write basic tests for a Vespa application in JSON format, run them with the Vespa CLI, and use them to verify production deployments in Vespa Cloud."
   link: https://blog.vespa.ai/basic-http-tests/
@@ -21,12 +29,4 @@
   author: Lester Solbakken
   author-avatar: https://blog.vespa.ai/assets/avatars/lesters.jpg
   date: 2021-11-28
-
-- title: "Vespa Newsletter, November 2021"
-  excerpt: "Advances in Vespa features and performance include improved schema inheritance, Intellij plugin for schemas, Hamming distance in ranking, and performance gains in data dump and application deployment."
-  link: https://blog.vespa.ai/vespa-newsletter-november-2021/
-  image: https://blog.vespa.ai/assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2021-11-23
 
