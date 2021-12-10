@@ -1,3 +1,11 @@
+- title: "Basic HTTP testing of Vespa applications"
+  excerpt: "Write basic tests for a Vespa application in JSON format, run them with the Vespa CLI, and use them to verify production deployments in Vespa Cloud."
+  link: https://blog.vespa.ai/basic-http-tests/
+  image: https://blog.vespa.ai/assets/images/basic-http-testing-in-terminal.png
+  author: Jon M Venstad and Håkon Hallingstad
+  author-avatar: https://blog.vespa.ai/assets/avatars/jvenstad.jpg https://blog.vespa.ai/assets/avatars/hakonhall.jpg
+  date: 2021-12-09
+
 - title: "Billion-scale vector search with Vespa - part one"
   excerpt: "Part one in a blog post series on billion-scale vector search. This post covers using nearest neighbor search with compact binary representations and bitwise hamming distance."
   link: https://blog.vespa.ai/billion-scale-knn/
@@ -21,12 +29,4 @@
   author: Kristian Aune
   author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
   date: 2021-11-23
-
-- title: "Vespa increases HTTP visiting throughput ten-fold or more"
-  excerpt: "The new slicing feature in /document/v1 splits visiting across independent HTTP requests, letting throughput scale with the number of container nodes or clients."
-  link: https://blog.vespa.ai/sliced-visiting/
-  image: https://blog.vespa.ai/assets/2021-11-13-sliced-visiting/annie-spratt-gSQbip5HHuc-unsplash.jpg
-  author: Jon M Venstad
-  author-avatar: https://blog.vespa.ai/assets/avatars/jvenstad.jpg
-  date: 2021-11-13
 
