@@ -1,3 +1,11 @@
+- title: "Vespa Newsletter, December 2021"
+  excerpt: "Advances in Vespa features and performance include tensor performance improvements, match-features and a Vespa IntelliJ plugin."
+  link: https://blog.vespa.ai/vespa-newsletter-december-2021/
+  image: https://blog.vespa.ai/assets/images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg
+  author: Kristian Aune
+  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
+  date: 2021-12-22
+
 - title: "Log4j vulnerability update (CVE-2021-44228)"
   excerpt: "Brief update on our current knowledge about the Log4j vulnerability (CVE-2021-44228) and Vespa."
   link: https://blog.vespa.ai/log4j-vulnerability/
@@ -21,12 +29,4 @@
   author: Jo Kristian Bergum
   author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
   date: 2021-12-01
-
-- title: "Text-to-image search with Vespa"
-  excerpt: "In this post we explore a text-to-image search application on Vespa using approximate nearest neighbor search on vector representations of text and images."
-  link: https://blog.vespa.ai/text-image-search/
-  image: https://blog.vespa.ai/assets/2021-11-28-text-image-search/streamlit_example.png
-  author: Lester Solbakken
-  author-avatar: https://blog.vespa.ai/assets/avatars/lesters.jpg
-  date: 2021-11-28
 
