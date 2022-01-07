@@ -1,3 +1,11 @@
+- title: "Machine-learned model serving at scale"
+  excerpt: "An under-communicated point is that the default tuning for most libraries and platforms for evaluating machine-learned models is unsuitable for serving at scale."
+  link: https://blog.vespa.ai/ml-model-serving-at-scale/
+  image: https://blog.vespa.ai/assets/2022-01-07-ml-model-serving-at-scale/jukan-tateisi-bJhT_8nbUA0-unsplash.jpg
+  author: Lester Solbakken
+  author-avatar: https://blog.vespa.ai/assets/avatars/lesters.jpg
+  date: 2022-01-07
+
 - title: "Vespa Newsletter, December 2021"
   excerpt: "Advances in Vespa features and performance include tensor performance improvements, match-features and a Vespa IntelliJ plugin."
   link: https://blog.vespa.ai/vespa-newsletter-december-2021/
@@ -21,12 +29,4 @@
   author: Jon M Venstad and Håkon Hallingstad
   author-avatar: https://blog.vespa.ai/assets/avatars/jvenstad.jpg https://blog.vespa.ai/assets/avatars/hakonhall.jpg
   date: 2021-12-09
-
-- title: "Billion-scale vector search with Vespa - part one"
-  excerpt: "Part one in a blog post series on billion-scale vector search. This post covers using nearest neighbor search with compact binary representations and bitwise hamming distance."
-  link: https://blog.vespa.ai/billion-scale-knn/
-  image: https://blog.vespa.ai/assets/2021-12-03-binary-codes/federico-beccari-L8126OwlroY-unsplash.jpg
-  author: Jo Kristian Bergum
-  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2021-12-01
 
