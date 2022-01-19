@@ -1,3 +1,11 @@
+- title: "Doubling the throughput of data redistribution"
+  excerpt: "Learn which improvements we made to double the throughput of data redistribution in Vespa."
+  link: https://blog.vespa.ai/doubling-the-throughput-of-data-redistribution/
+  image: https://blog.vespa.ai/assets/2022-01-19-doubling-the-throughput-of-data-redistribution/andy-holmes-oEIFOoC3gi0-unsplash-crop.jpg
+  author: Geir Storli and Tor Brede Vekterli
+  author-avatar: https://blog.vespa.ai/assets/avatars/geirst.jpg https://blog.vespa.ai/assets/avatars/vekterli.jpg
+  date: 2022-01-19
+
 - title: "Machine-learned model serving at scale"
   excerpt: "An under-communicated point is that the default tuning for most libraries and platforms for evaluating machine-learned models is unsuitable for serving at scale."
   link: https://blog.vespa.ai/ml-model-serving-at-scale/
@@ -21,12 +29,4 @@
   author: Andreas Eriksen
   author-avatar: https://blog.vespa.ai/assets/avatars/andreer.jpg
   date: 2021-12-10
-
-- title: "Basic HTTP testing of Vespa applications"
-  excerpt: "Write basic tests for a Vespa application in JSON format, run them with the Vespa CLI, and use them to verify production deployments in Vespa Cloud."
-  link: https://blog.vespa.ai/basic-http-tests/
-  image: https://blog.vespa.ai/assets/images/basic-http-testing-in-terminal.png
-  author: Jon M Venstad and Håkon Hallingstad
-  author-avatar: https://blog.vespa.ai/assets/avatars/jvenstad.jpg https://blog.vespa.ai/assets/avatars/hakonhall.jpg
-  date: 2021-12-09
 
