@@ -1,3 +1,11 @@
+- title: "Billion-scale vector search with Vespa - part two"
+  excerpt: "Part two in a blog post series on billion-scale vector search with Vespa. This post explores the many trade-offs related to nearest neighbor search."
+  link: https://blog.vespa.ai/billion-scale-knn-part-two/
+  image: https://blog.vespa.ai/assets/2022-01-27-billion-scale-knn-part-two/vincentiu-solomon-ln5drpv_ImI-unsplash.jpg
+  author: Jo Kristian Bergum
+  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
+  date: 2022-01-27
+
 - title: "Doubling the throughput of data redistribution"
   excerpt: "Learn which improvements we made to double the throughput of data redistribution in Vespa."
   link: https://blog.vespa.ai/doubling-the-throughput-of-data-redistribution/
@@ -21,12 +29,4 @@
   author: Kristian Aune
   author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
   date: 2021-12-22
-
-- title: "Log4j vulnerability update (CVE-2021-44228)"
-  excerpt: "Brief update on our current knowledge about the Log4j vulnerability (CVE-2021-44228) and Vespa."
-  link: https://blog.vespa.ai/log4j-vulnerability/
-  image: https://blog.vespa.ai/assets/2021-12-10-log4j-vulnerability/github-pr.png
-  author: Andreas Eriksen
-  author-avatar: https://blog.vespa.ai/assets/avatars/andreer.jpg
-  date: 2021-12-10
 
