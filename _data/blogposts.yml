@@ -1,3 +1,11 @@
+- title: "Vespa Newsletter, January 2022"
+  excerpt: "Advances in Vespa features, performance and operability improvements include: Improved synonym support, faster node recovery, re-balancing and re-indexing, WeakAnd query type and new pyvespa features and sample applications."
+  link: https://blog.vespa.ai/vespa-newsletter-january-2022/
+  image: https://blog.vespa.ai/assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg
+  author: Kristian Aune
+  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
+  date: 2022-01-31
+
 - title: "Billion-scale vector search with Vespa - part two"
   excerpt: "Part two in a blog post series on billion-scale vector search with Vespa. This post explores the many trade-offs related to nearest neighbor search."
   link: https://blog.vespa.ai/billion-scale-knn-part-two/
@@ -21,12 +29,4 @@
   author: Lester Solbakken
   author-avatar: https://blog.vespa.ai/assets/avatars/lesters.jpg
   date: 2022-01-07
-
-- title: "Vespa Newsletter, December 2021"
-  excerpt: "Advances in Vespa features and performance include tensor performance improvements, match-features and a Vespa IntelliJ plugin."
-  link: https://blog.vespa.ai/vespa-newsletter-december-2021/
-  image: https://blog.vespa.ai/assets/images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2021-12-22
 
