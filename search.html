@@ -65,7 +65,7 @@ layout: page
 
         var url = "https://doc-search.vespa.oath.cloud/search/?jsoncallback=?"
         $.getJSON(url, {
-            yql: "select * from doc where userInput(@input);",
+            yql: "select * from doc where [{\"grammar\": \"weakAnd\"}]userInput(@input);",
             input: query,
             hits: 400,
             ranking: "documentation",
