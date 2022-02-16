@@ -1,3 +1,11 @@
+- title: "Preview of Vespa on ARM64"
+  excerpt: "With the increasing adoption of ARM64 based hardware like the AWS Graviton and Apple M1 MacBooks we are making a preview of Vespa available for this architecture."
+  link: https://blog.vespa.ai/preview-of-vespa-on-arm64/
+  image: https://blog.vespa.ai/assets/2022-02-16-preview-of-vespa-on-arm64/jeremy-bezanger-wl8hZoJBSU8-unsplash.jpg
+  author: Arnstein Ressem
+  author-avatar: https://blog.vespa.ai/assets/avatars/aressem.png
+  date: 2022-02-16
+
 - title: "Vespa Newsletter, January 2022"
   excerpt: "Advances in Vespa features, performance and operability improvements include: Improved synonym support, faster node recovery, re-balancing and re-indexing, WeakAnd query type and new pyvespa features and sample applications."
   link: https://blog.vespa.ai/vespa-newsletter-january-2022/
@@ -21,12 +29,4 @@
   author: Geir Storli and Tor Brede Vekterli
   author-avatar: https://blog.vespa.ai/assets/avatars/geirst.jpg https://blog.vespa.ai/assets/avatars/vekterli.jpg
   date: 2022-01-19
-
-- title: "Machine-learned model serving at scale"
-  excerpt: "An under-communicated point is that the default tuning for most libraries and platforms for evaluating machine-learned models is unsuitable for serving at scale."
-  link: https://blog.vespa.ai/ml-model-serving-at-scale/
-  image: https://blog.vespa.ai/assets/2022-01-07-ml-model-serving-at-scale/jukan-tateisi-bJhT_8nbUA0-unsplash.jpg
-  author: Lester Solbakken
-  author-avatar: https://blog.vespa.ai/assets/avatars/lesters.jpg
-  date: 2022-01-07
 
