@@ -35,7 +35,8 @@ index: true
                 <h2 id="versions">Versions</h2>
                 <p>
                     Vespa uses <a href="https://semver.org/">semantic versioning</a>.
-                    Each release is backwards compatible and supports live migration on running systems.
+                    Each release is backwards compatible and supports live migration on running systems, provided they
+                    are running a version which is less than 2 months old.
                     It is therefore a minor version number change. All new features are released on such minor versions.
                     Every second year or so we make a major version change which removes previously deprecated
                     functionality.
@@ -66,6 +67,7 @@ index: true
 
 
                 <h2 id="stored-data">Stored Data</h2>
+
                 <p>
                     Data written to Vespa is compatible between adjacent releases.
                     For self-hosted systems, it may be necessary to upgrade through each
