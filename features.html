@@ -52,13 +52,13 @@ index: true
         <p>
           Operators querying fields in these ways can be
           <a href="https://docs.vespa.ai/en/reference/query-language-reference.html">combined freely</a>
-          by AND and OR in queries
+          by <em>AND</em> and <em>OR</em> in queries
           while still executing efficiently. This makes it possible to express a wide range
           of behavior, such as retrieving in vector spaces with filters or performing hybrid
           text and semantic retrieval. Vespa is the only engine able to do this:
         </p>
         <div style="text-align: center" class="p-20">
-          <img width="400" style="text-align: center" src="assets/query-tree.svg" alt=""/>
+          <img width="400" style="text-align: center" src="assets/query-tree.svg" alt="Example query tree with ANN and filter terms"/>
         </div>
         <p>
           In addition, Vespa provides a <a href="https://docs.vespa.ai/en/grouping">grouping language</a>
@@ -101,20 +101,20 @@ index: true
           for computation, something which can not scale.
         </p>
         <div style="text-align: center" class="p-20">
-          <img width="500" src="assets/ML-models.svg" alt=""/>
+          <img width="500" src="assets/ML-models.svg" alt="Model deployment to content nodes"/>
         </div>
         <p>
           The features these expressions compute over are either fields of the documents, values passed with the
           query, data from the application package, or a selection from the wide range of
           <a href="https://docs.vespa.ai/en/reference/rank-features.html">built-in features</a>
-          in Vespa combining data from both queries and documents, such as e.g text match features.
+          in Vespa combining data from both queries and documents, such as e.g. text match features.
         </p>
 
         <h3>Sparse and dense tensors</h3>
 
         <p>
           <a href="https://docs.vespa.ai/en/tensor-user-guide.html">Tensors</a>
-          are generalizations of vectors (1-d) and matrixes (2-d) to any number of dimensions.
+          are generalizations of vectors (1-d) and matrices (2-d) to any number of dimensions.
           Since features in Vespa can be tensors, and the expression language provides operators for
           <a href="https://docs.vespa.ai/en/reference/ranking-expressions.html#tensor-functions">computing over tensors</a>,
           it is possible to express a wide range of computation over collections of numbers
@@ -146,7 +146,7 @@ index: true
 
         <p>
           Vespa is engineered to be safe and easy to operate at scale. While operating distributed stateful
-          systems to deliver consistent low latency and high availability in all scenarios is never easy and
+          systems to deliver consistent low latency and high availability in all scenarios is never easy, and
           you should consider using the <a href="https://cloud.vespa.ai/">Vespa Cloud</a> to provide that for you,
           Vespa automates all routine tasks such that they can be  performed safely in production with no service
           disruption and little human involvement. This includes tasks involved in
@@ -162,13 +162,14 @@ index: true
           over available nodes in the cluster,
           in the configured
           <a href="https://docs.vespa.ai/en/reference/services-content.html#redundancy">redundancy</a>
-          factor, with no manual decision making needed. Nodes can be added to
+          factor, with no manual decision-making needed. Nodes can be added to
           (or removed from) clusters at any time: Vespa will redistribute
           content in the background without impacting query or write traffic.
         </p>
 
         <div style="text-align: center" class="p-20">
-          <img width="300" src="assets/elastic-grow.svg" alt=""/>
+          <img width="300" src="assets/elastic-grow.svg"
+               alt="Growing a cluster in two dimensions"/>
         </div>
 
         <p>
@@ -187,7 +188,8 @@ index: true
         </p>
 
         <div style="text-align: center" class="p-20">
-          <img width="300" style="text-align: center"  src="assets/elastic-fail.svg" alt=""/>
+          <img width="300" style="text-align: center"  src="assets/elastic-fail.svg"
+               alt="Document redistribution after a node fail"/>
         </div>
 
         <p>
@@ -215,7 +217,8 @@ index: true
           it to Vespa:
         </p>
         <div style="text-align: center" class="p-20">
-          <img width="400" style="text-align: center"  src="assets/deploy-flow.svg" alt=""/>
+          <img width="400" style="text-align: center"  src="assets/deploy-flow.svg"
+               alt="Application package deployment to multiple nodes"/>
         </div>
         <p>
           Vespa will apply most changes immediately without impacting
@@ -235,9 +238,9 @@ index: true
         <h2 id="performance-and-scalability">Performance and scalability</h2>
 
         <p>
-          Vespa is engineered to perform computations over data in less than hundred milliseconds
+          Vespa is engineered to perform computations over data in less than one hundred milliseconds
           and scale to any data size and query load. Due to the large scale of some of the systems
-          Vespa is running, it has been cost effective to invest a large number of man-years into optimizing
+          Vespa is running, it has been cost-effective to invest a large number of man-years into optimizing
           Vespa at all levels from fundamental architectural choices to ensure parallelization to low-level
           optimization of core algorithms and data structures to execute without cache misses.
         </p>
@@ -250,7 +253,7 @@ index: true
           scales with the number of content nodes, and that network bandwidth never becomes a bottleneck.
         </p>
         <div style="text-align: center" class="p-20">
-          <img width="300" src="assets/query-fanout.svg" alt=""/>
+          <img width="300" src="assets/query-fanout.svg" alt="Query fanout to multiple nodes"/>
         </div>
         <p>
           If you can express a computation in Vespa you, can be sure that you can scale it nearly indefinitely
@@ -284,8 +287,8 @@ index: true
           In addition to queries, <a href="https://docs.vespa.ai/en/reads-and-writes.html">write</a>
           <a href="https://docs.vespa.ai/en/performance/sizing-feeding.html">performance</a>
           is also important in most applications.
-          Vespa can deliver a write throughput of tens of thousands of operations per second per content
-          node in most cases, and this write load can be sustained indefinitely, and does not impact query
+          Vespa can deliver a write-throughput of tens of thousands of operations per second per content
+          node in most cases, and this write-load can be sustained indefinitely, and does not impact query
           execution, apart from spending a fixed fraction of the nodes resources. All writes are applied in real time.
           Vespa achieves this by distributing writes to nodes using a distributed, async messagebus, and applying them
           using lock-free in-memory data structures only, in addition to a persisted transaction log for replay.

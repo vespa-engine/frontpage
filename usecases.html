@@ -103,11 +103,11 @@ index: true
           </li>
           <li>
             Vespa documentation search: A simple text search application providing the search on this site.
-            <a href="https://github.com/vespa-engine/sample-apps/tree/master/vespa-cloud/vespa-documentation-search">Complete application source</a>.
+            <a href="https://github.com/vespa-cloud/vespa-documentation-search">Complete application source</a>.
           </li>
           <li>
             cord19.vespa.ai: Hybrid text and semantic search, document similarity search and attribute filtering.
-            <a href="https://github.com/vespa-engine/sample-apps/tree/master/vespa-cloud/cord-19-search">Complete application source</a>.
+            <a href="https://github.com/vespa-cloud/cord-19-search">Complete application source</a>.
             <a href="https://cord19.vespa.ai/">Try it out</a>.
           </li>
           <li>
@@ -128,13 +128,13 @@ index: true
           Recommendation, content personalization and ad targeting is all the same thing when it comes to
           implementation: For a given user or context, evaluate machine-learned content recommender models
           to find the best items and show them to the user. Usually it is also necessary to filter out
-          unwanted items based on metadata, such as e.g language used, or remaining ad budget.
-          In addition it is often necessary to group the recommended items to make browsing easier or
+          unwanted items based on metadata, such as e.g. language used, or remaining ad budget.
+          In addition, it is often necessary to group the recommended items to make browsing easier or
           filter out those that are too similar.
         </p>
         <p>
           Vespa makes it possible to do the whole process online, at the moment
-          when the recommendation is needed, which ensures recommendations are up to date and makes it affordable
+          when the recommendation is needed, which ensures recommendations are up-to-date and makes it affordable
           to make them specifically for each user or situation. These features of Vespa are usually leveraged:
         </p>
         <ul class="list p-l-30 p-b-10">
@@ -179,7 +179,7 @@ index: true
       <div class="flex-column">
         <h2 id="question-answering">Question answering</h2>
         <p>
-          Question answering provides direct answers to user's question. This is needed in chat bots,
+          Question answering provides direct answers to user's question. This is needed in chat-bots,
           virtual assistants and similar, and is also becoming an expected feature of high-end search solutions, where
           a direct answer is provided on queries that seem to be questions.
         </p>
@@ -248,7 +248,7 @@ index: true
         <p>
           <i>Personal search</i> (not to be confused with <a href="#recommendation-and-personalization">personalization</a>)
           is to provide search in personal collections of data where there is never a need to search across many
-          collections in a single query. In such applications it is not cost effective to do the work to maintain global
+          collections in a single query. In such applications it is not cost-effective to do the work to maintain global
           reverse indexes and the best solution is to
           <a href="https://docs.vespa.ai/en/streaming-search.html">search by streaming</a>
           trough the raw data at query time.
