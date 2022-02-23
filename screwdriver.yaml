@@ -20,6 +20,6 @@ jobs:
           bundle install
           bundle exec jekyll build
           bundle exec htmlproofer \
-            --assume-extension --empty_alt_ignore \
+            --assume-extension \
             --typhoeus-config '{"connecttimeout": 10, "timeout": 30}' \
             _site
