@@ -1,3 +1,9 @@
+- logo: assets/logos/spotify.jpeg
+  text: When Spotify wanted to implement semantic search using vector embeddings, they turned to
+    Vespa for its support for fast ANN search in combination with all the other needs of a real world
+    application, such as using ranking functions combining vector similarity with other signals.
+    <a href="https://engineering.atspotify.com/2022/03/introducing-natural-language-search-for-podcast-episodes/">Read more</a>.
+
 - logo: assets/logos/yahoo.png
   text: Yahoo runs about 150 Vespa applications, including selecting the personalized content
     on all content pages in real time and the targeted ads of one of the worlds largest ad exchanges.
@@ -5,7 +11,7 @@
     per second.
 
 - logo: assets/logos/okcupid.png
-  text: OkCupid chose Vespa over Elasticsearch as the basis of their solution to find
+  text: OkCupid chose Vespa over Elasticsearch for their solution to find
     matches for users in real time, due to Vespa's automatic data management, flexible ranking,
     and support for adding new fields for filtering and sorting quickly without
     refeeding all data. <a href="https://tech.okcupid.com/vespa-vs-elasticsearch-for-matching-millions-of-people-6e3af18eb4dc" target="_new">Read more</a>.
