@@ -4,6 +4,8 @@
       link: https://docs.vespa.ai/
     - title: Open Source
       link: https://github.com/vespa-engine/vespa
+    - title: Roadmap
+      link: roadmap
     - title: Releases
       link: releases
 
@@ -26,3 +28,5 @@
       link: https://stackoverflow.com/questions/tagged/vespa
     - title: Contributing
       link: https://github.com/vespa-engine/vespa/blob/master/CONTRIBUTING.md
+    - title: Blog
+      link: https://blog.vespa.ai/
