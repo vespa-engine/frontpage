@@ -5,9 +5,9 @@
     - title: Open Source
       link: https://github.com/vespa-engine/vespa
     - title: Roadmap
-      link: roadmap
+      link: /roadmap
     - title: Releases
-      link: releases
+      link: /releases
 
 - header: Contact
   links:
@@ -18,7 +18,7 @@
     - title: Issues
       link: https://github.com/vespa-engine/vespa/issues
     - title: Mailing list
-      link: mailing-list
+      link: /mailing-list
 
 - header: Community
   links:
