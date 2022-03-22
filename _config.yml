@@ -44,6 +44,10 @@ exclude:
   - vendor/ruby/
   - .idea
   - vespaai_index.json
+  - test/
+  - "*.pem"
+  - "*.yaml"
+  - "*.py"
 
 search:
   namespace: "vespaai"
