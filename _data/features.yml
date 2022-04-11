@@ -10,13 +10,13 @@
     most machine-learned models from most tools.
   link: features#computation-engine
 
-- title: Elastic data management
+- title: Auto-elastic data management
   description: >
     Vespa will automatically keep data distributed over nodes, and redistribute in the background on changes.
     No need to worry about how data is divided and distributed.
   link: features#operability-and-data-management
 
-- title: Unbeatable performance
+- title: Unbeatable end-to-end performance
   description: >
     Vespa scales to any amount of data and traffic, and is built on a C++ core providing hardware-near optimizations
     and efficient utilization of any amount of memory and cores.
