@@ -1,4 +1,4 @@
-- logo: assets/logos/spotify.png
+- logo: assets/logos/spotify-rnd.png
   text: When Spotify wanted to implement semantic search using vector embeddings, they turned to
     Vespa for its support for fast ANN search in combination with all the other needs of a real world
     application, such as using ranking functions combining vector similarity with other signals.
