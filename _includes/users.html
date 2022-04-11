@@ -9,14 +9,8 @@
         <div class="row">
             {% for user in include.users %}
             <div class="xs-col-1-1 sm-col-1-1 md-col-1-3 lg-col-1-3 xl-col-1-3">
-                <div class="flex flex-column">
-                    <div class="flex section-users--user-column">
-                        <img class="p-30" src="{{ site.baseurl }}/{{user.logo}}" alt="Logo">
-                    </div>
-                    <div class="flex section-users--user-column">
-                        <p class="p-30">{{user.text}}</p>
-                    </div>
-                </div>
+                <img class="p-30 p-t-50" width="{{user.logowidth}}" src="{{ site.baseurl }}/{{user.logo}}" alt="{{user.alt}}">
+                <p class="p-30 {{user.gapclass}}">{{user.text}}</p>
             </div>
             {% endfor %}
         </div>
