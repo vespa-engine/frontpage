@@ -1,3 +1,11 @@
+- title: "Upcoming changes in OS support for Vespa"
+  excerpt: "Today we support CentOS Linux 7 as the OS for Vespa release artifacts. This is about to change."
+  link: https://blog.vespa.ai/Upcoming-changes-in-OS-support-for-Vespa/
+  image: https://blog.vespa.ai/assets/2022-03-29-Upcoming-changes-in-OS-support-for-Vespa/jon-flobrant-rB7-LCa_diU-unsplash.jpg
+  author: Arnstein Ressem
+  author-avatar: https://blog.vespa.ai/assets/avatars/aressem.png
+  date: 2022-03-29
+
 - title: "Preview of Vespa on ARM64"
   excerpt: "With the increasing adoption of ARM64 based hardware like the AWS Graviton and Apple M1 MacBooks we are making a preview of Vespa available for this architecture."
   link: https://blog.vespa.ai/preview-of-vespa-on-arm64/
@@ -21,12 +29,4 @@
   author: Jo Kristian Bergum
   author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
   date: 2022-01-27
-
-- title: "Doubling the throughput of data redistribution"
-  excerpt: "Learn which improvements we made to double the throughput of data redistribution in Vespa."
-  link: https://blog.vespa.ai/doubling-the-throughput-of-data-redistribution/
-  image: https://blog.vespa.ai/assets/2022-01-19-doubling-the-throughput-of-data-redistribution/andy-holmes-oEIFOoC3gi0-unsplash-crop.jpg
-  author: Geir Storli and Tor Brede Vekterli
-  author-avatar: https://blog.vespa.ai/assets/avatars/geirst.jpg https://blog.vespa.ai/assets/avatars/vekterli.jpg
-  date: 2022-01-19
 
