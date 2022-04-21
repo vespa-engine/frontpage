@@ -1,3 +1,11 @@
+- title: "Vespa Newsletter, April 2022"
+  excerpt: "Advances in Vespa features and performance include tensor and ranking configuration improvements, pyvespa usability features and grouping configuration. Also find new guides for performance and ANN. And a podcast!"
+  link: https://blog.vespa.ai/vespa-newsletter-april-2022/
+  image: https://blog.vespa.ai/assets/images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg
+  author: Kristian Aune
+  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
+  date: 2022-04-21
+
 - title: "Upcoming changes in OS support for Vespa"
   excerpt: "Today we support CentOS Linux 7 as the OS for Vespa release artifacts. This is about to change."
   link: https://blog.vespa.ai/Upcoming-changes-in-OS-support-for-Vespa/
@@ -21,12 +29,4 @@
   author: Kristian Aune
   author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
   date: 2022-01-31
-
-- title: "Billion-scale vector search with Vespa - part two"
-  excerpt: "Part two in a blog post series on billion-scale vector search with Vespa. This post explores the many trade-offs related to nearest neighbor search."
-  link: https://blog.vespa.ai/billion-scale-knn-part-two/
-  image: https://blog.vespa.ai/assets/2022-01-27-billion-scale-knn-part-two/vincentiu-solomon-ln5drpv_ImI-unsplash.jpg
-  author: Jo Kristian Bergum
-  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2022-01-27
 
