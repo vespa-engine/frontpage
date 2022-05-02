@@ -86,17 +86,17 @@ $ python3 ./ES_Vespa_parser.py --application_name bank bank_data.json bank_mappi
             (see <a href="https://docs.vespa.ai/en/reference/document-json-format.html">JSON format</a>)
             where each document has IDs like this <code>id:bank:_doc::1</code>.
             It also generates a <code>bank</code> folder with a
-            <a href="https://docs.vespa.ai/en/cloudconfig/application-packages.html">Vespa application package</a>.
+            <a href="https://docs.vespa.ai/en/application-packages.html">Vespa application package</a>.
           </p>
 <pre>
 /bank
-      │     
+      │
       ├── documents.json
       ├── hosts.xml
       ├── services.xml
       └── /schemas
             ├── _doc.sd
-            └── ... 
+            └── ...
 </pre>
 
 
@@ -117,7 +117,7 @@ $ docker run -m 6G --detach --name vespa --hostname vespa-es-tutorial \
 $ docker exec vespa bash -c 'curl -s --head http://localhost:19071/ApplicationStatus'
 </pre>
           <p>
-            <a href="https://docs.vespa.ai/en/cloudconfig/application-packages.html#deploy">Deploy</a>
+            <a href="https://docs.vespa.ai/en/application-packages.html#deploy">Deploy</a>
             the <code>application</code> package:
           </p>
 <pre>
