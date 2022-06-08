@@ -1,3 +1,19 @@
+- title: "Billion-scale vector search using hybrid HNSW-IF"
+  excerpt: "This blog post describes HNSW-IF, a cost-efficient solution for high-accuracy vector search over billion scale vector datasets."
+  link: https://blog.vespa.ai/vespa-hybrid-billion-scale-vector-search/
+  image: https://blog.vespa.ai/assets/2022-06-07-vespa-spann-billion-scale-vector-search//graham-holtshausen-fUnfEz3VLv4-unsplash.jpg
+  author: Jo Kristian Bergum
+  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
+  date: 2022-06-08
+
+- title: "Query Time Constrained Approximate Nearest Neighbor Search"
+  excerpt: "This blog post describes Vespa's industry leading support for combining approximate nearest neighbor search, or vector search, with query constraints to solve real-world search and recommendation problems at scale."
+  link: https://blog.vespa.ai/constrained-approximate-nearest-neighbor-search/
+  image: https://blog.vespa.ai/assets/2022-05-09-constrained-approximate-nearest-neighbor-search/christopher-burns-Kj2SaNHG-hg-unsplash.jpg
+  author: Geir Storli and Jo Kristian Bergum
+  author-avatar: https://blog.vespa.ai/assets/avatars/geirst.jpg https://blog.vespa.ai/assets/avatars/jobergum.jpg
+  date: 2022-05-20
+
 - title: "Vespa Newsletter, April 2022"
   excerpt: "Advances in Vespa features and performance include tensor and ranking configuration improvements, pyvespa usability features and grouping configuration. Also find new guides for performance and ANN. And a podcast!"
   link: https://blog.vespa.ai/vespa-newsletter-april-2022/
@@ -13,20 +29,4 @@
   author: Arnstein Ressem
   author-avatar: https://blog.vespa.ai/assets/avatars/aressem.png
   date: 2022-03-29
-
-- title: "Preview of Vespa on ARM64"
-  excerpt: "With the increasing adoption of ARM64 based hardware like the AWS Graviton and Apple M1 MacBooks we are making a preview of Vespa available for this architecture."
-  link: https://blog.vespa.ai/preview-of-vespa-on-arm64/
-  image: https://blog.vespa.ai/assets/2022-02-16-preview-of-vespa-on-arm64/jeremy-bezanger-wl8hZoJBSU8-unsplash.jpg
-  author: Arnstein Ressem
-  author-avatar: https://blog.vespa.ai/assets/avatars/aressem.png
-  date: 2022-02-16
-
-- title: "Vespa Newsletter, January 2022"
-  excerpt: "Advances in Vespa features, performance and operability improvements include: Improved synonym support, faster node recovery, re-balancing and re-indexing, WeakAnd query type and new pyvespa features and sample applications."
-  link: https://blog.vespa.ai/vespa-newsletter-january-2022/
-  image: https://blog.vespa.ai/assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2022-01-31
 
