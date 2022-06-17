@@ -1,3 +1,11 @@
+- title: "Vespa at Berlin Buzzwords 2022"
+  excerpt: "Find videos and links from four Vespa-related talks at Berlin Buzzwords 2022, Germany’s most exciting conference on storing, processing, streaming and searching large amounts of digital data."
+  link: https://blog.vespa.ai/vespa-at-berlin-buzzwords/
+  image: https://blog.vespa.ai/assets/2022-06-18-vespa-at-berlin-buzzwords/cover.png
+  author: Kristian Aune
+  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
+  date: 2022-06-17
+
 - title: "Billion-scale vector search using hybrid HNSW-IF"
   excerpt: "This blog post describes HNSW-IF, a cost-efficient solution for high-accuracy vector search over billion scale vector datasets."
   link: https://blog.vespa.ai/vespa-hybrid-billion-scale-vector-search/
@@ -21,12 +29,4 @@
   author: Kristian Aune
   author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
   date: 2022-04-21
-
-- title: "Upcoming changes in OS support for Vespa"
-  excerpt: "Today we support CentOS Linux 7 as the OS for Vespa release artifacts. This is about to change."
-  link: https://blog.vespa.ai/Upcoming-changes-in-OS-support-for-Vespa/
-  image: https://blog.vespa.ai/assets/2022-03-29-Upcoming-changes-in-OS-support-for-Vespa/jon-flobrant-rB7-LCa_diU-unsplash.jpg
-  author: Arnstein Ressem
-  author-avatar: https://blog.vespa.ai/assets/avatars/aressem.png
-  date: 2022-03-29
-
+  
