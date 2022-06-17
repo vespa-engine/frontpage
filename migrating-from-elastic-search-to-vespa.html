@@ -135,11 +135,11 @@ $ curl -s --head http://localhost:8080/ApplicationStatus
           </p>
           <p>
             Feed documents using the
-            <a href="https://docs.vespa.ai/en/vespa-http-client.html">vespa-http-client</a>:
+            <a href="https://docs.vespa.ai/en/vespa-feed-client.html">vespa-feed-client</a>:
           </p>
 <pre>
-$ docker exec vespa bash -c 'java -jar /opt/vespa/lib/jars/vespa-http-client-jar-with-dependencies.jar \
-  --verbose --file /app/bank/documents.json --host localhost --port 8080'
+$ docker exec vespa bash -c '/opt/vespa/bin/vespa-feed-client \
+  --verbose --show-all --file /app/bank/documents.json --endpoint http://localhost:8080/'
 </pre>
           <p>
             Get a document using the <a href="https://docs.vespa.ai/en/document-v1-api-guide.html">Document API</a>:
