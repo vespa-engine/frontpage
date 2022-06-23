@@ -1,0 +1,180 @@
+---
+# Copyright Yahoo. All rights reserved.
+title: Resources
+layout: page
+index: true
+---
+
+<style>
+.subpage h2 {margin-top: 80px;}
+
+.subpage p, .subpage ul {margin-top: 20px;} /* More spacing for the links / example commands */
+
+.hidden { display: none;}
+
+button {
+    background: none!important;
+    border: none;
+    padding: 0!important;
+}
+</style>
+
+<div class="container-full">
+  <div class="m-t-20 row">
+    <div class="xs-col-1-1 sm-col-1-1 md-col-1-1 lg-col-8-12 lg-col-off-2-12 xl-col-8-12 xl-col-off-2-12">
+      <div class="flex-column">
+        <h1 id="releases">Resources</h1>
+
+        <h2 id="troubleshooting-startup-singlenode">Troubleshooting startup - singlenode</h2>
+        <ul>
+          <li>How to start Vespa in a Docker container, with an overview of relevant Vespa processes.</li>
+          <li>Vespa startup sequence.</li>
+          <li>Verify services are up by using logs and status/health interfaces.</li>
+          <li>The video goes through common pitfalls like bundle load error and troubleshooting.</li>
+        </ul>
+        <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/dUCLKtNchuE"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        <br />
+        <button onclick="toggleNext(this)" class="link">
+          Links and commands from the video
+        </button>
+        <div class="hidden">
+          <ul>
+            <li><a href="https://docs.vespa.ai/en/vespa-quick-start.html">
+              docs.vespa.ai/en/vespa-quick-start.html</a></li>
+            <li><a href="https://github.com/vespa-engine/docker-image/blob/master/include/start-container.sh">
+              github.com/vespa-engine/docker-image/blob/master/include/start-container.sh</a></li>
+            <li><a href="https://docs.vespa.ai/en/reference/metrics.html">
+              docs.vespa.ai/en/reference/metrics.html</a></li>
+            <li><a href="https://docs.vespa.ai/en/operations/configuration-server.html">
+              docs.vespa.ai/en/operations/configuration-server.html</a></li>
+            <li><a href="https://blog.vespa.ai/preview-of-vespa-on-arm64/">
+              blog.vespa.ai/preview-of-vespa-on-arm64/</a></li>
+            <li><a href="https://docs.vespa.ai/en/application-packages.html">
+              docs.vespa.ai/en/application-packages.html</a></li>
+            <li><a href="https://docs.vespa.ai/en/config-sentinel.html">
+              docs.vespa.ai/en/config-sentinel.html</a></li>
+          </ul>
+          <p><code>curl http://localhost:19071/state/v1/health</code></p>
+          <p><code>docker exec vespa curl http://localhost:19071/state/v1/health</code></p>
+          <p><code>docker info | grep "Total Memory"</code></p>
+          <p><code>docker ps</code></p>
+          <p><code>docker exec vespa /opt/vespa/bin/vespa-logfmt -S configserver</code></p>
+          <p><code>docker exec vespa /opt/vespa/bin/vespa-model-inspect services</code></p>
+          <p><code>docker exec vespa /opt/vespa/bin/vespa-model-inspect service container</code></p>
+          <p><code>docker exec vespa curl -s http://localhost:8080/state/v1/health</code></p>
+          <p><code>docker exec vespa curl -s http://localhost:19110/state/v1/health</code></p>
+          <p><code>docker exec vespa /opt/vespa/bin/vespa-logfmt -S container</code></p>
+          <p><code>ls -la target/albums-deploy.jar</code></p>
+        </div>
+
+
+
+        <h2 id="troubleshooting-startup-multinode">Troubleshooting startup - multinode</h2>
+        <ul>
+          <li>How to start a Vespa instance with multiple config servers.</li>
+          <li>Validate that all servers are started.</li>
+          <li>How Vespa config servers use Apache ZooKeeper, and check for quorum / leader election.</li>
+        </ul>
+        <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/BG7XZmXpIzo"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        <br />
+        <button onclick="toggleNext(this)" class="link">
+          Links and commands from the video
+        </button>
+        <div class="hidden">
+          <ul>
+            <li><a href="https://github.com/vespa-engine/sample-apps/tree/master/examples/operations/multinode-HA">
+              https://github.com/vespa-engine/sample-apps/tree/master/examples/operations/multinode-HA</a></li>
+            <li><a href="https://github.com/vespa-engine/sample-apps/tree/master/examples/operations/multinode">
+              https://github.com/vespa-engine/sample-apps/tree/master/examples/operations/multinode</a></li>
+            <li><a href="https://github.com/vespa-engine/docker-image/blob/master/include/start-container.sh">
+              https://github.com/vespa-engine/docker-image/blob/master/include/start-container.sh</a></li>
+            <li><a href="https://zookeeper.apache.org/">
+              https://zookeeper.apache.org/</a></li>
+          </ul>
+          <p><code>curl http://localhost:19071/state/v1/health</code></p>
+          <p><code>docker exec node0 /opt/vespa/bin/vespa-logfmt -f -S configserver</code></p>
+          <p><code>
+            docker run --detach --name node0 --hostname node0.vespanet \<br/>
+            &nbsp;&nbsp;-e VESPA_CONFIGSERVERS=node0.vespanet,node1.vespanet,node2.vespanet \<br/>
+            &nbsp;&nbsp;--network vespanet \<br/>
+            &nbsp;&nbsp;vespaengine/vespa
+          </code></p>
+          <p><code>docker exec node1 sh -c 'echo stat | nc localhost 2181'</code></p>
+          <p><code>docker rm -f node1</code></p>
+        </div>
+
+
+
+        <h2 id="auto-bucket-distribution-intro">Auto bucket distribution - intro</h2>
+        <ul>
+          <li>Intro to document distribution using buckets and Vespa’s ideal state algorithm.</li>
+          <li>Using the Monitoring example application to monitor document distribution.</li>
+          <li>Auto bucket redistribution when increasing capacity.</li>
+          <li>Auto bucket redistribution at node failure.</li>
+        </ul>
+        <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/HnhiesF62JY"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        <br />
+        <button onclick="toggleNext(this)" class="link">
+          Links and commands from the video
+        </button>
+        <div class="hidden">
+          <ul>
+            <li><a href="https://docs.vespa.ai/en/vespa-quick-start.html">
+              docs.vespa.ai/en/vespa-quick-start.html</a></li>
+            <li><a href="https://docs.vespa.ai/en/operations/monitoring.html">
+              docs.vespa.ai/en/operations/monitoring.html</a></li>
+            <li><a href="http://localhost:19050/clustercontroller-status/v1/music">
+              http://localhost:19050/clustercontroller-status/v1/music</a></li>
+          </ul>
+          <p><code>
+            docker run --detach --name vespa --hostname vespa-container \<br/>
+            &nbsp;&nbsp;--publish 8080:8080 --publish 19000-19200:19000-19200 \<br/>
+            &nbsp;&nbsp;--network monitoring \<br/>
+            &nbsp;&nbsp;vespaengine/vespa
+          </code></p>
+          <p><code>curl -L -o vespa-feed-client-cli.zip https://search.maven.org/remotecontent?filepath=com/yahoo/vespa/vespa-feed-client-cli/7.588.57/vespa-feed-client-cli-7.588.57-zip.zip</code></p>
+          <p><code>unzip -o vespa-feed-client-cli.zip</code></p>
+          <p><code>
+            i=0; while [ $i -lt 60000 ]; do \<br/>
+            &nbsp;&nbsp;(echo -n '{"put": "id:mynamespace:music::'; \<br/>
+            &nbsp;&nbsp;echo -n "$i\","; \<br/>
+            &nbsp;&nbsp;echo '"fields": {"album": "A", "artist": "B", "year": 10}}'); \<br/>
+            &nbsp;&nbsp;((i++)); \<br/>
+            done | ./vespa-feed-client-cli/vespa-feed-client --stdin --endpoint http://localhost:8080
+          </code></p>
+          <p><code>vespa deploy --wait 300</code></p>
+          <p><code>docker exec -it vespa /opt/vespa/bin/vespa-set-node-state -i 2 down</code></p>
+        </div>
+
+
+
+        <!--
+        <h2 id="schema-changes">Schema changes</h2>
+        -->
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleNext(elem) {
+    let e = elem.nextSibling;
+    while(e && e.nodeType === Node.TEXT_NODE) {
+        e = e.nextSibling;
+    }
+    e.classList.toggle("hidden");
+}
+</script>
