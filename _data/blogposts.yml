@@ -1,3 +1,11 @@
+- title: "Vespa 8 is here"
+  excerpt: "Announcing the release of Vespa 8 - the next major version of vespa.ai"
+  link: https://blog.vespa.ai/vespa-8-is-here/
+  image: https://blog.vespa.ai/assets/2022-06-22-vespa-8-is-here/claudio-schwarz-8-unsplash.jpg
+  author: Jon Bratseth
+  author-avatar: https://blog.vespa.ai/assets/avatars/bratseth.jpg
+  date: 2022-06-22
+
 - title: "Vespa at Berlin Buzzwords 2022"
   excerpt: "Find videos and links from four Vespa-related talks at Berlin Buzzwords 2022, Germany’s most exciting conference on storing, processing, streaming and searching large amounts of digital data."
   link: https://blog.vespa.ai/vespa-at-berlin-buzzwords/
@@ -22,11 +30,3 @@
   author-avatar: https://blog.vespa.ai/assets/avatars/geirst.jpg https://blog.vespa.ai/assets/avatars/jobergum.jpg
   date: 2022-05-20
 
-- title: "Vespa Newsletter, April 2022"
-  excerpt: "Advances in Vespa features and performance include tensor and ranking configuration improvements, pyvespa usability features and grouping configuration. Also find new guides for performance and ANN. And a podcast!"
-  link: https://blog.vespa.ai/vespa-newsletter-april-2022/
-  image: https://blog.vespa.ai/assets/images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2022-04-21
-  
