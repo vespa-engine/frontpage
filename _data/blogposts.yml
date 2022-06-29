@@ -1,3 +1,11 @@
+- title: "Vespa Newsletter, June 2022"
+  excerpt: "Advances in Vespa features and performance include ANN with configurable filtering, fuzzy matching, and native embedding support. Also see pyvespa’s new experimental ranking module!"
+  link: https://blog.vespa.ai/vespa-newsletter-june-2022/
+  image: https://blog.vespa.ai/assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg
+  author: Kristian Aune
+  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
+  date: 2022-06-29
+
 - title: "Vespa 8 is here"
   excerpt: "Announcing the release of Vespa 8 - the next major version of vespa.ai"
   link: https://blog.vespa.ai/vespa-8-is-here/
@@ -21,12 +29,4 @@
   author: Jo Kristian Bergum
   author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
   date: 2022-06-08
-
-- title: "Query Time Constrained Approximate Nearest Neighbor Search"
-  excerpt: "This blog post describes Vespa's industry leading support for combining approximate nearest neighbor search, or vector search, with query constraints to solve real-world search and recommendation problems at scale."
-  link: https://blog.vespa.ai/constrained-approximate-nearest-neighbor-search/
-  image: https://blog.vespa.ai/assets/2022-05-09-constrained-approximate-nearest-neighbor-search/christopher-burns-Kj2SaNHG-hg-unsplash.jpg
-  author: Geir Storli and Jo Kristian Bergum
-  author-avatar: https://blog.vespa.ai/assets/avatars/geirst.jpg https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2022-05-20
 
