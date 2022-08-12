@@ -60,3 +60,10 @@ search:
     - url: https://vespacloud-docsearch.vespa-team.aws-ap-northeast-1a.z.vespa-app.cloud/
       indexes:
         - vespaai_index.json
+
+defaults:
+  -
+    scope:
+      path  : ""
+    values:
+      index : true
