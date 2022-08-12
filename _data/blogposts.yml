@@ -1,3 +1,19 @@
+- title: "Summer internship at Vespa"
+  excerpt: "After the summer internship of 2022 the intern have summarized what he has done and his experience at Vespa"
+  link: https://blog.vespa.ai/summer-intern/
+  image: https://blog.vespa.ai/assets/2022-08-12-summer-internship/internship.jpg
+  author: Erlend Solbakken Nikolaisen
+  author-avatar: https://blog.vespa.ai
+  date: 2022-08-12
+
+- title: "Managed Vector Search using Vespa Cloud"
+  excerpt: "This blog post describes how your organization can unlock the full potential of multimodal AI-powered vector representations using Vespa -- the industry-leading open-source big data serving engine."
+  link: https://blog.vespa.ai/vespa-managed-vector-search/
+  image: https://blog.vespa.ai/assets/2022-07-01-vespa-ai-database/israel-palacio-ImcUkZ72oUs-unsplash.jpg
+  author: Jo Kristian Bergum
+  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
+  date: 2022-07-01
+
 - title: "Vespa Newsletter, June 2022"
   excerpt: "Advances in Vespa features and performance include ANN with configurable filtering, fuzzy matching, and native embedding support. Also see pyvespa’s new experimental ranking module!"
   link: https://blog.vespa.ai/vespa-newsletter-june-2022/
@@ -13,20 +29,4 @@
   author: Jon Bratseth
   author-avatar: https://blog.vespa.ai/assets/avatars/bratseth.jpg
   date: 2022-06-22
-
-- title: "Vespa at Berlin Buzzwords 2022"
-  excerpt: "Find videos and links from four Vespa-related talks at Berlin Buzzwords 2022, Germany’s most exciting conference on storing, processing, streaming and searching large amounts of digital data."
-  link: https://blog.vespa.ai/vespa-at-berlin-buzzwords/
-  image: https://blog.vespa.ai/assets/2022-06-18-vespa-at-berlin-buzzwords/cover.png
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2022-06-17
-
-- title: "Billion-scale vector search using hybrid HNSW-IF"
-  excerpt: "This blog post describes HNSW-IF, a cost-efficient solution for high-accuracy vector search over billion scale vector datasets."
-  link: https://blog.vespa.ai/vespa-hybrid-billion-scale-vector-search/
-  image: https://blog.vespa.ai/assets/2022-06-07-vespa-spann-billion-scale-vector-search//graham-holtshausen-fUnfEz3VLv4-unsplash.jpg
-  author: Jo Kristian Bergum
-  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2022-06-08
 
