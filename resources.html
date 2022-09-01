@@ -42,7 +42,7 @@ button {
                 allowfullscreen></iframe>
         <br />
         <button onclick="toggleNext(this)" class="link">
-          Links and commands from the video
+          Links and commands used in the video
         </button>
         <div class="hidden">
           <ul>
@@ -89,7 +89,7 @@ button {
                 allowfullscreen></iframe>
         <br />
         <button onclick="toggleNext(this)" class="link">
-          Links and commands from the video
+          Links and commands used in the video
         </button>
         <div class="hidden">
           <ul>
@@ -130,7 +130,7 @@ button {
                 allowfullscreen></iframe>
         <br />
         <button onclick="toggleNext(this)" class="link">
-          Links and commands from the video
+          Links and commands used in the video
         </button>
         <div class="hidden">
           <ul>
@@ -162,10 +162,42 @@ button {
         </div>
 
 
-
-        <!--
-        <h2 id="schema-changes">Schema changes</h2>
-        -->
+        <h2 id="debugging-a-vespa-searcher">Debugging a Vespa Searcher</h2>
+        <ul>
+          <li>Deploy a Java Searcher that manipulates the user query.</li>
+          <li>Add query trace output for debugging.</li>
+          <li>Use a debugger, stepping through the Searcher code.</li>
+        </ul>
+        <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/mEYZpo4PCZM"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        <br />
+        <button onclick="toggleNext(this)" class="link">
+          Links and commands used in the video
+        </button>
+        <div class="hidden">
+          <ul>
+            <li><a href="https://docs.vespa.ai/en/vespa-quick-start-java.html">
+              docs.vespa.ai/en/vespa-quick-start-java.html</a></li>
+            <li><a href="https://github.com/vespa-engine/sample-apps/tree/master/album-recommendation-java">
+              github.com/vespa-engine/sample-apps/tree/master/album-recommendation-java</a></li>
+            <li><a href="https://docs.vespa.ai/en/query-api.html#query-tracing">
+              docs.vespa.ai/en/query-api.html#query-tracing</a></li>
+            <li><a href="https://docs.vespa.ai/en/developer-guide.html">
+              docs.vespa.ai/en/developer-guide.html
+            </a></li>
+          </ul>
+          <p><code>
+            vespa query "select * from music where album contains 'metallica'" | jq<br/>
+            vespa query "select * from music where album contains 'metallica'" tracelevel=4 | jq<br/>
+            vespa query "select * from music where album contains 'metallica'" searchChain=metalChain
+          </code></p>
+          <p><code>docker run --detach --name vespa --hostname vespa-container \<br/>
+            &nbsp; --publish 8080:8080 --publish 19071:19071 --publish 5005:5005 \<br/>
+            &nbsp; vespaengine/vespa</code></p>
+        </div>
 
       </div>
     </div>
