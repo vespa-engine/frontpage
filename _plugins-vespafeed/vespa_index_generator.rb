@@ -13,6 +13,8 @@ module Jekyll
             namespace = site.config["search"]["namespace"]
             operations = []
             site.pages.each do |page|
+                next if page.path.start_with?("css/") ||
+                        page.url.start_with?("/redirects.json")
                 if page.data["index"] == true
                     operations.push({
                         :fields => {
