@@ -1,5 +1,21 @@
+- title: "Vespa Newsletter, September 2022"
+  excerpt: "Advances in Vespa features and performance include rank-phase statistics, detailed rank performance analysis, new query- and trace-applications and a new training video!"
+  link: https://blog.vespa.ai/vespa-newsletter-september-2022/
+  image: https://blog.vespa.ai/assets/images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg
+  author: Kristian Aune
+  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
+  date: 2022-09-19
+
+- title: "Will new vector databases dislodge traditional search engines?"
+  excerpt: "Doug Turnbull asks an interesting question on Linkedin; Will new vector databases dislodge traditional search engines?"
+  link: https://blog.vespa.ai/will-vector-dbs-dislodge-search-engines/
+  image: https://blog.vespa.ai/assets/2022-09-20-will-vector-dbs-dislodge-search-engines/joshua-sortino-LqKhnDzSF-8-unsplash.jpg
+  author: Jo Kristian Bergum
+  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
+  date: 2022-09-19
+
 - title: "Summer internship at Vespa"
-  excerpt: "After the summer internship of 2022 the intern have summarized what he has done and his experience at Vespa"
+  excerpt: "After the summer internship of 2022 the intern has summarized what he has done and his experience at Vespa"
   link: https://blog.vespa.ai/summer-intern/
   image: https://blog.vespa.ai/assets/2022-08-12-summer-internship/internship.jpg
   author: Erlend Solbakken Nikolaisen
@@ -13,20 +29,4 @@
   author: Jo Kristian Bergum
   author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
   date: 2022-07-01
-
-- title: "Vespa Newsletter, June 2022"
-  excerpt: "Advances in Vespa features and performance include ANN with configurable filtering, fuzzy matching, and native embedding support. Also see pyvespa’s new experimental ranking module!"
-  link: https://blog.vespa.ai/vespa-newsletter-june-2022/
-  image: https://blog.vespa.ai/assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2022-06-29
-
-- title: "Vespa 8 is here"
-  excerpt: "Announcing the release of Vespa 8 - the next major version of vespa.ai"
-  link: https://blog.vespa.ai/vespa-8-is-here/
-  image: https://blog.vespa.ai/assets/2022-06-22-vespa-8-is-here/claudio-schwarz-8-unsplash.jpg
-  author: Jon Bratseth
-  author-avatar: https://blog.vespa.ai/assets/avatars/bratseth.jpg
-  date: 2022-06-22
 
