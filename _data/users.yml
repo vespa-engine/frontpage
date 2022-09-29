@@ -5,7 +5,7 @@
   text: When Spotify wanted to implement semantic search using vector embeddings, they turned to
     Vespa for its support for fast ANN search in combination with all the other needs of real
     applications, such as using ranking functions combining vector similarity with other signals.
-    <a href="https://engineering.atspotify.com/2022/03/introducing-natural-language-search-for-podcast-episodes/">Read more</a>.
+    <a href="https://engineering.atspotify.com/introducing-natural-language-search-for-podcast-episodes/">Read more</a>.
 
 - logo: assets/logos/yahoo.png
   logowidth: 250
