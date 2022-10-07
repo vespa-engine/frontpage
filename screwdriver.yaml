@@ -20,8 +20,8 @@ jobs:
           bundle install
           bundle exec jekyll build
           bundle exec htmlproofer \
-            --assume-extension \
-            --check-html \
+            --assume-extension .html \
+            --enforce_https false \
             --typhoeus '{"connecttimeout": 10, "timeout": 30}' \
             --hydra '{"max_concurrency": 1}' \
             _site
