@@ -1,3 +1,19 @@
+- title: "Building Billion-Scale Vector Search - part two"
+  excerpt: "Searching billion-scale datasets without breaking the bank."
+  link: https://blog.vespa.ai/building-billion-scale-vector-search-part-two/
+  image: https://blog.vespa.ai/assets/2022-10-26-building-billion-scale-vector-search-part-two/julien-tromeur-EWg1-0UjeWY-unsplash.jpg
+  author: Jo Kristian Bergum
+  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
+  date: 2022-10-26
+
+- title: "Vespa on ARM64"
+  excerpt: "Vespa is now released as a multiplatform container image, supporting both x86_64 and ARM64."
+  link: https://blog.vespa.ai/vespa-on-arm64/
+  image: https://blog.vespa.ai/assets/2022-10-11-vespa-on-arm64/niek-doup-Xf071ws2Icg-unsplash.jpg
+  author: Kristian Aune
+  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
+  date: 2022-10-11
+
 - title: "Building Billion-Scale Vector Search - part one"
   excerpt: "How fast is fast? Many consider the blink of an eye, around 100-250ms, to be plenty fast."
   link: https://blog.vespa.ai/building-billion-scale-vector-search/
@@ -13,20 +29,4 @@
   author: Jon Bratseth
   author-avatar: https://blog.vespa.ai/assets/avatars/bratseth.jpg
   date: 2022-10-04
-
-- title: "Text embedding made simple"
-  excerpt: "Vespa now lets you create a production quality semantic search application from scratch in minutes"
-  link: https://blog.vespa.ai/text-embedding-made-simple/
-  image: https://blog.vespa.ai/assets/2022-09-20-text-embedding-made-simple/embeddings.png
-  author: Jon Bratseth
-  author-avatar: https://blog.vespa.ai/assets/avatars/bratseth.jpg
-  date: 2022-09-20
-
-- title: "Vespa Newsletter, September 2022"
-  excerpt: "Advances in Vespa features and performance include rank-phase statistics, detailed rank performance analysis, new query- and trace-applications and a new training video!"
-  link: https://blog.vespa.ai/vespa-newsletter-september-2022/
-  image: https://blog.vespa.ai/assets/images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2022-09-19
 
