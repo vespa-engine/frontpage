@@ -1,3 +1,11 @@
+- title: "Vespa Newsletter, October 2022"
+  excerpt: "Advances in Vespa features and performance include a BertBase Embedder / model hub, improved query performance, paged attributes, ARM64 support and term bolding in string arrays."
+  link: https://blog.vespa.ai/vespa-newsletter-october-2022/
+  image: https://blog.vespa.ai/assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg
+  author: Kristian Aune
+  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
+  date: 2022-10-31
+
 - title: "Building Billion-Scale Vector Search - part two"
   excerpt: "Searching billion-scale datasets without breaking the bank."
   link: https://blog.vespa.ai/building-billion-scale-vector-search-part-two/
@@ -21,12 +29,4 @@
   author: Jo Kristian Bergum
   author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
   date: 2022-10-06
-
-- title: "Pre-trained models on Vespa Cloud"
-  excerpt: "Vespa Cloud now provides pre-trained ML models for your applications"
-  link: https://blog.vespa.ai/pre-trained-models-on-vespa-cloud/
-  image: https://blog.vespa.ai/assets/2022-10-04-pre-trained-models-on-vespa-cloud/pre-trained.png
-  author: Jon Bratseth
-  author-avatar: https://blog.vespa.ai/assets/avatars/bratseth.jpg
-  date: 2022-10-04
 
