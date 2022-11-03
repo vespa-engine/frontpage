@@ -1,3 +1,11 @@
+- title: "Improving Product Search with Learning to Rank - part one"
+  excerpt: "This is the first blog post on applying learning to rank to enhance E-commerce search."
+  link: https://blog.vespa.ai/improving-product-search-with-ltr/
+  image: https://blog.vespa.ai/assets/2022-11-03-improving-product-search-with-ltr/pawel-czerwinski-RkIsyD_AVvc-unsplash.jpg
+  author: Jo Kristian Bergum
+  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
+  date: 2022-11-03
+
 - title: "Vespa Newsletter, October 2022"
   excerpt: "Advances in Vespa features and performance include a BertBase Embedder / model hub, improved query performance, paged attributes, ARM64 support and term bolding in string arrays."
   link: https://blog.vespa.ai/vespa-newsletter-october-2022/
@@ -21,12 +29,4 @@
   author: Kristian Aune
   author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
   date: 2022-10-11
-
-- title: "Building Billion-Scale Vector Search - part one"
-  excerpt: "How fast is fast? Many consider the blink of an eye, around 100-250ms, to be plenty fast."
-  link: https://blog.vespa.ai/building-billion-scale-vector-search/
-  image: https://blog.vespa.ai/assets/2022-10-07-building-billion-scale-vector-search/arnaud-mariat-45Z6hW1dQMI-unsplash.jpg
-  author: Jo Kristian Bergum
-  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2022-10-06
 
