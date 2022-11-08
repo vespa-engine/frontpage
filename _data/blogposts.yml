@@ -1,3 +1,11 @@
+- title: "Vespa Cloud on Google Cloud Platform"
+  excerpt: "Vespa Cloud is now available on Google Cloud Platform"
+  link: https://blog.vespa.ai/vespa-cloud-on-gcp/
+  image: https://blog.vespa.ai/assets/images/nasa-Q1p7bh3SHj8-unsplash.jpg
+  author: Kristian Aune
+  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
+  date: 2022-11-08
+
 - title: "Improving Product Search with Learning to Rank - part one"
   excerpt: "This is the first blog post on applying learning to rank to enhance E-commerce search."
   link: https://blog.vespa.ai/improving-product-search-with-ltr/
@@ -21,12 +29,4 @@
   author: Jo Kristian Bergum
   author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
   date: 2022-10-26
-
-- title: "Vespa on ARM64"
-  excerpt: "Vespa is now released as a multiplatform container image, supporting both x86_64 and ARM64."
-  link: https://blog.vespa.ai/vespa-on-arm64/
-  image: https://blog.vespa.ai/assets/2022-10-11-vespa-on-arm64/niek-doup-Xf071ws2Icg-unsplash.jpg
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2022-10-11
 
