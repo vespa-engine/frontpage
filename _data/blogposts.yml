@@ -1,3 +1,11 @@
+- title: "Improving Product Search with Learning to Rank - part two"
+  excerpt: "This is the second blog post on applying learning to rank to enhance E-commerce search."
+  link: https://blog.vespa.ai/improving-product-search-with-ltr-part-two/
+  image: https://blog.vespa.ai/assets/2022-11-11-improving-product-search-with-ltr-part-two/carl-campbell-sUhjgTt_M58-unsplash.jpg
+  author: Jo Kristian Bergum
+  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
+  date: 2022-11-10
+
 - title: "Vespa Cloud on Google Cloud Platform"
   excerpt: "Vespa Cloud is now available on Google Cloud Platform"
   link: https://blog.vespa.ai/vespa-cloud-on-gcp/
@@ -21,12 +29,4 @@
   author: Kristian Aune
   author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
   date: 2022-10-31
-
-- title: "Building Billion-Scale Vector Search - part two"
-  excerpt: "Searching billion-scale datasets without breaking the bank."
-  link: https://blog.vespa.ai/building-billion-scale-vector-search-part-two/
-  image: https://blog.vespa.ai/assets/2022-10-26-building-billion-scale-vector-search-part-two/julien-tromeur-EWg1-0UjeWY-unsplash.jpg
-  author: Jo Kristian Bergum
-  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2022-10-26
 
