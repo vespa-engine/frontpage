@@ -1,3 +1,11 @@
+- title: "Vespa Newsletter, November 2022"
+  excerpt: "Vespa features and performance advances include ANN Pre-Filter Performance, Parent Field Hit-Estimates, Model Training Notebooks, and GCP Support."
+  link: https://blog.vespa.ai/vespa-newsletter-november-2022/
+  image: https://blog.vespa.ai/assets/images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg
+  author: Kristian Aune
+  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
+  date: 2022-11-30
+
 - title: "Improving Product Search with Learning to Rank - part two"
   excerpt: "This is the second blog post on applying learning to rank to enhance E-commerce search."
   link: https://blog.vespa.ai/improving-product-search-with-ltr-part-two/
@@ -21,12 +29,4 @@
   author: Jo Kristian Bergum
   author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
   date: 2022-11-03
-
-- title: "Vespa Newsletter, October 2022"
-  excerpt: "Advances in Vespa features and performance include a BertBase Embedder / model hub, improved query performance, paged attributes, ARM64 support and term bolding in string arrays."
-  link: https://blog.vespa.ai/vespa-newsletter-october-2022/
-  image: https://blog.vespa.ai/assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2022-10-31
 
