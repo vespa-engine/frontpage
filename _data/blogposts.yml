@@ -1,32 +1,32 @@
-- title: "Improving Product Search with Learning to Rank - part three"
-  excerpt: "This is the third blog post on applying learning to rank to enhance E-commerce search."
-  link: https://blog.vespa.ai/improving-product-search-with-ltr-part-three/
-  image: https://blog.vespa.ai/assets/2022-12-05-improving-product-search-with-ltr-part-three/niels-weiss-rDVP7whoibw-unsplash.jpg
+- title: "Improving Search Ranking with Few-Shot Prompting of LLMs"
+  excerpt: "Distilling the knowledge and power of generative Large Language Models (LLMs) with billions of parameters to ranking models with a few million parameters."
+  link: https://blog.vespa.ai/improving-text-ranking-with-few-shot-prompting/
+  image: https://blog.vespa.ai/assets/2023-02-03-improving-text-ranking-with-few-shot-prompting/maxime-valcarce-mAj8xn5zXsk-unsplash.jpg
   author: Jo Kristian Bergum
   author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2022-12-01
+  date: 2023-02-03
 
-- title: "Vespa Newsletter, November 2022"
-  excerpt: "Vespa features and performance advances include ANN Pre-Filter Performance, Parent Field Hit-Estimates, Model Training Notebooks, and GCP Support."
-  link: https://blog.vespa.ai/vespa-newsletter-november-2022/
-  image: https://blog.vespa.ai/assets/images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg
+- title: "Vespa Newsletter, January 2023"
+  excerpt: "Advances in Vespa features and performance include Better Tensor formats, AWS PrivateLink, Autoscaling, Data Plane Access Control and Container and Content Node Performance."
+  link: https://blog.vespa.ai/vespa-newsletter-january-2023/
+  image: https://blog.vespa.ai/assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg
   author: Kristian Aune
   author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2022-11-30
+  date: 2023-01-31
 
-- title: "Improving Product Search with Learning to Rank - part two"
-  excerpt: "This is the second blog post on applying learning to rank to enhance E-commerce search."
-  link: https://blog.vespa.ai/improving-product-search-with-ltr-part-two/
-  image: https://blog.vespa.ai/assets/2022-11-11-improving-product-search-with-ltr-part-two/carl-campbell-sUhjgTt_M58-unsplash.jpg
+- title: "Improving Zero-Shot Ranking with Vespa Hybrid Search - part two"
+  excerpt: "Where should you begin if you plan to implement search functionality but have not yet collected data from user interactions to train ranking models?"
+  link: https://blog.vespa.ai/improving-zero-shot-ranking-with-vespa-part-two/
+  image: https://blog.vespa.ai/assets/2023-01-10-improving-zero-shot-ranking-with-vespa-part-two/tamarcus-brown-YWI8pZdcuAA-unsplash.jpg
   author: Jo Kristian Bergum
   author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2022-11-10
+  date: 2023-01-09
 
-- title: "Vespa Cloud on Google Cloud Platform"
-  excerpt: "Vespa Cloud is now available on Google Cloud Platform"
-  link: https://blog.vespa.ai/vespa-cloud-on-gcp/
-  image: https://blog.vespa.ai/assets/images/nasa-Q1p7bh3SHj8-unsplash.jpg
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2022-11-08
+- title: "Improving Zero-Shot Ranking with Vespa Hybrid Search"
+  excerpt: "If you are planning to implement search functionality but have not yet collected data from user interactions to train ranking models, where should you begin?"
+  link: https://blog.vespa.ai/improving-zero-shot-ranking-with-vespa/
+  image: https://blog.vespa.ai/assets/2023-01-06-improving-zero-shot-ranking-with-vespa/norbert-braun-uU8n5LuzpTc-unsplash.jpg
+  author: Jo Kristian Bergum
+  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
+  date: 2023-01-05
 
