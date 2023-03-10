@@ -32,61 +32,63 @@ layout: page
             <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.9/getting-started-index.html">
               getting-started-index</a> or skip this part if you have an index:
           </p>
-<pre>
+<pre data-test="exec">
 $ docker network create --driver bridge esnet
 
-$ docker run --rm --name esnode --network esnet -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" \
+$ docker run -d --rm --name esnode --network esnet -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" \
   docker.elastic.co/elasticsearch/elasticsearch:7.10.2
-
-# Let Elasticsearch run while loading and dumping, open a new window for the below:
-
-$ curl 'https://raw.githubusercontent.com/elastic/elasticsearch/master/docs/src/test/resources/accounts.json' \
+</pre>
+Download test data and feed the data to elasticsearch:
+<pre data-test="exec">
+$ curl 'https://raw.githubusercontent.com/elastic/elasticsearch/7.10/docs/src/test/resources/accounts.json' \
   &gt; accounts.json
 
 $ curl -H "Content-Type:application/json" --data-binary @accounts.json 'localhost:9200/bank/_bulk?pretty&refresh'
-
+</pre>
+Verify index
+<pre data-test="exec" data-test-expect="1000">
 $ curl 'localhost:9200/_cat/indices?v'
 </pre>
+
           <p>
             The last command should indicate 1,000 documents in the index.
           </p>
 
+<h2 id="dump-documents-from-es">Dump documents from ES</h2>
+<p>Refer to <a href="https://github.com/elasticsearch-dump/elasticsearch-dump">ElasticDump</a> for details.</p>
 
-          <h2 id="dump-documents-from-es">Dump documents from ES</h2>
-          <p>
-            Refer to <a href="https://github.com/elasticsearch-dump/elasticsearch-dump">ElasticDump</a> for details.
-          </p>
-<pre>
+<pre data-test="exec">
 $ cat &gt; dumpit.sh &lt;&lt; EOF
 npm install elasticdump
 /dump/node_modules/.bin/elasticdump --input=http://esnode:9200/bank --output=bank_data.json    --type=data
 /dump/node_modules/.bin/elasticdump --input=http://esnode:9200/bank --output=bank_mapping.json --type=mapping
 EOF
-
-$ docker run --rm --name esdump --network esnet -v "$PWD":/dump -w /dump node:alpine sh dumpit.sh
-
-$ docker network remove esnet   # Stop Elasticsearch in the other container before removing the network
 </pre>
 
+Dump the data:
+<pre data-test="exec">
+$ docker run --rm --name esdump --network esnet -v "$PWD":/dump -w /dump node:alpine sh dumpit.sh
+$ docker network remove esnet   # Stop Elasticsearch in the other container before removing the network
+$ docker rm -f esnode
+</pre>
 
-          <h2 id="generate-vespa-documents-and-application-package">Generate Vespa documents and Application Package</h2>
-          <p>
-            Use <a href="https://github.com/vespa-engine/vespa/tree/master/config-model/src/main/python">
-            ES_Vespa_parser.py</a> to generate Vespa documents and configuration:
-          </p>
-<pre>
+<h2 id="generate-vespa-documents-and-application-package">Generate Vespa documents and Application Package</h2>
+<p>
+Use <a href="https://github.com/vespa-engine/vespa/tree/master/config-model/src/main/python">
+ES_Vespa_parser.py</a> to generate Vespa documents and configuration:
+</p>
+<pre data-test="exec">
 $ curl 'https://raw.githubusercontent.com/vespa-engine/vespa/master/config-model/src/main/python/ES_Vespa_parser.py' \
   &gt; ES_Vespa_parser.py
 
 $ python3 ./ES_Vespa_parser.py --application_name bank bank_data.json bank_mapping.json
 </pre>
-          <p>
-            This generates documents in <code>documents.json</code>
-            (see <a href="https://docs.vespa.ai/en/reference/document-json-format.html">JSON format</a>)
-            where each document has IDs like this <code>id:bank:_doc::1</code>.
-            It also generates a <code>bank</code> folder with a
-            <a href="https://docs.vespa.ai/en/application-packages.html">Vespa application package</a>.
-          </p>
+<p>
+This generates documents in <code>documents.json</code>
+(see <a href="https://docs.vespa.ai/en/reference/document-json-format.html">JSON format</a>)
+where each document has IDs like this <code>id:bank:_doc::1</code>.
+It also generates a <code>bank</code> folder with a <a href="https://docs.vespa.ai/en/application-packages.html">Vespa application package</a>.
+</p>
 <pre>
 /bank
       │
@@ -99,75 +101,109 @@ $ python3 ./ES_Vespa_parser.py --application_name bank bank_data.json bank_mappi
 </pre>
 
 
-          <h2 id="deploy-and-test">Deploy and test</h2>
-          <p>
-            This tutorial have been tested with a Docker container with 6 GB RAM.
-            Start the Vespa container:
-          </p>
+<h2 id="deploy">Deploy Vespa</h2>
+<p>
+  Install <a href="https://docs.vespa.ai/en/vespa-cli.html">Vespa CLI</a>. 
+  In this example we use <a href="https://brew.sh/">Homebrew</a>, you can also
+  download a vespa cli release from <a href="https://github.com/vespa-engine/vespa/releases">GitHub</a>.
+</p>
 <pre>
-$ docker run -m 6G --detach --name vespa --hostname vespa-es-tutorial \
-  --privileged --volume `pwd`:/app \
-  --publish 8080:8080 --publish 19112:19112 vespaengine/vespa
+$ brew install vespa-cli
 </pre>
-          <p>
-            Wait for the configuration server to start - wait for a 200 OK response:
-          </p>
-<pre>
-$ docker exec vespa bash -c 'curl -s --head http://localhost:19071/ApplicationStatus'
+<p>
+  Set target env, it's also possible to deploy to <a href="https://cloud.vespa.ai/">Vespa Cloud</a>
+using target cloud. For local deployment using docker image use 
+
+<pre data-test="exec">
+$ vespa config set target local
 </pre>
-          <p>
-            <a href="https://docs.vespa.ai/en/application-packages.html#deploy">Deploy</a>
-            the <code>application</code> package:
-          </p>
+
+For cloud deployment using <a href="https://cloud.vespa.ai/">Vespa Cloud</a>
+
 <pre>
-$ docker exec vespa bash -c '/opt/vespa/bin/vespa-deploy prepare /app/bank && \
-  /opt/vespa/bin/vespa-deploy activate'
+$ vespa config set target cloud
+$ vespa config set application tenant-name.myapp.default
+$ vespa auth login 
+$ vespa auth cert
 </pre>
-          <p>
-            Ensure the application is active - wait for a 200 OK response:
-          </p>
-<pre>
-$ curl -s --head http://localhost:8080/ApplicationStatus
+
+See also <a href="https://cloud.vespa.ai/en/getting-started">Cloud Vespa getting started guide</a>. It's possible
+to switch between local deployment and cloud deployment by changing the <em>config target</em>
+</p>
+<p>Run the Vespa container. We forward the deploy api port and the data plane serving port (8080).</p>
+<pre data-test="exec">
+$ docker run -m 4G --detach --name vespa --hostname vespa-es-tutorial \
+  --publish 8080:8080 --publish 19071:19071 vespaengine/vespa
 </pre>
-          <p>
-            The Vespa node is now configured and ready for use.
-          </p>
-          <p>
-            Feed documents using the
-            <a href="https://docs.vespa.ai/en/vespa-feed-client.html">vespa-feed-client</a>:
-          </p>
-<pre>
-$ docker exec vespa bash -c '/opt/vespa/bin/vespa-feed-client \
-  --verbose --show-all --file /app/bank/documents.json --endpoint http://localhost:8080/'
+<p></p>Verify that configuration service (deploy api) is ready:</p>
+
+<pre data-test="exec" data-test-assert-contains="ready">
+$ vespa status deploy --wait 300
 </pre>
-          <p>
-            Get a document using the <a href="https://docs.vespa.ai/en/document-v1-api-guide.html">Document API</a>:
-          </p>
-<pre>
+</p>
+<p>Deploy the application package</p>
+<pre data-test="exec" data-test-assert-contains="Success">
+$ vespa deploy --wait 300 bank
+</pre>
+
+<p>Wait for the application endpoint to become available:</p>
+
+<pre data-test="exec">
+$ vespa status --wait 300
+</pre>
+
+<p>Index the documents we dumped from Elasticsearch. Download <a href="https://docs.vespa.ai/en/vespa-feed-client.html">Vespa feed client</a>:</p>
+
+<pre data-test="exec">
+$ FEED_CLI_REPO="https://repo1.maven.org/maven2/com/yahoo/vespa/vespa-feed-client-cli" \
+    && FEED_CLI_VER=$(curl -Ss "${FEED_CLI_REPO}/maven-metadata.xml" | sed -n 's/.*&lt;release&gt;\(.*\)&lt;.*&gt;/\1/p') \
+    && curl -SsLo vespa-feed-client-cli.zip ${FEED_CLI_REPO}/${FEED_CLI_VER}/vespa-feed-client-cli-${FEED_CLI_VER}-zip.zip \
+    && unzip -o vespa-feed-client-cli.zip
+</pre>
+<p>Index documents:</p>
+
+<pre data-test="exec">
+  $ ./vespa-feed-client-cli/vespa-feed-client \
+       --file bank/documents.json --endpoint http://localhost:8080
+</pre>
+
+<h2 id="querying-vespa">Querying Vespa</h2>
+  
+<p>Get a document using the <a href="https://docs.vespa.ai/en/document-v1-api-guide.html">Document API</a>:</p>
+
+<pre data-test="exec" data-test-assert-contains="amberduke@pyrami.com">
 $ curl -s http://localhost:8080/document/v1/bank/_doc/docid/1
 </pre>
-          <p>
-            Use the <a href="https://docs.vespa.ai/en/query-api.html">Query API</a> to count documents,
-            find <code>"totalCount": 1000</code> in the output - then run a text query:
-          </p>
-<pre>
-$ curl -H "Content-Type: application/json" \
-  --data '{"yql" : "select * from sources * where sddocname contains \"_doc\";"}' \
-  http://localhost:8080/search/
 
+<p>Use the <a href="https://docs.vespa.ai/en/query-api.html">Query API</a> to count documents,
+find <code>"totalCount": 1000</code> in the output - then run a text query:
+</p>
+
+<pre data-test="exec" data-test-assert-contains='totalCount":1000'>
 $ curl -H "Content-Type: application/json" \
-  --data '{"yql" : "select * from sources * where firstname contains \"amber\";"}' \
+  --data '{"yql" : "select * from sources * where true"}' \
   http://localhost:8080/search/
 </pre>
 
+<p>Run a simple query against the <em>firstname</em field:></p>
+<pre data-test="exec" data-test-assert-contains='totalCount":1000'>
+$ curl -H "Content-Type: application/json" \
+  --data '{"yql" : "select firstname,lastname from sources * where firstname contains \"amber\""}' \
+  http://localhost:8080/search/
+</pre>
+<p>It's also possible to query using the vespa cli:</p>
+<pre data-test="exec">
+$ vespa query \
+    'yql=select firstname,lastname from sources *  where true' 
+</pre>
 
-          <h2 id="next-steps">Next steps</h2>
-          <p>
-            Review the differences in document records, Vespa to the right:
-          </p>
-          <table>
-            <tr>
-              <td>
+<h2 id="next-steps">Next steps</h2>
+<p>
+  Review the differences in document records, Vespa to the right:
+</p>
+<table>
+  <tr>
+    <td>
 <pre>
 {
     "_index": "bank",
@@ -189,8 +225,8 @@ $ curl -H "Content-Type: application/json" \
     }
 }
 </pre>
-              </td>
-              <td>
+  </td>
+  <td>
 <pre>
 {
 
@@ -212,43 +248,26 @@ $ curl -H "Content-Type: application/json" \
     }
 }
 </pre>
-              </td>
-            </tr>
-          </table>
-          <p>
-            The ID field <code>id:bank:_doc::1</code> is composed of:
-          </p>
-
-            <ul class="list p-l-30 p-b-10">
-              <li>namespace: bank</li>
-              <li>document type: _doc</li>
-              <li>id: 1</li>
-            </ul>
-          <p>
-            Use namespaces for data management (normally not needed, hard code one for now).
-            Namespace is not used in the query API - query routing is per document type.
-            A document type has a schema and Vespa queries all document types by default.
-            Read more in <a href="https://docs.vespa.ai/en/documents.html">Documents</a> and
-            <a href="https://docs.vespa.ai/en/schemas.html">Schemas</a>.
+  </td>
+  </tr>
+</table>
+  <p>
+    The <a href="https://docs.vespa.ai/en/documents.html#document-ids">id</a> field <code>id:bank:_doc::1</code> is composed of:
+  </p>
+   <ul class="list p-l-30 p-b-10">
+    <li>namespace: bank</li>
+    <li>schema: _doc</li>
+    <li>id: 1</li>
+   </ul>
+<p>
+Read more in <a href="https://docs.vespa.ai/en/documents.html">Documents</a> and <a href="https://docs.vespa.ai/en/schemas.html">Schemas</a>.
             <!-- ToDo: namespace is normally only useful in document api (and doc expiry?) use cases -->
-          </p>
-          <p>
-            All document types are stored in the same content cluster by default.
-            Many applications have only one document type.
-            Read more in <a href="https://docs.vespa.ai/en/schemas.html#multiple-schemas">Multiple Schemas</a>.
-          </p>
-          <p>
-            The Schema is the key Vespa configuration file - here, field types are configured,
-            and ranking expression defined.
-            The ranking expression is the computation over the corpus when running a query.
-            The default is <a href="https://docs.vespa.ai/en/text-matching-ranking.html">Text Search</a>
-            (example <em>...where firstname contains "amber"</em> above),
-            but the ranking expression can be any mathematical expression.
-            Read more in <a href="https://docs.vespa.ai/en/ranking.html">Ranking</a>.
-          </p>
-          <p>
-            The schema (found in <code>_doc.sd</code>) also has indexing settings, example:
-          </p>
+</p>
+<p>
+The schema is the key Vespa configuration file where field types 
+and <a href="https://docs.vespa.ai/en/ranking.html">ranking</a> are configured.</p>
+<p>
+The schema (found in <code>_doc.sd</code>) also has <a href="https://docs.vespa.ai/en/schemas.html#indexing">indexing</a>settings, example:</p>
 <pre>
 search _doc {
     document _doc {
@@ -262,17 +281,13 @@ search _doc {
     }
 }
 </pre>
-          <p>
-            Read more in <a href="https://docs.vespa.ai/en/schemas.html#indexing">Indexing</a>.
-          </p>
 
-
-          <h2 id="notes">Notes</h2>
-          <p>
-            The Vespa docker image used in this guide is the same as used in production serving instances.
-            It is the full Vespa application running, with all features.
-            Read more about Vespa components in the <a href="https://docs.vespa.ai/en/overview.html">Overview</a>.
-          </p>
+<h2 id="notes">Notes</h2>
+<p>
+The Vespa docker image used in this guide is the same as used in
+<a href="https://docs.vespa.ai/en/operations/docker-containers.html">production</a> serving instances.
+It is the full Vespa application running, with all features. Read more about Vespa components in the <a href="https://docs.vespa.ai/en/overview.html">Vespa overview</a>.
+</p>
           <!-- ToDo: more here on how features are different, and how to think about this / migrate -->
         </div>
       </div>
