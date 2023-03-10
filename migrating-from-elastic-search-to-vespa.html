@@ -46,7 +46,7 @@ $ curl 'https://raw.githubusercontent.com/elastic/elasticsearch/7.10/docs/src/te
 $ curl -H "Content-Type:application/json" --data-binary @accounts.json 'localhost:9200/bank/_bulk?pretty&refresh'
 </pre>
 Verify index
-<pre data-test="exec" data-test-expect="1000">
+<pre data-test="exec" data-test-assert-contains="1000">
 $ curl 'localhost:9200/_cat/indices?v'
 </pre>
 
