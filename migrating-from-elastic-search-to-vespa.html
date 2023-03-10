@@ -37,7 +37,10 @@ $ docker network create --driver bridge esnet
 
 $ docker run -d --rm --name esnode --network esnet -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" \
   docker.elastic.co/elasticsearch/elasticsearch:7.10.2
+
+$ sleep 15 # Wait for elasticsearch to start
 </pre>
+
 Download test data and feed the data to elasticsearch:
 <pre data-test="exec">
 $ curl 'https://raw.githubusercontent.com/elastic/elasticsearch/7.10/docs/src/test/resources/accounts.json' \
@@ -58,18 +61,17 @@ $ curl 'localhost:9200/_cat/indices?v'
 <p>Refer to <a href="https://github.com/elasticsearch-dump/elasticsearch-dump">ElasticDump</a> for details.</p>
 
 <pre data-test="exec">
-$ cat &gt; dumpit.sh &lt;&lt; EOF
-npm install elasticdump
-/dump/node_modules/.bin/elasticdump --input=http://esnode:9200/bank --output=bank_data.json    --type=data
-/dump/node_modules/.bin/elasticdump --input=http://esnode:9200/bank --output=bank_mapping.json --type=mapping
-EOF
+$ echo "\
+npm install elasticdump \n \
+/dump/node_modules/.bin/elasticdump --input=http://esnode:9200/bank --output=bank_data.json    --type=data \n \
+/dump/node_modules/.bin/elasticdump --input=http://esnode:9200/bank --output=bank_mapping.json --type=mapping" > dumpit.sh
 </pre>
 
 Dump the data:
 <pre data-test="exec">
 $ docker run --rm --name esdump --network esnet -v "$PWD":/dump -w /dump node:alpine sh dumpit.sh
-$ docker network remove esnet   # Stop Elasticsearch in the other container before removing the network
 $ docker rm -f esnode
+$ docker network remove esnet    
 </pre>
 
 <h2 id="generate-vespa-documents-and-application-package">Generate Vespa documents and Application Package</h2>
@@ -176,7 +178,7 @@ $ curl -s http://localhost:8080/document/v1/bank/_doc/docid/1
 </pre>
 
 <p>Use the <a href="https://docs.vespa.ai/en/query-api.html">Query API</a> to count documents,
-find <code>"totalCount": 1000</code> in the output - then run a text query:
+find <code>"totalCount":1000</code> in the output - then run a text query:
 </p>
 
 <pre data-test="exec" data-test-assert-contains='totalCount":1000'>
@@ -186,13 +188,13 @@ $ curl -H "Content-Type: application/json" \
 </pre>
 
 <p>Run a simple query against the <em>firstname</em field:></p>
-<pre data-test="exec" data-test-assert-contains='totalCount":1000'>
+<pre data-test="exec" data-test-assert-contains='totalCount":1'>
 $ curl -H "Content-Type: application/json" \
   --data '{"yql" : "select firstname,lastname from sources * where firstname contains \"amber\""}' \
   http://localhost:8080/search/
 </pre>
 <p>It's also possible to query using the vespa cli:</p>
-<pre data-test="exec">
+<pre data-test="exec" data-test-assert-contains='totalCount": 1000'>
 $ vespa query \
     'yql=select firstname,lastname from sources *  where true' 
 </pre>
@@ -294,3 +296,7 @@ It is the full Vespa application running, with all features. Read more about Ves
     </div>
   </div>
 </div>
+<p>Tear down container:</p>
+<pre data-test="exec">
+$ docker rm -f vespa 
+</pre>
