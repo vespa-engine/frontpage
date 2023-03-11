@@ -38,7 +38,7 @@ $ docker network create --driver bridge esnet
 $ docker run -d --rm --name esnode --network esnet -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" \
   docker.elastic.co/elasticsearch/elasticsearch:7.10.2
 
-$ while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' localhost:9200)" != "200" ]]; do sleep 5; done # Wait for elasticsearch to start
+$ while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' localhost:9200)" != "200" ]]; do sleep 5; done #wait for ES to start
 </pre>
 
 Download test data and feed the data to elasticsearch:
@@ -61,9 +61,8 @@ $ curl 'localhost:9200/_cat/indices?v'
 <p>Refer to <a href="https://github.com/elasticsearch-dump/elasticsearch-dump">ElasticDump</a> for details.</p>
 
 <pre data-test="exec">
-$ echo "\
-npm install elasticdump \n \
-/dump/node_modules/.bin/elasticdump --input=http://esnode:9200/bank --output=bank_data.json    --type=data \n \
+$ echo "npm install elasticdump\n\
+/dump/node_modules/.bin/elasticdump --input=http://esnode:9200/bank --output=bank_data.json    --type=data\n\
 /dump/node_modules/.bin/elasticdump --input=http://esnode:9200/bank --output=bank_mapping.json --type=mapping" > dumpit.sh
 </pre>
 
