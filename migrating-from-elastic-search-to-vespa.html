@@ -38,7 +38,7 @@ $ docker network create --driver bridge esnet
 $ docker run -d --rm --name esnode --network esnet -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" \
   docker.elastic.co/elasticsearch/elasticsearch:7.10.2
 
-$ sleep 15 # Wait for elasticsearch to start
+$ while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' localhost:9200)" != "200" ]]; do sleep 5; done # Wait for elasticsearch to start
 </pre>
 
 Download test data and feed the data to elasticsearch:
