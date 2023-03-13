@@ -1,0 +1,9 @@
+# https://securitytxt.org/
+
+# Yahoo uses HackerOne for responsible disclosure.
+# To report abusive behavior, spam, email scams, etc. please visit https://safety.yahoo.com.
+Contact: mailto:security@yahooinc.com
+Contact: https://hackerone.com/yahoo
+Acknowledgements: https://hackerone.com/yahoo/thanks
+Policy: https://hackerone.com/yahoo?view_policy=true
+# Hiring: https://www.yahooinc.com/careers/search.html

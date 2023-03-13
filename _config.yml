@@ -49,6 +49,10 @@ exclude:
   - "*.yaml"
   - "*.py"
 
+# Include .well-known
+include:
+  - ".well-known"
+
 search:
   namespace: "vespaai"
   do_feed  : true
