@@ -21,7 +21,7 @@ layout: page
           </p>
           <p>
             <a href="https://github.com/vespa-engine/vespa/tree/master/config-model/src/main/python">ES_Vespa_parser.py</a>
-            is provided for basic conversion of ES data and mappings to Vespa data and configuration.
+            is provided for conversion of Elasticsearch data and index mappings to Vespa data and configuration.
             It is a basic script with minimal error checking -
             it is designed for a simple export, modify this as needed for your application's needs.
           </p>
@@ -32,6 +32,8 @@ layout: page
             <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.9/getting-started-index.html">
               getting-started-index</a> or skip this part if you have an index:
           </p>
+
+<p>Run Elasticsearch and wait for Elasticsearch to start:</p>
 <pre data-test="exec">
 $ docker network create --driver bridge esnet
 
@@ -41,34 +43,29 @@ $ docker run -d --rm --name esnode --network esnet -p 9200:9200 -p 9300:9300 -e 
 $ while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' localhost:9200)" != "200" ]]; do sleep 5; done #wait for ES to start
 </pre>
 
-Download test data and feed the data to elasticsearch:
+<p>Download test data, and feed the data to running Elasticsearch instance:</p>
 <pre data-test="exec">
 $ curl 'https://raw.githubusercontent.com/elastic/elasticsearch/7.10/docs/src/test/resources/accounts.json' \
   &gt; accounts.json
 
 $ curl -H "Content-Type:application/json" --data-binary @accounts.json 'localhost:9200/bank/_bulk?pretty&refresh'
 </pre>
-Verify index
+<p>Verify that the index has 1,000 documents:</p>
 <pre data-test="exec" data-test-assert-contains="1000">
 $ curl 'localhost:9200/_cat/indices?v'
 </pre>
 
-          <p>
-            The last command should indicate 1,000 documents in the index.
-          </p>
+<h2 id="dump-documents-from-es">Dump documents from Elasticsearch</h2>
+<p>This guide uses 
+<a href="https://github.com/elasticsearch-dump/elasticsearch-dump">ElasticDump</a> to 
+dump the index contents and the index mapping.</p>
 
-<h2 id="dump-documents-from-es">Dump documents from ES</h2>
-<p>Refer to <a href="https://github.com/elasticsearch-dump/elasticsearch-dump">ElasticDump</a> for details.</p>
-
+<p>Dump the documents and mappings, and delete the docker network and running Elasticsearch container:</p>
 <pre data-test="exec">
-$ echo "npm install elasticdump\n\
-/dump/node_modules/.bin/elasticdump --input=http://esnode:9200/bank --output=bank_data.json    --type=data\n\
-/dump/node_modules/.bin/elasticdump --input=http://esnode:9200/bank --output=bank_mapping.json --type=mapping" > dumpit.sh
-</pre>
-
-Dump the data:
-<pre data-test="exec">
-$ docker run --rm --name esdump --network esnet -v "$PWD":/dump -w /dump node:alpine sh dumpit.sh
+$ docker run --rm --name esdump --network esnet -v "$PWD":/dump -w /dump elasticdump/elasticsearch-dump \
+--input=http://esnode:9200/bank --output=bank_data.json    --type=data
+$ docker run --rm --name esdump --network esnet -v "$PWD":/dump -w /dump elasticdump/elasticsearch-dump \
+--input=http://esnode:9200/bank --output=bank_mapping.json --type=mapping
 $ docker rm -f esnode
 $ docker network remove esnet    
 </pre>
@@ -106,20 +103,20 @@ It also generates a <code>bank</code> folder with a <a href="https://docs.vespa.
 <p>
   Install <a href="https://docs.vespa.ai/en/vespa-cli.html">Vespa CLI</a>. 
   In this example we use <a href="https://brew.sh/">Homebrew</a>, you can also
-  download a vespa cli release from <a href="https://github.com/vespa-engine/vespa/releases">GitHub</a>.
+  download a vespa-cli release from <a href="https://github.com/vespa-engine/vespa/releases">GitHub</a>.
 </p>
 <pre>
 $ brew install vespa-cli
 </pre>
 <p>
-  Set target env, it's also possible to deploy to <a href="https://cloud.vespa.ai/">Vespa Cloud</a>
-using target cloud. For local deployment using docker image use 
+Set cli <em>target</em> environment, it's possible to deploy to <a href="https://cloud.vespa.ai/">Vespa Cloud</a>
+using target cloud. For local deployment using docker image use :</p>
 
 <pre data-test="exec">
 $ vespa config set target local
 </pre>
 
-For cloud deployment using <a href="https://cloud.vespa.ai/">Vespa Cloud</a>
+<p>For cloud deployment using <a href="https://cloud.vespa.ai/">Vespa Cloud</a>, use:</p>
 
 <pre>
 $ vespa config set target cloud
@@ -128,10 +125,11 @@ $ vespa auth login
 $ vespa auth cert
 </pre>
 
-See also <a href="https://cloud.vespa.ai/en/getting-started">Cloud Vespa getting started guide</a>. It's possible
-to switch between local deployment and cloud deployment by changing the <em>config target</em>
+<p>See also <a href="https://cloud.vespa.ai/en/getting-started">Cloud Vespa getting started guide</a>. 
+It's possible to switch between local deployment and cloud deployment by changing the <em>config target</em>
 </p>
-<p>Run the Vespa container. We forward the deploy api port and the data plane serving port (8080).</p>
+<p>Run the Vespa container. We forward the deploy api port (19071), 
+  and the data plane serving port (8080).</p>
 <pre data-test="exec">
 $ docker run -m 4G --detach --name vespa --hostname vespa-es-tutorial \
   --publish 8080:8080 --publish 19071:19071 vespaengine/vespa
@@ -153,7 +151,8 @@ $ vespa deploy --wait 300 bank
 $ vespa status --wait 300
 </pre>
 
-<p>Index the documents we dumped from Elasticsearch. Download <a href="https://docs.vespa.ai/en/vespa-feed-client.html">Vespa feed client</a>:</p>
+<p>Index the documents we dumped from Elasticsearch. 
+Download <a href="https://docs.vespa.ai/en/vespa-feed-client.html">Vespa feed client</a>:</p>
 
 <pre data-test="exec">
 $ FEED_CLI_REPO="https://repo1.maven.org/maven2/com/yahoo/vespa/vespa-feed-client-cli" \
@@ -161,6 +160,7 @@ $ FEED_CLI_REPO="https://repo1.maven.org/maven2/com/yahoo/vespa/vespa-feed-clien
     && curl -SsLo vespa-feed-client-cli.zip ${FEED_CLI_REPO}/${FEED_CLI_VER}/vespa-feed-client-cli-${FEED_CLI_VER}-zip.zip \
     && unzip -o vespa-feed-client-cli.zip
 </pre>
+
 <p>Index documents:</p>
 
 <pre data-test="exec">
@@ -268,7 +268,7 @@ Read more in <a href="https://docs.vespa.ai/en/documents.html">Documents</a> and
 The schema is the key Vespa configuration file where field types 
 and <a href="https://docs.vespa.ai/en/ranking.html">ranking</a> are configured.</p>
 <p>
-The schema (found in <code>_doc.sd</code>) also has <a href="https://docs.vespa.ai/en/schemas.html#indexing">indexing</a>settings, example:</p>
+The schema (found in <code>_doc.sd</code>) also has <a href="https://docs.vespa.ai/en/schemas.html#indexing">indexing</a> settings, example:</p>
 <pre>
 search _doc {
     document _doc {
@@ -282,20 +282,33 @@ search _doc {
     }
 }
 </pre>
+<p>These settings impacts both performance and how fields are matched. For example, 
+  the <em>account_number</em> above is using the <em>attribute</em> keyword, which
+  makes the field available for <a href="https://docs.vespa.ai/en/reference/sorting.html">sorting</a>, 
+  <a href="https://docs.vespa.ai/en/ranking.html">ranking</a>, <a href="https://docs.vespa.ai/en/grouping.html">grouping</a>,
+  but which by default does not have data structures for fast search. 
+  Read more in <a href="https://docs.vespa.ai/en/attributes.html">attributes</a> and 
+  <a href="https://docs.vespa.ai/en/performance/practical-search-performance-guide.html">practical search 
+    performance guide
+  </a>
+</p>
 
 <h2 id="notes">Notes</h2>
 <p>
 The Vespa docker image used in this guide is the same as used in
-<a href="https://docs.vespa.ai/en/operations/docker-containers.html">production</a> serving instances.
-It is the full Vespa application running, with all features. Read more about Vespa components in the <a href="https://docs.vespa.ai/en/overview.html">Vespa overview</a>.
+<a href="https://docs.vespa.ai/en/operations/docker-containers.html">production</a>.
+Read more about Vespa components in the <a href="https://docs.vespa.ai/en/overview.html">Vespa overview</a>.
 </p>
+
+<p>Tear down the Vespa container:</p>
+<pre data-test="exec">
+$ docker rm -f vespa 
+</pre>
           <!-- ToDo: more here on how features are different, and how to think about this / migrate -->
         </div>
       </div>
     </div>
   </div>
 </div>
-<p>Tear down container:</p>
-<pre data-test="exec">
-$ docker rm -f vespa 
-</pre>
+
+
