@@ -1,13 +1,13 @@
-- title: "Text search"
+- title: "Search"
   icon: d-time-stopwatch
   image: "assets/text-search-illustration.png"
   imagewidth: 266
-  link: "usecases#text-search"
-  description: Vespa is a full-featured text search engine and supports both regular text search
-    and fast approximate vector search (ANN). This makes it easy to create high-performing search
-    applications at any scale, whether you want to use traditional techniques, or a modern vector based
-    approach. You can even combine both approaches efficiently in the same query, something no other engine
-    can do.
+  link: "usecases#search"
+  description: Vespa is a fully featured search engine that supports vector search (ANN),
+    lexical search, and search in structured data, all in the same query.
+    Integrated machine-learned model inference allows you to apply AI to make sense of your data in real time. 
+    Together with Vespa's proven scaling and high availability, this empowers you to create production ready
+    search applications at any scale, and with any combination of features.
 
 - title: "Recommendation and personalization"
   icon: d-certificate-ribbon
