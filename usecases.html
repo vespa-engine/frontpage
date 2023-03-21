@@ -90,7 +90,7 @@ layout: page
           and <a href="https://docs.vespa.ai/en/reads-and-writes.html">fully realtime writes</a>
           which allows you to both add new documents, and cheaply update fields of existing documents while serving.
         </p>
-        <h3>Try it out!</h3>
+        <h3>Search sample applications</h3>
         <p>
           Grab one of these open source sample applications to create your own Vespa application:
         </p>
@@ -177,36 +177,26 @@ layout: page
 
     <div>
       <div class="flex-column">
-        <h2 id="question-answering">Question answering</h2>
+        <h2 id="conversational-ai">Conversational AI</h2>
         <p>
-          Question answering provides direct answers to user's question. This is needed in chat-bots,
-          virtual assistants and similar, and is also becoming an expected feature of high-end search solutions, where
-          a direct answer is provided on queries that seem to be questions.
+          Large language models compress the information in large amounts of text into a handful of billions of parameters.
+          When done well this give them a certain amount of intelligence and true understanding, but they are still
+          missing crucial ingredients to be truly useful in many settings: They need to be able to access specific
+          information about the topic at hand, form memories and temporary store information as they work,
+          carry out long reasoning chains using this information, and verify their results.
         </p>
         <p>
-          A high quality question answerer works as follows: Text snippets are represented by vector embeddings
-          which are indexed for fast matching with
-          <a href="https://docs.vespa.ai/en/approximate-nn-hnsw.html">ANN</a>.
-          The best candidates found by ANN matching are evaluated in a
-          transformer based language model which outputs the score of the snippet as well as the beginning and
-          end of the text answer.
+          We at Vespa are not going to create these more complete and capable agents, but we know that they will
+          be built, and that they will need the capabilities that Vespa provides as an integrated package:
+          Machine-learned model inference using ONNX, storing vectors and
+          text and immediately retrieve the data in queries, easily writing components
+          that carries out chains of inference, store and search steps, and the ability to run all this at scale
+          with high availability.
         </p>
         <p>
-          By using Vespa, the entire process can be implemented as an application on a
-          single platform, and made to execute with a latency of a few tens of milliseconds while scaling to any
-          volume, while delivering quality on par with the research state of the art.
+          Building such solutions on Vespa means you can focus on the behavior of the system rather than infrastructure
+          and integration, and ensures it will be suitable for running in production, solving real problems.
         </p>
-        <p>
-          See our
-          <a href="https://blog.vespa.ai/efficient-open-domain-question-answering-on-vespa/">blog post</a>
-          showing how to replicate the best question answering performance from the research community
-          as a production ready Vespa application, and
-          <a href="https://blog.vespa.ai/from-research-to-production-scaling-a-state-of-the-art-machine-learning-system/">the followup post</a>
-          how we brought down the response time to tens of milliseconds.
-          The <a href="https://github.com/vespa-engine/sample-apps/tree/master/dense-passage-retrieval-with-ann">complete source</a>
-          for this application is also available.
-        </p>
-
       </div>
     </div>
 
@@ -289,7 +279,42 @@ layout: page
           <li>A <a href="#personal-search">personal search</a> cluster if some suggestions depend on personal data,
             and if so federated with a cluster of shared suggestions.</li>
         </ul>
+      </div>
+    </div>
+
+    <div>
+      <div class="flex-column">
+        <h2 id="question-answering">Question answering</h2>
+        <p>
+          Question answering provides direct answers to user's question. This is needed in chat-bots,
+          virtual assistants and similar, and is also becoming an expected feature of high-end search solutions, where
+          a direct answer is provided on queries that seem to be questions.
+        </p>
+        <p>
+          A high quality question answerer works as follows: Text snippets are represented by vector embeddings
+          which are indexed for fast matching with
+          <a href="https://docs.vespa.ai/en/approximate-nn-hnsw.html">ANN</a>.
+          The best candidates found by ANN matching are evaluated in a
+          transformer based language model which outputs the score of the snippet as well as the beginning and
+          end of the text answer.
+        </p>
+        <p>
+          By using Vespa, the entire process can be implemented as an application on a
+          single platform, and made to execute with a latency of a few tens of milliseconds while scaling to any
+          volume, while delivering quality on par with the research state of the art.
+        </p>
+        <p>
+          See our
+          <a href="https://blog.vespa.ai/efficient-open-domain-question-answering-on-vespa/">blog post</a>
+          showing how to replicate the best question answering performance from the research community
+          as a production ready Vespa application, and
+          <a href="https://blog.vespa.ai/from-research-to-production-scaling-a-state-of-the-art-machine-learning-system/">the followup post</a>
+          how we brought down the response time to tens of milliseconds.
+          The <a href="https://github.com/vespa-engine/sample-apps/tree/master/dense-passage-retrieval-with-ann">complete source</a>
+          for this application is also available.
+        </p>
         <p class="m-b-50"></p>
+
       </div>
     </div>
 
