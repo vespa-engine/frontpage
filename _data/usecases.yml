@@ -20,16 +20,17 @@
     over the items. This makes it possible to make recommendations specifically for each user or situation, using
     completely up to date information.
 
-- title: "Question answering"
+- title: "Conversational AI"
   icon: d-comment-help
   image: "assets/qa-illustration.png"
   imagewidth: 268
-  link: "usecases#question-answering"
-  description: Providing direct answers to questions is useful when creating chatbots,
-    virtual assistants, and to answer some search queries. Modern question answerers
-    combine evaluation of transformer based language models with efficient retrieval of candidate text
-    snippets. Vespa makes it easy to build question answering systems combining
-    the state of the art in research with performance suitable for production.
+  link: "usecases#conversational-ai"
+  description: Large language models are revolutionary, but their usefulness for real tasks
+    is limited by their lack of memory, trustworthiness, specific knowledge, and ability
+    to reason in many steps. To make more useful agents we must give the models the ability
+    to store and search vector and text data in real time, and orchestrate many such
+    operations to carry out a task. Vespa is the ideal platform for this, as it integrates 
+    all these building blocks in scalable form.
 
 - title: "Semi-structured navigation"
   icon: d-cart-shopping
