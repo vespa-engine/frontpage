@@ -22,9 +22,10 @@ index: true
     <div>
       <div class="flex-column">
         <p>
-          Vespa is a complete platform for big data serving, with the goal to make it easy
-          to create modern applications which computes over large data sets online,
-          and affordable to run them at any scale.
+          Vespa is a complete platform for applications combining data and AI, online.
+          By building such applications on Vespa you avoid any boring integration work to get all the features
+          you'll need, and you can be sure it will scale to any amount of traffic and data with good performance
+          in production.
           To deliver that, Vespa provides
           an <a href="#query-capabilities">uniquely broad range of query capabilities</a>,
           a <a href="#computation-engine">powerful computation engine</a> with great support for modern machine-learned models,
@@ -42,20 +43,25 @@ index: true
         <p>Vespa supports querying by:
         </p>
           <ul class="list p-l-30 p-b-10">
+            <li><b><a href="https://docs.vespa.ai/en/nearest-neighbor-search.html">Vectors</a></b>:
+              Nearest neighbour, approximate (ANN) or exact, with a variety of distance metrics.</li>
             <li><b><a href="https://docs.vespa.ai/en/reference/query-language-reference.html">Structured data</a></b>:
               Exact, substring and regexp, numerical ranges, geo-distance, predicates.</li>
             <li><b><a href="https://docs.vespa.ai/en/text-matching-ranking">Text</a></b>:
               Full text with tokenization and stemming, as well as positional information.</li>
-            <li><b><a href="https://docs.vespa.ai/en/nearest-neighbor-search.html">Vectors</a></b>:
-              Nearest neighbour, approximate (ANN) or exact, with a variety of distance metrics.</li>
           </ul>
+        <p>
+          A document can have any number of fields of these types that can be queried efficiently
+          in the same query, and each fields - even vector fields - can have multiple values in
+          the same document.
+        </p>
         <p>
           Operators querying fields in these ways can be
           <a href="https://docs.vespa.ai/en/reference/query-language-reference.html">combined freely</a>
           by <em>AND</em> and <em>OR</em> in queries
           while still executing efficiently. This makes it possible to express a wide range
           of behavior, such as retrieving in vector spaces with filters or performing hybrid
-          text and semantic retrieval. Vespa is the only engine able to do this:
+          text and semantic retrieval.
         </p>
         <div style="text-align: center" class="p-20">
           <img width="400" style="text-align: center" src="assets/query-tree.svg" alt="Example query tree with ANN and filter terms"/>
