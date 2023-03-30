@@ -3,7 +3,7 @@
   image: "assets/text-search-illustration.png"
   imagewidth: 266
   link: "usecases#search"
-  description: Vespa is a fully featured search engine that supports vector search (ANN),
+  description: Vespa is a fully featured search engine and vector database. It supports vector search (ANN),
     lexical search, and search in structured data, all in the same query.
     Integrated machine-learned model inference allows you to apply AI to make sense of your data in real time. 
     Together with Vespa's proven scaling and high availability, this empowers you to create production ready
