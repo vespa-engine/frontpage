@@ -1,3 +1,19 @@
+- title: "Customizing Reusable Frozen ML-Embeddings with Vespa"
+  excerpt: "Deep-learned embeddings are popular for search and recommendation use cases. This post introduces the concept of using reusable frozen embeddings and tailoring them with Vespa."
+  link: https://blog.vespa.ai/tailoring-frozen-embeddings-with-vespa/
+  image: https://blog.vespa.ai/assets/2023-03-31-tailoring-frozen-embeddings-with-vespa/fabio-oyXis2kALVg-unsplash.jpg
+  author: Jo Kristian Bergum
+  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
+  date: 2023-03-31
+  
+- title: "Revolutionizing Semantic Search with Multi-Vector HNSW Indexing in Vespa"
+  excerpt: "Announcing multi-vector indexing support in Vespa, which allows you to index multiple vectors per document and retrieve documents by the closest vector in each document."
+  link: https://blog.vespa.ai/semantic-search-with-multi-vector-indexing/
+  image: https://blog.vespa.ai/assets/2023-03-29-semantic-search-with-multi-vector-indexing/peter-herrmann-aT88kga0g_M-unsplash.jpg
+  author: Geir Storli
+  author-avatar: https://blog.vespa.ai/assets/avatars/geirst.jpg
+  date: 2023-03-29
+
 - title: "Vespa Newsletter, March 2023"
   excerpt: "Advances in Vespa features and performance include GPU support, advanced BCP autoscaling, GCP Private Service Connect, and a great update to the e-commerce sample app."
   link: https://blog.vespa.ai/vespa-newsletter-march-2023/
@@ -13,20 +29,3 @@
   author: Martin Polden
   author-avatar: https://blog.vespa.ai/assets/avatars/mpolden.jpg
   date: 2023-03-08
-
-- title: "Improving Search Ranking with Few-Shot Prompting of LLMs"
-  excerpt: "Distilling the knowledge and power of generative Large Language Models (LLMs) with billions of parameters to ranking models with a few million parameters."
-  link: https://blog.vespa.ai/improving-text-ranking-with-few-shot-prompting/
-  image: https://blog.vespa.ai/assets/2023-02-03-improving-text-ranking-with-few-shot-prompting/maxime-valcarce-mAj8xn5zXsk-unsplash.jpg
-  author: Jo Kristian Bergum
-  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2023-02-03
-
-- title: "Vespa Newsletter, January 2023"
-  excerpt: "Advances in Vespa features and performance include Better Tensor formats, AWS PrivateLink, Autoscaling, Data Plane Access Control and Container and Content Node Performance."
-  link: https://blog.vespa.ai/vespa-newsletter-january-2023/
-  image: https://blog.vespa.ai/assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2023-01-31
-
