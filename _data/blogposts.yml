@@ -29,13 +29,3 @@
   author: Martin Polden
   author-avatar: https://blog.vespa.ai/assets/avatars/mpolden.jpg
   date: 2023-03-08
-
-- title: "Improving Search Ranking with Few-Shot Prompting of LLMs"
-  excerpt: "Distilling the knowledge and power of generative Large Language Models (LLMs) with billions of parameters to ranking models with a few million parameters."
-  link: https://blog.vespa.ai/improving-text-ranking-with-few-shot-prompting/
-  image: https://blog.vespa.ai/assets/2023-02-03-improving-text-ranking-with-few-shot-prompting/maxime-valcarce-mAj8xn5zXsk-unsplash.jpg
-  author: Jo Kristian Bergum
-  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2023-02-03
-
-
