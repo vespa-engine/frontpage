@@ -25,4 +25,5 @@ jobs:
             --enforce_https false \
             --typhoeus '{"connecttimeout": 10, "timeout": 30}' \
             --hydra '{"max_concurrency": 1}' \
+            --ignore-urls '/twitter.com/vespaengine/' \
             _site
