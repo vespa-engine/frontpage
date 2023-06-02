@@ -1,3 +1,19 @@
+- title: "Vespa Newsletter, May 2023"
+  excerpt: "Advances in Vespa features and performance include multi-vector HNSW Indexing, global-phase re-ranking, LangChain support, improved bfloat16 throughput, and new document feed/export features in the Vespa CLI."
+  link: https://blog.vespa.ai/vespa-newsletter-may-2023/
+  image: https://blog.vespa.ai/assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg
+  author: Kristian Aune
+  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
+  date: 2023-05-31
+
+- title: "High performance feeding with Vespa CLI"
+  excerpt: "Vespa CLI can now feed large sets of documents to Vespa efficiently."
+  link: https://blog.vespa.ai/high-performance-feeding-with-vespa-cli/
+  image: https://blog.vespa.ai/assets/2023-05-22-high-performance-feeding-with-vespa-cli/shiro-hatori-WR-ifjFy4CI-unsplash.jpg
+  author: Martin Polden
+  author-avatar: https://blog.vespa.ai/assets/avatars/mpolden.jpg
+  date: 2023-05-22
+
 - title: "Vespa support in langchain"
   excerpt: "Langchain now comes with a Vespa retriever."
   link: https://blog.vespa.ai/vespa-support-in-langchain/
@@ -13,20 +29,4 @@
   author: Bjørn C Seime, Arne H Juul, and Jo Kristian Bergum
   author-avatar: https://blog.vespa.ai/assets/avatars/bjorncs.jpg https://blog.vespa.ai/assets/avatars/arnej.jpg https://blog.vespa.ai/assets/avatars/jobergum.jpg
   date: 2023-05-08
-
-- title: "Customizing Reusable Frozen ML-Embeddings with Vespa"
-  excerpt: "Deep-learned embeddings are popular for search and recommendation use cases. This post introduces the concept of using reusable frozen embeddings and tailoring them with Vespa."
-  link: https://blog.vespa.ai/tailoring-frozen-embeddings-with-vespa/
-  image: https://blog.vespa.ai/assets/2023-03-31-tailoring-frozen-embeddings-with-vespa/fabio-oyXis2kALVg-unsplash.jpg
-  author: Jo Kristian Bergum
-  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2023-03-31
-
-- title: "Revolutionizing Semantic Search with Multi-Vector HNSW Indexing in Vespa"
-  excerpt: "Announcing multi-vector indexing support in Vespa, which allows you to index multiple vectors per document and retrieve documents by the closest vector in each document."
-  link: https://blog.vespa.ai/semantic-search-with-multi-vector-indexing/
-  image: https://blog.vespa.ai/assets/2023-03-29-semantic-search-with-multi-vector-indexing/peter-herrmann-aT88kga0g_M-unsplash.jpg
-  author: Geir Storli, Tor Egge, and Jo Kristian Bergum
-  author-avatar: https://blog.vespa.ai/assets/avatars/geirst.jpg https://blog.vespa.ai/assets/avatars/tegge.jpg https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2023-03-29
 
