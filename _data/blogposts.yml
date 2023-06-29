@@ -1,3 +1,11 @@
+- title: "Announcing vector streaming search: AI assistants at scale without breaking the bank"
+  excerpt: "With personal data, you need complete results at low cost, something vector databases cannot provide. Vespa's new vector streaming search delivers complete results at a fraction of the cost. "
+  link: https://blog.vespa.ai/announcing-vector-streaming-search/
+  image: https://blog.vespa.ai/assets/2023-06-28-announcing-vector-streaming-search/marc-sendra-martorell--Vqn2WrfxTQ-unsplash.jpg
+  author: Geir Storli, Jon Bratseth, and Tor Egge
+  author-avatar: https://blog.vespa.ai/assets/avatars/geirst.jpg https://blog.vespa.ai/assets/avatars/bratseth.jpg https://blog.vespa.ai/assets/avatars/tegge.jpg
+  date: 2023-06-28
+
 - title: "Vespa at Berlin Buzzwords 2023"
   excerpt: "Summarizing Berlin Buzzwords 2023, Germany’s most exciting conference on storing, processing, streaming and searching large amounts of digital data."
   link: https://blog.vespa.ai/vespa-at-berlin-buzzwords-2023/
@@ -21,12 +29,4 @@
   author: Kristian Aune
   author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
   date: 2023-05-31
-
-- title: "High performance feeding with Vespa CLI"
-  excerpt: "Vespa CLI can now feed large sets of documents to Vespa efficiently."
-  link: https://blog.vespa.ai/high-performance-feeding-with-vespa-cli/
-  image: https://blog.vespa.ai/assets/2023-05-22-high-performance-feeding-with-vespa-cli/shiro-hatori-WR-ifjFy4CI-unsplash.jpg
-  author: Martin Polden
-  author-avatar: https://blog.vespa.ai/assets/avatars/mpolden.jpg
-  date: 2023-05-22
 
