@@ -1,3 +1,19 @@
+- title: "Leveraging frozen embeddings in Vespa with SentenceTransformers"
+  excerpt: "How to implement frozen embeddings approach in Vespa using SentenceTransformers library and optimize your search application at the same time."
+  link: https://blog.vespa.ai/leveraging-frozen-embeddings-in-vespa-with-sentence-transformers/
+  image: https://blog.vespa.ai/assets/2023-06-30-leveraging-frozen-embeddings-in-vespa-with-sentence-transformers/abstract.png
+  author: Andrii Yurkiv
+  author-avatar: https://blog.vespa.ai/assets/avatars/dnmca.jpg
+  date: 2023-07-10
+
+- title: "Announcing Maximum Inner Product Search"
+  excerpt: "Vespa can now solve Maximum Inner Product Search problems using an internal transformation to a Nearest Neighbor search. This is enabled by the new dotproduct distance metric."
+  link: https://blog.vespa.ai/announcing-maximum-inner-product-search/
+  image: https://blog.vespa.ai/assets/2023-07-03-announcing-maximum-inner-product-search/nicole-avagliano-TeLjs2pL5fA-unsplash.jpg
+  author: Arne H Juul and Geir Storli
+  author-avatar: https://blog.vespa.ai/assets/avatars/arnej.jpg https://blog.vespa.ai/assets/avatars/geirst.jpg
+  date: 2023-07-03
+
 - title: "Announcing vector streaming search: AI assistants at scale without breaking the bank"
   excerpt: "With personal data, you need complete results at low cost, something vector databases cannot provide. Vespa's new vector streaming search delivers complete results at a fraction of the cost. "
   link: https://blog.vespa.ai/announcing-vector-streaming-search/
@@ -13,20 +29,4 @@
   author: Kristian Aune
   author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
   date: 2023-06-23
-
-- title: "Enhancing Vespa’s Embedding Management Capabilities"
-  excerpt: "We are thrilled to announce significant updates to Vespa’s support for inference with text embedding models that maps texts into vector representations."
-  link: https://blog.vespa.ai/enhancing-vespas-embedding-management-capabilities/
-  image: https://blog.vespa.ai/assets/2023-06-13-enhancing-vespas-embedding-management-capabilities/vnwayne-fan-Zqmia99hgF8-unsplash.jpg
-  author: Jo Kristian Bergum and Bjørn C Seime
-  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg https://blog.vespa.ai/assets/avatars/bjorncs.jpg
-  date: 2023-06-14
-
-- title: "Vespa Newsletter, May 2023"
-  excerpt: "Advances in Vespa features and performance include multi-vector HNSW Indexing, global-phase re-ranking, LangChain support, improved bfloat16 throughput, and new document feed/export features in the Vespa CLI."
-  link: https://blog.vespa.ai/vespa-newsletter-may-2023/
-  image: https://blog.vespa.ai/assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2023-05-31
 
