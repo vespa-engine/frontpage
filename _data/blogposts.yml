@@ -1,3 +1,11 @@
+- title: "Vespa Newsletter, July 2023"
+  excerpt: "Advances in Vespa features and performance include Vector Streaming Search, GPU accelerated embeddings, Huggingface models and a solution to MIPS using a nearest neighbor search."
+  link: https://blog.vespa.ai/vespa-newsletter-july-2023/
+  image: https://blog.vespa.ai/assets/images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg
+  author: Kristian Aune
+  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
+  date: 2023-07-17
+
 - title: "Leveraging frozen embeddings in Vespa with SentenceTransformers"
   excerpt: "How to implement frozen embeddings approach in Vespa using SentenceTransformers library and optimize your search application at the same time."
   link: https://blog.vespa.ai/leveraging-frozen-embeddings-in-vespa-with-sentence-transformers/
@@ -21,12 +29,4 @@
   author: Geir Storli, Jon Bratseth, and Tor Egge
   author-avatar: https://blog.vespa.ai/assets/avatars/geirst.jpg https://blog.vespa.ai/assets/avatars/bratseth.jpg https://blog.vespa.ai/assets/avatars/tegge.jpg
   date: 2023-06-28
-
-- title: "Vespa at Berlin Buzzwords 2023"
-  excerpt: "Summarizing Berlin Buzzwords 2023, Germany’s most exciting conference on storing, processing, streaming and searching large amounts of digital data."
-  link: https://blog.vespa.ai/vespa-at-berlin-buzzwords-2023/
-  image: https://blog.vespa.ai/assets/2023-06-23-vespa-at-berlin-buzzwords-2023/bb2023.png
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2023-06-23
 
