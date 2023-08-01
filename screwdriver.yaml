@@ -24,7 +24,7 @@ jobs:
           bundle exec jekyll build
           bundle exec htmlproofer \
             --assume-extension .html \
-            --enforce_https false \
+            --no-enforce-https \
             --typhoeus '{"connecttimeout": 10, "timeout": 30}' \
             --hydra '{"max_concurrency": 1}' \
             --ignore-urls '/twitter.com/vespaengine/' \
