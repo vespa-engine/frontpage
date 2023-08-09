@@ -1,3 +1,19 @@
+- title: "Accelerating Transformer-based Embedding Retrieval with Vespa"
+  excerpt: "In this post, we’ll see how to accelerate embedding inference and retrieval with little impact on quality. We’ll take a holistic approach and deep-dive into both aspects of an embedding retrieval system: Embedding inference and retrieval with nearest neighbor search."
+  link: https://blog.vespa.ai/accelerating-transformer-based-embedding-retrieval-with-vespa/
+  image: https://blog.vespa.ai/assets/2023-08-09-accelerating-transformer-based-embedding-retrieval-with-Vespa/appic-PvIB1FU4v7Y-unsplash.jpg
+  author: Jo Kristian Bergum
+  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
+  date: 2023-08-08
+
+- title: "Simplify Search with Multilingual Embedding Models"
+  excerpt: "This blog post presents and shows how to represent a robust multilingual embedding model of the E5 family in Vespa."
+  link: https://blog.vespa.ai/simplify-search-with-multilingual-embeddings/
+  image: https://blog.vespa.ai/assets/2023-07-25-simplify-search-with-multilingual-embeddings/bruno-martins-4cwf-iW6I1Q-unsplash.jpg
+  author: Jo Kristian Bergum
+  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
+  date: 2023-07-24
+
 - title: "Vespa Newsletter, July 2023"
   excerpt: "Advances in Vespa features and performance include Vector Streaming Search, GPU accelerated embeddings, Huggingface models and a solution to MIPS using a nearest neighbor search."
   link: https://blog.vespa.ai/vespa-newsletter-july-2023/
@@ -13,20 +29,4 @@
   author: Andrii Yurkiv
   author-avatar: https://blog.vespa.ai/assets/avatars/dnmca.jpg
   date: 2023-07-10
-
-- title: "Announcing Maximum Inner Product Search"
-  excerpt: "Vespa can now solve Maximum Inner Product Search problems using an internal transformation to a Nearest Neighbor search. This is enabled by the new dotproduct distance metric."
-  link: https://blog.vespa.ai/announcing-maximum-inner-product-search/
-  image: https://blog.vespa.ai/assets/2023-07-03-announcing-maximum-inner-product-search/nicole-avagliano-TeLjs2pL5fA-unsplash.jpg
-  author: Arne H Juul and Geir Storli
-  author-avatar: https://blog.vespa.ai/assets/avatars/arnej.jpg https://blog.vespa.ai/assets/avatars/geirst.jpg
-  date: 2023-07-03
-
-- title: "Announcing vector streaming search: AI assistants at scale without breaking the bank"
-  excerpt: "With personal data, you need complete results at low cost, something vector databases cannot provide. Vespa's new vector streaming search delivers complete results at a fraction of the cost. "
-  link: https://blog.vespa.ai/announcing-vector-streaming-search/
-  image: https://blog.vespa.ai/assets/2023-06-28-announcing-vector-streaming-search/marc-sendra-martorell--Vqn2WrfxTQ-unsplash.jpg
-  author: Geir Storli, Jon Bratseth, and Tor Egge
-  author-avatar: https://blog.vespa.ai/assets/avatars/geirst.jpg https://blog.vespa.ai/assets/avatars/bratseth.jpg https://blog.vespa.ai/assets/avatars/tegge.jpg
-  date: 2023-06-28
 
