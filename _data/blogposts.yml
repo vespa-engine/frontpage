@@ -1,3 +1,11 @@
+- title: "Summer Internship at Vespa"
+  excerpt: "The tale of 2023's summer interns and their attempt at generating training data for information retrieval with LLMs."
+  link: https://blog.vespa.ai/summer-internship-2023/
+  image: https://blog.vespa.ai/assets/2023-08-10-summer-internship-2023/the-interns.jpg
+  author: Torstein Egge and Sivert Olstad
+  author-avatar: https://blog.vespa.ai/assets/avatars/tegge01.jpg https://blog.vespa.ai/assets/avatars/solstad.jpg
+  date: 2023-08-10
+
 - title: "Representing BGE embedding models in Vespa using bfloat16 "
   excerpt: "This post demonstrates how to use recently announced BGE embedding models in Vespa. We evaluate the effectiveness of two BGE variants on the BEIR trec-covid dataset. Finally, we demonstrate how Vespa’s support for storing and indexing vectors using bfloat16 precision saves 50% of memory and storage footprint with close to zero loss in retrieval quality."
   link: https://blog.vespa.ai/bge-embedding-models-in-vespa-using-bfloat16/
@@ -21,12 +29,4 @@
   author: Jo Kristian Bergum
   author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
   date: 2023-07-24
-
-- title: "Vespa Newsletter, July 2023"
-  excerpt: "Advances in Vespa features and performance include Vector Streaming Search, GPU accelerated embeddings, Huggingface models and a solution to MIPS using a nearest neighbor search."
-  link: https://blog.vespa.ai/vespa-newsletter-july-2023/
-  image: https://blog.vespa.ai/assets/images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2023-07-17
 
