@@ -1,3 +1,11 @@
+- title: "Vespa Newsletter, August 2023"
+  excerpt: "Advances in Vespa features and performance include multilingual models, more control over ANN queries, mapped tensors in queries, and multiple new features in pyvespa and the Vespa CLI."
+  link: https://blog.vespa.ai/vespa-newsletter-august-2023/
+  image: https://blog.vespa.ai/assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg
+  author: Kristian Aune
+  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
+  date: 2023-08-31
+
 - title: "Summer Internship at Vespa"
   excerpt: "The tale of 2023's summer interns and their attempt at generating training data for information retrieval with LLMs."
   link: https://blog.vespa.ai/summer-internship-2023/
@@ -21,12 +29,4 @@
   author: Jo Kristian Bergum
   author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
   date: 2023-08-08
-
-- title: "Simplify Search with Multilingual Embedding Models"
-  excerpt: "This blog post presents and shows how to represent a robust multilingual embedding model of the E5 family in Vespa."
-  link: https://blog.vespa.ai/simplify-search-with-multilingual-embeddings/
-  image: https://blog.vespa.ai/assets/2023-07-25-simplify-search-with-multilingual-embeddings/bruno-martins-4cwf-iW6I1Q-unsplash.jpg
-  author: Jo Kristian Bergum
-  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2023-07-24
 
