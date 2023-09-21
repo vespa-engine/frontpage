@@ -9,8 +9,16 @@
         <div class="row">
             {% for user in include.users %}
             <div class="xs-col-1-1 sm-col-1-1 md-col-1-3 lg-col-1-3 xl-col-1-3">
-                <img class="p-30 p-t-50" width="{{user.logowidth}}" src="{{ site.baseurl }}/{{user.logo}}" alt="{{user.alt}}">
-                <p class="p-30 {{user.gapclass}}">{{user.text}}</p>
+                <div style="height: 150px; position:relative" class="p-30" title="{{user.text}}">
+                    {% assign logo_position_from_center = user.logoheight | divided_by: -2 %}
+                    <a href="{{user.link}}">
+                    <img src="{{ site.baseurl }}/{{user.logo}}" alt="{{user.alt}}"
+                         style="position:absolute; top:50%;
+                             height:{{user.logoheight}}px;
+                             margin-top:{{logo_position_from_center}}px;">
+                    </a>
+                </div>
+                <!-- p class="p-30 {{user.gapclass}}">{{user.text}}</p -->
             </div>
             {% endfor %}
         </div>
