@@ -8,7 +8,7 @@ This directory contains the various data files used to build the files:
 | `features.yml` | The four feature boxes below the use-cases on the frontpage. |
 | `footerlinks.yml` | The links in the footer of the page. |
 | `usecases.yml` | The use cases listed under "What is Vespa used for?". |
-| `users.yml` | Companies listed under "How other companies…" |
+| `users.yml` | Companies listed under "Companies who…" |
 
 ### Updating `blogposts.yml`
 While we wait for some automated way of doing this, the `blogposts.yml`
