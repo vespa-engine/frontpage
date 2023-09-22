@@ -42,7 +42,9 @@
   gapclass: p-t-2
   alt: OTTO
   link: https://www.otto.de/unternehmen/en/
-  text:
+  text: OTTO, the largest German online retailer, runs its autosuggest on Vespa.
+    Vespa has enabled OTTO to easily implement not only model-supported reranking,
+    but also semantic retrieval using embeddings in a highly scalable and low-latency environment.
 
 - logo: assets/logos/ravenpack-logo-normal-monochrome.svg
   # svg is 16 x 16
