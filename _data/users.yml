@@ -28,13 +28,13 @@
     matches for users in real time, due to Vespa''s automatic data management, flexible ranking,
     and support for adding new fields for filtering and sorting quickly without refeeding all data.
 
-- logo: assets/logos/qwant.jpg
+- logo: assets/logos/wix.png
   # jpg is 2048 x 788 -> 205 x 79 -> 136 x 53
-  logoheight: 53
+  logoheight: 70
   gapclass: p-t-2
-  alt: Qwant
-  link: https://about.qwant.com/wp-content/uploads/2022/10/20221018_Qwant-x-Vespa-EN.pdf
-  text: 'Qwant and Vespa.ai: a stronger collaboration in a continuous process of improving the search engine developed by Qwant.'
+  alt: Wix
+  link: https://wix.com
+  text:
 
 - logo: assets/logos/otto.png
   # png is 2000 x 676 -> 200 x 68 -> 133 x 45
