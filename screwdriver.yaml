@@ -27,5 +27,5 @@ jobs:
             --no-enforce-https \
             --typhoeus '{"connecttimeout": 10, "timeout": 30}' \
             --hydra '{"max_concurrency": 1}' \
-            --ignore-urls '/twitter.com/vespaengine/' \
+            --ignore-urls '/twitter.com/vespaengine/,/slack.vespa.ai/' \
             _site
