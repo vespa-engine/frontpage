@@ -55,3 +55,19 @@
   text: RavenPack processes millions of documents daily.
     Vespa's hybrid search capabilities ensure that our clients receive up-to-date, relevant, and accurate information seamlessly.
     Vespa's efficiency and adaptability have allowed us to maintain high service and accuracy standards in an ever-evolving landscape.
+
+- logo: assets/logos/elicit-logo.svg
+  #
+  logoheight: 50
+  gapclass: p-t-2
+  alt: Elicit
+  link: https://elicit.com/
+  text:
+
+- logo: assets/logos/qwant.jpg
+  # jpg is 2048 x 788 -> 205 x 79 -> 136 x 53
+  logoheight: 50
+  gapclass: p-t-2
+  alt: Qwant
+  link: https://about.qwant.com/wp-content/uploads/2022/10/20221018_Qwant-x-Vespa-EN.pdf
+  text: 'Qwant and Vespa.ai: a stronger collaboration in a continuous process of improving the search engine developed by Qwant.'
