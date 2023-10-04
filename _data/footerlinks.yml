@@ -8,6 +8,8 @@
       link: /roadmap
     - title: Releases
       link: /releases
+    - title: Issues
+      link: https://github.com/vespa-engine/vespa/issues
 
 - header: Contact
   links:
@@ -15,10 +17,10 @@
       link: https://twitter.com/vespaengine
     - title: info@vespa.ai
       link: mailto:info@vespa.ai
-    - title: leadership@vespa.ai
-      link: mailto:leadership@vespa.ai
-    - title: Issues
-      link: https://github.com/vespa-engine/vespa/issues
+    - title: Vespa.ai team
+      link: /team
+    - title: We are hiring!
+      link: /we-are-hiring
     - title: Mailing list
       link: /mailing-list
 
