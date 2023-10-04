@@ -1,3 +1,19 @@
+- title: "Vespa is becoming a company"
+  excerpt: "Vespa is becoming its own company!"
+  link: https://blog.vespa.ai/vespa-is-becoming-its-own-company/
+  image: https://blog.vespa.ai/assets/2023-10-03-vespa-is-becoming-its-own-company/VespaLogoBlack.png
+  author: Jon Bratseth
+  author-avatar: https://blog.vespa.ai/assets/avatars/bratseth.jpg
+  date: 2023-10-03
+
+- title: "Announcing search.vespa.ai"
+  excerpt: "A new search experience for Vespa-related content - powered by Vespa, LangChain, and OpenAI’s chatGPT model - our motivation for building it, features, limitations, and how we made it."
+  link: https://blog.vespa.ai/search-vespa-ai/
+  image: https://blog.vespa.ai/assets/2023-09-08-search-vespa-ai/search.vespa.ai.png
+  author: , Leandro Alves, Kristian Aune, Jo Kristian Bergum, and Valerij Fredriksen
+  author-avatar: https://blog.vespa.ai https://blog.vespa.ai/assets/avatars/leandroalves.jpg https://blog.vespa.ai/assets/avatars/kkraune.jpg https://blog.vespa.ai/assets/avatars/jobergum.jpg https://blog.vespa.ai
+  date: 2023-09-08
+
 - title: "Vespa Newsletter, August 2023"
   excerpt: "Advances in Vespa features and performance include multilingual models, more control over ANN queries, mapped tensors in queries, and multiple new features in pyvespa and the Vespa CLI."
   link: https://blog.vespa.ai/vespa-newsletter-august-2023/
@@ -13,20 +29,4 @@
   author: Torstein Egge and Sivert Olstad
   author-avatar: https://blog.vespa.ai/assets/avatars/tegge01.jpg https://blog.vespa.ai/assets/avatars/solstad.jpg
   date: 2023-08-10
-
-- title: "Representing BGE embedding models in Vespa using bfloat16 "
-  excerpt: "This post demonstrates how to use recently announced BGE embedding models in Vespa. We evaluate the effectiveness of two BGE variants on the BEIR trec-covid dataset. Finally, we demonstrate how Vespa’s support for storing and indexing vectors using bfloat16 precision saves 50% of memory and storage footprint with close to zero loss in retrieval quality."
-  link: https://blog.vespa.ai/bge-embedding-models-in-vespa-using-bfloat16/
-  image: https://blog.vespa.ai/assets/2023-08-10-bge-embedding-models-in-vespa-using-bfloat16/rafael-druck-jq3FQ1hmRa8-unsplash.jpg
-  author: Jo Kristian Bergum
-  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2023-08-10
-
-- title: "Accelerating Transformer-based Embedding Retrieval with Vespa"
-  excerpt: "In this post, we’ll see how to accelerate embedding inference and retrieval with little impact on quality. We’ll take a holistic approach and deep-dive into both aspects of an embedding retrieval system: Embedding inference and retrieval with nearest neighbor search."
-  link: https://blog.vespa.ai/accelerating-transformer-based-embedding-retrieval-with-vespa/
-  image: https://blog.vespa.ai/assets/2023-08-09-accelerating-transformer-based-embedding-retrieval-with-Vespa/appic-PvIB1FU4v7Y-unsplash.jpg
-  author: Jo Kristian Bergum
-  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2023-08-08
 
