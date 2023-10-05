@@ -105,6 +105,7 @@ $color-brand-500: #FF9750;
 /* Navbar */
 .nav {
     font-weight: 700;
+    z-index: 100;
 }
 
 // Responsive design; downscaled nav bar for small desktop screens
