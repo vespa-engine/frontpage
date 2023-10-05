@@ -15,7 +15,7 @@
   imagewidth: 305
   link: "usecases#recommendation-and-personalization"
   description: Recommendation, personalization and targeting involves evaluating recommender
-    models over content items to select the best ones. Vespa lets you build applications which does this online,
+    models over content items to select the best ones. Vespa lets you build applications which do this online,
     typically combining fast vector search and filtering with evaluation of machine-learned models
     over the items. This makes it possible to make recommendations specifically for each user or situation, using
     completely up to date information.
