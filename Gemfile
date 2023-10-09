@@ -1,4 +1,4 @@
-# Copyright Yahoo. All rights reserved.
+# Copyright Vespa.ai. All rights reserved.
 ruby '>=2.6'
 
 source "https://rubygems.org"

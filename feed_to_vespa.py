@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright Yahoo. All rights reserved
+# Copyright Vespa.ai. All rights reserved
 
 import json
 import os

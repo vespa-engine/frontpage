@@ -1,4 +1,4 @@
-# Copyright Yahoo. All rights reserved
+# Copyright Vespa.ai. All rights reserved
 
 require 'json'
 require 'nokogiri'
