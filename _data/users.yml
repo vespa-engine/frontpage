@@ -64,10 +64,19 @@
   link: https://elicit.com/
   text:
 
-- logo: assets/logos/qwant.jpg
-  # jpg is 2048 x 788 -> 205 x 79 -> 136 x 53
-  logoheight: 50
+- logo: assets/logos/vinted.svg
+  logoheight: 150
   gapclass: p-t-2
-  alt: Qwant
-  link: https://about.qwant.com/wp-content/uploads/2022/10/20221018_Qwant-x-Vespa-EN.pdf
-  text: 'Qwant and Vespa.ai: a stronger collaboration in a continuous process of improving the search engine developed by Qwant.'
+  alt: Vinted
+  link: https://vinted.engineering/2023/10/09/adopting-vespa-for-recommendation-retrieval/
+  text: One particular aspect that drew us to Vespa was its first-class support for 
+    machine learning based search and ranking. On top of that, the real-time data update 
+    capability is appealing.
+
+#- logo: assets/logos/qwant.jpg
+  # jpg is 2048 x 788 -> 205 x 79 -> 136 x 53
+#  logoheight: 50
+#  gapclass: p-t-2
+#  alt: Qwant
+#  link: https://about.qwant.com/wp-content/uploads/2022/10/20221018_Qwant-x-Vespa-EN.pdf
+#  text: 'Qwant and Vespa.ai: a stronger collaboration in a continuous process of improving the search engine developed by Qwant.'
