@@ -32,6 +32,7 @@
 - logo: assets/logos/wix.png
   # jpg is 2048 x 788 -> 205 x 79 -> 136 x 53
   logoheight: 70
+  marginleft: 20
   gapclass: p-t-2
   alt: Wix
   link: https://wix.com
@@ -68,13 +69,13 @@
   text:
 
 - logo: assets/logos/vinted.svg
-  logoheight: 150
+  logoheight: 70
   gapclass: p-t-2
   alt: Vinted
   link: https://vinted.engineering/2023/10/09/adopting-vespa-for-recommendation-retrieval/
-  text: One particular aspect that drew us to Vespa was its first-class support for 
-    machine learning based search and ranking. On top of that, the real-time data update 
-    capability is appealing.
+  text: Vinted has picked Vespa because of the excellent support for the ANN search with filtering.
+    As a bonus, we've got a stable, well-supported, and truly open-source system
+    that gets the job done and embraces the contributions back to the project.
 
 #- logo: assets/logos/qwant.jpg
   # jpg is 2048 x 788 -> 205 x 79 -> 136 x 53
