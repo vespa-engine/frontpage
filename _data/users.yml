@@ -1,7 +1,7 @@
 - logo: assets/logos/spotify-rnd.png
   # png is 2362 x 708 -> 236 x 71 -> 157 x 47
   logoheight: 47
-  gapclass: p-t-9
+  gapclass: p-t-2
   alt: Spotify
   link: https://engineering.atspotify.com/introducing-natural-language-search-for-podcast-episodes/
   text: When Spotify wanted to implement semantic search using vector embeddings, they turned to
@@ -11,7 +11,8 @@
 - logo: assets/logos/yahoo.png
   # png is 1624 x 450 -> 162 x 45
   logoheight: 45
-  gapclass: p-t-10
+  marginleft: 35
+  gapclass: p-t-2
   alt: Yahoo
   link: https://www.yahoo.com/
   text: Yahoo runs about 150 Vespa applications, including selecting the personalized content
@@ -31,6 +32,7 @@
 - logo: assets/logos/wix.png
   # jpg is 2048 x 788 -> 205 x 79 -> 136 x 53
   logoheight: 70
+  marginleft: 20
   gapclass: p-t-2
   alt: Wix
   link: https://wix.com
@@ -39,6 +41,7 @@
 - logo: assets/logos/otto.png
   # png is 2000 x 676 -> 200 x 68 -> 133 x 45
   logoheight: 45
+  marginleft: 40
   gapclass: p-t-2
   alt: OTTO
   link: https://www.otto.de/unternehmen/en/
@@ -49,6 +52,7 @@
 - logo: assets/logos/ravenpack-logo-normal-monochrome.svg
   # svg is 16 x 16
   logoheight: 32
+  marginleft: -20
   gapclass: p-t-2
   alt: RavenPack
   link: https://www.ravenpack.com/
@@ -64,10 +68,19 @@
   link: https://elicit.com/
   text:
 
-- logo: assets/logos/qwant.jpg
-  # jpg is 2048 x 788 -> 205 x 79 -> 136 x 53
-  logoheight: 50
+- logo: assets/logos/vinted.svg
+  logoheight: 70
   gapclass: p-t-2
-  alt: Qwant
-  link: https://about.qwant.com/wp-content/uploads/2022/10/20221018_Qwant-x-Vespa-EN.pdf
-  text: 'Qwant and Vespa.ai: a stronger collaboration in a continuous process of improving the search engine developed by Qwant.'
+  alt: Vinted
+  link: https://vinted.engineering/2023/10/09/adopting-vespa-for-recommendation-retrieval/
+  text: Vinted has picked Vespa because of the excellent support for the ANN search with filtering.
+    As a bonus, we've got a stable, well-supported, and truly open-source system
+    that gets the job done and embraces the contributions back to the project.
+
+#- logo: assets/logos/qwant.jpg
+  # jpg is 2048 x 788 -> 205 x 79 -> 136 x 53
+#  logoheight: 50
+#  gapclass: p-t-2
+#  alt: Qwant
+#  link: https://about.qwant.com/wp-content/uploads/2022/10/20221018_Qwant-x-Vespa-EN.pdf
+#  text: 'Qwant and Vespa.ai: a stronger collaboration in a continuous process of improving the search engine developed by Qwant.'
