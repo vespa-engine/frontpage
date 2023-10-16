@@ -1,3 +1,11 @@
+- title: "Introducing Lucene Linguistics"
+  excerpt: "<p>This post is about an idea that was born at the <a href=\"https://tickets.plainschwarz.com/bbuzz23/\">Berlin Buzzwords 2023</a> conference and its journey towards the production-ready implementation of the new <a href=\"https://lucene.apache.org/\">Apache Lucene</a>-based <a href=\"https://docs.vespa.ai/en/linguistics.html\">Vespa Linguistics component</a>.The primary goal of the Lucene linguistics is to make it easier to migrate existing search applications from Lucene-based search engines to Vespa.Also, it can help improve your current Vespa applications.More on that next!</p>"
+  link: https://blog.vespa.ai/lucene-linguistics/
+  image: https://blog.vespa.ai/assets/2023-10-16-lucene-linguistics/search-box.png
+  author: Dainius Jocas
+  author-avatar: https://blog.vespa.ai/assets/avatars/dainiusjocas.jpg
+  date: 2023-10-16
+
 - title: "HTTP/2 Rapid Reset (CVE-2023-44487)"
   excerpt: "Vespa 8.240.5 is available with updated dependencies to address CVE-2023-44487."
   link: https://blog.vespa.ai/cve-2023-44487/
@@ -21,12 +29,4 @@
   author: Leandro Alves, Kristian Aune, Jo Kristian Bergum, and Valerij Fredriksen
   author-avatar: https://blog.vespa.ai/assets/avatars/leandroalves.jpg https://blog.vespa.ai/assets/avatars/kkraune.jpg https://blog.vespa.ai/assets/avatars/jobergum.jpg
   date: 2023-09-08
-
-- title: "Vespa Newsletter, August 2023"
-  excerpt: "Advances in Vespa features and performance include multilingual models, more control over ANN queries, mapped tensors in queries, and multiple new features in pyvespa and the Vespa CLI."
-  link: https://blog.vespa.ai/vespa-newsletter-august-2023/
-  image: https://blog.vespa.ai/assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2023-08-31
 
