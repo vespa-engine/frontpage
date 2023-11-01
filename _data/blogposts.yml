@@ -1,3 +1,11 @@
+- title: "Vespa Newsletter, October 2023"
+  excerpt: "Advances in Vespa features and performance include Vespa Cloud Enclave, Lucene Linguistics integration, much faster fuzzy query term matching, and performance and usability improvements."
+  link: https://blog.vespa.ai/vespa-newsletter-october-2023/
+  image: https://blog.vespa.ai/assets/images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg
+  author: Kristian Aune
+  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
+  date: 2023-10-31
+
 - title: "Introducing Lucene Linguistics"
   excerpt: "<p>This post is about an idea that was born at the <a href=\"https://tickets.plainschwarz.com/bbuzz23/\">Berlin Buzzwords 2023</a> conference and its journey towards the production-ready implementation of the new <a href=\"https://lucene.apache.org/\">Apache Lucene</a>-based <a href=\"https://docs.vespa.ai/en/linguistics.html\">Vespa Linguistics component</a>.The primary goal of the Lucene linguistics is to make it easier to migrate existing search applications from Lucene-based search engines to Vespa.Also, it can help improve your current Vespa applications.More on that next!</p>"
   link: https://blog.vespa.ai/lucene-linguistics/
@@ -21,12 +29,4 @@
   author: Jon Bratseth
   author-avatar: https://blog.vespa.ai/assets/avatars/bratseth.jpg
   date: 2023-10-03
-
-- title: "Announcing search.vespa.ai"
-  excerpt: "A new search experience for Vespa-related content - powered by Vespa, LangChain, and OpenAI’s chatGPT model - our motivation for building it, features, limitations, and how we made it."
-  link: https://blog.vespa.ai/search-vespa-ai/
-  image: https://blog.vespa.ai/assets/2023-09-08-search-vespa-ai/search.vespa.ai.png
-  author: Leandro Alves, Kristian Aune, Jo Kristian Bergum, and Valerij Fredriksen
-  author-avatar: https://blog.vespa.ai/assets/avatars/leandroalves.jpg https://blog.vespa.ai/assets/avatars/kkraune.jpg https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2023-09-08
 
