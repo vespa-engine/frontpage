@@ -1,3 +1,19 @@
+- title: "Yahoo Mail turns to Vespa to do RAG at scale"
+  excerpt: "Vector search in trillions of personal documents can be done cost-effectively with vector streaming search."
+  link: https://blog.vespa.ai/yahoo-mail-turns-to-vespa-to-do-rag-at-scale/
+  image: https://blog.vespa.ai/assets/2023-11-02-yahoo-mail-turns-to-vespa-to-do-rag-at-scale/evgeni-tcherkasski.jpg
+  author: Jon Bratseth
+  author-avatar: https://blog.vespa.ai/assets/avatars/bratseth.jpg
+  date: 2023-11-02
+
+- title: "Announcing our series A funding"
+  excerpt: "Announcing a $31 million investment from Blossom Capital"
+  link: https://blog.vespa.ai/announcing-our-series-a-funding/
+  image: https://blog.vespa.ai/assets/2023-11-01-announcing-our-series-a-funding/team.avif
+  author: Jon Bratseth
+  author-avatar: https://blog.vespa.ai/assets/avatars/bratseth.jpg
+  date: 2023-11-01
+
 - title: "Vespa Newsletter, October 2023"
   excerpt: "Advances in Vespa features and performance include Vespa Cloud Enclave, Lucene Linguistics integration, much faster fuzzy query term matching, and performance and usability improvements."
   link: https://blog.vespa.ai/vespa-newsletter-october-2023/
@@ -13,20 +29,4 @@
   author: Dainius Jocas
   author-avatar: https://blog.vespa.ai/assets/avatars/dainiusjocas.jpg
   date: 2023-10-16
-
-- title: "HTTP/2 Rapid Reset (CVE-2023-44487)"
-  excerpt: "Vespa 8.240.5 is available with updated dependencies to address CVE-2023-44487."
-  link: https://blog.vespa.ai/cve-2023-44487/
-  image: https://blog.vespa.ai/
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2023-10-11
-
-- title: "Vespa is becoming a company"
-  excerpt: "Vespa is becoming its own company!"
-  link: https://blog.vespa.ai/vespa-is-becoming-its-own-company/
-  image: https://blog.vespa.ai/assets/2023-10-03-vespa-is-becoming-its-own-company/VespaLogoBlack.png
-  author: Jon Bratseth
-  author-avatar: https://blog.vespa.ai/assets/avatars/bratseth.jpg
-  date: 2023-10-03
 
