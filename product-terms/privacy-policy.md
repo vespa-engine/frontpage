@@ -1,7 +1,7 @@
 ---
 # Copyright Vespa.ai. All rights reserved.
 title: Privacy Policy and Cookies
-layout: narrow-page
+layout: container-page
 ---
 
 # Privacy Policy and Cookies
