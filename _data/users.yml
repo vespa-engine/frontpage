@@ -19,24 +19,24 @@
     on all content pages in real time and the targeted ads of one of the worlds largest ad exchanges.
     In total these applications serve close to a billion users, at a rate of 600 000 queries per second.
 
-#- logo: assets/logos/okcupid.png
+- logo: assets/logos/okcupid.png
   # png is 1107 x 352 -> 111 x 35 -> 158 x 50
-#  logoheight: 50
-#  gapclass: p-t-2
-#  alt: OKCupid
-#  link: https://tech.okcupid.com/vespa-vs-elasticsearch-for-matching-millions-of-people-6e3af18eb4dc
-#  text: OkCupid chose Vespa over Elasticsearch for their solution to find
-#    matches for users in real time, due to Vespa''s automatic data management, flexible ranking,
-#    and support for adding new fields for filtering and sorting quickly without refeeding all data.
-
-- logo: assets/logos/qwant.jpg
-  # jpg is 2048 x 788 -> 205 x 79 -> 136 x 53
   logoheight: 50
-  marginleft: 35
   gapclass: p-t-2
-  alt: Qwant
-  link: https://about.qwant.com/wp-content/uploads/2022/10/20221018_Qwant-x-Vespa-EN.pdf
-  text: 'Qwant and Vespa.ai: a stronger collaboration in a continuous process of improving the search engine developed by Qwant.'
+  alt: OKCupid
+  link: https://tech.okcupid.com/vespa-vs-elasticsearch-for-matching-millions-of-people-6e3af18eb4dc
+  text: OkCupid chose Vespa over Elasticsearch for their solution to find
+    matches for users in real time, due to Vespa''s automatic data management, flexible ranking,
+    and support for adding new fields for filtering and sorting quickly without refeeding all data.
+
+#- logo: assets/logos/qwant.jpg
+#  # jpg is 2048 x 788 -> 205 x 79 -> 136 x 53
+#  logoheight: 50
+#  marginleft: 35
+#  gapclass: p-t-2
+#  alt: Qwant
+#  link: https://about.qwant.com/wp-content/uploads/2022/10/20221018_Qwant-x-Vespa-EN.pdf
+#  text: 'Qwant and Vespa.ai: a stronger collaboration in a continuous process of improving the search engine developed by Qwant.'
 
 - logo: assets/logos/wix.png
   # jpg is 2048 x 788 -> 205 x 79 -> 136 x 53
