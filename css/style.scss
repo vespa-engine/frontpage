@@ -32,9 +32,14 @@
 /* Helpers that need to be added */
 
 /* Variables copied from theme */
-$color-brand-300: #1A7DB6;
-$color-brand-400: #005A8E;
-$color-brand-500: #FF9750;
+// Re-brand colors
+$color-brand-grey: #4D4D4D;
+$color-brand-green: #61D790;
+$color-brand-white: #FFFFFF;
+$color-brand-links: #3788A5;
+$color-brand-lightgreen: #D0F3DE80;
+$color-brand-darkgreen: #2E2F27;
+$color-brand-black: #000000;
 
 .has-bg-brand-300 {
     background-color: $color-brand-300 !important;
@@ -106,6 +111,12 @@ $color-brand-500: #FF9750;
 .nav {
     font-weight: 700;
     z-index: 100;
+    .menu-content a {
+        color: $color-brand-darkgreen;
+    }
+    .menu-content a:hover {
+        color: rgba($color-brand-darkgreen, 0.4) !important;
+    }
 }
 
 // Responsive design; downscaled nav bar for small desktop screens
@@ -151,18 +162,23 @@ button.section-searchbar {
 }
 
 /* Cover */
+.container-cover {
+    background-color: $color-brand-green;
+}
+
 .section-cover {
     height: 530px;
-
+    color: $color-brand-darkgreen;
     .paragraph-header {
         font-weight: 600;
         font-size: 2.0rem;
     }
 }
 .section-cover--image {
-    background-image: url("{{ site.baseurl }}/assets/cover-image.png");
-    background-size: cover;
+    background-image: url("{{ site.baseurl }}/assets/vespa-banner-image.png");
+    background-size: 50%;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 @media (max-width: 999px) {
@@ -290,7 +306,7 @@ pre {
 }
 
 body {
-    font-family: "Hind Madurai", sans-serif;
+    font-family: "Roobert TRIAL", sans-serif;
     font-size: 1.6rem;
     line-height: 1.75;
     font-weight: 400;

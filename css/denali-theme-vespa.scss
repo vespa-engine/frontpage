@@ -3,6 +3,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;600;700&display=swap");
 
 // GLOBALS
+
+// Re-brand colors
+$color-brand-grey: #4D4D4D;
+$color-brand-green: #61D790;
+$color-brand-white: #FFFFFF;
+$color-brand-links: #3788A5;
+$color-brand-lightgreen: #D0F3DE80;
+$color-brand-darkgreen: #2E2F27;
+$color-brand-black: #000000;
+
 // Brand
 $color-brand-100: #CCE2FF;
 $color-brand-200: null;
@@ -39,7 +49,7 @@ $color-violet: #9a2ead;
 $color-pink: #ff3390;
 
 // Font Family
-$font-family-sans-serif: 'Hind Madurai', sans-serif;
+$font-family-sans-serif: 'Roobert TRIAL', sans-serif;
 $font-family-monospace: "SFMono-Regular",monospace;
 
 // Border Radius
@@ -257,11 +267,11 @@ $modal-modal-container-border-style: solid;
 $modal-modal-container-close-icon-color: $color-grey-800;
 
 // Navbar
-$navbar-bg-color: $color-brand-400;
+$navbar-bg-color: $color-brand-green;
 $navbar-height: 60px;
-$navbar-item-text-color: $color-grey-100;
-$navbar-item-hover-text-color: rgba($color-grey-100, 0.4);
-$navbar-item-active-text-color: $color-grey-100;
+$navbar-item-text-color: $color-brand-darkgreen;
+$navbar-item-hover-text-color: rgba($color-brand-darkgreen, 0.4);
+$navbar-item-active-text-color: $color-brand-darkgreen;
 $navbar-item-active-border-color: $color-brand-300;
 $navbar-responsive-bg-color: $color-brand-400;
 $navbar-responsive-menu-bg-color: $color-brand-300;
