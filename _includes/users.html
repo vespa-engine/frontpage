@@ -1,26 +1,16 @@
 <!-- Copyright Vespa.ai. All rights reserved. -->
-<div class="container-full is-marginless has-bg-grey-300">
-    <div class="container p-y-15">
-        <div class="row">
-            <div class="col">
-                <h1 class="is-brand-500 m-t-20">Companies who take their data and AI online build on Vespa</h1>
-            </div>
-        </div>
-        <div class="row">
+<div class="container-full is-marginless has-bg-brand-200">
+    <div class="container">
+        <div class="row section-users">
+            <h1>Companies who take their data and AI online build on Vespa</h1>
             {% for user in include.users %}
-            <div class="xs-col-1-1 sm-col-1-1 md-col-1-4 lg-col-1-4 xl-col-1-4">
-                <div style="height: 150px; position:relative" title="{{user.text}}">
-                    {% assign logo_position_from_center = user.logoheight | divided_by: -2 %}
-                    <a href="{{user.link}}">
-                    <img src="{{ site.baseurl }}/{{user.logo}}" alt="{{user.alt}}"
-                         style="position:absolute; top:50%;
-                             height:{{user.logoheight}}px;
-                             margin-left:{{user.marginleft}}px;
-                             margin-top:{{logo_position_from_center}}px;">
-                    </a>
+                <div class="xs-col-1-1 sm-col-1-1 md-col-1-2 lg-col-1-4 xl-col-1-4">
+                    <div class="user-logo">
+                        <a href="{{user.link}}">
+                            <img src="{{ site.baseurl }}/{{user.logo}}" alt="{{user.alt}}" title="{{user.text}}">
+                        </a>
+                    </div>
                 </div>
-                <!-- p class="p-30 {{user.gapclass}}">{{user.text}}</p -->
-            </div>
             {% endfor %}
         </div>
     </div>
