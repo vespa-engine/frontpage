@@ -283,6 +283,21 @@ button.section-searchbar {
     }
 }
 
+.section-features {
+    display: flex;
+    flex: 1;
+    gap: 21px;
+    flex-direction: column;
+    padding: 0 34px;
+    justify-content: flex-end;
+
+    h2 {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 160%;
+    }
+}
 
 @media (max-width: 999px) {
     .section-cover--video-modal {
@@ -304,28 +319,6 @@ button.section-searchbar {
         width: 840px;
         height: 473px;
     }
-}
-
-/* Guides */
-.section-guide--item {
-    min-height: 320px;
-    transition: 300ms;
-}
-.section-guide--item div:last-child {
-    transition: 300ms;
-}
-.section-guide--item .section-guide--item--button > p {
-    color: #005A8E;
-    transition: 300ms;
-}
-.section-guide--item:hover {
-    box-shadow: 0 1px 3px 2px rgba(0,0,0,0.10);
-}
-.section-guide--item:hover div:last-child {
-    background-color: #1A7DB6;
-}
-.section-guide--item:hover .section-guide--item--button > p {
-    color: #fff;
 }
 
 /* Blog */
