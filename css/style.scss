@@ -33,13 +33,17 @@
 
 /* Variables copied from theme */
 // Re-brand colors
-$color-brand-grey: #4D4D4D;
-$color-brand-green: #61D790;
-$color-brand-white: #FFFFFF;
-$color-brand-links: #3788A5;
-$color-brand-lightgreen: #D0F3DE80;
-$color-brand-darkgreen: #2E2F27;
-$color-brand-black: #000000;
+$color-brand-100: #FFFFFF;
+$color-brand-200: #D0F3DE;
+$color-brand-300: #61D790;
+$color-brand-400: #2E2F27;
+$color-brand-500: #4D4D4D;
+$color-brand-600: #000000;
+$color-brand-700: #3788A5;
+
+h1, h2, h3, h4, h5, h6, blockquote {
+    text-wrap: balance;
+}
 
 .has-bg-brand-300 {
     background-color: $color-brand-300 !important;
@@ -112,10 +116,10 @@ $color-brand-black: #000000;
     font-weight: 700;
     z-index: 100;
     .menu-content a {
-        color: $color-brand-darkgreen;
+        color: $color-brand-400;
     }
     .menu-content a:hover {
-        color: rgba($color-brand-darkgreen, 0.4) !important;
+        color: rgba($color-brand-400, 0.8) !important;
     }
 }
 
@@ -148,13 +152,19 @@ $color-brand-black: #000000;
 }
 
 input.section-searchbar {
+    background: rgba($color-brand-400, 0.13) !important;
+    color: $color-brand-400 !important;
     font-weight: 200 !important;
     border-top-right-radius: 0px !important;
     border-bottom-right-radius: 0px !important;
 }
 
+input.section-searchbar::placeholder {
+    color: $color-brand-400 !important;
+}
+
 button.section-searchbar {
-    background: rgba($color-brand-300, 0.30) !important;
+    background: rgba($color-brand-400, 0.13) !important;
 }
 
 .nav-item.section-searchbar {
@@ -163,21 +173,45 @@ button.section-searchbar {
 
 /* Cover */
 .container-cover {
-    background-color: $color-brand-green;
+    background-color: $color-brand-300;
 }
 
 .section-cover {
-    height: 530px;
-    color: $color-brand-darkgreen;
+    padding: 34px 0 55px 0;
+
     .paragraph-header {
-        font-weight: 600;
-        font-size: 2.0rem;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+    }
+
+    .paragraph {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+    }
+
+    h1 {
+
+        font-size: 72px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
     }
 }
+
+.section-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .section-cover--image {
     background-image: url("{{ site.baseurl }}/assets/vespa-banner-image.png");
-    background-size: 50%;
-    background-position: center;
+    background-size: contain;
+    background-position: right;
     background-repeat: no-repeat;
 }
 
