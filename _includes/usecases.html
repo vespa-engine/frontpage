@@ -1,55 +1,46 @@
 <!-- Copyright Vespa.ai. All rights reserved. -->
 <!-- Usecases -->
-<div class="container-full is-marginless has-bg-grey-300">
-    <div class="container p-y-15">
+<div class="container-full is-marginless has-bg-brand-200">
+    <div class="container section-usecases">
         <div class="row">
-            <div class="col">
-                <h1 class="is-brand-500 m-t-20 p-x-10">What is Vespa used for?</h1>
+            <div class="xs-col-1-1">
+                <h1>What is Vespa used for?</h1>
             </div>
         </div>
-
-        {% for usecase in include.usecases %}
-            {% assign reversed = forloop.index0 | modulo: 2 %}
-            {% if reversed == 0 %}
-                <!-- Usecase Item -->
-                <div class="row p-y-30">
-                    <div style="text-align: center" class="p-y-0 xs-col-6-8 xs-col-off-1-8 sm-col-2-4 sm-col-off-1-4 md-hide lg-hide xl-hide align-self-center">
-                        <img width="{{usecase.imagewidth}}" src="{{usecase.image}}" alt="Usecase illustration">
-                    </div>
-                    <div class="xs-col-1-1 sm-col-6-8 sm-col-off-1-8 md-col-1-2 lg-col-6-12 xl-col-6-12">
-                        <div>
-                            <h2>{{usecase.title}}</h2>
+        <div class="container-usecases">
+            {% for usecase in include.usecases %}
+                {% assign reversed = forloop.index0 | modulo: 2 %}
+                {% if reversed == 0 %}
+                    <!-- Usecase Item -->
+                    <div class="row">
+                        <div class="md-hide lg-hide xl-hide image-usecase">
+                            <img width="{{usecase.imagewidth}}" src="{{usecase.image}}" alt="Usecase illustration">
                         </div>
-                        <p class="m-t-15">
-                            {{usecase.description}}
-                            {% if usecase.link %}  <a class="m-l-5" href="{{usecase.link}}">more <i class="d-icon d-arrow-right is-small"></i></a>{% endif %}
-                        </p>
-                    </div>
-                    <div style="text-align: center" class="pagination-centered p-y-0 xs-hide sm-hide md-col-1-2 lg-col-6-12 xl-col-6-12 align-self-center">
-                        <img class="mx-auto d-block" width="{{usecase.imagewidth}}" src="{{usecase.image}}" alt="Usecase illustration">
-                    </div>
-                </div>
-            {% else %}
-                <!-- Usecase Item Reversed -->
-                <div class="row p-y-30">
-                    <div style="text-align: center" class="p-y-0 xs-col-6-8 xs-col-off-1-8 sm-col-2-4 sm-col-off-1-4 md-col-1-2 lg-col-6-12 xl-col-6-12 align-self-center">
-                        <img width="{{usecase.imagewidth}}" src="{{usecase.image}}" alt="Usecase illustration">
-                    </div>
-                    <div class="xs-col-1-1 sm-col-6-8 sm-col-off-1-8 md-col-1-2 lg-col-6-12 xl-col-6-12">
-                        <div class="">
+                        <div class="xs-col-1-1 md-col-1-2 lg-col-6-12 xl-col-6-12 text-usecase">
                             <h2>{{usecase.title}}</h2>
+                            <p>{{usecase.description}} {% if usecase.link %}  <a class="more" href="{{usecase.link}}">more <i class="d-icon d-arrow-right is-small"></i></a>{% endif %}</p>
                         </div>
-                        <p class="m-t-15">
-                            {{usecase.description}}
-                            {% if usecase.link %}  <a class="m-l-5" href="{{usecase.link}}">more <i class="d-icon d-arrow-right is-small"></i></a>{% endif %}
-                        </p>
+                        <div class="xs-hide sm-hide image-usecase">
+                            <img width="{{usecase.imagewidth}}" src="{{usecase.image}}" alt="Usecase illustration">
+                        </div>
                     </div>
-                </div>
-            {% endif %}
-        {% endfor %}
-        <div class="row m-t-10">
-            <div class="col">
-                <h4><a href="usecases#personal-search" class="link m-l-10">More use cases <i class="d-icon d-arrow-right is-small"></i></a></h4>
+                {% else %}
+                    <!-- Usecase Item Reversed -->
+                    <div class="row">
+                        <div class="image-usecase">
+                            <img width="{{usecase.imagewidth}}" src="{{usecase.image}}" alt="Usecase illustration">
+                        </div>
+                        <div class="xs-col-1-1 md-col-1-2 lg-col-6-12 xl-col-6-12 text-usecase">
+                            <h2>{{usecase.title}}</h2>
+                            <p>{{usecase.description}} {% if usecase.link %}  <a class="more" href="{{usecase.link}}">more <i class="d-icon d-arrow-right is-small"></i></a>{% endif %}</p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="row">
+            <div class="xs-col-1-1">
+                <h4><a href="usecases#personal-search">More use cases <i class="d-icon d-arrow-right is-small"></i></a></h4>
             </div>
         </div>
     </div>

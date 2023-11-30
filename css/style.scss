@@ -42,9 +42,13 @@ $color-brand-600: #000000;
 $color-brand-700: #3788A5;
 
 h1, h2, h3, h4, h5, h6, blockquote {
+    white-space: unset;
     text-wrap: balance;
 }
 
+.has-bg-brand-200 {
+    background-color: $color-brand-200 !important;
+}
 .has-bg-brand-300 {
     background-color: $color-brand-300 !important;
 }
@@ -219,13 +223,63 @@ button.section-searchbar {
     display: flex;
     flex-direction: column;
     gap: 21px;
-    margin: 55px 0;
+    padding: 55px 10px;
 
     h1 {
         font-size: 48px;
         font-style: normal;
         font-weight: 500;
         line-height: 120%;
+    }
+}
+
+.section-usecases {
+    display: flex;
+    flex-direction: column;
+    padding: 55px 0;
+    gap: 55px;
+
+    h1 {
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+    }
+
+    h2 {
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+    }
+
+    .container-usecases {
+        display: flex;
+        flex-direction: column;
+        gap: 89px;
+    }
+
+    .text-usecase {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+        white-space: unset;
+        text-wrap: balance;
+    }
+
+    .image-usecase {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+
+        img {
+            width: 233px;
+            height: 233px;
+        }
+    }
+
+    .more {
+        white-space: nowrap;
     }
 }
 
