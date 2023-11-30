@@ -215,6 +215,21 @@ button.section-searchbar {
     background-repeat: no-repeat;
 }
 
+.section-pitch {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    margin: 55px 0;
+
+    h1 {
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+    }
+}
+
+
 @media (max-width: 999px) {
     .section-cover--video-modal {
         width: 650px !important;
