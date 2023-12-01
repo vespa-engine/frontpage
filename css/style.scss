@@ -55,8 +55,27 @@ h1, h2, h3, h4, h5, h6, blockquote {
 .has-bg-brand-400 {
     background-color: $color-brand-400 !important;
 }
+.has-bg-brand-500 {
+    background-color: $color-brand-500 !important;
+}
+
+.is-brand-100 {
+    color: $color-brand-100 !important;
+}
+.is-brand-200 {
+    color: $color-brand-200 !important;
+}
+.is-brand-300 {
+    color: $color-brand-300 !important;
+}
+.is-brand-400 {
+    color: $color-brand-400 !important;
+}
 .is-brand-500 {
     color: $color-brand-500 !important;
+}
+.is-brand-700 {
+    color: $color-brand-700 !important;
 }
 
 /* TODO: Border radiius circle and pill */
@@ -300,7 +319,7 @@ button.section-searchbar {
 }
 
 .section-users {
-    padding: 55px 0;
+    padding: 55px 0 89px 0;
     justify-content: center;
     row-gap: 55px;
 
@@ -404,9 +423,25 @@ button.section-searchbar {
 }
 
 /* Footer */
+.section-footer--header {
+    font-size: 1.3rem !important;
+    font-weight: 700;
+}
+
+.section-footer--link {
+    font-size: 1.3rem !important;
+    font-weight: 700;
+    color: $color-brand-300 !important;
+}
+
 .section-footer--copyright {
     align-self: flex-end;
     align-items: flex-end;
+    color: $color-brand-300 !important;
+    h6 {
+        font-size: 1.3rem !important;
+        font-weight: 700;
+    }
 }
 
 /* Fix anchored links being hidden under navbar */

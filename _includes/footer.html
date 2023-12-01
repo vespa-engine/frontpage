@@ -1,20 +1,20 @@
 <!-- Copyright Vespa.ai. All rights reserved. -->
 <!-- Footer -->
-<div class="container-full is-marginless has-bg-grey-200">
+<div class="container-full is-marginless has-bg-brand-400">
     <div class="container">
-        <div class="row p-t-30">
-            <div class="xs-col-1-1 sm-col-1-1 md-col-1-2 lg-col-1-2 xl-col-1-2 flex flex-row space-between m-b-20">
+        <div class="row p-y-55">
+            <div class="xs-col-1-1 sm-col-1-1 md-col-1-2 lg-col-1-2 xl-col-1-2 flex flex-row space-between">
                 {% for column in include.footerlinks %}
                     <div class="flex-column">
-                        <h4 class="upper">{{column.header}}</h4>
+                        <h4 class="upper section-footer--header is-brand-300">{{column.header}}</h4>
                         {% for link in column.links %}
-                            <a href="{{link.link}}">{{link.title}}</a><br>
+                            <a class="section-footer--link" href="{{link.link}}">{{link.title}}</a><br>
                         {% endfor %}
                     </div>
                 {% endfor %}
             </div>
-            <div class="col m-b-20 section-footer--copyright">
-                <h6>Copyright Vespa.ai</h6>
+            <div class="col section-footer--copyright">
+                <h6 class="is-brand-300">Copyright Vespa.ai</h6>
             </div>
         </div>
     </div>
