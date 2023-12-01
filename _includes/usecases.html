@@ -12,7 +12,7 @@
                 {% assign reversed = forloop.index0 | modulo: 2 %}
                 {% if reversed == 0 %}
                     <!-- Usecase Item -->
-                    <div class="row">
+                    <div class="row row-gap-usecases">
                         <div class="md-hide lg-hide xl-hide image-usecase">
                             <img width="{{usecase.imagewidth}}" src="{{usecase.image}}" alt="Usecase illustration">
                         </div>
@@ -26,7 +26,7 @@
                     </div>
                 {% else %}
                     <!-- Usecase Item Reversed -->
-                    <div class="row">
+                    <div class="row row-gap-usecases">
                         <div class="image-usecase">
                             <img width="{{usecase.imagewidth}}" src="{{usecase.image}}" alt="Usecase illustration">
                         </div>
@@ -40,7 +40,7 @@
         </div>
         <div class="row">
             <div class="xs-col-1-1">
-                <a class="more-usercases" href="usecases#personal-search">More use cases <i class="d-icon d-arrow-right is-small"></i></a>
+                <a class="more-usecases" href="usecases#personal-search">More use cases <i class="d-icon d-arrow-right is-small"></i></a>
             </div>
         </div>
     </div>

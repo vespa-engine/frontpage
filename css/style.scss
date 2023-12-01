@@ -262,6 +262,10 @@ button.section-searchbar {
     }
 }
 
+.row-gap-usecases {
+    row-gap: 21px;
+}
+
 .section-usecases {
     display: flex;
     flex-direction: column;
@@ -313,7 +317,7 @@ button.section-searchbar {
         white-space: nowrap;
     }
 
-    .more-usercases {
+    .more-usecases {
         font-size: 18px;
         font-style: normal;
         font-weight: 500;
@@ -323,6 +327,10 @@ button.section-searchbar {
     p {
         margin: 0 !important;
     }
+}
+
+.row-gap-features {
+    row-gap: 55px;
 }
 
 .section-features {
