@@ -6,7 +6,7 @@
             <div class="xs-col-1-1 sm-col-1-1 md-col-1-2 lg-col-1-2 xl-col-1-2 flex flex-row space-between">
                 {% for column in include.footerlinks %}
                     <div class="flex-column">
-                        <h4 class="upper section-footer--header is-brand-300">{{column.header}}</h4>
+                        <p class="upper section-footer--header is-brand-300">{{column.header}}</p>
                         {% for link in column.links %}
                             <a class="section-footer--link" href="{{link.link}}">{{link.title}}</a><br>
                         {% endfor %}

@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6, blockquote {
 
 /* TODO: Lineheight Helpers */
 .line-height-compact {
-    line-height: 1 !important;
+    //line-height: 1 !important;
 }
 
 /* TODO: Add overflow helpers */
@@ -207,10 +207,11 @@ button.section-searchbar {
     padding: 34px 0 55px 0;
 
     .paragraph-header {
+        font-family: Libre Baskerville;
         font-size: 24px;
         font-style: normal;
         font-weight: 400;
-        line-height: 160%;
+        line-height: 160% !important;
     }
 
     .paragraph {
@@ -221,11 +222,11 @@ button.section-searchbar {
     }
 
     h1 {
-
         font-size: 72px;
         font-style: normal;
-        font-weight: 500;
-        line-height: 120%;
+        font-weight: 500 !important;;
+        line-height: 120% !important;
+        margin: 0 !important;
     }
 }
 
@@ -251,8 +252,13 @@ button.section-searchbar {
     h1 {
         font-size: 48px;
         font-style: normal;
-        font-weight: 500;
-        line-height: 120%;
+        font-weight: 500 !important;;
+        line-height: 120% !important;
+        margin: 0 !important;
+    }
+
+    p {
+        margin: 0 !important;
     }
 }
 
@@ -265,15 +271,17 @@ button.section-searchbar {
     h1 {
         font-size: 48px;
         font-style: normal;
-        font-weight: 500;
-        line-height: 120%;
+        font-weight: 500 !important;;
+        line-height: 120% !important;
+        margin: 0 !important;
     }
 
     h2 {
         font-size: 34px;
         font-style: normal;
-        font-weight: 500;
-        line-height: 120%;
+        font-weight: 500 !important;;
+        line-height: 120% !important;
+        margin: 0 !important;
     }
 
     .container-usecases {
@@ -304,6 +312,17 @@ button.section-searchbar {
     .more {
         white-space: nowrap;
     }
+
+    .more-usercases {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+    }
+
+    p {
+        margin: 0 !important;
+    }
 }
 
 .section-features {
@@ -317,21 +336,27 @@ button.section-searchbar {
     h2 {
         font-size: 20px;
         font-style: normal;
-        font-weight: 600;
-        line-height: 160%;
+        font-weight: 600 !important;;
+        line-height: 160% !important;
+        margin: 0 !important;
+    }
+
+    p {
+        margin: 0 !important;
     }
 }
 
 .section-users {
     padding: 55px 0 89px 0;
     justify-content: center;
-    row-gap: 55px;
+    row-gap: 89px;
 
     h1 {
         font-size: 34px;
         font-style: normal;
-        font-weight: 500;
-        line-height: 120%;
+        font-weight: 500 !important;;
+        line-height: 120% !important;
+        margin: 0 !important;
         text-align: center;
     }
 
@@ -346,7 +371,12 @@ button.section-searchbar {
             width: 100%;
             height: 55px;
             object-fit: contain;
-        }}
+        }
+    }
+
+    p {
+        margin: 0 !important;
+    }
 
 }
 
@@ -397,6 +427,14 @@ button.section-searchbar {
     }
 }
 
+.more-blogs {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+
 /* Getting started */
 .section-gettingstarted {
     padding: 55px 0;
@@ -408,33 +446,45 @@ button.section-searchbar {
         gap: 21px;
     }
 
+    .paragraph-header {
+        font-family: Libre Baskerville;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160% !important;
+    }
+
+    .paragraph {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+    }
+
     h1 {
         color: $color-brand-400;
         text-edge: cap;
         font-size: 48px;
         font-style: normal;
-        font-weight: 500;
-        line-height: 120%;
+        font-weight: 500 !important;;
+        line-height: 120% !important;
+        margin: 0 !important;
     }
 
     p {
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 160%;
+        margin: 0 !important;
     }
 
 }
 
 /* Footer */
 .section-footer--header {
-    font-size: 1.3rem !important;
-    font-weight: 700;
+    font-weight: 600 !important;
+    margin: 0 !important;
 }
 
 .section-footer--link {
-    font-size: 1.3rem !important;
-    font-weight: 700;
+    font-weight: 400 !important;
     color: $color-brand-300 !important;
 }
 
@@ -443,8 +493,7 @@ button.section-searchbar {
     align-items: flex-end;
     color: $color-brand-300 !important;
     h6 {
-        font-size: 1.3rem !important;
-        font-weight: 700;
+        font-weight: 600 !important;
     }
 }
 
@@ -456,35 +505,6 @@ h1[id]::before, h2[id]::before, h3[id]::before, h4[id]::before {
     height: 75px;
     visibility: hidden;
 }
-
-//.subpage {
-//    p {
-//        margin-block-end: 0.5em;
-//    }
-//    li {
-//        font-size: 1.6rem;
-//    }
-//    h2 {
-//        margin-top: 35px;
-//        margin-bottom: 15px;
-//    }
-//    h3 {
-//        margin-top: 20px;
-//        margin-bottom: 10px;
-//    }
-//
-//    ul {
-//        list-style-type: disc;
-//        list-style-position: outside;
-//    }
-//
-//    ul, ol {
-//        padding-inline-start: 40px;
-//        margin-block-end: 0.5em;
-//    }
-//
-//
-//}
 
 /* Want to hide tables under navbar as well */
 table {
@@ -515,8 +535,5 @@ html {
 }
 
 body {
-    //font-family: $font-family-sans-serif;
-    //font-size: 1.6rem;
-    //line-height: 1.75;
-    //font-weight: 400;
+    font-size: 1.6rem;
 }
