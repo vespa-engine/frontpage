@@ -374,6 +374,35 @@ button.section-searchbar {
     }
 }
 
+/* Getting started */
+.section-gettingstarted {
+    padding: 55px 0;
+
+    .gettingstarted-box {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        gap: 21px;
+    }
+
+    h1 {
+        color: $color-brand-400;
+        text-edge: cap;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+    }
+
+    p {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+    }
+
+}
+
 /* Footer */
 .section-footer--copyright {
     align-self: flex-end;
