@@ -74,6 +74,9 @@ h1, h2, h3, h4, h5, h6, blockquote {
 .is-brand-500 {
     color: $color-brand-500 !important;
 }
+.is-brand-600 {
+    color: $color-brand-600 !important;
+}
 .is-brand-700 {
     color: $color-brand-700 !important;
 }
@@ -170,9 +173,6 @@ h1, h2, h3, h4, h5, h6, blockquote {
     }
 }
 
-.nav.vespa-light {
-    border-bottom: 1px solid #005A8E;
-}
 
 input.section-searchbar {
     background: rgba($color-brand-400, 0.13) !important;
