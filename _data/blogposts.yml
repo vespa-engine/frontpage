@@ -1,3 +1,27 @@
+- title: "A new visual identity for a new era"
+  excerpt: "Today we are starting the roll-out of our new logo and visual identity."
+  link: https://blog.vespa.ai/a-new-visual-identity-for-a-new-era/
+  image: https://blog.vespa.ai/assets/2023-12-04-a-new-visual-identity-for-a-new-era/vespa-logo-preview.png
+  author: Frode Lundgren
+  author-avatar: https://blog.vespa.ai/assets/avatars/frodelu.jpg
+  date: 2023-12-04
+
+- title: "🎄Advent of Tensors 2023 🎅"
+  excerpt: "Prepare to embark on a festive journey as we bring you the Advent of Tensors!"
+  link: https://blog.vespa.ai/advent-of-tensors-2023/
+  image: https://blog.vespa.ai/assets/2023-12-01-advent-of-tensors-2023/andreer_vespa_99582_a_cartoon_santa_doing_mathematics_with_rein_abcc3133-6019-41c1-88c7-15bf48652252.png
+  author: Andreas Eriksen and Jo Kristian Bergum
+  author-avatar: https://blog.vespa.ai/assets/avatars/andreer.jpg https://blog.vespa.ai/assets/avatars/jobergum.jpg
+  date: 2023-11-30
+
+- title: "Hands-On RAG guide for personal data with Vespa and LLamaIndex"
+  excerpt: "A hands-on guide to using Vespa streaming mode with PyVespa and LLamaIndex."
+  link: https://blog.vespa.ai/scaling-personal-ai-assistants-with-streaming-mode/
+  image: https://blog.vespa.ai/assets/2023-11-30-scaling-personal-ai-assistants-with-streaming-mode/avi-richards-Z3ownETsdNQ-unsplash.jpg
+  author: Jo Kristian Bergum
+  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
+  date: 2023-11-30
+
 - title: "Changes in OS support for Vespa"
   excerpt: "Today the supported OS for Vespa 8 is CentOS Stream 8. This is about to change."
   link: https://blog.vespa.ai/Changes-in-OS-support-for-Vespa/
@@ -5,28 +29,3 @@
   author: Arnstein Ressem
   author-avatar: https://blog.vespa.ai/assets/avatars/aressem.png
   date: 2023-11-21
-
-- title: "Anonymized endpoints and token authentication in Vespa Cloud"
-  excerpt: "In this post we will explain the new endpoint format and also introduce a new token authentication method for Vespa Cloud data plane."
-  link: https://blog.vespa.ai/announce-tokens-and-anonymous-endpoints/
-  image: https://blog.vespa.ai/assets/2023-11-09-announce-tokens-and-anonymous-endpoints/markus-spiske-6pflEeSzGUo-unsplash.jpg
-  author: Morten Tokle and Martin Polden
-  author-avatar: https://blog.vespa.ai/assets/avatars/mortent.png https://blog.vespa.ai/assets/avatars/mpolden.jpg
-  date: 2023-11-09
-
-- title: "Yahoo Mail turns to Vespa to do RAG at scale"
-  excerpt: "Vector search in trillions of personal documents can be done cost-effectively with vector streaming search."
-  link: https://blog.vespa.ai/yahoo-mail-turns-to-vespa-to-do-rag-at-scale/
-  image: https://blog.vespa.ai/assets/2023-11-02-yahoo-mail-turns-to-vespa-to-do-rag-at-scale/evgeni-tcherkasski.jpg
-  author: Jon Bratseth
-  author-avatar: https://blog.vespa.ai/assets/avatars/bratseth.jpg
-  date: 2023-11-02
-
-- title: "Announcing our series A funding"
-  excerpt: "Announcing a $31 million investment from Blossom Capital"
-  link: https://blog.vespa.ai/announcing-our-series-a-funding/
-  image: https://blog.vespa.ai/assets/2023-11-01-announcing-our-series-a-funding/team.avif
-  author: Jon Bratseth
-  author-avatar: https://blog.vespa.ai/assets/avatars/bratseth.jpg
-  date: 2023-11-01
-

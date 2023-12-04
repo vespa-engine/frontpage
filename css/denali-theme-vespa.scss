@@ -1,14 +1,18 @@
 ---
 ---
-@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 // GLOBALS
+
 // Brand
-$color-brand-100: #CCE2FF;
-$color-brand-200: null;
-$color-brand-300: #1A7DB6;
-$color-brand-400: #005A8E;
-$color-brand-500: #FF9750;
+$color-brand-100: #FFFFFF;
+$color-brand-200: #D0F3DE;
+$color-brand-300: #61D790;
+$color-brand-400: #2E2F27;
+$color-brand-500: #4D4D4D;
+$color-brand-600: #000000;
+$color-brand-700: #0246C9;
+$color-brand-800: #5E93FB;
 
 // Grey
 $color-grey-100: #ffffff;
@@ -39,7 +43,7 @@ $color-violet: #9a2ead;
 $color-pink: #ff3390;
 
 // Font Family
-$font-family-sans-serif: 'Hind Madurai', sans-serif;
+$font-family-sans-serif: 'Roobert', sans-serif;
 $font-family-monospace: "SFMono-Regular",monospace;
 
 // Border Radius
@@ -60,8 +64,8 @@ $shadow-5: 0 50px 60px -50px rgba(0, 0, 0, 0.10), 0 25px 60px 0 rgba(0, 0, 0, 0.
 
 // BASE
 // Body Element
-$body-bg-color: $color-grey-100;
-$body-text-color: $color-grey-800;
+$body-bg-color: $color-brand-100;
+$body-text-color: $color-brand-600;
 $base-font-size: 10px;
 
 
@@ -149,13 +153,13 @@ $icon-size-md: 3.6rem;
 $icon-size-lg: 4.8rem;
 
 // Links
-$links-text-color: $color-brand-300;
-$links-hover-text-color: $color-brand-400;
-$links-disabled-text-color: rgba($color-grey-800, 0.2);
-$links-secondary-text-color: $color-grey-700;
-$links-secondary-hover-text-color: $color-grey-800;
-$links-inverse-text-color: $color-grey-100;
-$links-inverse-hover-text-color: rgba($color-grey-100, .4);
+$links-text-color: $color-brand-700;
+$links-hover-text-color: $color-brand-700;
+$links-disabled-text-color: rgba($color-brand-700, 0.2);
+$links-secondary-text-color: $color-brand-700;
+$links-secondary-hover-text-color: $color-brand-700;
+$links-inverse-text-color: $color-brand-100;
+$links-inverse-hover-text-color: rgba($color-brand-100, .4);
 $links-small-text-size: 1.2rem;
 
 // Loader
@@ -190,13 +194,13 @@ $button-sizes-lg-font-size: 16px;
 $button-sizes-lg-min-width: null;
 
 $button-solid-default-bg-color: $color-brand-300;
-$button-solid-default-text-color: $color-grey-100;
-$button-solid-default-inverse-bg-color: $color-grey-100;
-$button-solid-default-inverse-text-color: $color-brand-300;
-$button-solid-focus-bg-color: $color-brand-400;
-$button-solid-focus-text-color: $color-grey-100;
-$button-solid-focus-inverse-bg-color: $color-grey-300;
-$button-solid-focus-inverse-text-color: $color-brand-300;
+$button-solid-default-text-color: $color-brand-400;
+$button-solid-default-inverse-bg-color: $color-brand-400;
+$button-solid-default-inverse-text-color: $color-brand-100;
+$button-solid-focus-bg-color: $color-brand-300;
+$button-solid-focus-text-color: $color-brand-400;
+$button-solid-focus-inverse-bg-color: $color-brand-400;
+$button-solid-focus-inverse-text-color: $color-brand-100;
 $button-solid-disabled-bg-color: rgba($color-grey-800, .12);
 $button-solid-disabled-text-color: rgba($color-grey-800, .5);
 $button-solid-disabled-inverse-bg-color: rgba($color-grey-100, .12);
@@ -237,15 +241,15 @@ $button-outline-disabled-inverse-border: solid 1px rgba($color-grey-100, .5);
 $button-text-default-bg-color: transparent;
 $button-text-default-text-color: $color-brand-300;
 $button-text-default-inverse-bg-color: transparent;
-$button-text-default-inverse-text-color: $color-grey-100;
-$button-text-focus-bg-color: rgba($color-brand-400, .26);
+$button-text-default-inverse-text-color: $color-brand-400;
+$button-text-focus-bg-color: transparent;
 $button-text-focus-text-color: $color-brand-400;
-$button-text-focus-inverse-bg-color: rgba($color-brand-400, .26);
-$button-text-focus-inverse-text-color: $color-grey-100;
+$button-text-focus-inverse-bg-color: transparent;
+$button-text-focus-inverse-text-color:  $color-brand-400;
 $button-text-disabled-bg-color: transparent;
-$button-text-disabled-text-color: rgba($color-grey-800, .5);
+$button-text-disabled-text-color: rgba($color-brand-400, .5);
 $button-text-disabled-inverse-bg-color: transparent;
-$button-text-disabled-inverse-text-color: rgba($color-grey-100, .5);
+$button-text-disabled-inverse-text-color: rgba($color-brand-100, .5);
 
 // Modals
 $modal-overlay-color: rgba($color-grey-500, 0.9);
@@ -257,14 +261,14 @@ $modal-modal-container-border-style: solid;
 $modal-modal-container-close-icon-color: $color-grey-800;
 
 // Navbar
-$navbar-bg-color: $color-brand-400;
+$navbar-bg-color: $color-brand-300;
 $navbar-height: 60px;
-$navbar-item-text-color: $color-grey-100;
-$navbar-item-hover-text-color: rgba($color-grey-100, 0.4);
-$navbar-item-active-text-color: $color-grey-100;
+$navbar-item-text-color: $color-brand-400;
+$navbar-item-hover-text-color: rgba($color-brand-400, 0.9);
+$navbar-item-active-text-color: rgba($color-brand-400, 0.9);
 $navbar-item-active-border-color: $color-brand-300;
-$navbar-responsive-bg-color: $color-brand-400;
-$navbar-responsive-menu-bg-color: $color-brand-300;
+$navbar-responsive-bg-color: $color-brand-300;
+$navbar-responsive-menu-bg-color: $color-brand-100;
 
 // Progress
 $progress-bg-color: $color-grey-400;
@@ -426,24 +430,25 @@ $tooltip-small-text-size: 1rem;
 $tooltip-small-padding: 4px 6px;
 
 // Typography
-$headline-color: $color-grey-800;
+$headline-color: $color-brand-600;
 $headline-font-family: $font-family-sans-serif;
-$paragraph-color: $color-grey-800;
+$paragraph-color: $color-brand-600;
 $paragraph-font-family: $font-family-sans-serif;
 
-$h1-font-size: 3.6rem;
-$h2-font-size: 3.0rem;
-$h3-font-size: 2.4rem;
-$h4-font-size: 1.6rem;
-$h5-font-size: 1.4rem;
-$h6-font-size: 1.2rem;
+$h1-font-size: 4.25em;
+$h2-font-size: 2.3333em;
+$h3-font-size: 1.625em;
+$h4-font-size: 1.2917em;
+$h5-font-size: 1.1875em;
+$h6-font-size: 1em;
+
 $p-font-size: 1.6rem;
 
-$h1-font-weight: 700;
-$h2-font-weight: 700;
-$h3-font-weight: 700;
-$h4-font-weight: 700;
-$h5-font-weight: 600;
+$h1-font-weight: 400;
+$h2-font-weight: 400;
+$h3-font-weight: 400;
+$h4-font-weight: 500;
+$h5-font-weight: 500;
 $h6-font-weight: 400;
 $p-font-weight: 400;
 
@@ -451,6 +456,74 @@ $line-height-compact: 1.25;
 $line-height-normal: 1.5;
 $line-height-expanded: 1.75;
 
+ul, li {
+    font-family: $paragraph-font-family;
+    font-size: $p-font-size;
+    line-height: $line-height-expanded;
+    font-weight: $p-font-weight;
+    color: $paragraph-color;
+}
+
+:root {
+    --space: 1.75;
+    --vspace: calc(var(--space) * 1rem);
+    --vspace-0: calc(3 * var(--space) * 1rem);
+    --vspace-1: calc(2 * var(--space) * 1rem);
+    --vspace-2: calc(1.5 * var(--space) * 1rem);
+    --vspace-3: calc(0.5 * var(--space) * 1rem);
+}
+
+p {
+    margin: var(--vspace) 0;
+    line-height: var(--vspace);
+}
+
+h1 {
+    margin: var(--vspace-1) 0 var(--vspace-1) 0 !important;
+    line-height: calc(5 / var(--space) * var(--vspace)) !important;
+}
+
+h2 {
+    margin: var(--vspace-2) 0 var(--vspace-3) 0 !important;
+    line-height: 1em !important;
+}
+
+h3 {
+    margin: var(--vspace-1) 0 var(--vspace-3) 0 !important;
+    line-height: 1em !important;
+}
+
+h4, h5, h6 {
+    margin: var(--vspace-2) 0 var(--vspace-3) 0 !important;
+    line-height: var(--vspace) !important;
+}
+
+h1 {
+    word-break: break-word;
+}
+
+h2 {
+    word-break: break-word;
+}
+
+h3 {
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+h4 {
+    text-transform: capitalize;
+}
+
+h5 {
+    text-transform: uppercase;
+    letter-spacing: .15em;
+}
+
+h6 {
+    font-style: italic;
+    letter-spacing: 0 !important;
+}
 
 
 // COMPONENT IMPORTS

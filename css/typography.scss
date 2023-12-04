@@ -1,0 +1,80 @@
+---
+---
+@font-face {
+    font-family: 'Roobert';
+    src: url('/assets/fonts/Roobert-Medium.woff2') format('woff2'),
+    url('/assets/fonts/Roobert-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roobert';
+    src: url('/assets/fonts/Roobert-MediumItalic.woff2') format('woff2'),
+    url('/assets/fonts/Roobert-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roobert';
+    src: url('/assets/fonts/Roobert-Regular.woff2') format('woff2'),
+    url('/assets/fonts/Roobert-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roobert';
+    src: url('/assets/fonts/Roobert-RegularItalic.woff2') format('woff2'),
+    url('/assets/fonts/Roobert-RegularItalic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roobert';
+    src: url('/assets/fonts/Roobert-SemiBold.woff2') format('woff2'),
+    url('/assets/fonts/Roobert-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roobert';
+    src: url('/assets/fonts/Roobert-SemiBoldItalic.woff2') format('woff2'),
+    url('/assets/fonts/Roobert-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+blockquote {
+    font-size: 1em;
+    font-style: italic;
+    line-height: calc(1 * var(--vspace));
+    margin: var(--vspace-2) var(--vspace-2);
+}
+
+.caption_ts {
+    font-size: 0.8542em;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.endnote_ts {font-size: 0.8542em;}
+
+.footnote_ts {
+    margin: var(--vspace-0) 0 var(--vspace-2) 0;
+    font-size: 0.7917em;
+    border-top: 1px solid #ccc;
+    line-height: 2em;
+}
+
+sup {
+    font-size: 0.7917rem;
+    margin: .5em;
+    text-transform: none;
+    font-style: italic;
+    font-weight: normal;
+}

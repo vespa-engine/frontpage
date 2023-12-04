@@ -1,7 +1,7 @@
 - title: "Search"
   icon: d-time-stopwatch
-  image: "assets/text-search-illustration.png"
-  imagewidth: 266
+  image: "assets/text-search.svg"
+  imagewidth: 233
   link: "usecases#search"
   description: Vespa is a fully featured search engine and vector database. It supports vector search (ANN),
     lexical search, and search in structured data, all in the same query.
@@ -11,8 +11,8 @@
 
 - title: "Recommendation and personalization"
   icon: d-certificate-ribbon
-  image: "assets/performance-illustration.png"
-  imagewidth: 305
+  image: "assets/recommendations.svg"
+  imagewidth: 233
   link: "usecases#recommendation-and-personalization"
   description: Recommendation, personalization and targeting involves evaluating recommender
     models over content items to select the best ones. Vespa lets you build applications which do this online,
@@ -22,8 +22,8 @@
 
 - title: "Conversational AI"
   icon: d-comment-help
-  image: "assets/qa-illustration.png"
-  imagewidth: 268
+  image: "assets/conversation.svg"
+  imagewidth: 233
   link: "usecases#conversational-ai"
   description: Large language models are revolutionary, but their usefulness for real tasks
     is limited by their lack of memory, trustworthiness, specific knowledge, and ability
@@ -34,8 +34,8 @@
 
 - title: "Semi-structured navigation"
   icon: d-cart-shopping
-  image: "assets/e-commerce-illustration.png"
-  imagewidth: 266
+  image: "assets/structured-navigation.svg"
+  imagewidth: 233
   link: "usecases#semi-structured-navigation"
   description: Applications such as e-commerce use a combination of
     structured data and text and need to provide structured navigation - grouping data dynamically

@@ -1,35 +1,36 @@
 <!-- Copyright Vespa.ai. All rights reserved. -->
 <!-- Blog -->
 <div class="container-full is-marginless">
-    <div class="container p-y-60">
-        <div class="row">
-            {% for blogpost in include.blogposts %}
-                <div class="xs-col-1-1 sm-col-1-1 md-col-1-2 lg-col-1-2 xl-col-1-2">
-                    <a href="{{blogpost.link}}" class="box flex flex-column m-20 overflow-hidden shadow-1 section-blog--box">
-                        <div class="section-blog--image" style="background-image: url({{blogpost.image}});"></div>
-                        <div class="flex flex-column">
-                            <h2 class="p-t-20 p-x-20">{{blogpost.title}}</h2>
-                            <div class="flex p-20 align-items-center">
-                                {% assign avatars = blogpost.author-avatar | split: " " %}
-                                {% for avatar in avatars %}
-                                <div class="h-15 w-15 br-circle overflow-hidden m-r-20">
-                                    <img src="{{avatar}}" alt="Image of author">
-                                </div>
-                                {% endfor %}
-                                <div>
-                                    <h4>{{blogpost.author}}</h4>
-                                    <p class="line-height-compact">{{ blogpost.date | date_to_string }}</p>
+    <div class="container">
+        <div class="row p-y-55">
+            <div class="row section-blog-row">
+                {% for blogpost in include.blogposts %}
+                    <div class="xs-col-1-1 sm-col-1-1 md-col-1-2 lg-col-1-2 xl-col-1-2">
+                        <a href="{{blogpost.link}}" class="box flex flex-column overflow-hidden shadow-1 section-blog--box">
+                            <div class="section-blog--image" style="background-image: url({{blogpost.image}});"></div>
+                            <div class="flex flex-column">
+                                <h2 class="p-t-21 p-x-21">{{blogpost.title}}</h2>
+                                <div class="flex p-21 align-items-center">
+                                    {% assign avatars = blogpost.author-avatar | split: " " %}
+                                    {% for avatar in avatars %}
+                                    <div class="h-15 w-15 br-circle overflow-hidden m-r-20">
+                                        <img src="{{avatar}}" alt="Image of author">
+                                    </div>
+                                    {% endfor %}
+                                    <div>
+                                        <h4>{{blogpost.author}}</h4>
+                                        <p class="line-height-compact">{{ blogpost.date | date_to_string }}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row p-t-55">
+                <div class="xs-col-1-1">
+                    <a href="https://blog.vespa.ai" target="_new" class="link more-blogs">View more blogs <i class="d-icon d-arrow-right is-small"></i></a>
                 </div>
-            {% endfor %}
-
-        </div>
-        <div class="row m-t-10">
-            <div class="col">
-                <h4><a href="https://blog.vespa.ai" target="_new" class="link m-l-30">View more blogs <i class="d-icon d-arrow-right is-small"></i></a></h4>
             </div>
         </div>
     </div>

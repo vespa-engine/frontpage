@@ -32,18 +32,57 @@
 /* Helpers that need to be added */
 
 /* Variables copied from theme */
-$color-brand-300: #1A7DB6;
-$color-brand-400: #005A8E;
-$color-brand-500: #FF9750;
+// Re-brand colors
+$color-brand-100: #FFFFFF;
+$color-brand-200: #D0F3DE;
+$color-brand-300: #61D790;
+$color-brand-400: #2E2F27;
+$color-brand-500: #4D4D4D;
+$color-brand-600: #000000;
+$color-brand-700: #0246C9;
+$color-brand-800: #5E93FB;
 
+h1, h2, h3, h4, h5, h6, blockquote {
+    white-space: unset;
+    text-wrap: balance;
+}
+
+.has-bg-brand-200 {
+    background-color: $color-brand-200 !important;
+}
 .has-bg-brand-300 {
     background-color: $color-brand-300 !important;
 }
 .has-bg-brand-400 {
     background-color: $color-brand-400 !important;
 }
+.has-bg-brand-500 {
+    background-color: $color-brand-500 !important;
+}
+
+.is-brand-100 {
+    color: $color-brand-100 !important;
+}
+.is-brand-200 {
+    color: $color-brand-200 !important;
+}
+.is-brand-300 {
+    color: $color-brand-300 !important;
+}
+.is-brand-400 {
+    color: $color-brand-400 !important;
+}
 .is-brand-500 {
     color: $color-brand-500 !important;
+}
+.is-brand-600 {
+    color: $color-brand-600 !important;
+}
+.is-brand-700 {
+    color: $color-brand-700 !important;
+}
+.is-brand-800 {
+    color: $color-brand-700 !important;
 }
 
 /* TODO: Border radiius circle and pill */
@@ -79,7 +118,7 @@ $color-brand-500: #FF9750;
 
 /* TODO: Lineheight Helpers */
 .line-height-compact {
-    line-height: 1 !important;
+    //line-height: 1 !important;
 }
 
 /* TODO: Add overflow helpers */
@@ -106,6 +145,12 @@ $color-brand-500: #FF9750;
 .nav {
     font-weight: 700;
     z-index: 100;
+    .menu-content a {
+        color: $color-brand-400;
+    }
+    .menu-content a:hover {
+        color: rgba($color-brand-400, 0.8) !important;
+    }
 }
 
 // Responsive design; downscaled nav bar for small desktop screens
@@ -132,18 +177,21 @@ $color-brand-500: #FF9750;
     }
 }
 
-.nav.vespa-light {
-    border-bottom: 1px solid #005A8E;
-}
 
 input.section-searchbar {
+    background: rgba($color-brand-400, 0.13) !important;
+    color: $color-brand-400 !important;
     font-weight: 200 !important;
     border-top-right-radius: 0px !important;
     border-bottom-right-radius: 0px !important;
 }
 
+input.section-searchbar::placeholder {
+    color: $color-brand-400 !important;
+}
+
 button.section-searchbar {
-    background: rgba($color-brand-300, 0.30) !important;
+    background: rgba($color-brand-400, 0.13) !important;
 }
 
 .nav-item.section-searchbar {
@@ -151,19 +199,195 @@ button.section-searchbar {
 }
 
 /* Cover */
+.container-cover {
+    background-color: $color-brand-300;
+}
+
 .section-cover {
-    height: 530px;
+    padding: 34px 0 55px 0;
 
     .paragraph-header {
-        font-weight: 600;
-        font-size: 2.0rem;
+        font-family: Libre Baskerville;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160% !important;
+    }
+
+    .paragraph {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+    }
+
+    h1 {
+        font-size: 72px;
+        font-style: normal;
+        font-weight: 500 !important;;
+        line-height: 120% !important;
+        margin: 0 !important;
     }
 }
-.section-cover--image {
-    background-image: url("{{ site.baseurl }}/assets/cover-image.png");
-    background-size: cover;
-    background-position: center;
+
+.section-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
+
+.section-cover--image {
+    background-image: url("{{ site.baseurl }}/assets/vespa-banner-image.png");
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.section-pitch {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    padding: 55px 10px;
+
+    h1 {
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 500 !important;;
+        line-height: 120% !important;
+        margin: 0 !important;
+    }
+
+    p {
+        margin: 0 !important;
+    }
+}
+
+.row-gap-usecases {
+    row-gap: 21px;
+}
+
+.section-usecases {
+    display: flex;
+    flex-direction: column;
+    padding: 55px 0;
+    gap: 55px;
+
+    h1 {
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 500 !important;;
+        line-height: 120% !important;
+        margin: 0 !important;
+    }
+
+    h2 {
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500 !important;;
+        line-height: 120% !important;
+        margin: 0 !important;
+    }
+
+    .container-usecases {
+        display: flex;
+        flex-direction: column;
+        gap: 89px;
+    }
+
+    .text-usecase {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+        white-space: unset;
+        text-wrap: balance;
+    }
+
+    .image-usecase {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+
+        img {
+            width: 233px;
+            height: 233px;
+        }
+    }
+
+    .more {
+        white-space: nowrap;
+    }
+
+    .more-usecases {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+    }
+
+    p {
+        margin: 0 !important;
+    }
+}
+
+.row-gap-features {
+    row-gap: 55px;
+}
+
+.section-features {
+    display: flex;
+    flex: 1;
+    gap: 21px;
+    flex-direction: column;
+    padding: 0 34px;
+    justify-content: flex-end;
+
+    h2 {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600 !important;;
+        line-height: 160% !important;
+        margin: 0 !important;
+    }
+
+    p {
+        margin: 0 !important;
+    }
+}
+
+.section-users {
+    padding: 55px 0 89px 0;
+    justify-content: center;
+    row-gap: 89px;
+
+    h1 {
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500 !important;;
+        line-height: 120% !important;
+        margin: 0 !important;
+        text-align: center;
+    }
+
+    .user-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            display: block;
+            max-width: 265px;
+            width: 100%;
+            height: 55px;
+            object-fit: contain;
+        }
+    }
+
+    p {
+        margin: 0 !important;
+    }
+
+}
+
 
 @media (max-width: 999px) {
     .section-cover--video-modal {
@@ -187,28 +411,6 @@ button.section-searchbar {
     }
 }
 
-/* Guides */
-.section-guide--item {
-    min-height: 320px;
-    transition: 300ms;
-}
-.section-guide--item div:last-child {
-    transition: 300ms;
-}
-.section-guide--item .section-guide--item--button > p {
-    color: #005A8E;
-    transition: 300ms;
-}
-.section-guide--item:hover {
-    box-shadow: 0 1px 3px 2px rgba(0,0,0,0.10);
-}
-.section-guide--item:hover div:last-child {
-    background-color: #1A7DB6;
-}
-.section-guide--item:hover .section-guide--item--button > p {
-    color: #fff;
-}
-
 /* Blog */
 .section-blog--image {
     height: 150px;
@@ -218,13 +420,89 @@ button.section-searchbar {
 }
 
 .section-blog--box {
-    height: calc(100% - 40px);
+    height: 100%;
+    width: 100%;
+
+}
+
+.section-blog-row {
+    row-gap: 21px;
+
+    h2 {
+        font-size: 28px;
+        font-style: normal;
+        line-height: 120%;
+    }
+}
+
+.more-blogs {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+
+/* Getting started */
+.section-gettingstarted {
+    padding: 55px 0;
+
+    .gettingstarted-box {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        gap: 21px;
+    }
+
+    .paragraph-header {
+        font-family: Libre Baskerville;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160% !important;
+    }
+
+    .paragraph {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+    }
+
+    h1 {
+        color: $color-brand-400;
+        text-edge: cap;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 500 !important;;
+        line-height: 120% !important;
+        margin: 0 !important;
+    }
+
+    p {
+        margin: 0 !important;
+    }
+
 }
 
 /* Footer */
+.section-footer--header {
+    font-weight: 600 !important;
+    margin: 0 !important;
+}
+
+.section-footer--link {
+    font-weight: 400 !important;
+    color: $color-brand-300 !important;
+}
+
 .section-footer--copyright {
     align-self: flex-end;
     align-items: flex-end;
+    color: $color-brand-300 !important;
+    h6 {
+        font-weight: 600 !important;
+    }
 }
 
 /* Fix anchored links being hidden under navbar */
@@ -234,35 +512,6 @@ h1[id]::before, h2[id]::before, h3[id]::before, h4[id]::before {
     margin-top: -75px;
     height: 75px;
     visibility: hidden;
-}
-
-.subpage {
-    p {
-        margin-block-end: 0.5em;
-    }
-    li {
-        font-size: 1.6rem;
-    }
-    h2 {
-        margin-top: 35px;
-        margin-bottom: 15px;
-    }
-    h3 {
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-
-    ul {
-        list-style-type: disc;
-        list-style-position: outside;
-    }
-
-    ul, ol {
-        padding-inline-start: 40px;
-        margin-block-end: 0.5em;
-    }
-
-
 }
 
 /* Want to hide tables under navbar as well */
@@ -289,10 +538,10 @@ pre {
     margin-bottom: 10px;
 }
 
+html {
+    background-color: $color-brand-400;
+}
+
 body {
-    font-family: "Hind Madurai", sans-serif;
     font-size: 1.6rem;
-    line-height: 1.75;
-    font-weight: 400;
-    color: #303030;
 }
