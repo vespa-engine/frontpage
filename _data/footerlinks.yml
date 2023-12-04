@@ -10,6 +10,8 @@
       link: /releases
     - title: Issues
       link: https://github.com/vespa-engine/vespa/issues
+    - title: Privacy Policy
+      link: https://vespa.ai/product-terms/privacy-policy
 
 - header: Contact
   links:

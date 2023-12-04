@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- Copyright Vespa.ai. All rights reserved. -->
+<html>
+
+{% include htmlhead.html theme="light" %}
+
+<body class="denali-theme-vespa-light subpage">
+
+{% include navbar.html logo="vespa-logo-color.png" class="vespa-light" %}
+
+<div class="container-full">
+<div class="m-t-20 row">
+<div class="xs-col-1-1 sm-col-1-1 md-col-1-1 lg-col-8-12 lg-col-off-2-12 xl-col-8-12 xl-col-off-2-12">
+
+{{ content }}
+
+</div>
+</div>
+</div>
+
+{% include footer.html footerlinks=site.data.footerlinks %}
+{% include js.html %}
+
+</body>
+</html>
