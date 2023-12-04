@@ -1,6 +1,6 @@
 ---
 # Copyright Vespa.ai. All rights reserved.
 layout: frontpage
-title: Vespa - the big data serving engine
+title: Vespa - data + AI, online
 index: false
 ---

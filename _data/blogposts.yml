@@ -1,32 +1,32 @@
-- title: "Introducing Lucene Linguistics"
-  excerpt: "<p>This post is about an idea that was born at the <a href=\"https://tickets.plainschwarz.com/bbuzz23/\">Berlin Buzzwords 2023</a> conference and its journey towards the production-ready implementation of the new <a href=\"https://lucene.apache.org/\">Apache Lucene</a>-based <a href=\"https://docs.vespa.ai/en/linguistics.html\">Vespa Linguistics component</a>.The primary goal of the Lucene linguistics is to make it easier to migrate existing search applications from Lucene-based search engines to Vespa.Also, it can help improve your current Vespa applications.More on that next!</p>"
-  link: https://blog.vespa.ai/lucene-linguistics/
-  image: https://blog.vespa.ai/assets/2023-10-16-lucene-linguistics/search-box.png
-  author: Dainius Jocas
-  author-avatar: https://blog.vespa.ai/assets/avatars/dainiusjocas.jpg
-  date: 2023-10-16
+- title: "Changes in OS support for Vespa"
+  excerpt: "Today the supported OS for Vespa 8 is CentOS Stream 8. This is about to change."
+  link: https://blog.vespa.ai/Changes-in-OS-support-for-Vespa/
+  image: https://blog.vespa.ai/assets/2023-11-21-Changes-in-OS-support-for-Vespa/claudio-schwarz-z508Zk08HNU-unsplash.jpg
+  author: Arnstein Ressem
+  author-avatar: https://blog.vespa.ai/assets/avatars/aressem.png
+  date: 2023-11-21
 
-- title: "HTTP/2 Rapid Reset (CVE-2023-44487)"
-  excerpt: "Vespa 8.240.5 is available with updated dependencies to address CVE-2023-44487."
-  link: https://blog.vespa.ai/cve-2023-44487/
-  image: https://blog.vespa.ai/
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2023-10-11
+- title: "Anonymized endpoints and token authentication in Vespa Cloud"
+  excerpt: "In this post we will explain the new endpoint format and also introduce a new token authentication method for Vespa Cloud data plane."
+  link: https://blog.vespa.ai/announce-tokens-and-anonymous-endpoints/
+  image: https://blog.vespa.ai/assets/2023-11-09-announce-tokens-and-anonymous-endpoints/markus-spiske-6pflEeSzGUo-unsplash.jpg
+  author: Morten Tokle and Martin Polden
+  author-avatar: https://blog.vespa.ai/assets/avatars/mortent.png https://blog.vespa.ai/assets/avatars/mpolden.jpg
+  date: 2023-11-09
 
-- title: "Vespa is becoming a company"
-  excerpt: "Vespa is becoming its own company!"
-  link: https://blog.vespa.ai/vespa-is-becoming-its-own-company/
-  image: https://blog.vespa.ai/assets/2023-10-03-vespa-is-becoming-its-own-company/VespaLogoBlack.png
+- title: "Yahoo Mail turns to Vespa to do RAG at scale"
+  excerpt: "Vector search in trillions of personal documents can be done cost-effectively with vector streaming search."
+  link: https://blog.vespa.ai/yahoo-mail-turns-to-vespa-to-do-rag-at-scale/
+  image: https://blog.vespa.ai/assets/2023-11-02-yahoo-mail-turns-to-vespa-to-do-rag-at-scale/evgeni-tcherkasski.jpg
   author: Jon Bratseth
   author-avatar: https://blog.vespa.ai/assets/avatars/bratseth.jpg
-  date: 2023-10-03
+  date: 2023-11-02
 
-- title: "Announcing search.vespa.ai"
-  excerpt: "A new search experience for Vespa-related content - powered by Vespa, LangChain, and OpenAI’s chatGPT model - our motivation for building it, features, limitations, and how we made it."
-  link: https://blog.vespa.ai/search-vespa-ai/
-  image: https://blog.vespa.ai/assets/2023-09-08-search-vespa-ai/search.vespa.ai.png
-  author: Leandro Alves, Kristian Aune, Jo Kristian Bergum, and Valerij Fredriksen
-  author-avatar: https://blog.vespa.ai/assets/avatars/leandroalves.jpg https://blog.vespa.ai/assets/avatars/kkraune.jpg https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2023-09-08
+- title: "Announcing our series A funding"
+  excerpt: "Announcing a $31 million investment from Blossom Capital"
+  link: https://blog.vespa.ai/announcing-our-series-a-funding/
+  image: https://blog.vespa.ai/assets/2023-11-01-announcing-our-series-a-funding/team.avif
+  author: Jon Bratseth
+  author-avatar: https://blog.vespa.ai/assets/avatars/bratseth.jpg
+  date: 2023-11-01
 
