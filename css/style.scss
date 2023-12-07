@@ -238,6 +238,9 @@ button.section-searchbar {
 
 .section-cover--image {
     background-image: url("{{ site.baseurl }}/assets/vespa-banner-image.png");
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url('{{ site.baseurl }}/assets/vespa-banner-image@2x.png');
+    }
     background-size: contain;
     background-position: right;
     background-repeat: no-repeat;
