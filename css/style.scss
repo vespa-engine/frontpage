@@ -198,6 +198,20 @@ button.section-searchbar {
     padding-top: 14px;
 }
 
+.section-founders {
+    h3 {
+        margin-top: 0 !important;
+    }
+
+    h2 {
+        margin-bottom: 50px !important;
+    }
+
+    .founder-image {
+        text-align: center;
+    }
+}
+
 /* Cover */
 .container-cover {
     background-color: $color-brand-300;
