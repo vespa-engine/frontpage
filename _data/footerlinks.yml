@@ -29,7 +29,7 @@
 - header: Community
   links:
     - title: Slack
-      link: https://vespatalk.slack.com/
+      link: http://slack.vespa.ai
     - title: Stack Overflow
       link: https://stackoverflow.com/questions/tagged/vespa
     - title: Contributing
