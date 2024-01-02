@@ -1,3 +1,27 @@
+- title: "Announcing Vespa Cloud Enclave: Bring your own cloud"
+  excerpt: "Deploy your Vespa Cloud applications inside AWS accounts or GCP projects you own, while still managed and operated by Vespa.ai."
+  link: https://blog.vespa.ai/vespa-cloud-enclave/
+  image: https://blog.vespa.ai/assets/2024-01-02-vespa-cloud-enclave/samsommer-vddccTqwal8-unsplash.jpg
+  author: 
+  author-avatar: 
+  date: 2024-01-02
+
+- title: "Vespa Newsletter, December 2023"
+  excerpt: "Advances in Vespa features and performance include rank score normalization in the global ranking phase, improved feeding using PyVespa, token authentication, and query match debugging!"
+  link: https://blog.vespa.ai/vespa-newsletter-december-2023/
+  image: https://blog.vespa.ai/assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg
+  author: Kristian Aune
+  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
+  date: 2023-12-18
+
+- title: "Turbocharge RAG with LangChain and Vespa Streaming Mode for Sharded Data"
+  excerpt: "A hands-on guide to connect LangChain with Vespa streaming mode to build cost-efficient RAG applications over naturally sharded data."
+  link: https://blog.vespa.ai/turbocharge-rag-with-langchain-and-vespa-streaming-mode/
+  image: https://blog.vespa.ai/assets/2023-12-08-turbocharge-rag-with-langchain-and-vespa-streaming-mode/thought-catalog-UK78i6vK3sc-unsplash.jpg
+  author: Jo Kristian Bergum
+  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
+  date: 2023-12-07
+
 - title: "A new visual identity for a new era"
   excerpt: "Today we are starting the roll-out of our new logo and visual identity."
   link: https://blog.vespa.ai/a-new-visual-identity-for-a-new-era/
@@ -6,26 +30,3 @@
   author-avatar: https://blog.vespa.ai/assets/avatars/frodelu.jpg
   date: 2023-12-04
 
-- title: "🎄Advent of Tensors 2023 🎅"
-  excerpt: "Prepare to embark on a festive journey as we bring you the Advent of Tensors!"
-  link: https://blog.vespa.ai/advent-of-tensors-2023/
-  image: https://blog.vespa.ai/assets/2023-12-01-advent-of-tensors-2023/andreer_vespa_99582_a_cartoon_santa_doing_mathematics_with_rein_abcc3133-6019-41c1-88c7-15bf48652252.png
-  author: Andreas Eriksen and Jo Kristian Bergum
-  author-avatar: https://blog.vespa.ai/assets/avatars/andreer.jpg https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2023-11-30
-
-- title: "Hands-On RAG guide for personal data with Vespa and LLamaIndex"
-  excerpt: "A hands-on guide to using Vespa streaming mode with PyVespa and LLamaIndex."
-  link: https://blog.vespa.ai/scaling-personal-ai-assistants-with-streaming-mode/
-  image: https://blog.vespa.ai/assets/2023-11-30-scaling-personal-ai-assistants-with-streaming-mode/avi-richards-Z3ownETsdNQ-unsplash.jpg
-  author: Jo Kristian Bergum
-  author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2023-11-30
-
-- title: "Changes in OS support for Vespa"
-  excerpt: "Today the supported OS for Vespa 8 is CentOS Stream 8. This is about to change."
-  link: https://blog.vespa.ai/Changes-in-OS-support-for-Vespa/
-  image: https://blog.vespa.ai/assets/2023-11-21-Changes-in-OS-support-for-Vespa/claudio-schwarz-z508Zk08HNU-unsplash.jpg
-  author: Arnstein Ressem
-  author-avatar: https://blog.vespa.ai/assets/avatars/aressem.png
-  date: 2023-11-21
