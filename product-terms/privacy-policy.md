@@ -181,8 +181,9 @@ is the case, we will implement appropriate security measures in accordance with
 chapter five of the GDPR, in order to sufficiently protect your personal data,
 such as agreements including EU standard contractual clauses (SCC).
 
-In this link you will find an up-to-date list of Vespa.ai AS’s existing
-sub-contractors or service providers processing personal data on our behalf. 
+On our <a href="service-providers">Service Providers</a> page, you will
+find an up-to-date list of Vespa.ai AS’s existing sub-contractors and service
+providers processing personal data on our behalf.
 
 ## How do we protect your personal data?
 
