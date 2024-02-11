@@ -1,0 +1,27 @@
+---
+# Copyright Vespa.ai. All rights reserved.
+title: "Vespa Press Releases"
+layout: page
+---
+
+<div class="container-full is-marginless">
+  <div class="container section-pressreleases">
+
+    <div class="row">
+      <div class="xs-col-1-1 sm-col-1-1 md-col-1-2 lg-col-1-2 xl-col-1-2 flex flex-row space-between m-t-20">
+        <div class="flex-column">
+          <h1>Press Releases</h1>
+          <div class="flex-column">
+            {% for pressrelease in site.data.pressreleases %}
+            <h4 class="pr-title">{{ pressrelease.title }}</h4>
+            <p><b>{{ pressrelease.date }}</b></p>
+            <p><em>{{ pressrelease.excerpt }}</em></p>
+            <p><a href="/press/{{ pressrelease.slug }}">Read more</a></p>
+            <hr/>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
