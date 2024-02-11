@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- Copyright Vespa.ai. All rights reserved. -->
+<html>
+
+{% include htmlhead.html theme="light" %}
+
+<body class="denali-theme-vespa-light subpage">
+
+{% include navbar.html logo="logo.png" class="vespa-light" %}
+<div class="container-full is-marginless">
+    <div class="container section-pressreleases">
+
+        <div class="row">
+            <div class="xs-col-1-1 sm-col-1-1 md-col-1-2 lg-col-1-2 xl-col-1-2 flex flex-row space-between m-t-20">
+                <div class="flex-column">
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% include footer.html footerlinks=site.data.footerlinks %}
+{% include js.html %}
+
+</body>
+</html>
