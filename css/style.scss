@@ -217,6 +217,28 @@ button.section-searchbar {
     background-color: $color-brand-300;
 }
 
+.section-cover-banner {
+    p {
+        text-align: center;
+        img {
+            vertical-align: middle;
+            max-height: 50px;
+            margin-right: 10px;
+        }
+    }
+    a {
+        font-weight: 600;
+        font-size: 20px;
+        text-decoration: #2E2F27;
+        text-decoration-line: underline;
+        color: #2E2F27;
+    }
+    a:hover {
+        color: #5D5D5D;
+        text-decoration: #5D5D5D;
+        text-decoration-line: underline;
+    }
+}
 .section-cover {
     padding: 34px 0 55px 0;
 
