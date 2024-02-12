@@ -1,32 +1,32 @@
-- title: "Announcing Vespa Cloud Enclave: Bring your own cloud"
-  excerpt: "Deploy your Vespa Cloud applications inside AWS accounts or GCP projects you own, while still managed and operated by Vespa.ai."
-  link: https://blog.vespa.ai/vespa-cloud-enclave/
-  image: https://blog.vespa.ai/assets/2024-01-02-vespa-cloud-enclave/samsommer-vddccTqwal8-unsplash.jpg
-  author: 
-  author-avatar: 
-  date: 2024-01-02
+- title: "GigaOm Radar Sonar for Vector Databases Positions Vespa as a Leader"
+  excerpt: "Although we're more than a vector database, we're happy to be recognized as a leader in this category"
+  link: https://blog.vespa.ai/gigaom-radar-sonar-for-vector-databases-positions-vespa-as-a-leader/
+  image: https://blog.vespa.ai/assets/2024-02-12-gigaom-radar-sonar-for-vector-databases-positions-vespa-as-a-leader/Gigaom_leader.png
+  author: Jon Bratseth
+  author-avatar: https://blog.vespa.ai/assets/avatars/bratseth.jpg
+  date: 2024-02-12
 
-- title: "Vespa Newsletter, December 2023"
-  excerpt: "Advances in Vespa features and performance include rank score normalization in the global ranking phase, improved feeding using PyVespa, token authentication, and query match debugging!"
-  link: https://blog.vespa.ai/vespa-newsletter-december-2023/
-  image: https://blog.vespa.ai/assets/images/scott-graham-5fNmWej4tAA-unsplash.jpg
-  author: Kristian Aune
-  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
-  date: 2023-12-18
+- title: "Exploring the potential of OpenAI Matryoshka 🪆 embeddings with Vespa"
+  excerpt: "Using the \"shortening\" properties of OpenAI v3 embedding models to greatly reduce latency/cost while retaining near-exact quality"
+  link: https://blog.vespa.ai/matryoshka-embeddings-in-vespa/
+  image: https://blog.vespa.ai/assets/2024-02-08-matryoshka-embeddings-in-vespa/simon-hurry-QtiZpH_N2sA-unsplash.jpg
+  author: Andreas Eriksen
+  author-avatar: https://blog.vespa.ai/assets/avatars/andreer.jpg
+  date: 2024-02-08
 
-- title: "Turbocharge RAG with LangChain and Vespa Streaming Mode for Sharded Data"
-  excerpt: "A hands-on guide to connect LangChain with Vespa streaming mode to build cost-efficient RAG applications over naturally sharded data."
-  link: https://blog.vespa.ai/turbocharge-rag-with-langchain-and-vespa-streaming-mode/
-  image: https://blog.vespa.ai/assets/2023-12-08-turbocharge-rag-with-langchain-and-vespa-streaming-mode/thought-catalog-UK78i6vK3sc-unsplash.jpg
+- title: "Announcing IN query operator"
+  excerpt: "The new IN operator is a shorthand for multiple OR conditions, enabling writing more concise queries with better performance"
+  link: https://blog.vespa.ai/announcing-in-query-operator/
+  image: https://blog.vespa.ai/assets/2024-01-30-announcing-in-query-operator/chuttersnap-9cCeS9Sg6nU-unsplash.jpg
+  author: Geir Storli
+  author-avatar: https://blog.vespa.ai/assets/avatars/geirst.jpg
+  date: 2024-01-30
+
+- title: "Redefining Hybrid Search Possibilities with Vespa - part one"
+  excerpt: "This is the first blog post in a series on hybrid search. This first post focuses on efficient hybrid retrieval and representational approaches in IR"
+  link: https://blog.vespa.ai/redefining-hybrid-search-possibilities-with-vespa/
+  image: https://blog.vespa.ai/assets/2024-01-19-redefining-hybrid-search-possibilities-with-vespa/trent-erwin-UgA3Xvi3SkA-unsplash.jpg
   author: Jo Kristian Bergum
   author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2023-12-07
-
-- title: "A new visual identity for a new era"
-  excerpt: "Today we are starting the roll-out of our new logo and visual identity."
-  link: https://blog.vespa.ai/a-new-visual-identity-for-a-new-era/
-  image: https://blog.vespa.ai/assets/2023-12-04-a-new-visual-identity-for-a-new-era/vespa-logo-preview.png
-  author: Frode Lundgren
-  author-avatar: https://blog.vespa.ai/assets/avatars/frodelu.jpg
-  date: 2023-12-04
+  date: 2024-01-19
 
