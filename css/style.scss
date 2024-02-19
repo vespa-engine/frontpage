@@ -445,9 +445,20 @@ button.section-searchbar {
 
 }
 
-.section-pressreleases {
+.section-press {
     .pr-title {
         line-height: 1.5 !important;
+        text-wrap: pretty;
+        margin-top: 0px !important;
+        margin-bottom: 5px !important;
+    }
+
+    .pr-date {
+        margin-top: 0px;
+    }
+
+    h2 {
+        margin-bottom: var(--vspace-2) !important;
     }
 }
 

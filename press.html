@@ -1,27 +1,45 @@
 ---
 # Copyright Vespa.ai. All rights reserved.
-title: "Vespa Press Releases"
+title: "Vespa Top News and Press Releases"
 layout: page
 ---
 
 <div class="container-full is-marginless">
-  <div class="container section-pressreleases">
+    <div class="container section-press">
 
-    <div class="row">
-      <div class="xs-col-1-1 sm-col-1-1 md-col-1-2 lg-col-1-2 xl-col-1-2 flex flex-row space-between m-t-20">
-        <div class="flex-column">
-          <h1>Press Releases</h1>
-          <div class="flex-column">
-            {% for pressrelease in site.data.pressreleases %}
-            <h4 class="pr-title">{{ pressrelease.title }}</h4>
-            <p><b>{{ pressrelease.date }}</b></p>
-            <p><em>{{ pressrelease.excerpt }}</em></p>
-            <p><a href="/press/{{ pressrelease.slug }}">Read more</a></p>
-            <hr/>
-            {% endfor %}
-          </div>
+        <div class="row">
+            <div class="xs-col-1-1 sm-col-1-1 md-col-2-3 lg-col-2-3 xl-col-2-3 flex flex-row space-between m-t-20">
+                <div class="flex-column">
+                    <h2>Vespa in the news</h2>
+                    <div class="flex-column">
+                        {% for newsstory in site.data.newsstories %}
+                        <h5><a href="{{ newsstory.sourceurl }}">{{ newsstory.source }}</a></h5>
+                        <h4 class="pr-title">{{ newsstory.title }}</h4>
+                        <p class="pr-date">{{ newsstory.date | date_to_string: "ordinal", "US" }}</p>
+                        <p><a href="{{ newsstory.url }}" target="_blank">Read more <i
+                                class="d-icon d-external is-sub is-extrasmall"></i></a></p>
+                        <hr/>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <div class="row">
+            <div class="xs-col-1-1 sm-col-1-1 md-col-2-3 lg-col-2-3 xl-col-2-3 flex flex-row space-between m-t-20">
+                <div class="flex-column">
+                    <h2>Press Releases</h2>
+                    <div class="flex-column">
+                        {% for pressrelease in site.data.pressreleases %}
+                        <h4 class="pr-title">{{ pressrelease.title }}</h4>
+                        <p class="pr-date">{{ pressrelease.date | date_to_string: "ordinal", "US" }}</p>
+                        <p><em>{{ pressrelease.excerpt }}</em></p>
+                        <p><a href="/press/{{ pressrelease.slug }}">Read more</a></p>
+                        <hr/>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
