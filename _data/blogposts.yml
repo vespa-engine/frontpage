@@ -1,32 +1,32 @@
-- title: "GigaOm Sonar for Vector Databases Positions Vespa as a Leader"
-  excerpt: "Although we're more than a vector database, we're happy to be recognized as a leader in this category"
-  link: https://blog.vespa.ai/gigaom-radar-sonar-for-vector-databases-positions-vespa-as-a-leader/
+- title: "Embedding flexibility in Vespa"
+  excerpt: "Why did Vespa score \"Exceptional\" on Embedding Flexibility in GigaOm's report on Vector Databases?"
+  link: https://blog.vespa.ai/embedding-flexibility-in-vespa/
   image: https://blog.vespa.ai/assets/2024-02-12-gigaom-radar-sonar-for-vector-databases-positions-vespa-as-a-leader/Gigaom_leader.png
   author: Jon Bratseth
   author-avatar: https://blog.vespa.ai/assets/avatars/bratseth.jpg
-  date: 2024-02-12
+  date: 2024-02-16
 
-- title: "Exploring the potential of OpenAI Matryoshka 🪆 embeddings with Vespa"
-  excerpt: "Using the \"shortening\" properties of OpenAI v3 embedding models to greatly reduce latency/cost while retaining near-exact quality"
-  link: https://blog.vespa.ai/matryoshka-embeddings-in-vespa/
-  image: https://blog.vespa.ai/assets/2024-02-08-matryoshka-embeddings-in-vespa/simon-hurry-QtiZpH_N2sA-unsplash.jpg
-  author: Andreas Eriksen
-  author-avatar: https://blog.vespa.ai/assets/avatars/andreer.jpg
-  date: 2024-02-08
+- title: "Vespa Newsletter, February 2024"
+  excerpt: "Advances in Vespa features and performance include the YQL IN operator, new streaming search features, and embed using parameter substitution."
+  link: https://blog.vespa.ai/vespa-newsletter-february-2024/
+  image: https://blog.vespa.ai/assets/images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg
+  author: Kristian Aune
+  author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
+  date: 2024-02-15
 
-- title: "Announcing IN query operator"
-  excerpt: "The new IN operator is a shorthand for multiple OR conditions, enabling writing more concise queries with better performance"
-  link: https://blog.vespa.ai/announcing-in-query-operator/
-  image: https://blog.vespa.ai/assets/2024-01-30-announcing-in-query-operator/chuttersnap-9cCeS9Sg6nU-unsplash.jpg
-  author: Geir Storli
-  author-avatar: https://blog.vespa.ai/assets/avatars/geirst.jpg
-  date: 2024-01-30
+- title: "When you're using vectors you're doing search"
+  excerpt: "Combining scale and quality takes more than vector similarity search"
+  link: https://blog.vespa.ai/when-you-are-using-vectors-you-are-doing-search/
+  image: https://blog.vespa.ai/assets/2024-02-14-when-you-are-using-vectors-you-are-doing-search/coral.jpg
+  author: Jon Bratseth
+  author-avatar: https://blog.vespa.ai/assets/avatars/bratseth.jpg
+  date: 2024-02-14
 
-- title: "Redefining Hybrid Search Possibilities with Vespa - part one"
-  excerpt: "This is the first blog post in a series on hybrid search. This first post focuses on efficient hybrid retrieval and representational approaches in IR"
-  link: https://blog.vespa.ai/redefining-hybrid-search-possibilities-with-vespa/
-  image: https://blog.vespa.ai/assets/2024-01-19-redefining-hybrid-search-possibilities-with-vespa/trent-erwin-UgA3Xvi3SkA-unsplash.jpg
+- title: "Announcing the Vespa ColBERT embedder"
+  excerpt: "Announcing the native Vespa ColBERT embedder in Vespa, enabling explainable semantic search using token-level vector representations"
+  link: https://blog.vespa.ai/announcing-colbert-embedder-in-vespa/
+  image: https://blog.vespa.ai/assets/2024-02-14-announcing-colbert-embedder-in-vespa/victoire-joncheray-wVQFrEZCThs-unsplash.jpg
   author: Jo Kristian Bergum
   author-avatar: https://blog.vespa.ai/assets/avatars/jobergum.jpg
-  date: 2024-01-19
+  date: 2024-02-14
 
