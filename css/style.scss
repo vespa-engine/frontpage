@@ -462,6 +462,23 @@ button.section-searchbar {
     }
 }
 
+.section-events {
+    .ev-title {
+        line-height: 1.5 !important;
+        text-wrap: pretty;
+        margin-top: 0px !important;
+        margin-bottom: 5px !important;
+    }
+
+    .ev-date, .ev-location {
+        margin-top: 0px;
+    }
+
+    h2 {
+        margin-bottom: var(--vspace-2) !important;
+    }
+}
+
 
 @media (max-width: 999px) {
     .section-cover--video-modal {
