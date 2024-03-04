@@ -1,3 +1,11 @@
+- title: "The Singaporean government deploys state of the art semantic search"
+  excerpt: "The Singaporean government leverages Vespa to do semantic search in every word ever said in Parliament"
+  link: https://blog.vespa.ai/pair-search/
+  image: https://blog.vespa.ai/assets/2024-03-04-pair-search/smart-search-made-simple.jpg
+  author: Jon Bratseth
+  author-avatar: https://blog.vespa.ai/assets/avatars/bratseth.jpg
+  date: 2024-03-04
+
 - title: "Announcing Vespa Long-Context ColBERT"
   excerpt: "Announcing long-context ColBERT, giving it larger context for scoring and simplifying long-document RAG applications."
   link: https://blog.vespa.ai/announcing-long-context-colbert-in-vespa/
@@ -21,11 +29,3 @@
   author: Kristian Aune
   author-avatar: https://blog.vespa.ai/assets/avatars/kkraune.jpg
   date: 2024-02-15
-
-- title: "When you're using vectors you're doing search"
-  excerpt: "Combining scale and quality takes more than vector similarity search"
-  link: https://blog.vespa.ai/when-you-are-using-vectors-you-are-doing-search/
-  image: https://blog.vespa.ai/assets/2024-02-14-when-you-are-using-vectors-you-are-doing-search/coral.jpg
-  author: Jon Bratseth
-  author-avatar: https://blog.vespa.ai/assets/avatars/bratseth.jpg
-  date: 2024-02-14
