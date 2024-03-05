@@ -1,7 +1,16 @@
 - title: "SW2 Conference"
   excerpt: "SW2 is a conference devoted to the next wave of software development. It is where a welcoming community of experts will gather to learn about what’s next, years before those topics will appear at other conferences."
   represent: >
-    null
+    Jon Bratseth, CEO:
+      Building something real with RAG
+      Generative AI is transformative, but in most cases it needs to be combined with your data to deliver something truly useful - this is the topic of retrieval augmented generation (RAG). This talk will discuss how to make RAG applications that delivers quality results in production, at scale. Some topics:
+      - Why RAG?
+      - RAG is about relevance.
+      - Do you even need vector embeddings?
+      - Do you even need vector indexes?
+      - Using personal data effectively.
+      - Quality and cost tradeoffs.
+      - Letting your LLM train your relevance model.
   date: 2024-05-14
   location: "Broomfield, Colorado"
   url: https://www.sw2con.com/
