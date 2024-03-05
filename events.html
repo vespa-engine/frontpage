@@ -1,0 +1,31 @@
+---
+# Copyright Vespa.ai. All rights reserved.
+title: "Events"
+layout: page
+---
+
+<div class="container-full is-marginless">
+    <div class="container section-events">
+
+        <div class="row">
+            <div class="xs-col-1-1 sm-col-1-1 md-col-2-3 lg-col-2-3 xl-col-2-3 flex flex-row space-between m-t-20">
+                <div class="flex-column">
+                    <h2>Vespa at Events</h2>
+                    <div class="flex-column">
+                        {% for event in site.data.events %}
+                        <h4 class="ev-title">{{ event.title }}</h4>
+                        <p class="ev-date">{{ event.date | date_to_string: "ordinal", "US" }}</p>
+                        <p class="ev-location">{{ event.location }}</p>
+                        <p><em>{{ event.excerpt }}</em></p>
+                        {% if event.represent %}<p><em>{{ event.represent }}</em></p>{% endif %}
+                        <p><a href="{{ event.url }}" target="_blank">Read more <i
+                                class="d-icon d-external is-sub is-extrasmall"></i></a></p>
+                        <hr/>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
