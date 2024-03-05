@@ -1,5 +1,7 @@
 - title: "SW2 Conference"
   excerpt: "SW2 is a conference devoted to the next wave of software development. It is where a welcoming community of experts will gather to learn about what’s next, years before those topics will appear at other conferences."
+  represent: >
+    null
   date: 2024-05-14
   location: "Broomfield, Colorado"
   url: https://www.sw2con.com/

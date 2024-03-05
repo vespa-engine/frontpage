@@ -17,6 +17,7 @@ layout: page
                         <p class="ev-date">{{ event.date | date_to_string: "ordinal", "US" }}</p>
                         <p class="ev-location">{{ event.location }}</p>
                         <p><em>{{ event.excerpt }}</em></p>
+                        <p><em>{{ event.represent }}</em></p>
                         <p><a href="{{ event.url }}" target="_blank">Read more <i
                                 class="d-icon d-external is-sub is-extrasmall"></i></a></p>
                         <hr/>
